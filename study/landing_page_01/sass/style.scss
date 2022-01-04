@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@mixin fonts ($fz, $lh, $c){
+    font-size: #{$fz};
+    line-height: #{$lh};
+    color: $c;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    min-width: 360px;
+    font-size: 16px;
+}
+div.wrap{
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    header{
+        padding: 34px 0 21px;
+        h1{
+            display: flex;
+            justify-content: flex-end;
+            a{
+                width: 63px;
+                height: 47px;
+                display: inline-block;
+                margin-right: 7px;
+            }
+        }
+    }
+    .line{
+        .line_top{
+            height: 2px;
+            background-color: #a91313;            
+        }
+        .line_bottom{
+            height: 1px;   
+            background-color: #a91313;  
+            margin-top: 2px;   
+        }
+    }
+    section{
+        margin-top: 51px;
+        article{
+            display: flex;
+            h3{
+                padding: 23px 0;
+                margin-left: 26px;
+                @include fonts (34.5px, 37px, #d41b1b);
+                b{
+                    font-weight: bold;
+                }
+            }
+            img{
+                width: 120px;
+                height: 120px;
+            }
+        }    
+        p{
+            @include fonts (20px, 19px, #000);
+            text-align: center;
+        }
+        .button{
+            width: 140px;
+            height: 32px;
+            border: 1px solid #040000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 22px;
+            margin-left: 148px;
+            a{
+                @include fonts (14px, normal, #000);
+            }
+        }
+    }
+    aside{
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        margin-top: 112px;
+        padding: 18px 0px 18px 63px;
+        display: flex;
+        img{
+            width: 67px;
+            height: 59px;
+        }
+        .texts{
+            margin-left: 20px;
+            h4{
+                @include fonts (16px, normal, #000);
+            }
+            p{
+                @include fonts (14px, normal, #555);
+                margin-top: 10px;
+            }
+        }
+    }
+}
+@media (max-width : 720px) {
+    div.wrap{
+        header{
+            padding: 65px 0 51px;
+            h1{
+                a{
+                    width: 116px;
+                    height: 86px;
+                    margin-right: 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section{
+            margin-top: 51px;
+            article{
+                display: flex;
+                img{
+                    width: 99px;
+                    height: 99px;
+                }
+                h3{
+                    padding: 0;
+                    margin-left: 25.5px;
+                    margin-top: 7px;
+                    @include fonts (40px, 43.5px, #d41b1b);
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }    
+            p{
+                @include fonts (30.5px, 29px, #000);
+                margin-top: 51px;
+            }
+            .button{
+                width: 400px;
+                height: 80px;
+                margin-left: 0;
+                margin: 0 auto;
+                margin-top: 47px;
+                a{
+                    @include fonts (27.5px, normal, #000);
+                }
+            }
+        }
+        aside{
+            margin-top: 172px;
+            padding: 41px 0px 50px 36px;
+            flex-direction: row-reverse;
+            img{
+                width: 137px;
+                height: 119px;
+            }
+            .texts{
+                margin-left: 0;
+                h4{
+                    @include fonts (28px, 30.5px, #000);
+                }
+                p{
+                    @include fonts (24px, 22px, #555);
+                    margin-top: 26px;
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width : 420px) {
+    div.wrap{
+        width: 90%;
+        header{
+            padding: 20px 0;
+            h1{
+                a{
+                    width: 63px;
+                    height: 47px;
+                }
+            }
+        }
+        section{
+            margin-top: 30px;
+            article{
+                h3{
+                    font-size: 16px;
+                }
+            }    
+            p{
+                font-size: 18px;
+                margin-top: 30px;
+            }
+            .button{
+                width: 250px;
+                height: 60px;
+            }
+        }
+        aside{
+            margin-top: 40px;
+            img{
+                width: 67px;
+                height: 59px;
+            }
+            .texts{
+                h4{
+                    font-size: 14px;
+                }
+                p{
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
