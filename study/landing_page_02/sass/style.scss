@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    src: url(../webfonts/NanumSquareEB.ttf),
+         url(../webfonts/AnyConv.com__NanumSquareEB.eot),
+         url(../webfonts/AnyConv.com__NanumSquareEB.woff);
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(../webfonts/NanumSquareB.ttf),
+         url(../webfonts/AnyConv.com__NanumSquareB.eot),
+         url(../webfonts/AnyConv.com__NanumSquareB.woff);
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(../webfonts/NanumSquareR.ttf),
+         url(../webfonts/AnyConv.com__NanumSquareR.eot),
+         url(../webfonts/AnyConv.com__NanumSquareR.woff);
+}
+@mixin fonts ($fz, $fw, $lh, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    line-height: #{$lh}px;
+    color: $c;
+}
+body{
+    font-family: 'NanumSquare', sans-serif;
+    min-width: 360px;
+}
+span{
+    color: #009643;
+}
+@keyframes gs {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+    
+}
+div.wrap{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    .content{
+        max-width: 630px;
+        width: 100%;
+        height: auto;
+        padding: 55px 0 52px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.13);
+        header{
+            h1{
+                a{
+                    width: 58px;
+                    height: 43px;
+                    display: inline-block;
+                }
+            }
+        }
+        section{
+            margin-top: 35px;
+            h3{
+                @include fonts(32, 700, 31, #000);
+                br{
+                    display: none;
+                }
+            }
+            h6{
+                margin-top: 22px;
+                @include fonts(18, 700, 18, #000);
+            }
+            .gauge_wrap{
+                max-width: 550px;       
+                width: 90%;
+                display: flex;
+                margin: 0 auto;
+                margin-top: 43px;
+                .gauge_bar{
+                    max-width: 500px;
+                    min-width: 250px;
+                    width: 90%;
+                    border-radius: 7px;
+                    background-color: #f0f0f0;
+                    .gauge{
+                        height: 14px;
+                        border-radius: 7px;
+                        background-color: #09ce58;
+                        animation: gs 5s linear infinite; 
+                    }
+                }
+                em{
+                    @include fonts(12, 300, 14, #010101);
+                    margin-left: 9px;                                  
+                }
+            }
+            h4{
+                margin-top: 31px;
+                @include fonts(16, 300, 16, #666666);
+            }
+            h5{
+                margin-top: 8px;
+                @include fonts(30, 300, 28, #009643);
+                span{
+                    font-size: 26px;
+                }
+                strong{
+                    font-weight: 900;
+                }
+            }
+            .waiting{
+                max-width: 300px;
+                width: 90%;
+                background-color: #f0f0f0;
+                border-radius: 14px;
+                margin: 0 auto;     
+                margin-top: 17px;
+                p{
+                    @include fonts(16, 300, 34, #666666);
+                    span{
+                        font-weight: 900;
+                    }
+                    b{
+                        color: #080808;
+                    }
+                }         
+            }
+            p{
+                margin-top: 11px;
+                @include fonts(12, 300, 12, rgba(102, 102, 102, 0.8))
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width : 630px) {
+    div.wrap{
+        height: auto;
+        background-color: #fff;
+        .content{
+            width: 90%;
+            border: 0;
+            header{
+                h1{
+                    a{
+                        width: 58px;
+                        height: 43px;
+                        display: inline-block;
+                    }
+                }
+            }
+            section{
+                margin-top: 45px;
+                h3{
+                    @include fonts(35, 700, 40, #000);
+                    br{
+                        display: inline;
+                    }
+                }
+                h6{
+                    margin-top: 25px;
+                    @include fonts(18, 700, 18, #000);
+                }
+                .gauge_wrap{
+                    margin-top: 41px;
+                    .gauge_bar{
+                        height: 12px;
+                        border-radius: 6px;
+                        .gauge{
+                            height: 12px;
+                            border-radius: 6px;
+                        }
+                    }
+                    em{
+                        @include fonts(13, 300, 10, #010101);                               
+                    }
+                }
+                h4{
+                    margin-top: 25px;
+                    font-size: 13px;
+                }
+                h5{
+                    margin-top: 10px;
+                    span{
+                        font-size: 30px;
+                    }
+                }
+                .waiting{
+                    max-width: 270px;
+                    border-radius: 15px;
+                    p{
+                        @include fonts(17, 300, 32, #666666);
+                    }         
+                }
+                p{
+                    margin-top: 12px;
+                    line-height: 14px;
+                    br{
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

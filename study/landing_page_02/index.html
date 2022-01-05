@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가치삽시다</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <header>
+                <h1>
+                    <a href=""><img src="img/logo.png" alt="로고"></a>
+                </h1>
+            </header>
+            <section>
+                <h3>동시 접속자가 많아
+                    <br><span>대기 중</span>입니다.</h3>
+                <h6>잠시 기다려 주세요.</h6>
+                <div class="gauge_wrap">
+                    <ul class="gauge_bar">
+                        <li class="gauge"></li>
+                    </ul>
+                    <em>70%</em>
+                </div>
+                <h4>예상 대기시간</h4>
+                <h5><span>약</span> <strong id="min">15</strong>분 <strong id="sec">0</strong>초</h5>
+                <div class="waiting">
+                    <p>현재 대기인원 : <span>6,678</span><b>명</b></p>
+                </div>
+                <p>
+                    ⓘ 새로고침 또는 뒤로가기를 하시면
+                    <br>다시 대기시간이 부여됩니다.
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

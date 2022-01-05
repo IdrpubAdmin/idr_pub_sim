@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 900;
+  src: url(../webfonts/NanumSquareEB.ttf), url(../webfonts/AnyConv.com__NanumSquareEB.eot), url(../webfonts/AnyConv.com__NanumSquareEB.woff);
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  src: url(../webfonts/NanumSquareB.ttf), url(../webfonts/AnyConv.com__NanumSquareB.eot), url(../webfonts/AnyConv.com__NanumSquareB.woff);
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  src: url(../webfonts/NanumSquareR.ttf), url(../webfonts/AnyConv.com__NanumSquareR.eot), url(../webfonts/AnyConv.com__NanumSquareR.woff);
+}
+
+body {
+  font-family: 'NanumSquare', sans-serif;
+  min-width: 360px;
+}
+
+span {
+  color: #009643;
+}
+
+@-webkit-keyframes gs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes gs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+div.wrap {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+}
+
+div.wrap .content {
+  max-width: 630px;
+  width: 100%;
+  height: auto;
+  padding: 55px 0 52px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+div.wrap .content header h1 a {
+  width: 58px;
+  height: 43px;
+  display: inline-block;
+}
+
+div.wrap .content section {
+  margin-top: 35px;
+}
+
+div.wrap .content section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 31px;
+  color: #000;
+}
+
+div.wrap .content section h3 br {
+  display: none;
+}
+
+div.wrap .content section h6 {
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #000;
+}
+
+div.wrap .content section .gauge_wrap {
+  max-width: 550px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 43px;
+}
+
+div.wrap .content section .gauge_wrap .gauge_bar {
+  max-width: 500px;
+  min-width: 250px;
+  width: 90%;
+  border-radius: 7px;
+  background-color: #f0f0f0;
+}
+
+div.wrap .content section .gauge_wrap .gauge_bar .gauge {
+  height: 14px;
+  border-radius: 7px;
+  background-color: #09ce58;
+  -webkit-animation: gs 5s linear infinite;
+          animation: gs 5s linear infinite;
+}
+
+div.wrap .content section .gauge_wrap em {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #010101;
+  margin-left: 9px;
+}
+
+div.wrap .content section h4 {
+  margin-top: 31px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #666666;
+}
+
+div.wrap .content section h5 {
+  margin-top: 8px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #009643;
+}
+
+div.wrap .content section h5 span {
+  font-size: 26px;
+}
+
+div.wrap .content section h5 strong {
+  font-weight: 900;
+}
+
+div.wrap .content section .waiting {
+  max-width: 300px;
+  width: 90%;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  margin: 0 auto;
+  margin-top: 17px;
+}
+
+div.wrap .content section .waiting p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 34px;
+  color: #666666;
+}
+
+div.wrap .content section .waiting p span {
+  font-weight: 900;
+}
+
+div.wrap .content section .waiting p b {
+  color: #080808;
+}
+
+div.wrap .content section p {
+  margin-top: 11px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  color: rgba(102, 102, 102, 0.8);
+}
+
+div.wrap .content section p br {
+  display: none;
+}
+
+@media (max-width: 630px) {
+  div.wrap {
+    height: auto;
+    background-color: #fff;
+  }
+  div.wrap .content {
+    width: 90%;
+    border: 0;
+  }
+  div.wrap .content header h1 a {
+    width: 58px;
+    height: 43px;
+    display: inline-block;
+  }
+  div.wrap .content section {
+    margin-top: 45px;
+  }
+  div.wrap .content section h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+  }
+  div.wrap .content section h3 br {
+    display: inline;
+  }
+  div.wrap .content section h6 {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #000;
+  }
+  div.wrap .content section .gauge_wrap {
+    margin-top: 41px;
+  }
+  div.wrap .content section .gauge_wrap .gauge_bar {
+    height: 12px;
+    border-radius: 6px;
+  }
+  div.wrap .content section .gauge_wrap .gauge_bar .gauge {
+    height: 12px;
+    border-radius: 6px;
+  }
+  div.wrap .content section .gauge_wrap em {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 10px;
+    color: #010101;
+  }
+  div.wrap .content section h4 {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+  div.wrap .content section h5 {
+    margin-top: 10px;
+  }
+  div.wrap .content section h5 span {
+    font-size: 30px;
+  }
+  div.wrap .content section .waiting {
+    max-width: 270px;
+    border-radius: 15px;
+  }
+  div.wrap .content section .waiting p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #666666;
+  }
+  div.wrap .content section p {
+    margin-top: 12px;
+    line-height: 14px;
+  }
+  div.wrap .content section p br {
+    display: inline;
+  }
+}
