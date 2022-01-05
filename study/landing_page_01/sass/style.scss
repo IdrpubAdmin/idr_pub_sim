@@ -11,7 +11,7 @@ body{
 }
 div.wrap{
     max-width: 640px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     header{
         padding: 34px 0 21px;
@@ -81,6 +81,7 @@ div.wrap{
         img{
             width: 67px;
             height: 59px;
+            margin-right: 2%;
         }
         .texts{
             margin-left: 20px;
@@ -94,70 +95,74 @@ div.wrap{
         }
     }
 }
-@media (max-width : 720px) {
+@media (max-width : 640px) {
     div.wrap{
-        header{
-            padding: 65px 0 51px;
-            h1{
-                a{
-                    width: 116px;
-                    height: 86px;
-                    margin-right: 0;
-                    img{
-                        width: 100%;
-                    }
-                }
-            }
-        }
         section{
-            margin-top: 51px;
+            margin-top: 40px;
             article{
-                display: flex;
-                img{
-                    width: 99px;
-                    height: 99px;
-                }
                 h3{
-                    padding: 0;
-                    margin-left: 25.5px;
-                    margin-top: 7px;
-                    @include fonts (40px, 43.5px, #d41b1b);
-                    b{
-                        font-weight: bold;
-                    }
+                    @include fonts (26px, 30px, #d41b1b);
+                }
+                img{
+                    width: 110px;
+                    height: 110px;
                 }
             }    
             p{
-                @include fonts (30.5px, 29px, #000);
-                margin-top: 51px;
+                margin-top: 25px;
             }
             .button{
-                width: 400px;
-                height: 80px;
+                width: 160px;
+                height: 40px;
                 margin-left: 0;
                 margin: 0 auto;
-                margin-top: 47px;
-                a{
-                    @include fonts (27.5px, normal, #000);
-                }
+                margin-top: 24px;
             }
         }
         aside{
-            margin-top: 172px;
-            padding: 41px 0px 50px 36px;
+            margin-top: 86px;
+            padding: 10px 0px 12px 9px;
+        }
+    }
+}
+@media (max-width : 520px) {
+    div.wrap{
+        section{
+            margin-top: 30px;
+            article{
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+                h3{
+                    padding: 0;
+                    margin-left: 13px;
+                    margin-top: 10px;
+                    @include fonts (20px, 22px, #d41b1b);
+                }
+            }    
+            p{
+                @include fonts (15px, 15px, #000);
+            }
+            .button{
+                width: 200px;
+                height: 40px;
+            }
+        }
+        aside{
             flex-direction: row-reverse;
             img{
-                width: 137px;
-                height: 119px;
+                width: 78px;
+                height: 60px;
             }
             .texts{
                 margin-left: 0;
                 h4{
-                    @include fonts (28px, 30.5px, #000);
+                    @include fonts (14px, 15px, #000);
                 }
                 p{
-                    @include fonts (24px, 22px, #555);
-                    margin-top: 26px;
+                    @include fonts (12px, 11px, #555);
+                    margin-top: 13px;
                     b{
                         font-weight: bold;
                     }
@@ -166,49 +171,19 @@ div.wrap{
         }
     }
 }
-@media (max-width : 420px) {
+@media (max-width : 360px) {
     div.wrap{
-        width: 90%;
-        header{
-            padding: 20px 0;
-            h1{
-                a{
-                    width: 63px;
-                    height: 47px;
-                }
-            }
-        }
         section{
-            margin-top: 30px;
+            margin-top: 23px;
             article{
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
                 h3{
-                    font-size: 16px;
+                    margin-top: 3px;
                 }
             }    
-            p{
-                font-size: 18px;
-                margin-top: 30px;
-            }
-            .button{
-                width: 250px;
-                height: 60px;
-            }
-        }
-        aside{
-            margin-top: 40px;
-            img{
-                width: 67px;
-                height: 59px;
-            }
-            .texts{
-                h4{
-                    font-size: 14px;
-                }
-                p{
-                    font-size: 14px;
-                    margin-top: 10px;
-                }
-            }
         }
     }
 }

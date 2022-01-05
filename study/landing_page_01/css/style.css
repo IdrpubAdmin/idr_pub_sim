@@ -7,7 +7,7 @@ body {
 
 div.wrap {
   max-width: 640px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -112,6 +112,7 @@ div.wrap aside {
 div.wrap aside img {
   width: 67px;
   height: 59px;
+  margin-right: 2%;
 }
 
 div.wrap aside .texts {
@@ -131,127 +132,98 @@ div.wrap aside .texts p {
   margin-top: 10px;
 }
 
-@media (max-width: 720px) {
-  div.wrap header {
-    padding: 65px 0 51px;
-  }
-  div.wrap header h1 a {
-    width: 116px;
-    height: 86px;
-    margin-right: 0;
-  }
-  div.wrap header h1 a img {
-    width: 100%;
-  }
+@media (max-width: 640px) {
   div.wrap section {
-    margin-top: 51px;
+    margin-top: 40px;
   }
-  div.wrap section article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  div.wrap section article h3 {
+    font-size: 26px;
+    line-height: 30px;
+    color: #d41b1b;
   }
   div.wrap section article img {
-    width: 99px;
-    height: 99px;
+    width: 110px;
+    height: 110px;
+  }
+  div.wrap section p {
+    margin-top: 25px;
+  }
+  div.wrap section .button {
+    width: 160px;
+    height: 40px;
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  div.wrap aside {
+    margin-top: 86px;
+    padding: 10px 0px 12px 9px;
+  }
+}
+
+@media (max-width: 520px) {
+  div.wrap section {
+    margin-top: 30px;
+  }
+  div.wrap section article img {
+    width: 60px;
+    height: 60px;
   }
   div.wrap section article h3 {
     padding: 0;
-    margin-left: 25.5px;
-    margin-top: 7px;
-    font-size: 40px;
-    line-height: 43.5px;
+    margin-left: 13px;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 22px;
     color: #d41b1b;
   }
-  div.wrap section article h3 b {
-    font-weight: bold;
-  }
   div.wrap section p {
-    font-size: 30.5px;
-    line-height: 29px;
+    font-size: 15px;
+    line-height: 15px;
     color: #000;
-    margin-top: 51px;
   }
   div.wrap section .button {
-    width: 400px;
-    height: 80px;
-    margin-left: 0;
-    margin: 0 auto;
-    margin-top: 47px;
-  }
-  div.wrap section .button a {
-    font-size: 27.5px;
-    line-height: normal;
-    color: #000;
+    width: 200px;
+    height: 40px;
   }
   div.wrap aside {
-    margin-top: 172px;
-    padding: 41px 0px 50px 36px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
   div.wrap aside img {
-    width: 137px;
-    height: 119px;
+    width: 78px;
+    height: 60px;
   }
   div.wrap aside .texts {
     margin-left: 0;
   }
   div.wrap aside .texts h4 {
-    font-size: 28px;
-    line-height: 30.5px;
+    font-size: 14px;
+    line-height: 15px;
     color: #000;
   }
   div.wrap aside .texts p {
-    font-size: 24px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 11px;
     color: #555;
-    margin-top: 26px;
+    margin-top: 13px;
   }
   div.wrap aside .texts p b {
     font-weight: bold;
   }
 }
 
-@media (max-width: 420px) {
-  div.wrap {
-    width: 90%;
-  }
-  div.wrap header {
-    padding: 20px 0;
-  }
-  div.wrap header h1 a {
-    width: 63px;
-    height: 47px;
-  }
+@media (max-width: 360px) {
   div.wrap section {
-    margin-top: 30px;
+    margin-top: 23px;
+  }
+  div.wrap section article img {
+    width: 50px;
+    height: 50px;
   }
   div.wrap section article h3 {
-    font-size: 16px;
-  }
-  div.wrap section p {
-    font-size: 18px;
-    margin-top: 30px;
-  }
-  div.wrap section .button {
-    width: 250px;
-    height: 60px;
-  }
-  div.wrap aside {
-    margin-top: 40px;
-  }
-  div.wrap aside img {
-    width: 67px;
-    height: 59px;
-  }
-  div.wrap aside .texts h4 {
-    font-size: 14px;
-  }
-  div.wrap aside .texts p {
-    font-size: 14px;
-    margin-top: 10px;
+    margin-top: 3px;
   }
 }
