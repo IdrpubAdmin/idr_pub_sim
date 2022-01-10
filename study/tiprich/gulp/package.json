@@ -1,0 +1,35 @@
+{
+  "name": "tiprich",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/register": "^7.16.7",
+    "autoprefixer": "^10.4.1",
+    "default": "^0.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "init": "^0.1.2",
+    "node-sass": "^7.0.1",
+    "postcss-focus": "^5.0.1",
+    "postcss-fontpath": "^1.0.0",
+    "stylelint": "^14.2.0",
+    "webpack": "^5.65.0",
+    "webserver": "^5.0.1"
+  }
+}

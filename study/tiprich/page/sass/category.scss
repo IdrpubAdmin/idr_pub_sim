@@ -1,0 +1,175 @@
+@import url(reset.css);
+@import url(common.css);
+@mixin fonts ($fz, $fw, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    color: $c;
+}
+
+#wrapper{
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        .gnb{
+            h3{display: none;}
+            article{
+                width: 260px;
+                border: solid 1px #dfdfdc;
+                background-color: #f8f8f8;
+                padding: 20px 15px 40px;
+                .nav{
+                    display: flex;
+                    flex-wrap: wrap;
+                    h2{
+                        width: 50%;
+                        @include fonts(18, 500, #666);
+                        line-height: 85px;
+                        text-align: center;
+                        border-bottom: 1px dashed #dfdfdc;
+                        border-right: 1px dashed #dfdfdc;
+                        &:nth-of-type(2n){
+                            border-right: 0;
+                        }
+                        &:nth-of-type(n+11){
+                            border-bottom: 0;
+                        }
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            &:hover{
+                                background-color: rgba(0,0,0,0.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+            width: calc(100% - 300px);
+            .page_top{
+                border-bottom: 2px solid #999;
+                h3{
+                    @include fonts(30, 500, #000);
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        width: 6px;
+                        height: 30px;
+                        background-color: #333;
+                        margin-right: 16px;
+                    }
+                }
+                ul{
+                    display: flex;
+                    margin-top: 20px;
+                    align-items: center;
+                    li{
+                        width: 170px;
+                        text-align: center;
+                        height: 60px;
+                        @include fonts(20, 500, #000);
+                        line-height: 60px;
+                        cursor: pointer;
+                        &.hover{
+                            border-bottom: 5px solid #3b7cca;
+                        }
+                    }
+                    span{
+                        width: 2px;
+                        height: 20px;
+                        background-color: #ccc;
+                    }
+                }
+            }
+            section{
+                // position: absolute;
+            }
+            .cnt{
+                article{
+                    border-bottom: 1px solid #ccc;
+                    padding: 30px 0;
+                    &:first-child{
+                        padding-top: 50px;
+                    }
+                    .art_top{
+                        display: flex;
+                        justify-content: space-between;
+                        h4{
+                            @include fonts(16, 400, #000);
+                            line-height: 25px;
+                        }
+                        .tip{
+                            @include fonts(16, 400, #333);
+                            line-height: 25px;
+                        }
+                    }
+                    .art_bot{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 20px;
+                        .image{
+                            width: 60px;
+                            height: 60px;
+                            background-image: url(../img/layer-42.png);
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        .texts{
+                            width: calc(100% - 80px);
+                            p{
+                                @include fonts(16, 400, #666);
+                                line-height: 20px;
+                            }
+                            h6{
+                                @include fonts(14, 400, #666);
+                                line-height: 20px;
+                                margin-top: 10px;
+                            }
+                        } 
+                    }
+                }
+            }
+            .cnl{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 16px;
+                article{
+                    width: calc(50% - 20px);
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    border: solid 1px #dfdfdc;
+                    border-radius: 5px;
+                    .image{
+                        width: 60px;
+                        height: 60px;
+                        background-image: url(../img/layer-42.png);
+                        background-position: center;
+                        background-size: cover;
+                        margin-right: 20px
+                    }
+                    .texts{
+                        h4{
+                            @include fonts(18, 400, #000);
+                            line-height: 20px;
+                        }
+                        p{
+                            @include fonts(14, 400, #666);
+                            line-height: 20px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

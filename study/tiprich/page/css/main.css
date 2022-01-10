@@ -1,0 +1,318 @@
+@import url(reset.css);
+@import url(common.css);
+#wrapper main {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#wrapper main section {
+  background-image: url(../img/2020-1-15.png);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+#wrapper main section .silder {
+  width: 95%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+#wrapper main section .silder .btn i {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 900;
+  opacity: 0.5;
+  color: #fff;
+}
+
+#wrapper main section .btns {
+  width: 222px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 20px;
+  margin: auto;
+}
+
+#wrapper main section .btns button {
+  width: 60px;
+  height: 6px;
+  background-color: #fff;
+  opacity: 0.5;
+  border: 0;
+  margin: 0 5px;
+}
+
+#wrapper main section .btns button:last-child {
+  opacity: 1;
+}
+
+#wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 80px;
+}
+
+#wrapper .container section {
+  width: 33.33%;
+}
+
+#wrapper .container section h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  line-height: 30px;
+}
+
+#wrapper .container .focus article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 106px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#wrapper .container .focus article .image {
+  background-position: center;
+  background-size: cover;
+  width: 53px;
+  height: 53px;
+  margin-right: 20px;
+}
+
+#wrapper .container .focus article .texts h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  line-height: 20px;
+}
+
+#wrapper .container .focus article .texts p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+#wrapper .container .focus article .i1 {
+  background-image: url(../img/layer-42.png);
+}
+
+#wrapper .container .focus article .i2 {
+  background-image: url(../img/layer-43.png);
+}
+
+#wrapper .container .focus article .i3 {
+  background-image: url(../img/layer-44.png);
+}
+
+#wrapper .container .focus article .i4 {
+  background-image: url(../img/layer-45.png);
+}
+
+#wrapper .container .focus article:first-of-type {
+  margin-top: 9px;
+}
+
+#wrapper .container .focus article::after {
+  content: "";
+  width: calc(100% - 30px);
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+}
+
+#wrapper .container .gnb article {
+  margin-top: 28px;
+  border: 1px solid #dfdfdc;
+  background-color: #f8f8f8;
+}
+
+#wrapper .container .gnb article .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 20px;
+}
+
+#wrapper .container .gnb article .nav h2 {
+  width: 33.33%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  line-height: 85px;
+  text-align: center;
+  border-bottom: 1px dashed #dfdfdc;
+  border-right: 1px dashed #dfdfdc;
+}
+
+#wrapper .container .gnb article .nav h2:nth-of-type(3n) {
+  border-right: 0;
+}
+
+#wrapper .container .gnb article .nav h2:nth-of-type(n+10) {
+  border-bottom: 0;
+}
+
+#wrapper .container .gnb article .nav h2 a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper .container .gnb article .nav h2 a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#wrapper .contents {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+#wrapper .contents h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+  line-height: 30px;
+}
+
+#wrapper .contents section {
+  margin-top: 30px;
+}
+
+#wrapper .content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+#wrapper .content section article {
+  width: calc(33.33% - 20px);
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}
+
+#wrapper .content section article .image {
+  height: 240px;
+  background-image: url(../img/layer-47.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper .content section article .texts {
+  padding: 30px 20px 20px;
+}
+
+#wrapper .content section article .texts h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  line-height: 20px;
+}
+
+#wrapper .content section article .texts h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 15px;
+}
+
+#wrapper .content section article .texts p {
+  width: calc(100% - 5px);
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 20px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+#wrapper .channel {
+  padding-bottom: 100px;
+}
+
+#wrapper .channel section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+#wrapper .channel section article {
+  width: calc(25% - 20px);
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}
+
+#wrapper .channel section .image {
+  height: 240px;
+  background-image: url(../img/layer-47.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper .channel section .texts {
+  padding: 30px 18px 20px;
+}
+
+#wrapper .channel section .texts h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  line-height: 20px;
+}
+
+#wrapper .channel section .texts h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 15px;
+}
+
+#wrapper .channel section .texts p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 20px;
+  height: 40px;
+  margin-top: 20px;
+}

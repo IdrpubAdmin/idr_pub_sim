@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url(all.css);
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrapper {
+  max-width: 2560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#wrapper header {
+  border-top: 3px solid #3b7cca;
+  padding: 43px 0 23px;
+  border-bottom: 1px solid #ccc;
+}
+
+#wrapper header section {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#wrapper header section h1 a {
+  width: 185px;
+  height: 35px;
+  display: inline-block;
+}
+
+#wrapper header section h1 a img {
+  width: 100%;
+}
+
+#wrapper header section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper header section ul input {
+  width: 255px;
+  height: 40px;
+  background-color: #f8f8f8;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  text-indent: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+  margin: 0 3px;
+}
+
+#wrapper header section ul li {
+  width: 120px;
+  height: 40px;
+  background-color: #3b7cca;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 3px;
+}
+
+#wrapper header section ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#wrapper header section ul li:last-child {
+  color: #333;
+  background-color: #fff;
+}
+
+#wrapper header section ul li img {
+  padding: 5px;
+}
+
+#wrapper footer {
+  border-top: 1px solid #ccc;
+  padding: 50px 0 120px;
+  background-color: #f8f8f8;
+}
+
+#wrapper footer section {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper footer section h1 a {
+  width: 185px;
+  height: 35px;
+  display: inline-block;
+}
+
+#wrapper footer section h1 a img {
+  width: 100%;
+}
+
+#wrapper footer section address ul li {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}

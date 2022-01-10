@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url(all.css);
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin fonts ($fz, $fw, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    color: $c;
+}
+#wrapper{
+    max-width: 2560px;
+    width: 100%;
+    margin: 0 auto;
+    header{
+        border-top: 3px solid #3b7cca;
+        padding: 43px 0 23px;
+        border-bottom: 1px solid #ccc;
+        section{
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            h1{
+                a{
+                    width: 185px;
+                    height: 35px;
+                    display: inline-block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            ul{
+                display: flex;
+                input{
+                    width: 255px;
+                    height: 40px;
+                    background-color: #f8f8f8;
+                    border: solid 1px #ccc;
+                    border-radius: 5px;
+                    text-indent: 15px;
+                    @include fonts(16, 400, #999);
+                    margin: 0 3px;
+                }
+                li{
+                    width: 120px;
+                    height: 40px;
+                    background-color: #3b7cca;
+                    border-radius: 5px;
+                    @include fonts(16, 400, #fff);
+                    margin: 0 3px;
+                    a{
+                        width: 100%;
+                        height: 100%;      
+                        display: inline-block;
+                        display: flex;  
+                        align-items: center;
+                        justify-content: center;                  
+                    }
+                    &:last-child{
+                        color: #333;
+                        background-color: #fff;
+                    }
+                    img{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        border-top: 1px solid #ccc;
+        padding: 50px 0 120px;
+        background-color: #f8f8f8;
+        section{
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                a{
+                    width: 185px;
+                    height: 35px;
+                    display: inline-block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            address{
+                ul{
+                    li{
+                        line-height: 20px;
+                        @include fonts(14, 400, #333);
+                    }
+                }
+            }
+        }
+    }
+}
+    

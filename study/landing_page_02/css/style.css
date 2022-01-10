@@ -1,19 +1,20 @@
+@import url(../css/reset.css);
 @font-face {
   font-family: 'NanumSquare';
   font-weight: 900;
-  src: url(../webfonts/NanumSquareEB.ttf), url(../webfonts/AnyConv.com__NanumSquareEB.eot), url(../webfonts/AnyConv.com__NanumSquareEB.woff);
+  src: url(../webfonts/NanumSquareEB.ttf), url(../webfonts/NanumSquareEB.eot), url(../webfonts/NanumSquareEB.woff);
 }
 
 @font-face {
   font-family: 'NanumSquare';
   font-weight: 700;
-  src: url(../webfonts/NanumSquareB.ttf), url(../webfonts/AnyConv.com__NanumSquareB.eot), url(../webfonts/AnyConv.com__NanumSquareB.woff);
+  src: url(../webfonts/NanumSquareB.ttf), url(../webfonts/NanumSquareB.eot), url(../webfonts/NanumSquareB.woff);
 }
 
 @font-face {
   font-family: 'NanumSquare';
   font-weight: 300;
-  src: url(../webfonts/NanumSquareR.ttf), url(../webfonts/AnyConv.com__NanumSquareR.eot), url(../webfonts/AnyConv.com__NanumSquareR.woff);
+  src: url(../webfonts/NanumSquareR.ttf), url(../webfonts/NanumSquareR.eot), url(../webfonts/NanumSquareR.woff);
 }
 
 body {

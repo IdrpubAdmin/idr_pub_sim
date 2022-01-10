@@ -1,0 +1,233 @@
+@import url(reset.css);
+@import url(common.css);
+@mixin fonts ($fz, $fw, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    color: $c;
+}
+#wrapper{
+    main{
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 25px;
+        section{
+            background-image: url(../img/2020-1-15.png);
+            background-position: center;
+            background-size: cover;  
+            height: 400px;
+            position: relative;
+            .silder{
+                width: 95%;
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 0; bottom: 0; right: 0; left: 0;
+                margin: auto;
+                .btn{
+                    i{
+                        font-size: 80px;
+                        line-height: 80px;
+                        font-weight: 900;
+                        opacity: 0.5;
+                        color: #fff;
+                    }
+                }
+            }
+            .btns{
+                width: 222px;
+                position: absolute;
+                right: 0; left: 0;
+                bottom: 20px;
+                margin: auto;
+                button{
+                    width: 60px;
+                    height: 6px;
+                    background-color: #fff;
+                    opacity: 0.5;
+                    border: 0;
+                    margin: 0 5px;
+                    &:last-child{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+        section{
+            width: 33.33%;
+            h3{
+                @include fonts(30, 500, #000);
+                line-height: 30px;
+            }
+        }
+        .focus{
+            article{
+                display: flex;
+                height: 106px;
+                align-items: center;
+                position: relative;
+                .image{
+                    background-position: center;
+                    background-size: cover;
+                    width: 53px;
+                    height: 53px;
+                    margin-right: 20px;
+                }
+                .texts{
+                    h4{
+                        @include fonts(18, 400, #000);
+                        line-height: 20px;                   
+                    }
+                    p{
+                        @include fonts(14, 400, #666);  
+                        line-height: 20px;
+                        margin-top: 5px;
+                    }
+                }
+                .i1{background-image: url(../img/layer-42.png);}
+                .i2{background-image: url(../img/layer-43.png);}
+                .i3{background-image: url(../img/layer-44.png);}
+                .i4{background-image: url(../img/layer-45.png);}
+                &:first-of-type{
+                    margin-top: 9px;
+                }
+                &::after{
+                    content: "";
+                    width: calc(100% - 30px);
+                    height: 2px;
+                    background-color: #ccc;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+        .gnb{
+            article{
+                margin-top: 28px;
+                border: 1px solid #dfdfdc;
+                background-color: #f8f8f8;
+                .nav{    
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 30px 20px;
+                    h2{      
+                        width: 33.33%;
+                        @include fonts(18, 500, #666);
+                        line-height: 85px;
+                        text-align: center;
+                        border-bottom: 1px dashed #dfdfdc;
+                        border-right: 1px dashed #dfdfdc;
+                        &:nth-of-type(3n){
+                            border-right: 0;
+                        }
+                        &:nth-of-type(n+10){
+                            border-bottom: 0;
+                        }
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            &:hover{
+                                background-color: rgba(0,0,0,0.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contents{
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 80px;
+        h3{
+            @include fonts(28, 500, #000);
+            line-height: 30px;
+        }
+        section{
+            margin-top: 30px;
+        }
+    }
+    .content{
+        section{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            article{
+                width: calc(33.33% - 20px);
+                border-radius: 5px;
+                border: solid 1px #ccc;
+                .image{
+                    height: 240px;
+                    background-image: url(../img/layer-47.png);
+                    background-position: center;
+                    background-size: cover;
+                }
+                .texts{
+                    padding: 30px 20px 20px;
+                    h4{
+                        @include fonts(18, 500, #000);
+                        line-height: 20px;
+                    }
+                    h5{
+                        @include fonts(14, 400, #666);
+                        margin-top: 15px;
+                    }
+                    p{
+                        width: calc(100% - 5px);
+                        @include fonts(16, 300, #333);
+                        line-height: 20px;
+                        height: 60px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .channel{
+        padding-bottom: 100px;
+        section{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            article{
+                width: calc(25% - 20px);
+                border-radius: 5px;
+                border: solid 1px #ccc;                
+            }
+            .image{
+                height: 240px;
+                background-image: url(../img/layer-47.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .texts{
+                padding: 30px 18px 20px;
+                    h4{
+                        @include fonts(18, 500, #000);
+                        line-height: 20px;
+                    }
+                    h5{
+                        @include fonts(14, 400, #666);
+                        margin-top: 15px;
+                    }
+                    p{
+                        @include fonts(16, 300, #333);
+                        line-height: 20px;
+                        height: 40px;
+                        margin-top: 20px;
+                    }
+            }
+        }
+    }
+}
