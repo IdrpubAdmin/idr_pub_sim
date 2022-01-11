@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url(common.css);
+@import url(responsive.category.css);
 @mixin fonts ($fz, $fw, $c){
     font-size: #{$fz}px;
     font-weight: #{$fw};
@@ -9,6 +10,7 @@
 #wrapper{
     .container{
         max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 60px;
         display: flex;
@@ -50,6 +52,8 @@
         }
         .content{
             width: calc(100% - 300px);
+            height: 950px;
+            position: relative;
             .page_top{
                 border-bottom: 2px solid #999;
                 h3{
@@ -89,7 +93,8 @@
                 }
             }
             section{
-                // position: absolute;
+                width: 100%;
+                position: absolute;
             }
             .cnt{
                 article{
@@ -97,17 +102,34 @@
                     padding: 30px 0;
                     &:first-child{
                         padding-top: 50px;
+                        .art_top{
+                            h4{
+                                i{
+                                    color: #3b7cca;
+                                }
+                            }
+                        }
                     }
                     .art_top{
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                         h4{
                             @include fonts(16, 400, #000);
                             line-height: 25px;
+                            i{
+                                font-size: 25px;
+                                margin-right: 5px;
+                            }
                         }
                         .tip{
                             @include fonts(16, 400, #333);
                             line-height: 25px;
+                            i{
+                                font-size: 25px;
+                                margin-right: 10px;
+                                vertical-align: middle;
+                            }
                         }
                     }
                     .art_bot{
@@ -142,6 +164,8 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
                 row-gap: 16px;
+                margin-top: 50px;
+                display: none;
                 article{
                     width: calc(50% - 20px);
                     display: flex;

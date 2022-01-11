@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url(common.css);
+@import url(responsive.main.css);
 @mixin fonts ($fz, $fw, $c){
     font-size: #{$fz}px;
     font-weight: #{$fw};
@@ -8,6 +9,7 @@
 #wrapper{
     main{
         max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 25px;
         section{
@@ -31,6 +33,7 @@
                         font-weight: 900;
                         opacity: 0.5;
                         color: #fff;
+                        cursor: pointer;
                     }
                 }
             }
@@ -47,6 +50,7 @@
                     opacity: 0.5;
                     border: 0;
                     margin: 0 5px;
+                    cursor: pointer;
                     &:last-child{
                         opacity: 1;
                     }
@@ -56,6 +60,7 @@
     }
     .container{
         max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
@@ -145,7 +150,7 @@
     }
     .contents{
         max-width: 1200px;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         padding-top: 80px;
         h3{

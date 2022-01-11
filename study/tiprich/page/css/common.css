@@ -2,6 +2,7 @@
 @import url(all.css);
 body {
   font-family: 'Noto Sans KR', sans-serif;
+  min-width: 320px;
 }
 
 #wrapper {
@@ -18,7 +19,7 @@ body {
 
 #wrapper header section {
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,6 +70,10 @@ body {
   font-weight: 400;
   color: #fff;
   margin: 0 3px;
+  position: relative;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 
 #wrapper header section ul li a {
@@ -95,6 +100,35 @@ body {
   padding: 5px;
 }
 
+#wrapper header section ul li .menudrop {
+  display: none;
+}
+
+#wrapper header section ul li .active {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  z-index: 10;
+  background-color: #4888d6;
+  padding: 10px 0;
+  border-radius: 5px;
+  opacity: 0.9;
+  display: block;
+  cursor: default;
+}
+
+#wrapper header section ul li .active h2 {
+  margin-top: 5px;
+}
+
+#wrapper header section ul li .active h2:first-child {
+  margin-top: 0;
+}
+
+#wrapper header section ul li .active h2:hover {
+  color: #ccc;
+}
+
 #wrapper footer {
   border-top: 1px solid #ccc;
   padding: 50px 0 120px;
@@ -103,7 +137,7 @@ body {
 
 #wrapper footer section {
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

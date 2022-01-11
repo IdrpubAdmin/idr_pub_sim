@@ -1,7 +1,9 @@
 @import url(reset.css);
 @import url(common.css);
+@import url(responsive.category.css);
 #wrapper .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 60px;
   display: -webkit-box;
@@ -62,6 +64,8 @@
 
 #wrapper .container .content {
   width: calc(100% - 300px);
+  height: 950px;
+  position: relative;
 }
 
 #wrapper .container .content .page_top {
@@ -121,6 +125,11 @@
   background-color: #ccc;
 }
 
+#wrapper .container .content section {
+  width: 100%;
+  position: absolute;
+}
+
 #wrapper .container .content .cnt article {
   border-bottom: 1px solid #ccc;
   padding: 30px 0;
@@ -130,6 +139,10 @@
   padding-top: 50px;
 }
 
+#wrapper .container .content .cnt article:first-child .art_top h4 i {
+  color: #3b7cca;
+}
+
 #wrapper .container .content .cnt article .art_top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +150,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #wrapper .container .content .cnt article .art_top h4 {
@@ -146,11 +162,22 @@
   line-height: 25px;
 }
 
+#wrapper .container .content .cnt article .art_top h4 i {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
 #wrapper .container .content .cnt article .art_top .tip {
   font-size: 16px;
   font-weight: 400;
   color: #333;
   line-height: 25px;
+}
+
+#wrapper .container .content .cnt article .art_top .tip i {
+  font-size: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 #wrapper .container .content .cnt article .art_bot {
@@ -203,6 +230,8 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 16px;
+  margin-top: 50px;
+  display: none;
 }
 
 #wrapper .container .content .cnl article {
