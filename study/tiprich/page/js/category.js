@@ -5,6 +5,13 @@ menuBtn.addEventListener('click', () => {
     menuDrop.classList.toggle('active');
 });
 
+const barsbtn = document.querySelector('.barsbtn');
+const mnwrap = document.querySelector('.mnwrap');
+
+barsbtn.addEventListener('click', () => {
+    mnwrap.classList.toggle('navdrop');
+});
+
 const cntbtn = document.querySelector('.cntbtn');  
 const cnlbtn = document.querySelector('.cnlbtn');  
 const cnt = document.querySelector('.cnt');  

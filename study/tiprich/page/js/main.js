@@ -5,4 +5,9 @@ menuBtn.addEventListener('click', () => {
     menuDrop.classList.toggle('active');
 });
 
-const login = document.querySelector('.login');
+const barsbtn = document.querySelector('.barsbtn');
+const mnwrap = document.querySelector('.mnwrap');
+
+barsbtn.addEventListener('click', () => {
+    mnwrap.classList.toggle('navdrop');
+});

@@ -19,7 +19,7 @@ body{
         border-bottom: 1px solid #ccc;
         section{
             max-width: 1200px;
-            width: 100%;
+            width: 95%;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -98,7 +98,13 @@ body{
                     }
                 }
             }
+            .barsbtn{
+                display: none;
+            }
         }
+    }
+    .navdrop{
+        display: none;
     }
     footer{
         border-top: 1px solid #ccc;
@@ -106,7 +112,7 @@ body{
         background-color: #f8f8f8;
         section{
             max-width: 1200px;
-            width: 100%;
+            width: 95%;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -126,10 +132,150 @@ body{
                     li{
                         line-height: 20px;
                         @include fonts(14, 400, #333);
+                        br{
+                            display: none;
+                        }
                     }
                 }
             }
         }
     }
 }
-    
+
+@media (max-width:1200px) {
+    #wrapper{
+        header{
+            section{
+                ul{
+                    input{
+                        width: 200px;
+                        text-indent: 10px;
+                    }
+                    li{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        footer{
+            padding-bottom: 100px;
+            section{
+                justify-content: start;
+                align-items: start;
+                address{
+                    margin-left: 110px;
+                    ul{
+                        li{
+                            br{
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    #wrapper{
+        header{
+            section{
+                ul{
+                    input{
+                        width: 200px;
+                        text-indent: 10px;
+                    }
+                    li{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        footer{
+            padding-bottom: 100px;
+            section{
+                address{
+                    margin-left: 60px;
+                    ul{
+                        li{
+                            br{
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:820px) {
+    #wrapper{
+        position: relative;
+        header{
+            section{
+                ul{
+                    display: none;
+                }
+                .barsbtn{
+                    display: block;
+                    width: 40px;
+                    text-align: center;
+                    i{
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+        .mnwrap{
+            width: 100%;
+            position: absolute;
+            background-color: rgba(100,100,100,0.9);
+            z-index: 1000;          
+            menu{
+                width: 95%;
+                margin: 0 auto;
+                text-align-last: right;
+                padding: 30px 0;
+                color: #fff;
+                h3{
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+                input{
+                    margin-top: 10px;
+                    text-align-last: left;
+                    width: 180px;
+                    height: 40px;
+                    border: solid 1px #ccc;
+                    border-radius: 5px;
+                    text-indent: 10px;
+                    @include fonts(16, 500, #999);
+                }
+            }
+        }
+        footer{
+            padding: 50px 0;
+            section{
+                display: block;
+                h1{
+                    text-align: center;
+                }
+                address{
+                    text-align: center;
+                    margin-left: 0;
+                    margin-top: 20px;
+                    ul{
+                        li{
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

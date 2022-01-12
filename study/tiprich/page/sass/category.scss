@@ -1,6 +1,5 @@
 @import url(reset.css);
 @import url(common.css);
-@import url(responsive.category.css);
 @mixin fonts ($fz, $fw, $c){
     font-size: #{$fz}px;
     font-weight: #{$fw};
@@ -10,7 +9,7 @@
 #wrapper{
     .container{
         max-width: 1200px;
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
         margin-top: 60px;
         display: flex;
@@ -191,6 +190,109 @@
                             line-height: 20px;
                             margin-top: 10px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    #wrapper{
+        .container{
+            .gnb{
+                article{
+                    width: 200px;
+                    padding: 0;
+                    .nav{
+                        h2{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .content{
+                width: calc(100% - 250px);
+                .cnt{
+                    article{
+                        .art_bot{
+                            .texts{
+                                p{
+                                    width: 90%;
+                                }
+                            } 
+                        }
+                    }
+                }
+                .cnl{
+                    article{
+                        width: 100%;
+                        &:nth-of-type(n+7){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #wrapper{
+        .container{
+            .gnb{
+                display: none;
+            }
+            .content{
+                width: 100%;
+            }
+        }    
+    }
+}
+
+@media (max-width:480px) {
+    #wrapper{
+        .container{
+            margin-top: 40px;
+            .content{
+                height: 880px;
+                .cnt{
+                    article{
+                        padding: 20px 0;
+                        &:first-child{
+                            padding-top: 40px;
+                        }
+                        .art_top{
+                            h4{
+                                font-size: 14px;
+                                font-weight: 500;
+                                i{
+                                    font-size: 20px;
+                                    margin-right: 2px;
+                                }
+                            }
+                            .tip{
+                                font-size: 14px;
+                                font-weight: 500;
+                                i{
+                                    font-size: 20px;
+                                    margin-right: 3px;
+                                }
+                            }
+                        }
+                        .art_bot{
+                            align-items: flex-start;
+                            .texts{
+                                p{
+                                    width: 100%;
+                                }
+                            } 
+                        }
+                    }
+                }
+                .cnl{
+                    article{
+                        padding: 20px 10px;
                     }
                 }
             }
