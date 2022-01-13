@@ -3,26 +3,38 @@
 <!-- @@block main -->
 
 <!-- wrapper -->
-<div id="wrapper">  
+<div id="wrapper">
 
-<!-- @@include ../page_include/header.html -->
+    <!-- @@include ../page_include/header.html -->
 
     <!-- main -->
-    <main>
-        <section>
-            <div class="silder">
-                <div class="btn prev"><i class="fas fa-angle-left"></i></div>
-                <div class="btn next"><i class="fas fa-angle-right"></i></div>
-            </div>
-            <div class="btns">
-                <button></button>
-                <button></button>
-                <button class="opacity"></button>
-            </div>
+    <main class="swiper mySwiper">
+        <section class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
         </section>
+        <div class="btn button-next"><i class="fas fa-angle-right"></i></div>
+        <div class="btn button-prev"><i class="fas fa-angle-left"></i></div>
+        <div class="pagination"></div>
     </main>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+        });
+    </script>
     <!-- //main -->
-    
+
     <!-- container -->
     <div class="container">
         <section class="focus">
@@ -90,7 +102,7 @@
         <!-- @@include ../page_include/gnb.html -->
     </div>
     <!-- //container -->
-    
+
     <!-- content -->
     <div class="contents content">
         <h3>팁리치 추천 컨텐츠</h3>
@@ -158,7 +170,7 @@
         </section>
     </div>
     <!-- //content -->
-    
+
     <!-- channel -->
     <div class="contents channel">
         <h3>팁리치 추천 채널</h3>
@@ -169,7 +181,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -180,7 +192,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -191,7 +203,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -202,7 +214,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -213,7 +225,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -224,7 +236,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -235,7 +247,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -246,7 +258,7 @@
                     <h4>스텔라의 서울일기</h4>
                     <h5>인물사람 &#124; 포스트 102 &#124; 구독자 10</h5>
                     <p>
-                        일생을 요샛말로 ‘아싸’로 살았다. 
+                        일생을 요샛말로 ‘아싸’로 살았다.
                         <br>어려서도 아이들과 어울리지 못했다.
                     </p>
                 </div>
@@ -255,9 +267,9 @@
     </div>
     <!-- //channel -->
 
-<!-- @@include ../page_include/footer.html -->
+    <!-- @@include ../page_include/footer.html -->
 
 </div>
 <!-- //wrapper -->
-  
+
 <!-- @@close -->
