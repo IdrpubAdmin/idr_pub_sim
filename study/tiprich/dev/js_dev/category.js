@@ -1,20 +1,20 @@
-const menuBtn = document.querySelector('.menubtn');
-const menuDrop = document.querySelector('.menudrop');
+const menuBtn = document.querySelector('.menu_btn');
+const menuDrop = document.querySelector('.menu_drop');
 
 menuBtn.addEventListener('click', () => {
     menuDrop.classList.toggle('active');
 });
 
-const barsbtn = document.querySelector('.barsbtn');
-const mnwrap = document.querySelector('.mnwrap');
+const barsbtn = document.querySelector('.bars_btn');
+const mnwrap = document.querySelector('.mn_wrap');
 
 barsbtn.addEventListener('click', () => {
-    mnwrap.classList.toggle('navdrop');
+    mnwrap.classList.toggle('nav_drop');
 });
 
-const cntbtn = document.querySelector('.cntbtn');  
-const cnlbtn = document.querySelector('.cnlbtn');  
-const cnt = document.querySelector('.cnt');  
+const cntbtn = document.querySelector('.cnt_btn');  
+const cnlbtn = document.querySelector('.cnl_btn');  
+const cnt = document.querySelector('.cnts');  
 const cnl = document.querySelector('.cnl');  
 
 cntbtn.addEventListener('click', () => {

@@ -1,60 +1,11 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!-- @@master ../layout_tiprich_tmeplate_index.html -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팁리치</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="../static/plugin/swiper.js" defer></script>
-    <script src="../static/js/main.js" defer></script>
-</head>
-
-<body>
+<!-- @@block main -->
 
 <!-- wrapper -->
 <div id="wrapper">
 
-    <!-- header -->
-    <header id="header">
-        <section>
-            <h1>
-                <a href="main.html"><img src="../static/images/logo.png" alt="로고"></a>
-            </h1>
-            <ul class="nav">
-                <li>
-                    <input type="search" placeholder="검색">
-                </li>
-                <li class="menu_btn">카테고리
-                    <div class="menu_drop">
-                        <h2><a href="category.html">정치/시사</a></h2>
-                        <h2>건강/운동</h2>
-                        <h2>책/그림/웹툰</h2>
-                        <h2>경제활동</h2>
-                        <h2>경제</h2>
-                        <h2>취미생활</h2>
-                        <h2>부동산</h2>
-                    </div>
-                </li>
-                <li><a href="#none">채널신청</a></li>
-                <li>
-                    <a href="#none"><img src="../static/images/layer-50.png" alt="로그인">로그인</a>
-                </li>
-            </ul>
-            <div class="bars_btn"><i class="fas fa-bars"></i></div>
-        </section>
-    </header>
-    <div class="mn_wrap nav_drop">
-        <menu>
-            <h3><a href="##none">로그인</a></h3>
-            <h3><a href="category.html">카테고리</a></h3>
-            <h3><a href="##none">채널신청</a></h3>
-            <input type="search" placeholder="검색">
-        </menu>
-    </div>
-    <!-- //header -->
+    <!-- @@include ../page_include/header.html -->
 
     <!-- main 메인이미지-->
     <main class="mySwiper">
@@ -163,27 +114,7 @@
 
         <!-- //포커스 채널 -->
 
-        <!-- gnb -->
-        <section class="gnb">
-            <h3>카테고리</h3>
-            <article>
-                <div class="nav">
-                    <h2><a href="category.html">정치/시사</a></h2>
-                    <h2><a href="#none">건강/운동</a></h2>
-                    <h2><a href="#none">책/그림/웹툰</a></h2>
-                    <h2><a href="#none">건강/운동</a></h2>
-                    <h2><a href="#none">책/그림</a></h2>
-                    <h2><a href="category.html">정치/시사</a></h2>
-                    <h2><a href="#none">경제활동</a></h2>
-                    <h2><a href="#none">경제</a></h2>
-                    <h2><a href="#none">취미생활</a></h2>
-                    <h2><a href="#none">부동산</a></h2>
-                    <h2><a href="#none">취미</a></h2>
-                    <h2><a href="#none">경제활동</a></h2>
-                </div>
-            </article>
-        </section>
-        <!-- //gnb -->
+        <!-- @@include ../page_include/gnb.html -->
     </div>
     <!-- //container -->
 
@@ -421,27 +352,9 @@
     </div>
     <!-- //추천 채널 -->
 
-    <!-- footer -->
-    <footer id="footer">
-        <section>
-            <h1>
-                <a href="#"><img src="../static/images/logo.png" alt="로고"></a>
-            </h1>
-            <address>
-                <ul>
-                    <li>(주)팁리치 코리아</li>
-                    <li>서울특별시 마포구 연회로 11, 5층 552호 &#124; 대표 : 이세희 &#124; <br>사업자등록번호 : 461-87-01428 &#124; 대표번호 : <a href="tel:02-6408-5200">02-6408-5200</a> &#124; <a href="mailto:mrclick@tiprich.com">mrclick@tiprich.com</a> </li>
-                    <li>Copyright TIPRICH&#64;2020.all rights reserved.</li>
-                </ul>
-            </address>
-        </section>
-    </footer>
-    <!-- //footer -->
+    <!-- @@include ../page_include/footer.html -->
 
 </div>
 <!-- //wrapper -->
 
-
-</body>
-
-</html>
+<!-- @@close -->

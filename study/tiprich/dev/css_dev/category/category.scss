@@ -1,5 +1,3 @@
-@import url(reset.css);
-@import url(common.css);
 @mixin fonts ($fz, $fw, $c){
     font-size: #{$fz}px;
     font-weight: #{$fw};
@@ -7,7 +5,7 @@
 }
 
 #wrapper{
-    .container{
+    .category{
         max-width: 1200px;
         width: 95%;
         margin: 0 auto;
@@ -69,11 +67,11 @@
                         margin-right: 16px;
                     }
                 }
-                ul{
+                nav{
                     display: flex;
                     margin-top: 20px;
                     align-items: center;
-                    li{
+                    p{
                         width: 170px;
                         text-align: center;
                         height: 60px;
@@ -95,7 +93,7 @@
                 width: 100%;
                 position: absolute;
             }
-            .cnt{
+            .cnts{
                 article{
                     border-bottom: 1px solid #ccc;
                     padding: 30px 0;
@@ -139,17 +137,17 @@
                         .image{
                             width: 60px;
                             height: 60px;
-                            background-image: url(../img/layer-42.png);
-                            background-position: center;
-                            background-size: cover;
+                            img{
+                                width: 100%;
+                            }
                         }
                         .texts{
                             width: calc(100% - 80px);
-                            p{
+                            p:first-of-type{
                                 @include fonts(16, 400, #666);
                                 line-height: 20px;
                             }
-                            h6{
+                            p:last-of-type{
                                 @include fonts(14, 400, #666);
                                 line-height: 20px;
                                 margin-top: 10px;
@@ -175,10 +173,10 @@
                     .image{
                         width: 60px;
                         height: 60px;
-                        background-image: url(../img/layer-42.png);
-                        background-position: center;
-                        background-size: cover;
-                        margin-right: 20px
+                        margin-right: 20px;
+                        img{
+                            width: 100%;
+                        }
                     }
                     .texts{
                         h4{
@@ -199,7 +197,7 @@
 
 @media (max-width:1024px) {
     #wrapper{
-        .container{
+        .category{
             .gnb{
                 article{
                     width: 200px;
@@ -239,7 +237,7 @@
 
 @media (max-width:768px) {
     #wrapper{
-        .container{
+        .category{
             .gnb{
                 display: none;
             }
@@ -252,7 +250,7 @@
 
 @media (max-width:480px) {
     #wrapper{
-        .container{
+        .category{
             margin-top: 40px;
             .content{
                 height: 880px;
