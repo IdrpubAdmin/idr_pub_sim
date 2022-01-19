@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARKET Receipt</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/js/receipt.js" defer></script>
+</head>
+<body>
+    <div class="cnts-wrap tax">
+        <div class="content">
+            <header>
+                <h2>세금계산서 인쇄</h2>
+                <button class="close">닫기</button>
+            </header>
+            <section>
+                <img src="../static/images/bg-taxreceipit-01.png" alt="세금계산서">
+            </section>
+            <aside>
+                <ul>
+                    <li>1)본 전자금계산서는 공인인증서를 사용하여 전자서명한 세금계산서로 서명법에 의거 법적 효력을 갖는 문서입니다.</li>
+                    <li>2)본 세금계산서는 <a href="#none">www.esero.go.kr</a>에서도 확인할 수 있습니다.</li>
+                </ul>
+                <div class="btns">
+                    <button class="close-btn">닫기</button>
+                    <button class="print-btn">인쇄하기</button>
+                </div>    
+            </aside>
+        </div>
+    </div>
+    <div class="cnts-wrap cash">
+        <div class="content">
+            <header>
+                <h2>현금 영수증 인쇄</h2>
+                <button class="close">닫기</button>
+            </header>
+            <section>
+                <img src="../static/images/bg-receipt-cash.png" alt="현금영수증">
+            </section>
+            <div class="btns">
+                <button class="close-btn">닫기</button>
+                <button class="print-btn">인쇄하기</button>
+            </div>    
+        </div>
+    </div>
+    <div class="main-btns">
+        <button class="tax-btn">세금계산서 인쇄</button>
+        <button class="cash-btn">현금영수증 인쇄</button>
+    </div>
+</body>
+</html>
