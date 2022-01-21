@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url(normalize_v8.0.1.css);
 @import url(normalize_v3.0.3.css);
 @import url(reset.css);
+
+@mixin fonts ($fz, $fw, $lh, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    line-height: #{$lh}px;
+    color: $c;
+}
+
+@media print {
+    button{
+        display: none;
+    }
+}
+
 body{
     position: relative;
 }
@@ -28,6 +43,42 @@ body{
         position: absolute;
         top: 0; bottom: 0; right: 0; left: 0;
         margin: auto ;
+        padding: 48px 15px 0;
+        background-color: #fff;
+        section{
+            margin-top: 23px;
+        }
+        .top-btn{
+            position: absolute;
+            top: 26px; right: 18px;
+            background-color: #fff;
+            @include fonts(14, 500, 20, #333);
+        }
+        header{
+            text-align: center;
+            h2{
+                @include fonts(20, 400, 20, #000);
+            } 
+        }
+        .btns{
+            width: 100%;
+            display: flex;
+            .bot-bnt{
+                width: calc(50% - 8px);
+                height: 50px;
+                &:first-of-type{
+                    background-color: #fff;
+                    border: 1px solid #000;
+                    font-size: 18px;
+                    margin-right: 16px;
+                }
+                &:last-of-type{
+                    background-color: #000;
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
 
@@ -35,8 +86,17 @@ body{
     display: none;
     .content{
         width: 670px;
-        background-color: #fff;
-        section{
+        height: 780px;      
+        aside{
+            margin-top: 20px;
+            ul{
+                li{
+                    @include fonts(12, 400, 20, #010101);
+                }
+            }
+            .btns{
+                margin-top: 30px;
+            }
         }
     }
 }
@@ -45,7 +105,9 @@ body{
     .content{
         width: 381px;
         height: 840px;
-        background-color: #fff;
+        .btns{
+            margin-top: 37px;
+        }
     }
 }
 .active{

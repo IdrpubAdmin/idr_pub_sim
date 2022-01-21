@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url(normalize_v8.0.1.css);
 @import url(normalize_v3.0.3.css);
 @import url(reset.css);
+@media print {
+  button {
+    display: none;
+  }
+}
+
 body {
   position: relative;
 }
@@ -35,6 +42,59 @@ body {
   right: 0;
   left: 0;
   margin: auto;
+  padding: 48px 15px 0;
+  background-color: #fff;
+}
+
+.cnts-wrap .content section {
+  margin-top: 23px;
+}
+
+.cnts-wrap .content .top-btn {
+  position: absolute;
+  top: 26px;
+  right: 18px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #333;
+}
+
+.cnts-wrap .content header {
+  text-align: center;
+}
+
+.cnts-wrap .content header h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+}
+
+.cnts-wrap .content .btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cnts-wrap .content .btns .bot-bnt {
+  width: calc(50% - 8px);
+  height: 50px;
+}
+
+.cnts-wrap .content .btns .bot-bnt:first-of-type {
+  background-color: #fff;
+  border: 1px solid #000;
+  font-size: 18px;
+  margin-right: 16px;
+}
+
+.cnts-wrap .content .btns .bot-bnt:last-of-type {
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
 }
 
 .tax {
@@ -43,7 +103,22 @@ body {
 
 .tax .content {
   width: 670px;
-  background-color: #fff;
+  height: 780px;
+}
+
+.tax .content aside {
+  margin-top: 20px;
+}
+
+.tax .content aside ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #010101;
+}
+
+.tax .content aside .btns {
+  margin-top: 30px;
 }
 
 .cash {
@@ -53,7 +128,10 @@ body {
 .cash .content {
   width: 381px;
   height: 840px;
-  background-color: #fff;
+}
+
+.cash .content .btns {
+  margin-top: 37px;
 }
 
 .active {
