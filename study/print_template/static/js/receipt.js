@@ -28,3 +28,11 @@ cashOpen.addEventListener('click', function(){
         cashCnts.classList.add('active');
     }
 });
+
+const printBtn = document.querySelectorAll('.print-btn');
+
+printBtn.forEach((targetPrint) => {
+    targetPrint.addEventListener('click', () =>{
+        window.print();
+    });
+});

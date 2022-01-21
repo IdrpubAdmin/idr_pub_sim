@@ -5,20 +5,36 @@ body {
   position: relative;
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 160px 0;
+}
+
+.container .main-btns button {
+  padding: 20px 30px;
+  border: 5px solid #000;
+  background-color: #fff;
+  margin: 0 20px;
+}
+
 .cnts-wrap {
   width: 100%;
   height: 100vh;
   background: rgba(244, 244, 244, 0.9);
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.cnts-wrap .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .tax {
@@ -27,7 +43,6 @@ body {
 
 .tax .content {
   width: 670px;
-  height: 780px;
   background-color: #fff;
 }
 
