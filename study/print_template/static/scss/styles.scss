@@ -11,25 +11,38 @@
 }
 
 @media print {
+    header{
+        display: none;
+    }
     button{
         display: none;
     }
 }
 
 body{
+    font-family: "Noto Sans KR", serif;
     position: relative;
 }
 .container{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 160px 0;
+    padding-top: 500px;
     .main-btns{
+        width: 500px;
+        margin: 0 auto;
         button{
+            width: 200px;
             padding: 20px 30px;
             border: 5px solid #000;
             background-color: #fff;
             margin: 0 20px;
+            transition-property: "background-color", "color";
+            transition-duration: 0.3s;
+            &:hover{
+                background-color: rgb(150, 135, 135);
+                color: #fff;
+            }
         }
     }
 }
@@ -52,7 +65,7 @@ body{
             position: absolute;
             top: 26px; right: 18px;
             background-color: #fff;
-            @include fonts(14, 500, 20, #333);
+            @include fonts(14, 300, 20, #333);
         }
         header{
             text-align: center;
@@ -86,7 +99,39 @@ body{
     display: none;
     .content{
         width: 670px;
-        height: 780px;      
+        height: 780px;
+        section{ 
+            position: relative;
+            .tax-table{
+                position: absolute;
+                top: 0; left: 0;
+                width: 640px;          
+                border-collapse: collapse;
+                font-family: "돋움", "Dotum", serif;
+                tr{
+                    td{
+                        padding-left: 5px;
+                        vertical-align: middle;
+                        @include fonts(12, 500, 12, #010101);
+                    }
+                }
+                .tr1{
+                    td{
+                        text-indent: 450px;     
+                    }
+                }
+                .tr2{
+                    td{
+                        text-align: center;
+                        padding: 0;
+                        .left{
+                            text-align: left;
+                            text-indent: 5px;
+                        }         
+                    }
+                }
+            }
+        }
         aside{
             margin-top: 20px;
             ul{
@@ -105,6 +150,40 @@ body{
     .content{
         width: 381px;
         height: 840px;
+        section{
+            position: relative;
+            .cash-table{
+                position: absolute;
+                top: 10px; left: 9px; 
+                width: 333px;
+                border-collapse: collapse;
+                font-family: "돋움", "Dotum", serif;
+                tr{
+                    td{
+                        padding-top: 12px;
+                        text-indent: 5px;
+                        vertical-align: middle;
+                        @include fonts(12, 500, 12, #010101);
+                    }
+                }
+                .tr1{
+                    td{
+                        padding: 0;
+                        table{
+                            tr{
+                                td{
+                                    padding-top: 12px;
+                                }
+                                .right{
+                                    text-align: right;
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .btns{
             margin-top: 37px;
         }
