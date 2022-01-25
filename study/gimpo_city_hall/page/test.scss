@@ -1,0 +1,28 @@
+.gnb{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 160px 0;
+    .gnb-item{
+        width: 20%;    
+        a{
+            font-size: 40px;
+        }
+        .depth{
+            margin-top: 40px;
+            background-color: rgb(85, 168, 209);
+            height: 0;
+            overflow: hidden;
+            transition: height, 0.3s ;
+            ul{
+                li{
+                    font-size: 20px;    
+                    line-height: 40px;
+                }
+            }
+        }     
+        .active{
+            height: 200px;
+        }
+    }
+}
