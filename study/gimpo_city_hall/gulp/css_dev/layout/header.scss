@@ -1,0 +1,106 @@
+@mixin font ($fz, $fw, $c){
+    font-size: #{$fz}px;
+    font-weight: #{$fw};
+    color: $c;
+}
+header{
+    .gnb-wrap{
+        background-color: #eee;
+        .gnb{
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .gnb-area{
+                display: flex;
+                li{
+                    background-color: rgb(20, 6, 100);
+                    padding: 0 20px;
+                    @include font(16, 700, #fff);
+                    line-height: 45px;
+                    margin-right: 1px;
+                    &:hover{
+                        text-decoration: underline;                        
+                    }
+                }
+            }
+            .sub-area{
+                display: flex;
+                li{
+                    @include font(16, 500, #000);
+                    line-height: 45px;
+                    &:first-of-type{
+                        a::after{
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 13px;
+                            background-color: #b0b1b2;
+                            transform: rotate(20deg);  
+                            margin: 0 10px;
+                        }
+                    }
+                }
+                .select{
+                    select{
+
+                    }
+                }
+            }
+        }
+    }        
+    .logo-wrap{
+        padding: 10px 0;
+        .logo-area{
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            h1{
+                a{
+                    img{
+                        width: 140px;
+                    }
+                }
+            }
+            .search{
+                select{
+                }
+            }
+            input{}
+            .icon{
+            }
+        }
+    }
+    .lnb-wrap{
+        .lnb{
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            .lnb-area{
+                display: flex;
+                justify-content: space-between;
+                .lnb-item{
+                    width: calc(100% / 7);
+                    .snb{
+                        max-width: none;
+                        width: auto;
+                        width: 1000px;
+                        .snb-title{
+                            strong{}
+                            p{}
+                        }
+                        .snb-area{
+                            .snb-item{
+                                .nav{
+                                    li{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
