@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <TITLE> New Document </TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <META NAME="Keywcords" CONTENT="">
+    <META NAME="Description" CONTENT="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        header {
+            height: 50px;
+            margin-top: 20px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        nav {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        nav>ul.clearfix {}
+
+        nav>ul.clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        nav>ul>li {
+            float: left;
+            line-height: 50px;
+            margin-right: 40px;
+        }
+        nav>ul>li>ul>li:hover {
+            color: #09c;
+        }
+
+        nav>ul>li ul {
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </BODY>
+    <script>
+        $(function () {
+            var $firstMenu = $('nav > ul > li '),
+                $nav = $('nav'),
+                $header = $('header');
+
+            $firstMenu.click(function () {
+                $header.stop().animate({ height: '300px' }, 300);
+            });
+
+            $nav.mouseleave(function () {
+                $header.stop().animate({ height: '50px' }, 300);
+            });
+        });
+    </script>
+</HEAD>
+
+<BODY>
+    <header>
+        <nav>
+            <ul class="clearfix">
+                <li>경영계획 수립
+                    <ul>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                    </ul>
+                </li>
+                <li>자율경영 실행
+                    <ul>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                    </ul>
+                </li>
+                <li>성과측정
+                    <ul>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                    </ul>
+                </li>
+                <li>커뮤니케이션
+                    <ul>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                    </ul>
+                </li>
+                <li>시스템지원
+                    <ul>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                        <li>2nd menu</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</HTML>

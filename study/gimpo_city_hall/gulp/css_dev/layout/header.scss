@@ -14,6 +14,7 @@ header{
             justify-content: space-between;
             .gnb-area{
                 display: flex;
+                font-family: "GimpoTitle", sans-serif;
                 li{
                     background-color: rgb(20, 6, 100);
                     padding: 0 20px;
@@ -74,27 +75,116 @@ header{
         }
     }
     .lnb-wrap{
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        height: 60px;
+        font-family: "GimpoTitle", sans-serif;
         .lnb{
             max-width: 1240px;
             width: 100%;
+            position: relative;
             margin: 0 auto;
             .lnb-area{
                 display: flex;
                 justify-content: space-between;
                 .lnb-item{
                     width: calc(100% / 7);
+                    @include font(24, 500, #000);
+                    line-height: 59px;
                     .snb{
-                        max-width: none;
-                        width: auto;
-                        width: 1000px;
+                        display: flex;
+                        position: absolute;
+                        width: 1540px;
+                        height: 0px;
+                        left: -300px;
+                        top: 59px;
+                        transition: all 0.3s;
+                        overflow: hidden;
+                        &.snb1{
+                            &.active{
+                                height: 600px;
+                            }
+                        }
+                        &.snb2{
+                            &.active{
+                                height: 700px;
+                            }
+                        }
+                        &.snb3{
+                            &.active{
+                                height: 800px;
+                            }
+                        }
+                        &.snb4{
+                            &.active{
+                                height: 700px;
+                            }
+                        }
+                        &.snb5{
+                            &.active{
+                                height: 370px;
+                            }
+                        }
+                        &.snb6{
+                            &.active{
+                                height: 500px;
+                            }
+                        }
                         .snb-title{
-                            strong{}
-                            p{}
+                            background-color: #468ae4;;
+                            width: 590px;
+                            direction: rtl;
+                            position: relative;
+                            z-index: -10;
+                            .image{
+                                position: absolute;
+                                background-repeat: no-repeat;
+                                z-index: -10;
+                            }
+                            .i1{
+                                width: 123px;
+                                height: 59px;
+                                top: 0; left: 120px;
+                                background-image: url(../images/lnb_bg_sprite01.png);
+                            }
+                            .i2{
+                                width: 233px;
+                                height: 72px;
+                                bottom: 0; left: 0;
+                                background-image: url(../images/lnb_bg_sprite02.png);
+                            }
+                            .i3{
+                                width: 303px;
+                                height: 262px;
+                                right: 12px; bottom: 65px;
+                                background-image: url(../images/lnb_bg_sprite03.png);
+                            }
+                            .texts{
+                                width: 290px;
+                                padding-top: 50px;
+                                strong{
+                                    @include font(18, 500, #fff);
+                                    line-height: 40px;
+                                }
+                                p{
+                                    @include font(14, 300, #fff);
+                                    line-height: 20px;
+                                }
+                            }      
                         }
                         .snb-area{
+                            width: calc(100% - 290px);
+                            display: flex;
+                            flex-wrap: wrap;
+                            font-family: "Noto Sans KR", sans-serif;
                             .snb-item{
+                                width: calc(100% / 5);
+                                @include font(18, 500, #000);
                                 .nav{
-                                    li{}
+                                    li{
+                                        @include font(16, 500, #000);
+                                        line-height: 20px;
+                                    }
                                 }
                             }
                         }
