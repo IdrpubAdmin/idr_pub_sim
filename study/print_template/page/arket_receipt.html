@@ -15,8 +15,8 @@
     <!-- container -->
     <div class="container">
         <div class="main-btns">
-            <button onclick="toggleModal('.tax')" class="open tax-btn">세금계산서 인쇄</button>
-            <button onclick="toggleModal('.cash')" class="open cash-btn">현금영수증 인쇄</button>
+            <button name="tax" class="tax-btn btn-open">세금계산서 인쇄</button>
+            <button name="cash" class="cash-btn btn-open">현금영수증 인쇄</button>
         </div>
     </div>
     <!-- //container -->
@@ -29,6 +29,7 @@
             <div class="cnts-title">
                 <h2>세금계산서 인쇄</h2>
             </div>
+
             <!-- 세금계산서 미리보기 -->
             <section>
                 <img src="../static/images/bg-taxreceipit-01.png" alt="세금계산서">
@@ -208,6 +209,7 @@
             <div class="cnts-title">
                 <h2>현금 영수증 인쇄</h2>
             </div>
+            
             <!-- 현금 영수증 미리보기 -->
             <section>
                 <img src="../static/images/bg-receipt-cash.png" alt="현금영수증">

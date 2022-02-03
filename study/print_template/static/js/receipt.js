@@ -1,3 +1,21 @@
+var openBtn = document.querySelectorAll('.btn-open');
+var openClass;
+
+for(let i = 0; i < openBtn.length; i++){
+  openBtn[i].addEventListener('click', function(){
+    openClass = this.getAttribute('name');
+    document.querySelector('.' + openClass).classList.add('active');
+  });
+}
+
+function toggleModal(target){
+    document.querySelector(target).classList.remove('active');
+}
+
+function printBtn(){
+    window.print();
+}
+
 // const taxOpen = document.querySelector('.tax-btn');
 // const cashOpen = document.querySelector('.cash-btn');
 // const taxCnts = document.querySelector('.tax');
@@ -35,14 +53,6 @@
 //     });
 // });
 
-// function toggleModal(target){
-//     document.querySelector(target).classList.toggle('active');
-// }
-
-// function printBtn(){
-//     window.print();
-// }
-
 // const openB = document.querySelector('.open');
 // const openA = document.querySelector('.cnts-wrap');
 
@@ -52,33 +62,31 @@
 
 
 
-var currentMenu;
-var menu = document.querySelector('.btns');
+// var currentMenu;
+// var menu = document.querySelector('.btns');
 
- function ClickHandler(e){
-  if (currentMenu) {
-    classList.remove('active');
-     }
-     e.target.classList.add('active'); 
-    currentMenu = e.target;
- }
+//  function ClickHandler(e){
+//   if (currentMenu) {
+//     classList.remove('active');
+//      }
+//      e.target.classList.add('active'); 
+//     currentMenu = e.target;
+//  }
  
- menu.addEventListener('click',ClickHandler); 
+//  menu.addEventListener('click',ClickHandler); 
 
-//tax-btn 버튼을 클릭하면 tax 모달창이 띄워진다(클래스 추가)
-//cash-btn 버튼을 클릭하면 cash 모달창이 띄워진다(클래스 추가)
-//close 버튼들을 누르면 모달창이 꺼진다(클래스 제거)
-//print 버튼들을 누르면 페이지가 인쇄된다
+// //tax-btn 버튼을 클릭하면 tax 모달창이 띄워진다(클래스 추가)
+// //cash-btn 버튼을 클릭하면 cash 모달창이 띄워진다(클래스 추가)
+// //close 버튼들을 누르면 모달창이 꺼진다(클래스 제거)
+// //print 버튼들을 누르면 페이지가 인쇄된다
 
-const open = document.getElementsByClassName('open');
-const modal = document.getElementsByClassName('cnts-wrap');
-const modalLength = document.getElementsByClassName('cnts-wrap').length;
+// const open = document.getElementsByClassName('open');
+// const modal = document.getElementsByClassName('cnts-wrap');
+// const modalLength = document.getElementsByClassName('cnts-wrap').length;
 
-for(let i = 0; i < open.length ; i++){
-    open.addEventListener('click', function(){
-        modal.classList.add('active');
-        console.log(modalLength);
-    });
-}
-
-
+// for(let i = 0; i < open.length ; i++){
+//     open.addEventListener('click', function(){
+//         modal.classList.add('active');
+//         console.log(modalLength);
+//     });
+// }
