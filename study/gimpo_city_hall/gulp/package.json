@@ -19,6 +19,7 @@
     "gulp-pug": "^5.0.0"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.16.7",
     "babelify": "^10.0.0",
     "del": "^6.0.0",
     "gulp-autoprefixer": "^8.0.0",

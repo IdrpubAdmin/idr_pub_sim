@@ -82,10 +82,11 @@ header{
         border-bottom: 1px solid #000;
         height: 60px;
         font-family: "GimpoTitle", sans-serif;
+        position: relative;
         .lnb{
             max-width: 1240px;
             width: 100%;
-            position: relative;
+            // position: relative;
             margin: 0 auto;
             .lnb-area{
                 display: flex;
@@ -95,55 +96,54 @@ header{
                     @include font(24, 500, #000);
                     line-height: 59px;
                     text-align: center;
-                    .snb{
-                        display: flex;
+                    .snb-wrap{
+                        width: auto;
+                        width: 100vw;
+                        background-color: #fff;
                         position: absolute;
-                        width: 1540px;
                         height: 0px;
-                        left: -300px;
                         top: 59px;
-                        transition: all 0.3s;
+                        left: 0; right: 0;
+                        margin: 0 auto;
+                        opacity: 0;
                         overflow: hidden;
-                        &.snb1{
-                            &.active{
-                                height: 600px;
+                        transition: all 0.3s;
+                        &.active{
+                            opacity: 1;
+                            &.snb-wrap1{
+                                height: 740px;
                             }
-                        }
-                        &.snb2{
-                            &.active{
-                                height: 700px;
+                            &.snb-wrap2{
+                                height: 730px;
                             }
-                        }
-                        &.snb3{
-                            &.active{
+                            &.snb-wrap3{
                                 height: 800px;
                             }
-                        }
-                        &.snb4{
-                            &.active{
-                                height: 700px;
+                            &.snb-wrap4{
+                                height: 640px;
                             }
-                        }
-                        &.snb5{
-                            &.active{
-                                height: 370px;
+                            &.snb-wrap5{
+                                height: 360px;
                             }
-                        }
-                        &.snb6{
-                            &.active{
+                            &.snb-wrap6{
                                 height: 500px;
                             }
                         }
+                    }
+                    .snb{
+                        display: flex;
+                        position: relative;
+                        width: 1540px;
+                        left: -150px;
+                        margin: 0 auto;
                         .snb-title{
                             background-color: #468ae4;;
                             width: 590px;
                             direction: rtl;
                             position: relative;
-                            z-index: -10;
                             .image{
                                 position: absolute;
                                 background-repeat: no-repeat;
-                                z-index: -10;
                             }
                             .i1{
                                 width: 123px;
@@ -166,8 +166,11 @@ header{
                             .texts{
                                 width: 290px;
                                 padding-top: 50px;
+                                text-align: left;
+                                position: relative;
+                                z-index: 10;
                                 strong{
-                                    @include font(18, 500, #fff);
+                                    @include font(30, 500, #fff);
                                     line-height: 40px;
                                 }
                                 p{
@@ -179,10 +182,14 @@ header{
                         .snb-area{
                             width: calc(100% - 290px);
                             display: flex;
+                            justify-content: space-between;
                             flex-wrap: wrap;
                             font-family: "Noto Sans KR", sans-serif;
+                            padding: 40px 0 40px 40px;
+                            row-gap: 40px;
+                            background-color: #fff;
                             .snb-item{
-                                width: calc(100% / 5);
+                                width: calc(100% / 5 - 10px);
                                 @include font(18, 500, #000);
                                 line-height: 20px;
                                 text-align: center;
@@ -200,10 +207,22 @@ header{
                                     transition: all 0.4s;
                                 }
                                 .nav{
+                                    margin-top: 20px;
                                     li{
-                                        @include font(16, 500, #000);
+                                        @include font(15, 500, #000);
                                         line-height: 20px;
                                         text-align: left;
+                                        margin-top: 10px;
+                                        &::before{
+                                            content: "-";
+                                            display: inline;
+                                            vertical-align: top;
+                                        }
+                                        a{
+                                            width: calc(100% - 20px);
+                                            padding-left: 5px;
+                                            display: inline-block;
+                                        }
                                         &:hover{
                                             a{
                                                 text-decoration: underline;
@@ -215,6 +234,97 @@ header{
                             }
                         }
                     }
+                    
+                    &:nth-of-type(6){
+                        .deg{
+                            width: 100%;
+                            height: 100%;
+                            display: inline-block;
+                            color: #fff;
+                            background-color: #ba1e24;
+                            transform: skewX(-24deg);
+                            span{
+                                width: 100%;
+                                height: 100%;
+                                display: inline-block;
+                               transform: skewX(24deg);
+                            }
+                        }
+                    }
+                    .snb-wrap5{
+                        .snb{
+                            .snb-area{
+                                .snb-group{
+                                    .snb-item{
+                                        width: 100%;
+                                        margin-top: 40px;
+                                        &:first-child{
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .snb-wrap6{         
+                        .snb{
+                            width: 1930px;
+                            left: 0;
+                            background-color: #3f62c4;
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 0 auto;
+                            .snb-area{
+                                width: 1240px;
+                                margin: 0 auto;                         
+                                padding: 40px 0;
+                                background-color: #3f62c4;
+                                .snb-item{
+                                    width: calc(100% / 7 - 50px);
+                                    .circle{
+                                        width: 90px;
+                                        height: 90px;
+                                        border-radius: 50%;
+                                        position: relative;
+                                        margin: 0 auto;
+                                        background-color: #fff;
+                                        .image{
+                                            width: 50px;
+                                            height: 50px;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            background-size: cover;
+                                            position: absolute;
+                                            top: 0; bottom: 0; left: 0; right: 0;
+                                            margin: auto;
+                                            transition: transform 0.3s;
+                                            &:hover{
+                                                transform: rotateY(180deg);
+                                            }
+                                        }
+                                        @for $i from 1 to 8 {
+                                            .i#{$i}{
+                                                background-image: url(../images/lnb_icon_sprite0#{$i}.png);
+                                            }                                                                                                
+                                        }
+                                    }
+                                }
+                            }
+                            .side-area{
+                                width: 1240px;
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: space-between;
+                                .side-item{
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .map{
+                    display: flex;
+                    align-items: center;
                 }
             }
         }
