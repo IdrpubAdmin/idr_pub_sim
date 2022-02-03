@@ -11,7 +11,7 @@
 }
 
 @media print {
-    header{
+    .cnts-title{
         display: none;
     }
     button{
@@ -60,6 +60,72 @@ body{
         background-color: #fff;
         section{
             margin-top: 23px;
+            table{
+                tr{
+
+                    // @for $w from 1 to 500 {
+                    //     .w#{$w}{
+                    //         width: #{$w}px;
+                    //     }                        
+                    // }
+                    // @for $h from 1 to 500 {
+                    //     .h#{$h}{
+                    //         height: #{$h}px;
+                    //     }                        
+                    // }
+
+                    .h20{height: 20px;}
+                    .h22{height: 22px;}
+                    .h30{height: 30px;}
+                    .h31{height: 31px;}
+                    .h36{height: 36px;}
+                    .h37{height: 37px;}
+                    .h41{height: 41px;}
+                    .h46{height: 46px;}
+                    .h52{height: 52px;}
+                    .h90{height: 90px;}
+
+                    .w13{width: 13px;}
+                    .w17{width: 17px;}
+                    .w18{width: 18px;}
+                    .w19{width: 19px;}
+                    .w20{width: 20px;}
+                    .w31{width: 31px;}
+                    .w32{width: 32px;}
+                    .w35{width: 35px;}
+                    .w40{width: 40px;}
+                    .w41{width: 41px;}
+                    .w50{width: 50px;}
+                    .w51{width: 51px;}
+                    .w52{width: 52px;}
+                    .w75{width: 75px;}
+                    .w79{width: 79px;}
+                    .w80{width: 80px;}
+                    .w83{width: 83px;}
+                    .w86{width: 86px;}
+                    .w87{width: 87px;}
+                    .w90{width: 90px;}
+                    .w91{width: 91px;}
+                    .w93{width: 93px;}
+                    .w100{width: 100px;}
+                    .w104{width: 104px;}
+                    .w109{width: 109px;}
+                    .w119{width: 119px;}
+                    .w122{width: 122px;}
+                    .w142{width: 142px;}
+                    .w144{width: 144px;}
+                    .w145{width: 145px;}
+                    .w147{width: 147px;}
+                    .w171{width: 171px;}
+                    .w191{width: 191px;}
+                    .w215{width: 215px;}
+                    .w224{width: 224px;}
+                    .w229{width: 229px;}
+                    .w240{width: 240px;}
+                    .w493{width: 493px;}
+                    
+                }
+            }
         }
         .top-btn{
             position: absolute;
@@ -67,7 +133,7 @@ body{
             background-color: #fff;
             @include fonts(14, 300, 20, #333);
         }
-        header{
+        .cnts-title{
             text-align: center;
             h2{
                 @include fonts(20, 400, 20, #000);

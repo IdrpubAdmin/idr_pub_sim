@@ -15,8 +15,8 @@
     <!-- container -->
     <div class="container">
         <div class="main-btns">
-            <button class="tax-btn">세금계산서 인쇄</button>
-            <button class="cash-btn">현금영수증 인쇄</button>
+            <button onclick="toggleModal('.tax')" class="open tax-btn">세금계산서 인쇄</button>
+            <button onclick="toggleModal('.cash')" class="open cash-btn">현금영수증 인쇄</button>
         </div>
     </div>
     <!-- //container -->
@@ -25,34 +25,33 @@
     <!-- 세금계산서 -->
     <div class="cnts-wrap tax">
         <div class="content">
-            <button class="top-btn close">닫기</button>
-            <header>
+            <button onclick="toggleModal('.tax')" class="top-btn close">닫기</button>
+            <div class="cnts-title">
                 <h2>세금계산서 인쇄</h2>
-            </header>
-
+            </div>
             <!-- 세금계산서 미리보기 -->
             <section>
                 <img src="../static/images/bg-taxreceipit-01.png" alt="세금계산서">
                 <table class="tax-table">
                     <tr class="tr1">
-                        <td colspan="10" style="height: 52px;">
+                        <td class="h52" colspan="10">
                             20211005-41000052-755aac2d
                         </td>
                     </tr>
                     <tr>
-                        <td rowspan="5" style="width: 20px"></td>
-                        <td style="width: 50px;"></td>
-                        <td style="width: 119px; height: 31px;">000-00-00000</td>
-                        <td style="width: 52px;"></td>
-                        <td style="width: 79px;">12345-45</td>
-                        <td rowspan="5" style="width: 19px;"></td>
-                        <td style="width: 50px;"></td>
-                        <td style="width: 119px;">131-04-53100</td>
-                        <td style="width: 52px;"></td>
-                        <td style="width: 80px;">12345-45</td>
+                        <td class="w20" rowspan="5"></td>
+                        <td class="w50"></td>
+                        <td class="w119 h31">000-00-00000</td>
+                        <td class="w52"></td>
+                        <td class="w79">12345-45</td>
+                        <td class="w19" rowspan="5"></td>
+                        <td class="w50"></td>
+                        <td class="w119">131-04-53100</td>
+                        <td class="w52"></td>
+                        <td class="w80">12345-45</td>
                     </tr>
                     <tr>
-                        <td style="height: 31px;"></td>
+                        <td class="h31"></td>
                         <td>주식회사 현대백화점</td>
                         <td></td>
                         <td>이동호</td>
@@ -62,13 +61,13 @@
                         <td>홍길동</td>
                     </tr>
                     <tr>
-                        <td style="width: 50px; height: 31px;"></td>
+                        <td class="w50 h31"></td>
                         <td colspan="3">서울 강남구 테헤란로98길 12</td>
-                        <td style="width: 50px;"></td>
+                        <td class="w50"></td>
                         <td colspan="3">서울 강남구 테헤란로98길 12</td>
                     </tr>
                     <tr>
-                        <td style="height: 46px;"></td>
+                        <td class="h46"></td>
                         <td>서비스, 소매</td>
                         <td></td>
                         <td>방송프로그램<br>제작, TV홈쇼<br>핑</td>
@@ -78,49 +77,49 @@
                         <td>유제품유통,온라인정보제공</td>
                     </tr>
                     <tr>
-                        <td style="width: 50px; height: 31px;"></td>
+                        <td class="w50 h31"></td>
                         <td colspan="3"></td>
-                        <td style="width: 50px;"></td>
+                        <td class="w50"></td>
                         <td colspan="3">jdjdidkddk@naver.com</td>
                     </tr>
                     <tr class="tr2">
                         <td colspan="10">
                             <table>
                                 <tr>
-                                    <td style="height: 20px;" colspan="28"></td>
+                                    <td class="h20" colspan="28"></td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 31px;" colspan="27"></td>
+                                    <td class="h31" colspan="27"></td>
                                     <td rowspan="2"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 35px; height: 22px;">2021</td>
-                                    <td style="width: 19px;">07</td>
-                                    <td style="width: 19px;">07</td>
-                                    <td style="width: 31px;">7</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
-                                    <td style="width: 13px;">5</td>
+                                    <td class="w35 h22">2021</td>
+                                    <td class="w19">07</td>
+                                    <td class="w19">07</td>
+                                    <td class="w31">7</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
+                                    <td class="w13">5</td>
                                 </tr>
                             </table>
                         </td>
@@ -129,22 +128,22 @@
                         <td colspan="10">
                             <table>
                                 <tr>
-                                    <td style="height: 41px;" colspan="4"></td>
+                                    <td class="h41" colspan="4"></td>
                                     <td colspan="5"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 40px; height: 20px;" colspan="2"></td>
-                                    <td style="width: 215px;"></td>
-                                    <td style="width: 40px;"></td>
-                                    <td style="width: 41px;"></td>
-                                    <td style="width: 80px;"></td>
-                                    <td style="width: 109px;"></td>
-                                    <td style="width: 83px;"></td>
-                                    <td style="width: 32px;"></td>
+                                    <td class="w40 h20" colspan="2"></td>
+                                    <td class="w215"></td>
+                                    <td class="w40"></td>
+                                    <td class="w40"></td>
+                                    <td class="w80"></td>
+                                    <td class="w109"></td>
+                                    <td class="w83"></td>
+                                    <td class="w32"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 20px; height: 30px;">07</td>
-                                    <td style="width: 20px;">31</td>
+                                    <td class="w20 h30">07</td>
+                                    <td class="w20">31</td>
                                     <td class="left">유제품유통,온라인정보제공</td>
                                     <td></td>
                                     <td>5</td>
@@ -154,8 +153,8 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 20px; height: 90px;"></td>
-                                    <td style="width: 20px;"></td>
+                                    <td class="w20 h90"></td>
+                                    <td class="w20"></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -171,15 +170,15 @@
                         <td colspan="10">
                             <table>
                                 <tr>
-                                    <td style="width: 493px; height: 20px;" colspan="5"></td>
-                                    <td style="width: 147px;" rowspan="2"></td>
+                                    <td class="w493 h20" colspan="5"></td>
+                                    <td class="w147" rowspan="2"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 121px; height: 22px;">67,950</td>
-                                    <td style="width: 100px;"></td>
-                                    <td style="width: 91px;"></td>
-                                    <td style="width: 90px;"></td>
-                                    <td style="width: 90px;"></td>
+                                    <td class="w122 h22">67,950</td>
+                                    <td class="w100"></td>
+                                    <td class="w91"></td>
+                                    <td class="w90"></td>
+                                    <td class="w90"></td>
                                 </tr>
                             </table>
                         </td>
@@ -194,8 +193,8 @@
                     <li>2)본 세금계산서는 <a href="#none">www.esero.go.kr</a>에서도 확인할 수 있습니다.</li>
                 </ul>
                 <div class="btns">
-                    <button class="bot-bnt close">닫기</button>
-                    <button class="bot-bnt print-btn">인쇄하기</button>
+                    <button onclick="toggleModal('.tax')" class="bot-bnt close">닫기</button>
+                    <button onclick="printBtn()" class="bot-bnt print-btn">인쇄하기</button>
                 </div>
             </aside>
         </div>
@@ -205,43 +204,42 @@
     <!-- 현금 영수증 -->
     <div class="cnts-wrap cash">
         <div class="content">
-            <button class="top-btn close">닫기</button>
-            <header>
+            <button onclick="toggleModal('.cash')" class="top-btn close">닫기</button>
+            <div class="cnts-title">
                 <h2>현금 영수증 인쇄</h2>
-            </header>
-
+            </div>
             <!-- 현금 영수증 미리보기 -->
             <section>
                 <img src="../static/images/bg-receipt-cash.png" alt="현금영수증">
                 <table class="cash-table">
                     <tr>
-                        <td style="height: 37px;" colspan="3"></td>
+                        <td class="h37" colspan="3"></td>
                     </tr>
                     <tr>
-                        <td style="width: 93px; height: 36px;">12345</td>
-                        <td style="width: 154px;">123456</td>
-                        <td style="width: 86px;">123456</td>
+                        <td class="w93 h36">12345</td>
+                        <td class="w145">123456</td>
+                        <td class="w86">123456</td>
                     </tr>
                     <tr class="tr1">
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="width: 229px; height: 36px;">현금(소득공제용)</td>
-                                    <td style="width: 104px;">승인</td>
+                                    <td class="w229 h36">현금(소득공제용)</td>
+                                    <td class="w104">승인</td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 37px;" colspan="3">43028023**********</td>
+                        <td class="h37" colspan="3">43028023**********</td>
                     </tr>
                     <tr class="tr1">
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="width: 75px; height: 36px;">** / **</td>
-                                    <td style="width: 171px;">2021-07-10 20:02:05</td>
-                                    <td style="width: 87px;">20210705</td>
+                                    <td class="w75 h36">** / **</td>
+                                    <td class="w171">2021-07-10 20:02:05</td>
+                                    <td class="w87">20210705</td>
                                 </tr>
                             </table>
                         </td>
@@ -250,31 +248,19 @@
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="width: 144px; height: 36px;" colspan="2">72227</td>
-                                    <td style="width: 51px;"></td>
-                                    <td style="width: 17px;"></td>
-                                    <td style="width: 17px;">6</td>
-                                    <td style="width: 18px;">6</td>
-                                    <td style="width: 17px;">8</td>
-                                    <td style="width: 17px;">6</td>
-                                    <td style="width: 17px;">6</td>
-                                    <td style="width: 18px;">8</td>
-                                    <td style="width: 17px;">8</td>
+                                    <td class="w144 h36" colspan="2">72227</td>
+                                    <td class="w51"></td>
+                                    <td class="w17"></td>
+                                    <td class="w17">6</td>
+                                    <td class="w18">6</td>
+                                    <td class="w17">8</td>
+                                    <td class="w17">6</td>
+                                    <td class="w17">6</td>
+                                    <td class="w18">8</td>
+                                    <td class="w17">8</td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 36px;" colspan="2">가맹점명</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>8</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>8</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 36px;" colspan="2">000-00-0000</td>
+                                    <td class="h36" colspan="2">가맹점명</td>
                                     <td></td>
                                     <td></td>
                                     <td>6</td>
@@ -286,7 +272,19 @@
                                     <td>8</td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 36px;">일시불</td>
+                                    <td class="h36" colspan="2">000-00-0000</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td class="h36">일시불</td>
                                     <td>6개월</td>
                                     <td></td>
                                     <td></td>
@@ -299,7 +297,7 @@
                                     <td>8</td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 36px;" colspan="2">5678</td>
+                                    <td class="h36" colspan="2">5678</td>
                                     <td></td>
                                     <td>4</td>
                                     <td>6</td>
@@ -311,11 +309,11 @@
                                     <td>8</td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 37px;" colspan="2">LG</td>
+                                    <td class="h37" colspan="2">LG</td>
                                     <td colspan="9">79450</td>
                                 </tr>
                                 <tr>
-                                    <td style="height: 36px;" colspan="2">김인원</td>
+                                    <td class="h36" colspan="2">김인원</td>
                                     <td colspan="9" class="right">211-87-21455</td>
                                 </tr>
                             </table>
@@ -325,21 +323,21 @@
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="width: 191px; height: 36px;">현대백화점</td>
-                                    <td style="width: 142px;">오버사이즈 티셔츠롱...</td>
+                                    <td class="w191 h36">현대백화점</td>
+                                    <td class="142">오버사이즈 티셔츠롱...</td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 36px;" colspan="3">서울 강동구 천호동 454-2</td>
+                        <td class="h36" colspan="3">서울 강동구 천호동 454-2</td>
                     </tr>
                     <tr class="tr1">
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="height: 36px; width: 109px;">1800-2233</td>
-                                    <td style="width: 224px;">알림</td>
+                                    <td class="w109 h36">1800-2233</td>
+                                    <td class="w224">알림</td>
                                 </tr>
                             </table>
                         </td>
@@ -348,8 +346,8 @@
                         <td colspan="3">
                             <table>
                                 <tr>
-                                    <td style="height: 36px; width: 93px;">00000</td>
-                                    <td style="width: 240px;">서명</td>
+                                    <td class="w93 h36">00000</td>
+                                    <td class="w240">서명</td>
                                 </tr>
                             </table>
                         </td>
@@ -359,8 +357,8 @@
             <!-- //현금 영수증 미리보기 -->
 
             <div class="btns">
-                <button class="bot-bnt close">닫기</button>
-                <button class="bot-bnt print-btn">인쇄하기</button>
+                <button onclick="toggleModal('.cash')" class="bot-bnt close">닫기</button>
+                <button onclick="printBtn()" class="bot-bnt print-btn">인쇄하기</button>
             </div>
         </div>
     </div>

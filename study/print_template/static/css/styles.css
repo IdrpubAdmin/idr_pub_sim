@@ -4,7 +4,7 @@
 @import url(normalize_v3.0.3.css);
 @import url(reset.css);
 @media print {
-  header {
+  .cnts-title {
     display: none;
   }
   button {
@@ -70,6 +70,198 @@ body {
   margin-top: 23px;
 }
 
+.cnts-wrap .content section table tr .h20 {
+  height: 20px;
+}
+
+.cnts-wrap .content section table tr .h22 {
+  height: 22px;
+}
+
+.cnts-wrap .content section table tr .h30 {
+  height: 30px;
+}
+
+.cnts-wrap .content section table tr .h31 {
+  height: 31px;
+}
+
+.cnts-wrap .content section table tr .h36 {
+  height: 36px;
+}
+
+.cnts-wrap .content section table tr .h37 {
+  height: 37px;
+}
+
+.cnts-wrap .content section table tr .h41 {
+  height: 41px;
+}
+
+.cnts-wrap .content section table tr .h46 {
+  height: 46px;
+}
+
+.cnts-wrap .content section table tr .h52 {
+  height: 52px;
+}
+
+.cnts-wrap .content section table tr .h90 {
+  height: 90px;
+}
+
+.cnts-wrap .content section table tr .w13 {
+  width: 13px;
+}
+
+.cnts-wrap .content section table tr .w17 {
+  width: 17px;
+}
+
+.cnts-wrap .content section table tr .w18 {
+  width: 18px;
+}
+
+.cnts-wrap .content section table tr .w19 {
+  width: 19px;
+}
+
+.cnts-wrap .content section table tr .w20 {
+  width: 20px;
+}
+
+.cnts-wrap .content section table tr .w31 {
+  width: 31px;
+}
+
+.cnts-wrap .content section table tr .w32 {
+  width: 32px;
+}
+
+.cnts-wrap .content section table tr .w35 {
+  width: 35px;
+}
+
+.cnts-wrap .content section table tr .w40 {
+  width: 40px;
+}
+
+.cnts-wrap .content section table tr .w41 {
+  width: 41px;
+}
+
+.cnts-wrap .content section table tr .w50 {
+  width: 50px;
+}
+
+.cnts-wrap .content section table tr .w51 {
+  width: 51px;
+}
+
+.cnts-wrap .content section table tr .w52 {
+  width: 52px;
+}
+
+.cnts-wrap .content section table tr .w75 {
+  width: 75px;
+}
+
+.cnts-wrap .content section table tr .w79 {
+  width: 79px;
+}
+
+.cnts-wrap .content section table tr .w80 {
+  width: 80px;
+}
+
+.cnts-wrap .content section table tr .w83 {
+  width: 83px;
+}
+
+.cnts-wrap .content section table tr .w86 {
+  width: 86px;
+}
+
+.cnts-wrap .content section table tr .w87 {
+  width: 87px;
+}
+
+.cnts-wrap .content section table tr .w90 {
+  width: 90px;
+}
+
+.cnts-wrap .content section table tr .w91 {
+  width: 91px;
+}
+
+.cnts-wrap .content section table tr .w93 {
+  width: 93px;
+}
+
+.cnts-wrap .content section table tr .w100 {
+  width: 100px;
+}
+
+.cnts-wrap .content section table tr .w104 {
+  width: 104px;
+}
+
+.cnts-wrap .content section table tr .w109 {
+  width: 109px;
+}
+
+.cnts-wrap .content section table tr .w119 {
+  width: 119px;
+}
+
+.cnts-wrap .content section table tr .w122 {
+  width: 122px;
+}
+
+.cnts-wrap .content section table tr .w142 {
+  width: 142px;
+}
+
+.cnts-wrap .content section table tr .w144 {
+  width: 144px;
+}
+
+.cnts-wrap .content section table tr .w145 {
+  width: 145px;
+}
+
+.cnts-wrap .content section table tr .w147 {
+  width: 147px;
+}
+
+.cnts-wrap .content section table tr .w171 {
+  width: 171px;
+}
+
+.cnts-wrap .content section table tr .w191 {
+  width: 191px;
+}
+
+.cnts-wrap .content section table tr .w215 {
+  width: 215px;
+}
+
+.cnts-wrap .content section table tr .w224 {
+  width: 224px;
+}
+
+.cnts-wrap .content section table tr .w229 {
+  width: 229px;
+}
+
+.cnts-wrap .content section table tr .w240 {
+  width: 240px;
+}
+
+.cnts-wrap .content section table tr .w493 {
+  width: 493px;
+}
+
 .cnts-wrap .content .top-btn {
   position: absolute;
   top: 26px;
@@ -81,11 +273,11 @@ body {
   color: #333;
 }
 
-.cnts-wrap .content header {
+.cnts-wrap .content .cnts-title {
   text-align: center;
 }
 
-.cnts-wrap .content header h2 {
+.cnts-wrap .content .cnts-title h2 {
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;

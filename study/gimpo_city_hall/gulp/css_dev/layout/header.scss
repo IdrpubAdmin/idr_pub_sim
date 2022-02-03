@@ -31,6 +31,9 @@ header{
                 li{
                     @include font(16, 500, #000);
                     line-height: 45px;
+                    &:hover{
+                        text-decoration: underline;                        
+                    }
                     &:first-of-type{
                         a::after{
                             content: "";
@@ -91,6 +94,7 @@ header{
                     width: calc(100% / 7);
                     @include font(24, 500, #000);
                     line-height: 59px;
+                    text-align: center;
                     .snb{
                         display: flex;
                         position: absolute;
@@ -180,10 +184,32 @@ header{
                             .snb-item{
                                 width: calc(100% / 5);
                                 @include font(18, 500, #000);
+                                line-height: 20px;
+                                text-align: center;
+                                &:hover{                 
+                                    .box{
+                                        color: #fff;
+                                        background-color: #468ae4;
+                                    }
+                                }
+                                .box{
+                                    display: inline-block;
+                                    width: 100%;
+                                    padding: 13px 5px;
+                                    border: 1px solid #cdcdcd;
+                                    transition: all 0.4s;
+                                }
                                 .nav{
                                     li{
                                         @include font(16, 500, #000);
                                         line-height: 20px;
+                                        text-align: left;
+                                        &:hover{
+                                            a{
+                                                text-decoration: underline;
+                                                font-weight: 700;
+                                            }
+                                        }
                                     }
                                 }
                             }

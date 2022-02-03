@@ -764,6 +764,8 @@ header .gnb-wrap {
         font-weight: 500;
         color: #000;
         line-height: 45px; }
+        header .gnb-wrap .gnb .sub-area li:hover {
+          text-decoration: underline; }
         header .gnb-wrap .gnb .sub-area li:first-of-type a::after {
           content: "";
           display: inline-block;
@@ -808,7 +810,8 @@ header .lnb-wrap {
         font-size: 24px;
         font-weight: 500;
         color: #000;
-        line-height: 59px; }
+        line-height: 59px;
+        text-align: center; }
         header .lnb-wrap .lnb .lnb-area .lnb-item .snb {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -886,11 +889,27 @@ header .lnb-wrap {
               width: calc(100% / 5);
               font-size: 18px;
               font-weight: 500;
-              color: #000; }
+              color: #000;
+              line-height: 20px;
+              text-align: center; }
+              header .lnb-wrap .lnb .lnb-area .lnb-item .snb .snb-area .snb-item:hover .box {
+                color: #fff;
+                background-color: #468ae4; }
+              header .lnb-wrap .lnb .lnb-area .lnb-item .snb .snb-area .snb-item .box {
+                display: inline-block;
+                width: 100%;
+                padding: 13px 5px;
+                border: 1px solid #cdcdcd;
+                -webkit-transition: all 0.4s;
+                transition: all 0.4s; }
               header .lnb-wrap .lnb .lnb-area .lnb-item .snb .snb-area .snb-item .nav li {
                 font-size: 16px;
                 font-weight: 500;
                 color: #000;
-                line-height: 20px; }
+                line-height: 20px;
+                text-align: left; }
+                header .lnb-wrap .lnb .lnb-area .lnb-item .snb .snb-area .snb-item .nav li:hover a {
+                  text-decoration: underline;
+                  font-weight: 700; }
 
 /*# sourceMappingURL=../css/styles.css.map */
