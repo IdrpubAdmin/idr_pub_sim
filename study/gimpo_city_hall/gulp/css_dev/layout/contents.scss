@@ -1,6 +1,10 @@
 .container{
-    img{
-        width: 100%;
-        margin: 0 auto;
-    }
+    max-width: 2560px;
+    min-width: 320px;
+    width: 100%;
+    height: 2677px;
+    margin: 0 auto;
+    background-image: url(../images/contents.png);
+    background-position: center;
+    background-size: cover;
 }

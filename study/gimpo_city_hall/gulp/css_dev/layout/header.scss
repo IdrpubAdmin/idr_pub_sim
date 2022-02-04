@@ -4,6 +4,7 @@
     color: $c;
 }
 header{
+    min-width: 320px;
     .gnb-wrap{
         background-color: #eee;
         .gnb{
@@ -21,6 +22,10 @@ header{
                     @include font(16, 700, #fff);
                     line-height: 45px;
                     margin-right: 1px;
+                    img{
+                        vertical-align: middle;
+                        margin-right: 5px;
+                    }
                     &:hover{
                         text-decoration: underline;                        
                     }
@@ -47,8 +52,13 @@ header{
                     }
                 }
                 .select{
+                    margin-left: 20px;
                     select{
-
+                        width: 140px;
+                        height: 30px;
+                        border: 0;
+                        border-radius: 15px;
+                        text-align: center;
                     }
                 }
             }
@@ -61,32 +71,66 @@ header{
             width: 100%;
             margin: 0 auto;
             display: flex;
+            align-items: center;
             h1{
                 a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
                     img{
                         width: 140px;
                     }
                 }
             }
             .search{
+                width: 450px;
+                display: flex;
+                position: absolute;
+                left: 0; right: 0;
+                margin: 0 auto;
                 select{
+                    width: 120px;
+                    border: 2px solid #cdcdcd;
+                    border-radius: 25px 0 0 25px;
+                    border-right: 0;
+                    height: 50px;
+                    text-indent: 20px;
                 }
+                input{
+                    width: 260px;
+                    height: 50px;
+                    border-top: 2px solid #cdcdcd;
+                    border-bottom: 2px solid #cdcdcd;
+                    border-left: 0;
+                    border-right: 0;
+                    text-indent: 20px;
+                }
+                .icon{
+                    width: 70px;
+                    height: 50px;
+                    border: 2px solid #cdcdcd;
+                    border-left: 0;
+                    border-radius: 0 25px 25px 0;
+                    background-color: #fff;
+                }
+            }       
+            .m-open{
+                display: none;
             }
-            input{}
-            .icon{
+            .m-search{
+                display: none;
             }
         }
     }
     .lnb-wrap{
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
+        border-top: 1px solid #cdcdcd;
+        border-bottom: 1px solid #cdcdcd;
         height: 60px;
         font-family: "GimpoTitle", sans-serif;
         position: relative;
         .lnb{
             max-width: 1240px;
             width: 100%;
-            // position: relative;
             margin: 0 auto;
             .lnb-area{
                 display: flex;
@@ -96,6 +140,20 @@ header{
                     @include font(24, 500, #000);
                     line-height: 59px;
                     text-align: center;
+                    &:nth-of-type(1),
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4){
+                        &::after{
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 15px;
+                            background-color: #cdcdcd;
+                            position: relative;
+                            margin-left: 45px;
+                        }
+                    }
                     .snb-wrap{
                         width: auto;
                         width: 100vw;
@@ -107,40 +165,57 @@ header{
                         margin: 0 auto;
                         opacity: 0;
                         overflow: hidden;
-                        transition: all 0.3s;
+                        transition: all 0.4s;
+                        border-bottom: 1px solid #cdcdcd;
+                        margin: 0 auto;
                         &.active{
                             opacity: 1;
                             &.snb-wrap1{
-                                height: 740px;
+                                height: 726px;
                             }
                             &.snb-wrap2{
-                                height: 730px;
+                                height: 716px;
                             }
                             &.snb-wrap3{
-                                height: 800px;
+                                height: 784px;
                             }
                             &.snb-wrap4{
-                                height: 640px;
+                                height: 616px;
                             }
                             &.snb-wrap5{
-                                height: 360px;
+                                height: 348px;
                             }
                             &.snb-wrap6{
-                                height: 500px;
+                                height: 330px;
                             }
                         }
+                    }
+                    .snb-over{
+                        margin: 0 auto;
+                        max-width: 1240px;
+                        width: 100%;
                     }
                     .snb{
                         display: flex;
                         position: relative;
-                        width: 1540px;
-                        left: -150px;
-                        margin: 0 auto;
+                        max-width: 1600px;
+                        width: 150%;
+                        left: -360px;            
+                        .image{
+                            width: 285px;
+                            height: 73px;
+                            position: absolute;
+                            bottom: 0;
+                            right: -300px;
+                            background-image: url(../images/lnb_bg_sprite04.png);
+                        }
                         .snb-title{
                             background-color: #468ae4;;
-                            width: 590px;
-                            direction: rtl;
+                            width: 630px;
                             position: relative;
+                            z-index: 1;
+                            display: flex;
+                            justify-content: flex-end;
                             .image{
                                 position: absolute;
                                 background-repeat: no-repeat;
@@ -148,13 +223,13 @@ header{
                             .i1{
                                 width: 123px;
                                 height: 59px;
-                                top: 0; left: 120px;
+                                top: 0; left: 200px;
                                 background-image: url(../images/lnb_bg_sprite01.png);
                             }
                             .i2{
                                 width: 233px;
                                 height: 72px;
-                                bottom: 0; left: 0;
+                                bottom: 0; left: 0px;
                                 background-image: url(../images/lnb_bg_sprite02.png);
                             }
                             .i3{
@@ -164,7 +239,7 @@ header{
                                 background-image: url(../images/lnb_bg_sprite03.png);
                             }
                             .texts{
-                                width: 290px;
+                                width: 270px;
                                 padding-top: 50px;
                                 text-align: left;
                                 position: relative;
@@ -180,7 +255,7 @@ header{
                             }      
                         }
                         .snb-area{
-                            width: calc(100% - 290px);
+                            width: calc(100% - 610px);
                             display: flex;
                             justify-content: space-between;
                             flex-wrap: wrap;
@@ -209,7 +284,7 @@ header{
                                 .nav{
                                     margin-top: 20px;
                                     li{
-                                        @include font(15, 500, #000);
+                                        @include font(15, 500, #343434);
                                         line-height: 20px;
                                         text-align: left;
                                         margin-top: 10px;
@@ -227,6 +302,7 @@ header{
                                             a{
                                                 text-decoration: underline;
                                                 font-weight: 700;
+                                                color: #000;
                                             }
                                         }
                                     }
@@ -234,7 +310,6 @@ header{
                             }
                         }
                     }
-                    
                     &:nth-of-type(6){
                         .deg{
                             width: 100%;
@@ -268,19 +343,39 @@ header{
                     }
                     .snb-wrap6{         
                         .snb{
-                            width: 1930px;
+                            max-width: 1930px;
+                            width: 100%;
                             left: 0;
                             background-color: #3f62c4;
                             display: flex;
                             flex-wrap: wrap;
                             margin: 0 auto;
                             .snb-area{
-                                width: 1240px;
+                                max-width: 1240px;
+                                width: 100%;
                                 margin: 0 auto;                         
                                 padding: 40px 0;
                                 background-color: #3f62c4;
+                                border-bottom: 1px solid #ccc;
                                 .snb-item{
                                     width: calc(100% / 7 - 50px);
+                                    a{
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 100%;
+                                        &:hover{
+                                            .circle{
+                                                .image{
+                                                    transform: rotateY(180deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    p{
+                                        color: #fff;
+                                        margin-top: 20px;
+                                        font-family: "GimpoTitle", sans-serif;
+                                    }
                                     .circle{
                                         width: 90px;
                                         height: 90px;
@@ -298,9 +393,7 @@ header{
                                             top: 0; bottom: 0; left: 0; right: 0;
                                             margin: auto;
                                             transition: transform 0.3s;
-                                            &:hover{
-                                                transform: rotateY(180deg);
-                                            }
+                                            
                                         }
                                         @for $i from 1 to 8 {
                                             .i#{$i}{
@@ -315,16 +408,258 @@ header{
                                 margin: 0 auto;
                                 display: flex;
                                 justify-content: space-between;
+                                padding: 30px 0;
                                 .side-item{
-
+                                    a{
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                    p{
+                                        font-size: 16px;
+                                        color: #fff;
+                                    }
+                                    img{
+                                        margin: 0 5px;
+                                    }
                                 }
                             }
                         }
                     }
                 }
                 .map{
+                    width: calc(100% / 14);
                     display: flex;
                     align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .mnb-wrap{
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        background-color: rgba(0,0,0,0.6);
+        transition: all 0.3s;
+        opacity: 0;
+        z-index: -100;
+        &.m-active{
+            opacity: 1;
+            z-index: 100;
+        }
+        .mnb{
+            width: 260px;
+            height: 100vh;
+            background-color: #fff;
+            position: relative;
+            left: -315px;
+            transition: all 0.3s;
+            &.m-slide{
+                left: 0px;
+            }
+            .mnb-menu{
+                background-color: #1d5da7;
+                display: flex;
+                text-align: center;
+                color: #fff;
+                .home{
+                    width: 50%;
+                    line-height: 50px;
+                    border-right: 1px solid #4a7db9;
+                }
+                .login{
+                    width: 50%;
+                    line-height: 50px;
+                }
+                button{
+                    width: 55px;
+                    height: 51px;
+                    position: absolute;
+                    left: 260px;
+                    top: 0;
+                    border: 0;
+                    background-color: #1d5da7;
+                }
+            }
+            .link{
+                background-color: #1d5da7;
+                border-top: 1px solid #4a7db9;
+                border-bottom: 1px solid #4a7db9;
+                padding: 20px 0;
+                ul{
+                    display: flex;
+                    justify-content: space-around;
+                    li{
+                        width: 33.33%;
+                        &:hover{
+                            a{
+                                p{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            .circle{
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 50%;
+                                background-color: #fff;
+                                margin: 0 auto;
+                                position: relative;
+                                .image{
+                                    width: 33px;
+                                    height: 33px;
+                                    background-position: center;
+                                    background-size: cover;
+                                    position: absolute;
+                                    top: 0; bottom: 0; right: 0; left: 0;
+                                    margin: auto;
+                                }
+                                @for $i from 1 to 4 {
+                                    .i#{$i}{
+                                        background-image: url(../images/m_gnb_sprite#{$i}.png);
+                                    }                                        
+                                }
+                            }
+                            p{
+                                text-align: center;
+                                color: #fff;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lang{
+                background-color: #0d2b4e;
+                color: #fff;
+                ul{
+                    display: flex;
+                    li{
+                        width: 33.33%;
+                        line-height: 40px;
+                        text-align: center;
+                        position: relative;
+                        &:nth-of-type(n+2){
+                            &::after{
+                                content:"";
+                                display: inline-block;
+                                position: absolute;
+                                top: 0; bottom: 0;
+                                margin: auto;
+                                left: 0;
+                                width: 1px;
+                                height: 15px;
+                                background-color: #566b83;                    
+                            }
+                        }
+                    }
+                }
+            }
+            .mnb-area{
+                .accordian{
+                    .drop{
+                        line-height: 49px;
+                        text-indent: 15px;
+                        border-bottom: 1px solid #cdcdcd;
+                        cursor: pointer;
+                        &.active{
+                            .mnb-item1{
+                                height: 300px;
+                            }
+                            .mnb-item2{
+                                height: 500px;
+                            }
+                            .mnb-item3{
+                                height: 550px;
+                            }
+                            .mnb-item4{
+                                height: 500px;
+                            }
+                            .mnb-item5{
+                                height: 350px;
+                            }
+                            .mnb-item6{
+                                height: 350px;
+                            }
+                        }
+                        .mnb-item{
+                            height: 0;
+                            overflow: hidden;
+                            transition: all 0.3s;
+                            li{
+                                background-color: #5f6577;
+                                border-bottom: 1px solid #7a7e8d;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .mnb-sub{
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-bottom: 1px solid #cdcdcd;
+                    li{
+                        text-align: center;
+                        width: 33.33%;
+                        line-height: 50px;
+                        border-bottom: 1px solid #cdcdcd;
+                        border-right: 1px solid #cdcdcd;
+                        &:nth-of-type(n+4){
+                            width: 50%;
+                        }
+                        &:nth-of-type(2n+3){
+                            border-right: 0;
+                        }
+                        &:nth-of-type(8){
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1240px){
+    header{
+        .gnb-wrap{
+            display: none;
+        }
+        .lnb-wrap{
+            display: none;
+        }
+        .logo-wrap{
+            padding: 10px;
+            .logo-area{
+                justify-content: space-between;
+                .m-open{
+                    display: block;
+                    background-color: #fff;
+                }
+                h1{
+                    a{
+                        img{
+                            width: 100px;
+                        }
+                    }
+                }
+                .search{
+                    display: none;
+                }
+                .m-search{
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    background-color: #01288b;
                 }
             }
         }
