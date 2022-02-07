@@ -728,6 +728,90 @@ input, button, textarea, select, option {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.popup-wrap {
+  background-color: #c2e6ff;
+  font-family: "GimpoTitle", sans-serif; }
+  .popup-wrap .popup {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .popup-wrap .popup section {
+      width: 880px; }
+      .popup-wrap .popup section .popup-title {
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; }
+        .popup-wrap .popup section .popup-title p {
+          font-size: 13px; }
+        .popup-wrap .popup section .popup-title h3 {
+          font-size: 26px;
+          line-height: 30px; }
+          .popup-wrap .popup section .popup-title h3 span {
+            color: #e83e30; }
+        .popup-wrap .popup section .popup-title a {
+          font-size: 13px; }
+      .popup-wrap .popup section table {
+        width: 100%;
+        margin-top: 10px; }
+        .popup-wrap .popup section table .tr1 {
+          color: #fff;
+          text-align: center;
+          line-height: 28px; }
+          .popup-wrap .popup section table .tr1 .td1 {
+            background-color: #122c73;
+            border-radius: 10px 0 0 0;
+            width: 190px; }
+          .popup-wrap .popup section table .tr1 .td2 {
+            background-color: #3d92f5;
+            width: 190px; }
+          .popup-wrap .popup section table .tr1 .td3 {
+            background-color: #3d92f5;
+            width: 100px; }
+          .popup-wrap .popup section table .tr1 .td4 {
+            background-color: #0b62bb;
+            border-radius: 0 10px 0 0; }
+        .popup-wrap .popup section table .tr2 {
+          background-color: #fff;
+          text-align: center; }
+          .popup-wrap .popup section table .tr2 td span {
+            font-size: 20px;
+            font-weight: 900; }
+          .popup-wrap .popup section table .tr2 td p {
+            margin-top: 5px;
+            font-size: 11px;
+            color: #666;
+            font-weight: 500; }
+          .popup-wrap .popup section table .tr2 .td1 {
+            width: 90px;
+            border-radius: 0 0 0 10px; }
+          .popup-wrap .popup section table .tr2 .td3 {
+            width: 95px; }
+          .popup-wrap .popup section table .tr2 .td6 {
+            width: 100px; }
+          .popup-wrap .popup section table .tr2 .td7 {
+            width: calc((100% - 100px) / 3); }
+            .popup-wrap .popup section table .tr2 .td7 span:nth-of-type(1) {
+              font-size: 12px; }
+            .popup-wrap .popup section table .tr2 .td7 span:nth-of-type(2) {
+              font-size: 16px;
+              color: #0b62bb; }
+          .popup-wrap .popup section table .tr2 .td8 {
+            width: calc((100% - 100px) / 3); }
+          .popup-wrap .popup section table .tr2 .td9 {
+            width: calc((100% - 100px) / 3);
+            border-radius: 0 0 10px 0; }
+
 header {
   min-width: 320px; }
   header .gnb-wrap {

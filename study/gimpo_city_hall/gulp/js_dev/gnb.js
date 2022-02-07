@@ -29,8 +29,8 @@ mClose.addEventListener('click', function(){
 const mBtn = document.querySelectorAll('.drop');
 const mDropDown = document.querySelectorAll('.mnb-item');
 
-for(let j = 0; j < mBtn.length; j++){
-   mBtn[j].addEventListener('click', function(e){
+for(let i = 0; i < mBtn.length; i++){
+   mBtn[i].addEventListener('click', function(e){
       for(let x = 0; x < mDropDown.length; x++){
          mDropDown[x].parentNode.classList.remove('active');
          e.target.classList.add('active');

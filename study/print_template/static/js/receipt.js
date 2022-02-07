@@ -3,7 +3,7 @@ var openClass;
 
 for(let i = 0; i < openBtn.length; i++){
   openBtn[i].addEventListener('click', function(){
-    openClass = this.getAttribute('name');
+    openClass = this.getAttribute('data-modal-btn');
     document.querySelector('.' + openClass).classList.add('active');
   });
 }
