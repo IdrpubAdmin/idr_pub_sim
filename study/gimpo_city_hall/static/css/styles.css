@@ -730,7 +730,14 @@ input, button, textarea, select, option {
 
 .popup-wrap {
   background-color: #c2e6ff;
-  font-family: "GimpoTitle", sans-serif; }
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  height: 167px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .popup-wrap.active {
+    height: 0;
+    overflow: hidden; }
   .popup-wrap .popup {
     max-width: 1240px;
     width: 100%;
@@ -738,7 +745,13 @@ input, button, textarea, select, option {
     padding: 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
     .popup-wrap .popup section {
       width: 880px; }
       .popup-wrap .popup section .popup-title {
@@ -764,6 +777,8 @@ input, button, textarea, select, option {
       .popup-wrap .popup section table {
         width: 100%;
         margin-top: 10px; }
+        .popup-wrap .popup section table td {
+          border: 1px solid #cdcdcd; }
         .popup-wrap .popup section table .tr1 {
           color: #fff;
           text-align: center;
@@ -786,9 +801,9 @@ input, button, textarea, select, option {
           text-align: center; }
           .popup-wrap .popup section table .tr2 td span {
             font-size: 20px;
-            font-weight: 900; }
+            font-weight: 900;
+            line-height: 40px; }
           .popup-wrap .popup section table .tr2 td p {
-            margin-top: 5px;
             font-size: 11px;
             color: #666;
             font-weight: 500; }
@@ -802,15 +817,40 @@ input, button, textarea, select, option {
           .popup-wrap .popup section table .tr2 .td7 {
             width: calc((100% - 100px) / 3); }
             .popup-wrap .popup section table .tr2 .td7 span:nth-of-type(1) {
-              font-size: 12px; }
+              font-size: 12px;
+              line-height: 12px; }
             .popup-wrap .popup section table .tr2 .td7 span:nth-of-type(2) {
               font-size: 16px;
+              line-height: 16px;
               color: #0b62bb; }
           .popup-wrap .popup section table .tr2 .td8 {
             width: calc((100% - 100px) / 3); }
           .popup-wrap .popup section table .tr2 .td9 {
             width: calc((100% - 100px) / 3);
             border-radius: 0 0 10px 0; }
+    .popup-wrap .popup ul {
+      width: calc(100% - 910px); }
+      .popup-wrap .popup ul li {
+        line-height: 20px;
+        margin-top: 10px; }
+        .popup-wrap .popup ul li span {
+          display: inline-block;
+          padding: 3px 20px;
+          margin-right: 10px;
+          text-align: center;
+          color: #fff;
+          border-radius: 10px;
+          background-color: #122c73; }
+  .popup-wrap .popup-btns {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .popup-wrap .popup-btns .popup-close {
+      background-color: transparent;
+      margin-right: 10px; }
 
 header {
   min-width: 320px; }
@@ -1348,7 +1388,11 @@ header {
         line-height: 49px;
         text-indent: 15px;
         border-bottom: 1px solid #cdcdcd;
-        cursor: pointer; }
+        cursor: pointer;
+        position: relative; }
+        header .mnb-wrap .mnb .mnb-area .accordian .drop.active em::before {
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg); }
         header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item1 {
           height: 300px; }
         header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item2 {
@@ -1361,6 +1405,28 @@ header {
           height: 350px; }
         header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item6 {
           height: 350px; }
+        header .mnb-wrap .mnb .mnb-area .accordian .drop em::before {
+          content: "";
+          top: 18px;
+          right: 22px;
+          width: 2px;
+          height: 16px;
+          -webkit-transition: -webkit-transform 0.3s;
+          transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+          transition: transform 0.3s, -webkit-transform 0.3s;
+          display: block;
+          position: absolute;
+          background-color: #929292; }
+        header .mnb-wrap .mnb .mnb-area .accordian .drop em::after {
+          content: "";
+          top: 25px;
+          right: 15px;
+          width: 16px;
+          height: 2px;
+          display: block;
+          position: absolute;
+          background-color: #929292; }
         header .mnb-wrap .mnb .mnb-area .accordian .drop .mnb-item {
           height: 0;
           overflow: hidden;
