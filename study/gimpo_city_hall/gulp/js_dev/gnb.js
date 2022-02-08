@@ -15,22 +15,17 @@ for (let i = 0; i < dropDown.length; i++) {
 
 // 모바일 햄버거버튼
 
-const mOpen = document.querySelector('.m-open');
-const mClose = document.querySelector('.m-close');
+const mToggleBtn = document.querySelectorAll('.m-toggle');
 const mWrap = document.querySelector('.mnb-wrap');
 const mSlide = document.querySelector('.mnb');
 
-mOpen.addEventListener('click', function () {
-   mWrap.classList.add('m-active');
-   mSlide.classList.add('m-slide');
-   document.body.classList.add('scroll-lock');
-});
-
-mClose.addEventListener('click', function () {
-   mWrap.classList.remove('m-active');
-   mSlide.classList.remove('m-slide');
-   document.body.classList.remove('scroll-lock');
-});
+for(let i = 0; i < mToggleBtn.length; i++) {
+   mToggleBtn[i].addEventListener('click', function(){
+      mWrap.classList.toggle('m-active');
+      mSlide.classList.toggle('m-slide');
+      document.body.classList.toggle('scroll-lock');
+   });
+}
 
 // 모바일 아코디언 
 
@@ -50,11 +45,8 @@ for (let i = 0; i < mBtn.length; i++) {
    });
 }
 
-// 팝업닫기
+// 토글 버튼
 
-const popupBtn = document.querySelector('.popup-close');
-const popupClose = document.querySelector('.popup-wrap');
-
-popupBtn.addEventListener('click', function(){
-   popupClose.classList.add('active');
-});
+function toggleBtn(target){
+   document.querySelector(target).classList.toggle('active');
+}

@@ -131,7 +131,7 @@
         </ul>
     </div>
     <div class="popup-btns">
-        <button type="button" class="popup-close">[닫기]</button>
+        <button type="button" class="popup-close" onclick="toggleBtn('.popup-wrap')">[닫기]</button>
         <div class="popup-chk">
             <input type="checkbox" id="checkbox-corona">
             <label for="checkbox-corona">오늘은 열지 않기</label>
@@ -166,7 +166,7 @@
     </div>
     <div class="logo-wrap">
         <div class="logo-area">
-            <button type="button" class="m-open">
+            <button type="button" class="m-toggle">
                 <img src="../static/images/open.png" alt="메뉴버튼">
             </button>
             <h1>
@@ -184,13 +184,29 @@
                     <option value="민원서식">민원서식</option>
                 </select>
                 <input type="search" placeholder="검색어를 입력하세요" title="검색어">
-                <button type="button" class="icon">
+                <button type="submit" class="icon">
                     <img src="../static/images/search_sprite.png" alt="검색">
                 </button>
             </div>
-            <button type="button" class="m-search">
+            <button type="button" class="m-search" onclick="toggleBtn('.search-content')">
                 <img src="../static/images/search_sprite.png" alt="검색">
             </button>
+        </div>
+        <div class="search-content">
+            <section>   
+                <div class="search-title">
+                    <span>검색하기</span>
+                    <button type="button" onclick="toggleBtn('.search-content')"> 
+                        <img src="../static/images/close.png" alt="닫기">
+                    </button>
+                </div>
+                <div class="search-input">
+                    <input type="search" placeholder="검색어를 입력하세요">
+                    <button type="submit">
+                        <img src="../static/images/search_sprite.png" alt="검색">
+                    </button>
+                </div>
+            </section>
         </div>
     </div>
     <div class="lnb-wrap">
@@ -822,7 +838,7 @@
                 <div class="login">
                     <a href="#none">로그인</a>
                 </div>
-                <button type="button" class="m-close">
+                <button type="button" class="m-toggle">
                     <img src="../static/images/close.png" alt="닫기">
                 </button>
             </div>

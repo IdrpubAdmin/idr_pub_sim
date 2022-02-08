@@ -11,7 +11,7 @@ sass.compiler = require("node-sass");
 
 gulp.task('sass', function() {
 	return gulp.src('css_dev/*.scss')
-	.pipe(sass().on('error',sass.logError))
+	.pipe(sass({outputStyle: 'compact'}).on('error',sass.logError))
 	.pipe(autoprefixer())
 	.pipe(sourcemaps.init())
 	.pipe(sourcemaps.write('../css'))
