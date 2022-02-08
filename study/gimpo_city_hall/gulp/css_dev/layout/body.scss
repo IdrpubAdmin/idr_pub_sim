@@ -1,0 +1,6 @@
+body{
+    min-width: $mobile-width;
+    &.scroll-lock{
+        overflow: hidden;
+    }
+}

@@ -23,11 +23,13 @@ const mSlide = document.querySelector('.mnb');
 mOpen.addEventListener('click', function () {
    mWrap.classList.add('m-active');
    mSlide.classList.add('m-slide');
+   document.body.classList.add('scroll-lock');
 });
 
 mClose.addEventListener('click', function () {
    mWrap.classList.remove('m-active');
    mSlide.classList.remove('m-slide');
+   document.body.classList.remove('scroll-lock');
 });
 
 // 모바일 아코디언 

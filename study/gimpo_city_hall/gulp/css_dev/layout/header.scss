@@ -1,7 +1,9 @@
 header{
-    min-width: 320px;
     .gnb-wrap{
         background-color: #eee;
+        @include tablet{
+            display: none;
+        }
         .gnb{
             max-width: 1240px;
             width: 100%;
@@ -61,12 +63,18 @@ header{
     }        
     .logo-wrap{
         padding: 10px 0;
+        @include tablet{
+            padding: 10px;
+        }
         .logo-area{
             max-width: 1240px;
             width: 100%;
             margin: 0 auto;
             display: flex;
             align-items: center;
+            @include tablet{
+                justify-content: space-between;
+            }
             h1{
                 a{
                     display: inline-block;
@@ -74,6 +82,9 @@ header{
                     height: 100%;
                     img{
                         width: 140px;
+                        @include tablet{
+                            width: 100px;
+                        }
                     }
                 }
             }
@@ -83,6 +94,9 @@ header{
                 position: absolute;
                 left: 0; right: 0;
                 margin: 0 auto;
+                @include tablet{
+                    display: none;
+                }
                 select{
                     width: 120px;
                     border: 2px solid #cdcdcd;
@@ -111,9 +125,19 @@ header{
             }       
             .m-open{
                 display: none;
+                background-color: #fff;
+                @include tablet{
+                    display: block;
+                }
             }
             .m-search{
                 display: none;
+                @include tablet{
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    background-color: #01288b;
+                }
             }
         }
     }
@@ -123,6 +147,9 @@ header{
         height: 60px;
         font-family: "GimpoTitle", sans-serif;
         position: relative;
+        @include tablet{
+            display: none;
+        }
         .lnb{
             max-width: 1240px;
             width: 100%;
@@ -135,6 +162,9 @@ header{
                     @include font(24, 500, #000);
                     line-height: 59px;
                     text-align: center;
+                    &:hover{
+                        color: #4275ca;
+                    }
                     &:nth-of-type(1),
                     &:nth-of-type(2),
                     &:nth-of-type(3),
@@ -250,16 +280,16 @@ header{
                             }      
                         }
                         .snb-area{
-                            width: calc(100% - 610px);
+                            width: calc(100% - 600px);
                             display: flex;
                             justify-content: space-between;
                             flex-wrap: wrap;
                             font-family: "Noto Sans KR", sans-serif;
-                            padding: 40px 0 40px 40px;
+                            padding: 40px 0 40px 30px;
                             row-gap: 40px;
                             background-color: #fff;
                             .snb-item{
-                                width: calc(100% / 5 - 10px);
+                                width: calc(100% / 5 - 5px);
                                 @include font(18, 500, #000);
                                 line-height: 20px;
                                 text-align: center;
@@ -645,43 +675,6 @@ header{
                             border-bottom: 0;
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:1240px){
-    header{
-        .gnb-wrap{
-            display: none;
-        }
-        .lnb-wrap{
-            display: none;
-        }
-        .logo-wrap{
-            padding: 10px;
-            .logo-area{
-                justify-content: space-between;
-                .m-open{
-                    display: block;
-                    background-color: #fff;
-                }
-                h1{
-                    a{
-                        img{
-                            width: 100px;
-                        }
-                    }
-                }
-                .search{
-                    display: none;
-                }
-                .m-search{
-                    display: block;
-                    width: 35px;
-                    height: 35px;
-                    background-color: #01288b;
                 }
             }
         }

@@ -22,9 +22,9 @@
             <div class="popup-title">
                 <p>(2022. 2. 3. 17:00 기준)</p>
                 <h3>김포시 <span>코로나19</span> 현황</h3>
-                <a href="#none">자세히보기>></a>
+                <p><a href="#none">자세히보기 > ></a></p>
             </div>
-            <table>
+            <table class="table-pc">
                 <tr class="tr1">
                     <td class="td1" colspan="2">확진자</td>
                     <td class="td2" colspan="2">자가격리</td>
@@ -44,35 +44,85 @@
                         <span>643</span>
                         <p>격리중</p>
                     </td>
-                    <td class="td4">
+                    <td class="td3">
                         <span>44,326</span>
                         <p>격리해제</p>
                     </td>
-                    <td class="td5">
+                    <td class="td3">
                         <span>8,470</span>
                         <p>금일</p>
                     </td>
-                    <td class="td6">
+                    <td class="td2">
                         <span>484,327</span>
                         <p>총인구</p>
                     </td>
-                    <td class="td7">
+                    <td class="td4">
                         <span>406,642</span>
-                        <br><span>84.0%</span>
+                        <br>
+                        <span class="per">84.0%</span>
                         <p>1차 접종</p>
                     </td>
-                    <td class="td7">
+                    <td class="td4">
                         <span>400,449</span>
-                        <br><span>82.7%</span>
+                        <br>
+                        <span class="per">82.7%</span>
                         <p>2차 접종</p>
                     </td>
-                    <td class="td7 td9">
+                    <td class="td4 td5">
                         <span>235,109</span>
-                        <br><span>58.8%</span>
+                        <br>
+                        <span class="per">58.8%</span>
                         <p>3차 접종</p>
                     </td>
                 </tr>
             </table>
+            <div class="table-wrap">
+                <table class="table-m">
+                    <tr class="tr1">
+                        <td class="td1" colspan="2">확진자</td>
+                        <td class="td2" colspan="2">자가격리</td>
+                        <td class="td3">검사중</td>
+                    </tr>
+                    <tr class="tr2">
+                        <td class="td1">
+                            <span>388</span>
+                            <p>금일</p>
+                        </td>
+                        <td>
+                            <span>10,712</span>
+                            <p>누계</p>
+                        </td>
+                        <td>
+                            <span>643</span>
+                            <p>격리중</p>
+                        </td>
+                        <td>
+                            <span>44,326</span>
+                            <p>격리해제</p>
+                        </td>
+                        <td class="td5">
+                            <span>8,470</span>
+                            <p>금일</p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="table-m2">
+                    <tr class="tr3">
+                        <td class="td1">백신접종</td>
+                        <td class="td2">
+                            <span class="s1">1차 접종</span>
+                            <span>406,642</span>
+                            <span class="per">84.0%</span>
+                            <span class="s1">2차 접종</span>
+                            <span>400,449</span>
+                            <span class="per">82.7%</span>
+                            <span class="s1">3차 접종</span>
+                            <span>235,109</spanclass=>
+                            <span class="per">58.8%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </section>
         <ul>
             <li><span>김포시보건소</span>031-5186-4051~3</li>
@@ -105,10 +155,10 @@
                 <li><a href="#none">사이트맵</a></li>
                 <li class="select">
                     <select name="name" id="name">
-                        <option value="" selected>LANGUAGE</option>
-                        <option value="">English</option>
-                        <option value="">中文</option>
-                        <option value="">日本語</option>
+                        <option value="언어" selected>LANGUAGE</option>
+                        <option value="영어">English</option>
+                        <option value="중국어">中文</option>
+                        <option value="일본어">日本語</option>
                     </select>
                 </li>
             </ul>
@@ -913,11 +963,25 @@
 </header>
 
 <div class="container">
-    
+    <div class="mn-wrap">
+        <main>
+            <img src="../static/images/main.png" alt="메인">
+        </main>
+    </div>
+    <section>
+        <img src="../static/images/contents.png" alt="컨텐츠">
+    </section>
 </div>
 
 <div class="footer-wrap">
-    
+    <div class="fnb-wrap">
+        <div class="fnb">
+            <img src="../static/images/footer_bg.png" alt="푸터">
+        </div>
+    </div>
+    <footer>
+        <img src="../static/images/footer.png" alt="푸터">
+    </footer>
 </div>
 
 

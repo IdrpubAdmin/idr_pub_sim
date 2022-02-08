@@ -23,11 +23,13 @@ const mSlide = document.querySelector('.mnb');
 mOpen.addEventListener('click', function () {
    mWrap.classList.add('m-active');
    mSlide.classList.add('m-slide');
+   document.body.classList.add('scroll-lock');
 });
 
 mClose.addEventListener('click', function () {
    mWrap.classList.remove('m-active');
    mSlide.classList.remove('m-slide');
+   document.body.classList.remove('scroll-lock');
 });
 
 // 모바일 아코디언 
@@ -56,19 +58,3 @@ const popupClose = document.querySelector('.popup-wrap');
 popupBtn.addEventListener('click', function(){
    popupClose.classList.add('active');
 });
-
-
-   // 날짜 추출 (반환) date.getDate();
-   // 날짜 지정 date.setDate(새로운 날짜);
-   var date = new Date();
-   date.setDate(date.getDate() + 7);
-
- 
-   var setCookie = '';
-   // setCookie = setCookie + 'CookieName=ABC;';
-   setCookie += 'CookieName=ABC;';
-   setCookie += 'Expires=' + date.toUTCString();
-
-   document.cookie = setCookie; //쿠키 설정, 생성
-
-   console.log(document.cookie);
