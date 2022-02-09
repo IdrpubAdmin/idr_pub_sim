@@ -29,12 +29,12 @@ for(let i = 0; i < mToggleBtn.length; i++) {
 
 // 모바일 아코디언 
 
-const mBtn = document.querySelectorAll('.drop');
-const mDropDown = document.querySelectorAll('.mnb-item');
+var mBtn = document.querySelectorAll('.drop');
+var mDropDown = document.querySelectorAll('.mnb-item');
 
-for (let i = 0; i < mBtn.length; i++) {
+for (var i = 0; i < mBtn.length; i++) {
    mBtn[i].addEventListener('click', function (e) {
-      for (let x = 0; x < mDropDown.length; x++) {
+      for (var x = 0; x < mDropDown.length; x++) {
          if(getComputedStyle(e.target).height == '50px'){
             mDropDown[x].parentNode.classList.remove('active');
             e.target.classList.add('active');     
