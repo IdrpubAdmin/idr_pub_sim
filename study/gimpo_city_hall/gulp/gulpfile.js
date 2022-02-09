@@ -26,11 +26,10 @@ gulp.task('extend', function () {
 
 gulp.task('babel', function () {
 	return gulp.src('js_dev/*.js')
-		// .pipe(babel({
-		// 	presets: ["@babel/preset-env"]
-		// }))
-		// .pipe(plumber())
-		.pipe(gulp.dest('../static/js/'));
+	// .pipe(babel({
+	// 	presets: ["@babel/preset-env"]
+	// }))
+	.pipe(gulp.dest('../static/js/'));
 });
 
 gulp.task('watch', function() {
