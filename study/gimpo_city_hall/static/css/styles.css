@@ -657,18 +657,6 @@ header .mnb-wrap .mnb .mnb-area .accordian .drop { line-height: 49px; text-inden
 
 header .mnb-wrap .mnb .mnb-area .accordian .drop.active em::before { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item1 { height: 300px; }
-
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item2 { height: 500px; }
-
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item3 { height: 550px; }
-
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item4 { height: 500px; }
-
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item5 { height: 350px; }
-
-header .mnb-wrap .mnb .mnb-area .accordian .drop.active .mnb-item6 { height: 350px; }
-
 header .mnb-wrap .mnb .mnb-area .accordian .drop em::before { content: ""; top: 18px; right: 22px; width: 2px; height: 16px; -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; display: block; position: absolute; background-color: #929292; }
 
 header .mnb-wrap .mnb .mnb-area .accordian .drop em::after { content: ""; top: 25px; right: 15px; width: 16px; height: 2px; display: block; position: absolute; background-color: #929292; }
