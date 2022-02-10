@@ -34,23 +34,6 @@ function toggleBtn(target){
 
 // 모바일 아코디언 
 
-// var mBtn = document.querySelectorAll('.drop');
-// var mDropDown = document.querySelectorAll('.mnb-item');
-
-// for (var i = 0; i < mBtn.length; i++) {
-//    mBtn[i].addEventListener('click', function (e) {
-//       for (var x = 0; x < mDropDown.length; x++) {
-//          var targetItem = this.querySelector('.mnb-item');
-//          if(getComputedStyle(targetItem).height === '0px'){
-//             mDropDown[x].parentNode.classList.remove('active');
-//             e.target.classList.add('active');     
-//          } else{
-//             e.target.classList.remove('active');   
-//          }
-//       }
-//    });
-// }
-
 var mBtn = document.querySelectorAll('.drop');
 var mDropDown = document.querySelectorAll('.mnb-item');
 
