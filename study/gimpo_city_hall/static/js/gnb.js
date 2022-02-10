@@ -22,26 +22,7 @@ const mSlide = document.querySelector('.mnb');
 for(let i = 0; i < mToggleBtn.length; i++) {
    mToggleBtn[i].addEventListener('click', function(){
       mWrap.classList.toggle('m-active');
-      mSlide.classList.toggle('m-slide');
       document.body.classList.toggle('scroll-lock');
-   });
-}
-
-// 모바일 아코디언 
-
-var mBtn = document.querySelectorAll('.drop');
-var mDropDown = document.querySelectorAll('.mnb-item');
-
-for (var i = 0; i < mBtn.length; i++) {
-   mBtn[i].addEventListener('click', function (e) {
-      for (var x = 0; x < mDropDown.length; x++) {
-         if(getComputedStyle(e.target).height == '50px'){
-            mDropDown[x].parentNode.classList.remove('active');
-            e.target.classList.add('active');     
-         } else{
-            e.target.classList.remove('active');   
-         }
-      }
    });
 }
 
@@ -49,4 +30,42 @@ for (var i = 0; i < mBtn.length; i++) {
 
 function toggleBtn(target){
    document.querySelector(target).classList.toggle('active');
+}
+
+// 모바일 아코디언 
+
+// var mBtn = document.querySelectorAll('.drop');
+// var mDropDown = document.querySelectorAll('.mnb-item');
+
+// for (var i = 0; i < mBtn.length; i++) {
+//    mBtn[i].addEventListener('click', function (e) {
+//       for (var x = 0; x < mDropDown.length; x++) {
+//          var targetItem = this.querySelector('.mnb-item');
+//          if(getComputedStyle(targetItem).height === '0px'){
+//             mDropDown[x].parentNode.classList.remove('active');
+//             e.target.classList.add('active');     
+//          } else{
+//             e.target.classList.remove('active');   
+//          }
+//       }
+//    });
+// }
+
+var mBtn = document.querySelectorAll('.drop');
+var mDropDown = document.querySelectorAll('.mnb-item');
+
+for (var i = 0; i < mBtn.length; i++) {
+   mBtn[i].addEventListener('click', function () {
+      for (var x = 0; x < mDropDown.length; x++) {
+         var targetItem = this.querySelector('.mnb-item');
+         if(getComputedStyle(targetItem).height === '0px'){
+            mDropDown[x].style.height = null;
+            targetItem.style.height = targetItem.scrollHeight + "px";
+            targetItem.parentNode.classList.add('active');           
+         } else{
+            targetItem.style.height = null;   
+            targetItem.parentNode.classList.remove('active');   
+         }
+      }
+   });
 }

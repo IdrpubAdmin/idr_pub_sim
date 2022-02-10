@@ -524,6 +524,9 @@ header{
         &.m-active{
             opacity: 1;
             z-index: 100;
+            .mnb{
+                left: 0px;
+            }
         }
         .mnb{
             width: 260px;
@@ -532,9 +535,6 @@ header{
             position: relative;
             left: -315px;
             transition: all 0.3s;  
-            &.m-slide{
-                left: 0px;
-            }
             .mnb-menu{
                 background-color: #1d5da7;
                 display: flex;

@@ -609,9 +609,9 @@ header .mnb-wrap { position: fixed; top: 0; left: 0; width: 100vw; height: 100%;
 
 header .mnb-wrap.m-active { opacity: 1; z-index: 100; }
 
-header .mnb-wrap .mnb { width: 260px; background-color: #fff; height: 100%; position: relative; left: -315px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+header .mnb-wrap.m-active .mnb { left: 0px; }
 
-header .mnb-wrap .mnb.m-slide { left: 0px; }
+header .mnb-wrap .mnb { width: 260px; background-color: #fff; height: 100%; position: relative; left: -315px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 header .mnb-wrap .mnb .mnb-menu { background-color: #1d5da7; display: -webkit-box; display: -ms-flexbox; display: flex; text-align: center; color: #fff; }
 
