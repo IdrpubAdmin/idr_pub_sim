@@ -38,16 +38,14 @@ var mBtn = document.querySelectorAll('.drop');
 var mDropDown = document.querySelectorAll('.mnb-item');
 
 for (var i = 0; i < mBtn.length; i++) {
-   mBtn[i].addEventListener('click', function () {
+   mBtn[i].addEventListener('click', function (e) {
       for (var x = 0; x < mDropDown.length; x++) {
          var targetItem = this.querySelector('.mnb-item');
          if(getComputedStyle(targetItem).height === '0px'){
-            mDropDown[x].style.height = null;
-            targetItem.style.height = targetItem.scrollHeight + "px";
-            targetItem.parentNode.classList.add('active');           
+            mDropDown[x].parentNode.classList.remove('active');
+            e.target.classList.add('active');     
          } else{
-            targetItem.style.height = null;   
-            targetItem.parentNode.classList.remove('active');   
+            e.target.classList.remove('active');   
          }
       }
    });

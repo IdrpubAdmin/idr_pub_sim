@@ -650,6 +650,24 @@ header{
                             em::before{
                                 transform: rotate(90deg);              
                             }
+                            .mnb-item1{
+                                height: 300px;
+                            }
+                            .mnb-item2{
+                                height: 500px;
+                            }
+                            .mnb-item3{
+                                height: 550px;
+                            }
+                            .mnb-item4{
+                                height: 500px;
+                            }
+                            .mnb-item5{
+                                height: 350px;
+                            }
+                            .mnb-item6{
+                                height: 350px;
+                            }
                         }
                         em{
                             &::before{
