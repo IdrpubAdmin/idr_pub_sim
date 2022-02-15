@@ -27,4 +27,9 @@ module.exports = {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
     },
+    devServer: {
+        devMiddleware: { publicPath: '/dist' },
+        static: { directory: path.resolve(__dirname) },
+        hot: true
+    },
 };
