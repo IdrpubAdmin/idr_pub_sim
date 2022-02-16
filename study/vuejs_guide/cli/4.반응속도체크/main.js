@@ -1,4 +1,4 @@
 import Vue from 'vue';
-import ResponsCheck from './ResponsCheck';
+import ResponseCheck from './ResponseCheck';
 
-new Vue(ResponsCheck).$mount('#root');
+new Vue(ResponseCheck).$mount('#root');
