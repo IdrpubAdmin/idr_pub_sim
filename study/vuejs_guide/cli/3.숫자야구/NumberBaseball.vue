@@ -15,11 +15,16 @@
     </div>
 </template>
 <script>
+// 숫자 생성하는 함수
 const getNumbers = () => {
     const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const array = [];
+    // 4번 반복한다
     for (let i = 0; i < 4; i += 1){
-        const chosen = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
+        const chosen = candidates.splice(Math.floor(Math.random() * candidates.length), 1)[0];
+        // const chosen = Math.floor(Math.random() * (9 - i  )) // 0~8의 정수 (0~8의 숫자 생성)
+        // array.push(candidates[index]); // 마지막위치에 배열추가 (하나를 뽑고 array에 넣어줌)
+        // candidates.splice(index, 1); // index위치의 1개를 삭제한다 (뽑은곳에서 뽑힌 숫자 삭제)
         array.push(chosen);
     }
     return array;
@@ -27,7 +32,7 @@ const getNumbers = () => {
 export default {
     data() {
         return {
-            answer: getNumbers(),
+            answer: getNumbers(), // 숫자 생성하는 함수
             tries: [], // 시도 수
             value: '', // 입력
             result: '', // 결과
@@ -35,22 +40,25 @@ export default {
     },
     methods: {
         onSubmitForm() {
+            // 만약 내가 입력한 숫자와 생성한 숫자가 같다면 (정답을 맞췄다면) // join('') 배열요소를 결합해 문자열로 반환 ('')쓰면 콤마없이 반환
             if (this.value === this.answer.join('')){
-                // 정답 맞췄으면
-                 this.tries.push({
+                this.tries.push({
                 try: this.value,
                 result: '홈런',
             });
             this.result = '홈런';
-            this.answer = getNumbers();
-            this.value = '';
-            this.tries = [];
-            this.$refs.answer.focus();
+            this.answer = getNumbers(); // 숫자 생성
+            this.value = ''; // 게임초기화
+            this.tries = []; // 게임초기화
+            this.$refs.answer.focus(); //포커스를 다시 맞춰줌
+            // 정답을 틀렸다면
             } else {
-                // 정답 틀렸을때
+                // 10번넘게 시도했다면
                 if (this.tries.length >=9) {
+                    // 결과에 메세지를 띄우고 정답을 알려줌
                     this.result = `10번 넘게 틀려서 실패! 답은 ${this.answer.join('')}이었습니다!`;
                     alert('게임을 다시 시작합니다.')
+                    // 게임초기화
                     this.value = '';
                     this.answer = getNumbers();
                     this.tries = []; 
@@ -59,16 +67,21 @@ export default {
                 let strike = 0;
                 let ball = 0;
                 // 문자열을 숫자 배열로 바꾸는 코드
+                // split('') 한글자단위로 나눠진 문자열 반환
+                // map 배열요소 추출하여 새로운 배열 생성
+                // parseInt 문자를 다시 숫자열로 반환
                 const answerArray = this.value.split('').map(v => parseInt(v));
                 for (let i = 0; i < 4; i += 1){
                     if (answerArray[i] === this.answer[i]){
                         // 숫자 자릿수 모두 정답
                         strike++;
+                    // includes 문자열 포함여부 확인 (문자열 어디에 있던)
                     } else if(this.answer.includes(answerArray[i])){
                         // 숫자만 정답
                         ball++;
                     }
                 }
+                // 결과를 알려줌
                 this.tries.push({
                     try: this.value,
                     result: `${strike} 스트라이크, ${ball} 볼입니다.`
