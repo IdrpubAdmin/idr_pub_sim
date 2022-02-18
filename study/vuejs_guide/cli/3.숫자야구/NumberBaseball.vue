@@ -1,13 +1,16 @@
 <template>
     <div>
         <h1>{{result}}</h1>
+        <!-- v-on (@) 이벤트를 듣고 트리거 될 때 js 실행 -->
         <form @submit.prevent="onSubmitForm">
+            <!-- v-midel 폼 입력 바인딩 -->
             <input ref="answer" minlength="4" maxlength="4" v-model="value" />
             <button>입력</button>
         </form>
         <div>시도: {{tries.length}}</div>
         <ul>
-            <li v-for="t in tries" :key="t.try">
+            <!-- tries 시도수 만큼 t 반복 -->
+            <li v-for="t in tries" :key="t">
                 <div>{{t.try}}</div>
                 <div>{{t.result}}</div> 
             </li>
@@ -30,6 +33,7 @@ const getNumbers = () => {
     return array;
 }
 export default {
+    // 정보를 저장하는곳 인스턴스의 데이터 속성, 변수
     data() {
         return {
             answer: getNumbers(), // 숫자 생성하는 함수
@@ -38,6 +42,7 @@ export default {
             result: '', // 결과
         }
     },
+    // 화면 로직 제어와 관련된 메서드를 정의
     methods: {
         onSubmitForm() {
             // 만약 내가 입력한 숫자와 생성한 숫자가 같다면 (정답을 맞췄다면) // join('') 배열요소를 결합해 문자열로 반환 ('')쓰면 콤마없이 반환
