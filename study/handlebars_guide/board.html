@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+    <script id="board-template" type="text/x-handlebars-template">
+        <div>
+            <h2>게시판</h1>
+            <ul>
+                <li class="top">
+                    <div class="id">번호</div>
+                    <div class="title">제목</div>
+                    <div class="name">작성자</div>
+                    <div class="date">날짜</div>
+                    <div class="view">조회</div>
+                </li>
+                {{#board}}
+                <li class="list">
+                    <div class="id">{{id}}</div>
+                    {{#if title}}
+                        <div class="title tl">{{title}}</div>
+                        {{else}}
+                        <div class="title tl">(제목없음)</div>
+                    {{/if}}
+                    <div class="name">{{name}}</div>
+                    <div class="date">{{date}}</div>
+                    <div class="view">{{view}}</div>
+                </li>
+                {{/board}}
+            </ul>
+        </div>
+    </script>
+    <script>
+        let source = $("#board-template").html(); 
+        let template = Handlebars.compile(source); 
+        let data = {
+                board: [
+                    { id: '7', title: '잘부탁드려요', name: '염소', date: '2022-03-10', view: '91'},
+                    { id: '6', title: '', name: '고양이', date: '2022-03-01', view: '11'},
+                    { id: '5', title: '게시판 만들기입니다', name: '사자', date: '2022-02-25', view: '1'},
+                    { id: '4', title: '핸들바 게시판', name: '얼룩말', date: '2022-02-10', view: '33'},
+                    { id: '3', title: '안녕하세요', name: '말', date: '2022-02-09', view: '102'},
+                    { id: '2', title: '테스트 입니다', name: '강아지', date: '2022-02-02', view: '27'},
+                    { id: '1', title: '가입했어요', name: '고양이', date: '2022-01-11', view: '55'}
+                ]
+        }; 
+        let html = template(data);
+        $('body').append(html);
+    </script>
+    <style>
+        div {width: 1000px;}
+        div h2 {text-align: center;}
+        div ul {width: 800px; margin: 0 auto;}
+        div ul li{display: flex; justify-content: space-between; border-top: 1px solid #000; line-height: 30px;}
+        div ul .top{line-height: 40px;}
+        div ul .list:nth-child(even){background-color: #ccc;}
+        div ul li div{text-align: center;}
+        div ul li .id{width: 50px;}
+        div ul li .title{width: 300px;}
+        div ul li .tl{text-align: left;}
+        div ul li .name{width: 200px;}
+        div ul li .date{width: 200px;}
+        div ul li .view{width: 50px;}
+    </style>
+</body>
+</html>
