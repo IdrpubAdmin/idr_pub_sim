@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>구구단</title>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class GuGuDan extends React.Component{ 
+                // 변할것들을 다 state로 만듦
+                state = {
+                    first: Math.ceil(Math.random() * 9),
+                    second: Math.ceil(Math.random() * 9),
+                    value: '',
+                    result: '',
+                };
+                // 직접 만든 함수는 화살표함수를 써야함 아니면 this가 달라진다
+                onSubmit = (e) => {
+                    e.preventDefault();
+                    // value를 숫자로 변환 그 값이 첫숫자 * 두번째숫자 와 같다면
+                    if (parseInt(this.state.value) === this.state.first * this.state.second) {
+                        //함수를 사용하는경우 : 예전 State값을 가져와 현재 State로 변경할때 사용한다
+                        this.setState((prevState) => {
+                            return {
+                                result: '정답:' + prevState.value,
+                                first: Math.ceil(Math.random() * 9),
+                                second: Math.ceil(Math.random() * 9),
+                                value: '',
+                            }
+                        });
+                        this.input.focus();
+                    } else {
+                        this.setState({
+                            result: '땡',
+                            value: '',
+                        });
+                        this.input.focus();
+                    }
+                };
+                onChange = (e) => {
+                    this.setState({ value: e.target.value });
+                };
+                onRefInput = (c) => {this.input = c; }
+                input;
+                render() {
+                    return (
+                        <React.Fragment>
+                            <div>{this.state.first} 곱하기 {this.state.second}는?</div>
+                            <form onSubmit={this.onSubmit}>
+                                <input ref={this.onRefInput} type="number" value={this.state.value} onChange={this.onChange} />
+                                <button>입력</button>
+                            </form>
+                            <div>{this.state.result}</div>
+                        </React.Fragment>
+                    );
+                }
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<GuGuDan />, document.querySelector('#root')); // JSX에는 무조건 / 닫는태그 있어야함
+        </script>
+    </body>
+</html>

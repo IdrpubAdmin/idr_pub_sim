@@ -1,0 +1,110 @@
+<!-- 초기의 리액트 -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            const e = React.createElement; // 태그를 만든다
+
+            // 컴포넌트를 만든다
+            class LikeButton extends React.Component{ 
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        liked: false,
+                    };
+                }
+                render() {
+                    return e('button', 
+                    { onClick: () => { this.setState({ liked: true })}, type: 'submit' }, 
+                    this.state.liked === true ? 'Liked' : 'Like'); 
+                    // <button>Like</button> 를 만들겠다 ('태그명',태그의속성,'태그안에 들어갈 요소')
+                }
+            }
+        </script>
+        <script>
+            ReactDOM.render(e(LikeButton), document.querySelector('#root')); // 만든 컴포넌트를 DOM에 붙이겠다
+        </script>
+    </body>
+</html>
+
+
+<!-- 위의 문법에서 -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!-- 바벨 추가 -->
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel"> // 스크립트 타입을 text/babel로
+            // 컴포넌트를 만든다
+            class LikeButton extends React.Component{ 
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        liked: false,
+                    };
+                }
+                render() {
+                    return <button type='submit' onClick={()=>{this.setState({liked:true})}}>{this.state.liked === true ? 'Liked' : 'Like'}</button> // js에서 html태그는 허용이 되지않음 > babel 사용해야함 JSX(js와 xml)문법입니다.
+                }
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<LikeButton />, document.querySelector('#root')); // 만든 컴포넌트를 DOM에 붙이겠다
+        </script>
+    </body>
+</html>
+
+<!-- 기본 형태 -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class 작명 extends React.Component{ 
+                constructor(props){
+                    super(props);
+                }
+                render() {
+                    return ;
+                }
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<작명 />, document.querySelector('#root')); 
+        </script>
+    </body>
+</html>
+
+<!-- Hooks 함수 컴포넌트에 state와 ref기능을 사용할수 있도록 만든것 (권장) -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const 작명 = () => {
+                // state
+                const [first, setFirst] = React.useState(Math.ceil(Math.random() * 9));
+                const [second, setSecond] = React.useState(Math.ceil(Math.random() * 9));
+                return 
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<작명 />, document.querySelector('#root')); 
+        </script>
+    </body>
+</html>
