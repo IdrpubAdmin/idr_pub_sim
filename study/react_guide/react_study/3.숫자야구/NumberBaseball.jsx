@@ -1,10 +1,11 @@
 import React, { Component, createRef } from 'react';
 import Try from './Try';
 
+// this를 쓰지 않을경우 함수를 밖으로 뺄수있다.
 function getNumbers() { // 숫자 네 개를 겹치지 않고 랜덤하게 뽑는 함수
   const candidate = [1,2,3,4,5,6,7,8,9];
   const array = [];
-  for (let i = 0; i < 4; i += 1) {
+  for (let i = 0; i < 4; i += 1) { // i 0 1 2 3  4개
     const chosen = candidate.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
     array.push(chosen);
   }
