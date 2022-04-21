@@ -1,0 +1,12 @@
+.wrap{}
+.wrap .headerWrap{ background-color: rgba(0,0,0,0.8); padding: 20px 0;}
+.wrap .headerWrap header{ display: flex; max-width: 1200px; width: 100%; margin: 0 auto; align-items: center;;}
+.wrap .headerWrap header h1{ width: 150px; display: flex; align-items: center; }
+.wrap .headerWrap header h1 .logoImg{ width: 20px; height: 20px; margin-right: 10px;}
+.wrap .headerWrap header h1 span{ font-size: 18px; line-height: 30px; color: #fff;}
+.wrap .headerWrap header ul{ display: flex; }
+.wrap .headerWrap header ul li{ color: #fff; line-height: 20px; width: 100px;}
+
+.wrap .containerWrap { }
+.wrap .containerWrap { max-width: 1200px; width: 100%; margin: 0 auto; background-color: #000; }
+.wrap .containerWrap .cnts1 { color: #fff; font-size: 72px; }
