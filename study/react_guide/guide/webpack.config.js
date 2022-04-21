@@ -6,7 +6,7 @@ const RefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'); //
 
 module.exports = {
     name: 'wordrelay-setting',
-    mode: 'porduction', // 실서비스: porduction
+    mode: 'development', // 실서비스: porduction
     devtool: 'eval',
     resolve: {
         extensions: ['.js','.jsx'] // 엔트리 뒤에 확장자가 없어도 여기 적으면 알아듣게해줌
@@ -35,6 +35,7 @@ module.exports = {
     }, // 출력
     devServer: {
         devMiddleware: { publicPath: '/dist' },
+        historyApiFallback: true, // 새로고침 문제 해결
         static: { directory: path.resolve(__dirname) },
         hot: true
       }

@@ -2,27 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const gnbList = [
-    '시작', '문법','라우터'
+    { gnb: '시작', router: '1'},
+    { gnb: '문법', router: '2'},
+    { gnb: '라우터', router: '3'}
 ];
 
 const Header = () => {
     return (
         <>
             <header>
-                <h1>
-                    <Link to="/">
+                <Link to="/">
+                    <h1>
                         <img className='logoImg' src="images/logo.svg" alt="로고" />
                         <span>REACT</span>
-                    </Link>
-                </h1>
+                    </h1>
+                </Link>  
                 <ul>
-                    {/* {this.gnbList.map((v) => {
+                    {gnbList.map((v) => {
                         return (
-                            <li key={v}>{v}</li>
+                            <li key={v.gnb}><Link to={"/Content" + v.router}>{v.gnb}</Link></li>
                         );
-                    })} */}
-                    <Link to="/Content1">문법</Link>
-                    <Link to="/Content2">라우터</Link>
+                    })}
                 </ul>
             </header>
         </>
