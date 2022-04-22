@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Install from './Install';
 import Content1 from './Content1';
@@ -8,7 +8,7 @@ import Content3 from './Content3';
 
 const Main = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="wrap">
                 <div className="headerWrap">
                     <Header />
@@ -27,7 +27,7 @@ const Main = () => {
                     </footer>
                 </div>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     )
 } 
 
