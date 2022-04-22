@@ -4,10 +4,11 @@
 .wrap .headerWrap header{ display: flex; max-width: 1200px; width: 100%; margin: 0 auto; align-items: center;;}
 .wrap .headerWrap header a{display: inline-block; width: 150px;}
 .wrap .headerWrap header a h1{ display: flex; align-items: center; }
-.wrap .headerWrap header a h1 .logoImg{ width: 20px; height: 20px; margin-right: 10px; }
+.wrap .headerWrap header a h1 .logoImg{ width: 20px; height: 20px; margin-right: 5px;}
 .wrap .headerWrap header a h1 span{ font-size: 18px; line-height: 30px; color: #fff;}
 .wrap .headerWrap header ul{ display: flex; }
-.wrap .headerWrap header ul li{ color: #fff; line-height: 20px; width: 100px;}
+.wrap .headerWrap header ul li{ color: #fff; line-height: 20px; text-align: center; margin: 0 30px;}
+.wrap .headerWrap header ul li a{ width: 100%; }
 
 /* 공통 */
 .wrap .containerWrap { }

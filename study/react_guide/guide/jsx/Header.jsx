@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const gnbList = [
-    { gnb: '설치', router: '1'},
-    { gnb: '시작', router: '2'},
-    { gnb: '라우터', router: '3'}
+    { gnb: '설치', router: 'Install'},
+    { gnb: '시작', router: 'Start'},
+    { gnb: '문법', router: 'Grammar'},
+    { gnb: '컴포넌트', router: '3'},
+    { gnb: '라우터', router: '4'}
 ];
 
 const Header = () => {
@@ -20,7 +22,7 @@ const Header = () => {
                 <ul>
                     {gnbList.map((v) => {
                         return (
-                            <li key={v.gnb}><Link to={"/Content" + v.router}>{v.gnb}</Link></li>
+                            <li key={v.gnb}><Link to={v.router}>{v.gnb}</Link></li>
                         );
                     })}
                 </ul>

@@ -9,16 +9,16 @@ const Install = () => {
                     <h4>CDN링크</h4>
                     <div className='codeCnt'>
                         <code>
-                            <p>&#60;<span>script </span><span className='spanB'>crossorigin src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/react@17/umd/react.development.js"</span>&#62;&#60;/script&#62;</p>
-                            <p>&#60;<span>script </span><span className='spanB'>crossorigin src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/react-dom@17/umd/react-dom.development.js"</span>&#62;&#60;/script&#62;</p>
-                            <p>&#60;<span>script </span><span className='spanB'>src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/babel-standalone@6/babel.min.js"</span>&#62;&#60;/script&#62;</p>
+                            <p>&#60;script <span className='spanB'>crossorigin src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/react@17/umd/react.development.js"</span>&#62;&#60;/script&#62;</p>
+                            <p>&#60;script <span className='spanB'>crossorigin src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/react-dom@17/umd/react-dom.development.js"</span>&#62;&#60;/script&#62;</p>
+                            <p>&#60;script <span className='spanB'>src</span><span className='spanW'>=</span><span className='spanR'>"https://unpkg.com/babel-standalone@6/babel.min.js"</span>&#62;&#60;/script&#62;</p>
                         </code>
                     </div>
                     <ul>
                         <li>1. 위의 스크립트 코드를 입력합니다.</li>
                         <li>- CDN을 통해 리액트를 사용한다면, <b>crossorigin</b> 어트리뷰트(attribute)와 함께 사용하는 것을 권장한다고 공식문서에 적혀있습니다.</li>
-                        <li>- 리액트에서는 <b>jsx</b>라는 <b>Javascript</b>에 <b>XML</b>을 추가한 문법을 사용합니다.</li>
-                        <li>- <b>jsx</b>를 읽을수있게 하려면 바벨이 필요합니다.</li>
+                        <li>- 리액트에서는 <b>jsx</b>라는 Javascript에 XML을 추가한 문법을 사용합니다.</li>
+                        <li>- jsx를 읽을수있게 하려면 <b>바벨</b>이 필요합니다.</li>
                     </ul>
                 </article>
                 <article>
@@ -110,7 +110,7 @@ const Install = () => {
                         </code>
                     </div>
                     <ul>
-                        <li>- 웹팩은 많은 <b>jsx</b>파일들을 하나로 합쳐주는 역할을 합니다.</li>                        
+                        <li>- 웹팩은 많은 jsx파일들을 하나로 합쳐주는 역할을 합니다.</li>                        
                         <li>- 컴포넌트가 많아지면 하나의 파일에서 관리하기 어렵기 때문에 여러개로 쪼개는것이 좋은데, 이를위해 웹팩이 필요합니다.</li>                        
                         <li>- 웹팩은 기본적으로 <b>entry</b>에서 입력받아온 값들에게 <b>module</b>을 적용하여 <b>output</b>으로 출력시키는 동작을합니다.</li>                        
                     </ul>

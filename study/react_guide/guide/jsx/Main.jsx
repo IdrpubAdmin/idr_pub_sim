@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Install from './Install';
-import Content1 from './Content1';
-import Content2 from './Content2';
+import Start from './Start';
+import Grammar from './Grammar';
 import Content3 from './Content3';
 
 const Main = () => {
+    const v = '기본구조'
     return (
         <BrowserRouter>
             <div className="wrap">
@@ -15,9 +16,10 @@ const Main = () => {
                 </div>
                 <div className="containerWrap">
                     <Routes>
-                        <Route path="/" element={<Content1 />} />
+                        <Route path="/" element={<Install />} />
                         <Route path="/Install" element={<Install />} />
-                        <Route path="/Content2" element={<Content2 />} />
+                        <Route path="/Start" element={<Start />} />
+                        <Route path="/Grammar" element={<Grammar />} />
                         <Route path="/Content3" element={<Content3 />} />
                     </Routes>
                 </div>
