@@ -92,7 +92,7 @@ const Start = () => {
                             <p>const <span className='spanY'>Main</span> <span className='spanW'>= ( ) =&#62; &#123;</span></p>
                             <p>&nbsp;&nbsp;&nbsp;const <span className='spanW'>[ <span className='spanB'>value</span>, <span className='spanY'>setValue</span> ] = <span className='spanY'>useState</span>( <span className='spanR'>'기본구조'</span> );</span><span className='spanG'> // state저장 : value는 변수명, '기본구조'는 데이터가 됩니다. </span></p>
                             <br />
-                            <p>&nbsp;&nbsp;&nbsp;<span className='spanY'>textChange</span> <span className='spanW'>= ( ) =&#62; &#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;const <span className='spanY'>textChange</span> <span className='spanW'>= ( ) =&#62; &#123;</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const <span className='spanB'>newText</span> <span className='spanW'>= <span className="spanR">'텍스트변경'</span>;</span><span className='spanG'> // 변경될 데이터를 변수에 저장합니다.</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanY'>setValue</span><span className='spanW'>( <span className="spanB">newText</span> );</span><span className='spanG'> // state에 저장된 setValue를 사용하여 데이터를 변경시킬수있습니다. </span></p>
                             <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;;</span></p>
@@ -100,7 +100,7 @@ const Start = () => {
                             <p>&nbsp;&nbsp;&nbsp;<span className='spanP'>return</span> <span className='spanW'>(</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;React.Fragment&#62;</p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;<span className='spanW'>&#123; value &#125;</span>&#60;/h1&#62;<span className='spanG'> // 결과 : &#60;h1&#62;기본구조&#60;/h1&#62; </span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;&#60;button <span className='spanB'>onClick</span><span className='spanW'>=</span>&#123; <span className='spanY'>textChange</span> &#125;&#62;<span className='spanW'>버튼</span>&#60;/button&#62;<span className='spanG'> // 버튼을 클릭하면 h1의 텍스트가 '텍스트변경'으로 변경됩니다. </span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;button <span className='spanB'>onClick</span><span className='spanW'>=</span>&#123; <span className='spanY'>textChange</span> &#125;&#62;<span className='spanW'>버튼</span>&#60;/button&#62;<span className='spanG'> // 버튼을 클릭하면 h1의 텍스트가 '텍스트변경'으로 변경됩니다. </span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/React.Fragment&#62;</p>
                             <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>)</span></p>
                             <p><span className='spanW'>&#125;</span></p>
