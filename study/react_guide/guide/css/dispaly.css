@@ -12,12 +12,28 @@
 /* 공통 */
 .wrap .containerWrap { }
 .wrap .containerWrap { max-width: 1200px; width: 100%; margin: 0 auto; }
-.wrap .containerWrap section { padding: 80px 0; color: #000; height: 800px; }
+.wrap .containerWrap section { padding: 80px 0; color: #000; }
 .wrap .containerWrap section h3{ font-size: 24px; font-weight: 700; }
-.wrap .containerWrap section article{ margin-top: 20px; }
-.wrap .containerWrap section article img{ margin-top: 10px; }
-.wrap .containerWrap section article p{ font-size: 20px; }
-.wrap .containerWrap section article p{ font-size: 14px; }
+.wrap .containerWrap section article{ margin-top: 40px; }
+.wrap .containerWrap section article h4{ font-size: 20px; font-weight: 700; }
+.wrap .containerWrap section article ul{ margin-top: 20px; }
+.wrap .containerWrap section article ul li{ font-size: 14px; line-height: 20px; }
+.wrap .containerWrap section article ul li b {font-weight: 600;}
 
 /* 설치 */
 .wrap .containerWrap .install { }
+
+
+
+
+
+
+.codeCnt{ background-color: #000; border-radius: 10px; margin-top: 10px; padding: 20px;}
+.codeCnt code{ }
+.codeCnt code p{ color: rgb(52, 85, 194); font-size: 16px; line-height: 20px;}
+.codeCnt code p .spanB{ color: rgb(78, 156, 229) ;}
+.codeCnt code p .spanR{ color: rgb(213, 92, 44) ;}
+.codeCnt code p .spanW{ color: rgb(255, 255, 255) ;}
+.codeCnt code p .spanG{ color: rgb(75, 152, 31) ;}
+.codeCnt code p .spanP{ color: rgb(190, 50, 218) ;}
+.codeCnt code p .spanY{ color: rgb(224, 224, 47) ;}
