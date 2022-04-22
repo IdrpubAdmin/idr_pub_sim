@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const gnbList = [
-    { gnb: '시작', router: '1'},
-    { gnb: '문법', router: '2'},
+    { gnb: '설치', router: '1'},
+    { gnb: '시작', router: '2'},
     { gnb: '라우터', router: '3'}
 ];
 
