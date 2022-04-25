@@ -102,17 +102,83 @@ const Install = () => {
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;&#93;,</span></p>
                             <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>output:</span> <span className='spanW'>&#91;</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>path:</span> path<span className='spanW'>.<span className='spanY'>join</span>( <span className="spanB">__dirname</span> , <span className="spanR">'dist'</span> ) </span><span className='spanG'> // 경로를 합칩니다. (현재폴더경로, 안에있는 dist폴더)</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>filename:</span> <span className='spanR'>'app.js'</span><span className='spanG'> // 파일들을 합쳐 app.js파일을 만듭니다.</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>output:</span> <span className='spanW'>&#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>path:</span> path<span className='spanW'>.<span className='spanY'>join</span>( <span className="spanB">__dirname</span> , <span className="spanR">'dist'</span> ) </span><span className='spanW'>,</span><span className='spanG'> // 경로를 합칩니다. (현재폴더경로, 안에있는 dist폴더)</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>filename:</span> <span className='spanR'>'app.js'</span><span className='spanW'>,</span><span className='spanG'> // 파일들을 합쳐 app.js파일을 만듭니다.</span></p>
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>publicPath:</span> <span className='spanR'>'/dist'</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#93;,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
                         </code>
                     </div>
                     <ul>
                         <li>- 웹팩은 많은 jsx파일들을 하나로 합쳐주는 역할을 합니다.</li>                        
                         <li>- 컴포넌트가 많아지면 하나의 파일에서 관리하기 어렵기 때문에 여러개로 쪼개는것이 좋은데, 이를위해 웹팩이 필요합니다.</li>                        
                         <li>- 웹팩은 기본적으로 <b>entry</b>에서 입력받아온 값들에게 <b>module</b>을 적용하여 <b>output</b>으로 출력시키는 동작을합니다.</li>                        
+                    </ul>
+                </article>
+                <article>
+                    <h4>웹팩 실행</h4>
+                    <div className='codeCnt'>
+                        <code>
+                            <p><span className='spanW'>npx webpack</span></p>
+                            <p><span className='spanW'>npm run dev</span><span className='spanG'> // package.json파일의 scripts에서 dev를 실행합니다.</span></p>
+                        </code>
+                    </div>
+                    <ul>
+                        <li>- 위 코드중 하나를 터미널에 입력합니다.</li>
+                        <li>- npm run dev를 사용하려면 package.json파일에서 다음코드를 추가합니다.</li>
+                    </ul>
+                    <div className='codeCnt'>
+                        <code>
+                            <p><span className='spanB'>"scripts"</span><span className='spanW'>: &#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>"dev"</span><span className='spanW'>: <span className='spanR'>"webpack"</span>,</span></p>
+                            <p><span className='spanW'>&#125;,</span></p>
+                        </code>
+                    </div>
+                </article>
+                <article>
+                    <h4>자동 빌드</h4>
+                    <div className='codeCnt'>
+                        <code>
+                            <p><span className='spanW'>npm i -D react-refresh @pmmmwh/react-refresh-webpack-plugin</span></p>
+                            <p><span className='spanW'>npm i -D webpack-dev-server</span><span className='spanG'> // 변경된 소스를 감지해 결과물을 수정해줍니다.</span></p>
+                        </code>
+                    </div>
+                    <ul>
+                        <li>- 작업을 진행하다보면 코드하나를 수정할때마다 잘 수정되었는지 확인하기위해 터미널에 npx webpack이나 npm run dev를 계속 입력하여야하는 번거로움이 생깁니다.</li>
+                        <li>1. 이를 편리하게 하기위해 위 코드를 터미널에 입력해 플러그인을 설치합니다.</li>
+                        <li>2. package.json파일에서 코드를 수정합니다.</li>
+                    </ul>
+                    <div className='codeCnt'>
+                        <code>
+                            <p><span className='spanB'>"scripts"</span><span className='spanW'>: &#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>"dev"</span><span className='spanW'>: <span className='spanR'>"webpack serve --env development"</span>,</span></p>
+                            <p><span className='spanW'>&#125;,</span></p>
+                        </code>
+                    </div>
+                    <ul>
+                        <li>3. webpack.config.js파일에 아래 코드를 추가합니다.</li>
+                    </ul>
+                    <div className='codeCnt'>
+                        <code>
+                            <p>const <span className='spanB'>RefreshWebpackPlugin</span> <span className='spanW'>=</span> <span className='spanY'>require</span><span className='spanW'>( </span><span className="spanR">'@pmmmwh/react-refresh-webpack-plugin'</span><span className='spanW'> ) ;</span></p>
+                            <br />
+                            <p><span className="spanP">module<span className='spanW'>.</span><span className="spanP">exports</span></span> <span className='spanW'>= &#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>module:</span> <span className='spanR'></span><span className='spanW'>&#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>rules:</span> <span className='spanW'>&#91;&#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>options:</span> <span className='spanW'>&#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>plugins:</span> <span className='spanW'>&#91; </span><span className='spanR'>'react-refresh/babel'</span><span className='spanW'> &#93;,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;&#93;,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanB'>devServer:</span> <span className='spanW'>&#123;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>devMiddleware:</span> <span className='spanW'>&#123; <span className="spanB">publicPath</span> , <span className="spanR">'/dist'</span> &#125;, </span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>static:</span> <span className='spanW'>&#123; <span className="spanB">directory:</span></span> path<span className='spanW'>.<span className='spanY'>resolve</span> ( <span className="spanB">__dirname</span> ) &#125;, </span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='spanB'>hot:</span> true</p>
+                            <p>&nbsp;&nbsp;&nbsp;<span className='spanW'>&#125;,</span></p>
+                        </code>
+                    </div>
+                    <ul>
+                        <li>- 이제 npm run dev명령어 한번으로 수정사항을 실시간으로 확인할수있습니다.</li>
                     </ul>
                 </article>
             </section>
