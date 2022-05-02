@@ -6,7 +6,7 @@ const gnbList = [
     { gnb: '시작', router: 'Start'},
     { gnb: '문법', router: 'Grammar'},
     { gnb: '컴포넌트', router: '3'},
-    { gnb: '라우터', router: '4'}
+    { gnb: '라우터', router: 'Routerr'}
 ];
 
 const Header = () => {

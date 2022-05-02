@@ -94,3 +94,13 @@ const NumberBaseball = () => {
 };
 
 export default NumberBaseball;
+
+
+// 리액트 라이프 사이클 
+
+// class의 경우 -> constructor -> render -> ref -> componentDidMount -> setState/props 바뀔때 -> shouldComponentUpdate 
+// -> render -> componentDidUpdate -> 부모가 나를 없앴을때 -> componentWillUnmount -> 소멸
+
+// componentDidMount 컴포넌트가 첫 렌더링 된 후
+// componentDidUpdate 리렌더링 후
+// componentWillUnmount 컴포넌트가 제거되기 직전

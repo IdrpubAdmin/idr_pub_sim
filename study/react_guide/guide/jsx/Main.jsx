@@ -4,10 +4,9 @@ import Header from './Header';
 import Install from './Install';
 import Start from './Start';
 import Grammar from './Grammar';
-import Content3 from './Content3';
+import Routerr from './Routerr';
 
 const Main = () => {
-    const v = '기본구조'
     return (
         <BrowserRouter>
             <div className="wrap">
@@ -15,12 +14,12 @@ const Main = () => {
                     <Header />
                 </div>
                 <div className="containerWrap">
-                    <Routes>
+                    <Routes htmlCode = {"&nbsp;&nbsp;&nbsp;"}>
                         <Route path="/" element={<Install />} />
                         <Route path="/Install" element={<Install />} />
                         <Route path="/Start" element={<Start />} />
                         <Route path="/Grammar" element={<Grammar />} />
-                        <Route path="/Content3" element={<Content3 />} />
+                        <Route path="/Routerr" element={<Routerr />} />
                     </Routes>
                 </div>
                 <div className="footerWrap">

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+    <!-- 리액트가 어떻게 동작하는지 -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script>
+        const root = document.getElementById('root'); // ReactDOM에게 span을 어디에 둘건지 알려줘야함 그걸위해 바디에 root라는 아이디를 만들고 가져옴
+        const span = React.createElement('span', {id:'span', onMouseenter: () => console.log('마우스')}, 'Hello Im span'); // creacteElement안에는 실제 있는 태그만 작성 변수명은 알아서 작명
+        const btn = React.createElement('button', null, 'Click me');
+        const div = React.createElement('div', null, [span, btn]); // 위 Element를 둘다 가져오고싶다면
+        ReactDOM.render(div, root); // render(): creacteElement로 만들어진 Element를 가지고 HTML로 만들어 배치한다는것 (가져올것, 배치할곳)
+    </script>
+</html>

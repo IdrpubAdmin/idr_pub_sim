@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Grammar = () => {
+
+const Grammar = (props) => {
     return (
         <>
             <section className='install'>
@@ -20,6 +21,17 @@ const Grammar = () => {
                     </div>
                     <ul>
                         <li>- 리액트에서 반복문은 map을 사용합니다</li>
+                    </ul>     
+                </article>
+                <article>
+                    <h4>Props</h4>
+                    <div className='codeCnt'>
+                        <code>
+                            <p><span dangerouslySetInnerHTML={{ __html: props.htmlCode }}></span>dd</p>
+                        </code>
+                    </div>
+                    <ul>
+                         <li>- 리액트에서 반복문은 map을 사용합니다</li>
                     </ul>     
                 </article>
             </section>
