@@ -7,7 +7,6 @@ import Grammar from './Grammar';
 import Routerr from './Routerr';
 
 const Main = () => {
-    const htmlCode = `&nbsp;&nbsp;&nbsp;`
     return (
         <BrowserRouter>
             <div className="wrap">
@@ -15,7 +14,7 @@ const Main = () => {
                     <Header />
                 </div>
                 <div className="containerWrap">
-                    <Routes htmlCode={JSON.stringify.htmlCode}>
+                    <Routes>
                         <Route exact path="/" element={<Install />} />
                         <Route path="/Install" element={<Install />} />
                         <Route path="/Start" element={<Start />} />
