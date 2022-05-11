@@ -13,4 +13,4 @@ const AppRouter = ({isLoggedIn}) => {
     )
 }
 
-export default AppRouter;
+export default AppRouter; 
