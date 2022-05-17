@@ -8,7 +8,7 @@ import Navigation from "components/Navigation";
 const AppRouter = ({isLoggedIn, userObj}) => {
     return (
     <HashRouter>
-        {isLoggedIn && <Navigation />}
+        {isLoggedIn && <Navigation userObj={userObj} />}
         <div style={{ maxWidth: 890, width: "100%", margin: "0 auto", marginTop: 80, display: "flex", justifyContent: "center", }}>
             <Routes>
                 { isLoggedIn ? 
