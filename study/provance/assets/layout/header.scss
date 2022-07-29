@@ -1,5 +1,6 @@
 .wrapper {
     .header-wrap{
+<<<<<<< HEAD
         .logo-header{
             max-width: 1200px;
             width: 100%;
@@ -8,6 +9,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 22px 0;
+=======
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 22px 0;
+        .logo-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+>>>>>>> 507a7d3c582b946bce7bb3409eaa0d1dce9410cf
             .global-ico{
                 display: flex;
                 li{
@@ -39,6 +50,7 @@
                 }
             }
         }
+<<<<<<< HEAD
         .nav-header-wrap{
             border-top: 1px solid #000;
             border-bottom: 1px solid #000;
@@ -72,5 +84,8 @@
                 }
             }
         }
+=======
+        .menu-header{}
+>>>>>>> 507a7d3c582b946bce7bb3409eaa0d1dce9410cf
     }
 }
