@@ -1,7 +1,10 @@
 import Vue from 'vue';
-import ProvanceMain from './pages/ProvanceMain';
+import router from './router';
+import ProvanceMain from './ProvanceMain';
 import './assets/style.scss'
 
+
 new Vue({
-  render: createElement => createElement(ProvanceMain)
+  router,
+  render: createElement => createElement(ProvanceMain),
 }).$mount('#root');

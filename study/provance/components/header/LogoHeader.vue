@@ -15,11 +15,11 @@
             </li>
         </ul>
         <h1 class="logo">
-            <a href="#none">
+            <router-link to="/">
                 <img src="static/images/main/logo.png" alt="로고">
-            </a>
+            </router-link>
         </h1>
-        <sns-ico></sns-ico>
+        <sns-ico :snsData="snsData"></sns-ico>
     </div>
 </template>
 
@@ -27,6 +27,16 @@
 
 import SnsIco from './SnsIco.vue'
 export default {
+    data() {
+        return {
+            snsData : [
+                {image : '8', alt : '페이스북'},
+                {image : '7', alt : '블로그'},
+                {image : '4', alt : '인스타그램'},
+                {image : '3', alt : '유튜브'},
+            ]
+        }
+    },
     components: {
         SnsIco
     },
