@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in list" :key="item.id">
+                ID.{{item.id}} {{item.name}} HP.{{item.hp}} {{item.active}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        list : [
+            {id: 1, name: '슬라임', hp: 100},
+            {id: 2, name: '고블린', hp: 200},
+            {id: 3, name: '드래곤', hp: 500},
+        ]
+    },
+    created:function(){ // created: 리액티브 데이터가 초기화되고 난 후
+        this.list.forEach(function(item){ // item은 list의 요소들
+            this.$set(item, 'active', 1) // item에 active라는 속성을 추가함 값은 1
+        }, this)
+    }
+})
+
+
+</script>
+
+</html>

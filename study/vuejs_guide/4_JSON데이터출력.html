@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in list" :key="item.id">
+                ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        list : [] // 빈 리스트 준비
+    },
+    created: function() {
+        axios.get('list.json').then(function(response){ // axios.get('경로').then() 호출에 성공했을때 출력되는 부분
+            this.list = response.data // 데이터를 읽어와 list 배열에 할당 
+        }.bind(this)).catch(function(e){ // catch(예외객체): 예외처리, 호출에 실패했을때 출력되는 부분
+            console.error(e) // 데이터를 응답이 늦을 경우 아무것도 출력되지 않게 되므로 로딩 애니메이션 등을 이 부분에 넣는다. 
+        })
+    }
+})
+
+</script>
+
+</html>

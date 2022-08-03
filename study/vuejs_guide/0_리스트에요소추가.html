@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="name">
+        <button @click="doAdd">몬스터추가하기</button>
+        <ul>
+            <li v-for="item in list" :key="item.id">
+                ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        name : '',
+        list : [
+            {id: 1, name: '슬라임', hp: 100},
+            {id: 2, name: '고블린', hp: 200},
+            {id: 3, name: '드래곤', hp: 500},
+        ]
+    },
+    methods: {
+        doAdd: function() {
+            var max = this.list.reduce(function(a,b){ // reduce (배열요소를 계산하여 하나의 값으로 만듭니다) => reduce(function (previousValue, currentValue)
+                // 여기서 a 는 previousValue(이전값) => 보통은 배열값을 받아오는데 initialValue을 설정해 놓았기때문에 초기값이 0이 됩니다.
+                // b 는 currentValue(결과값) => 계산하고 나온값. 
+                return a > b.id ? a : b.id // 삼항연산자 (조건문) ? (참일때실행) : (거짓일때실행) => a > b.id : 이전값이 결과값 보다 크다면 이전값, 작다면 결과값 출력
+            }, 0) // 여기서 0은 initialValue => callback 함수가 최초로 호출될 때 previousValue에 초기화되는 값.
+            this.list.push({ // this는 Vue, Vue.list에 push(list 배열 마지막에 요소를 추가합니다)
+                id: max + 1,
+                name: this.name,
+                hp: 500
+            })
+        } 
+    },
+}) 
+
+// 궁금증 : 추가하고 새로고침했을때 반영 x => 반영시키려면?...
+
+</script> 
+
+</html>
