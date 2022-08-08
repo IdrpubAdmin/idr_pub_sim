@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li>computed를 사용한 데이터 : 결과를 캐시합니다 (몇번을 실행해도 같은 숫자가 리턴됩니다)</li>
+            <li>{{computedData}}</li>
+            <li>{{computedData}}</li>
+            <li>{{computedData}}</li>
+        </ol>
+        <ol>
+            <li>methods를 사용한 데이터</li>
+            <li>{{methodsData()}}</li>
+            <li>{{methodsData()}}</li>
+            <li>{{methodsData()}}</li>
+        </ol>
+    </div>
+</body>
+
+<script>
+    new Vue ({
+        el: '#app',
+        computed: {
+            computedData: function() {
+                return Math.random()
+            }
+        },
+        methods: {
+            methodsData: function() {
+                return Math.random()
+            }
+        }
+    })
+</script>
+</html>

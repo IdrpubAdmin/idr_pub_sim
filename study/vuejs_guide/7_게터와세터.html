@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model.number="halfWidth"> {{width}}
+    </div>
+</body>
+
+<script>
+    new Vue ({
+        el: '#app',
+        data: {
+            width: 800,
+            height: 600
+        },
+        computed: {
+            halfWidth: {
+                get:function() {
+                    return this.width /2
+                },
+                set:function(val) {
+                    return this.width = val * 2                
+                },
+            },
+            halfHeight: function() {
+                return this.height / 2
+            },
+            halfPoint: function() {
+                return {
+                    x: this.halfWidth,
+                    y: this.halfHeight
+                }
+            }
+        }
+    })
+</script>
+</html>
