@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p><button @click="count++">변경하기</button></p>
+        <transition>
+          <div :key="count">{{ count }}</div>
+        </transition>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            count: 0
+        }
+    }) 
+</script> 
+
+<style>
+    .v-enter-active {
+        transition: opacity 1s;
+    }
+    .v-leave-active {
+        transition: opacity 0.8s ease 0.2s;
+        position: absolute;
+    }
+    .v-enter, .v-leave-to {
+        opacity: 0;
+    }
+</style>
+</html>

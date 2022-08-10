@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            <button v-on:click="order=!order">변경하기</button>
+        </p>
+        <transition-group tag="ul" class="list">
+            <li v-show="order" v-for="item in list" :key="item.id">
+                {{ item.name }} {{ item.price }}원
+            </li>
+        </transition-group>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            order: false,
+            list: [
+                { id: 1, name: '사과', price: 1000 },
+                { id: 2, name: '바나나', price: 2000 },
+                { id: 3, name: '딸기', price: 3000 }
+            ]
+        },
+    }) 
+</script> 
+
+<style>
+    .v-enter-active, .v-leave-active, .v-move {
+        transition: opacity 1s, transform 1s;
+    }
+    .v-leave-active {
+        position: absolute;
+    }
+    .v-enter, .v-leave-to {
+        opacity: 0;
+    }
+</style>
+</html>

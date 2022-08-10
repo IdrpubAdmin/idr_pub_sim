@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p><button v-on:click="show=!show">변경하기</button></p>
+        <transition>
+          <div v-if="show" key="a">TRUE</div>
+          <div v-else key="b">FALSE</div>
+        </transition>
+    </div>
+</body>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        show: true
+    },
+
+}) 
+</script> 
+
+<style>
+    .v-enter-active, .v-leave-active {
+      transition: opacity 1s;
+    }
+    .v-leave-active {
+      position: absolute; /* 여러 요소를 그룹화하여 변경할때 포지션을 넣지않으면 변경될대 높이가 변경되어 부자연스러운 현상이 일어남 */
+    }
+    .v-enter, .v-leave-to {
+      opacity: 0;
+    }
+</style>
+</html>

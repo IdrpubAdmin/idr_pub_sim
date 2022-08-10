@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p><button v-on:click="show=!show">변경하기</button></p>
+        <transition mode="out-in">
+          <div v-if="show" key="a">TRUE</div>
+          <div v-else key="b">FALSE</div>
+        </transition>
+        <ul>
+            <li>트랜지션은 일반적으로 Enter와 Leave가 동시에 일어남</li>
+            <li>mode="in-out" : Enter먼저 시작되고 종료된후 Leave가 시작됨</li>
+            <li>mode="out-in" : Leave먼저 시작되고 종료된후 Enter가 시작됨</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        show: true
+    },
+
+}) 
+</script> 
+
+<style>
+    .v-enter-active, .v-leave-active {
+      transition: opacity 1s;
+    }
+    .v-enter, .v-leave-to {
+      opacity: 0;
+    }
+</style>
+</html>
