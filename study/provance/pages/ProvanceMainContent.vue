@@ -17,32 +17,23 @@
 		        <div class="swiper-pagination"></div>
 	        </div>
         </main>
+        <div class="content with">
+            <content-title
+                subTitle='WITH'
+                title='PROVENCE'
+                paragraph='파주프로방스에서 진행되는 다양한 이벤트로 많은 혜택을 누리세요'
+            ></content-title>
+            
+        </div>
     </div>
 </template>
 
 <script>
-
-// const swiper = new Swiper(".swiper-container", {
-//     slidesPerView: 1,
-//     autoHeight: true,
-//     effect: 'fade',
-//     fadeEffect: {
-//         crossFade: true
-//     },
-//     autoplay: true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         type: 'bullets',
-//         clickable: true,
-//         renderBullet: function (index, className) {
-//             return '<span class="' + className + '">' + '' + '</span>';
-//         },
-//     },
-// });
+import ContentTitle from '../components/contents/ContentTitle.vue'
 
 export default {
-    // swiper,
     components: { 
+        ContentTitle
     },
 
     methods: {
