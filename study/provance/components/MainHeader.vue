@@ -1,19 +1,13 @@
 <template>
     <div class="header-wrap">
         <logo-header></logo-header>
-<<<<<<< HEAD
         <nav-header :navData="navData"></nav-header>
-=======
-        <menu-header></menu-header>
->>>>>>> 507a7d3c582b946bce7bb3409eaa0d1dce9410cf
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import LogoHeader from './header/LogoHeader.vue'
 import NavHeader from './header/NavHeader.vue'
-
 
 export default {
     data() {
@@ -71,21 +65,7 @@ export default {
     components: {
         LogoHeader,
         NavHeader
-=======
-
-import LogoHeader from './header/LogoHeader.vue'
-import MenuHeader from './header/MenuHeader.vue'
-
-export default {
-    components: {
-        LogoHeader,
-        MenuHeader
->>>>>>> 507a7d3c582b946bce7bb3409eaa0d1dce9410cf
     },
-
-    methods: {
-    
-    }
 }
 
 </script>

@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"></HelloWorld>
+  <div>
+    <dest-componet></dest-componet>
+    <p>{{message}}</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DestComponet from './components/DestComponet.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    DestComponet
+  },
+  created() {
+    console.log(this.$store.state.count)
+    this.$store.commit('increment')
+  },
+  computed: {
+    message() {
+      return this.$store.getters.message
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

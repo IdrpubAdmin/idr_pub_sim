@@ -1,21 +1,18 @@
-import Vue from "vue";
 import { createStore } from "vuex";
-
-Vue.use(Vuex);
 
 export default createStore({
     state: {
-      counter: 10
+        message:'초기 메세지',
+        count: 0
     },
     getters: {
-      time2(state) {
-        return state.counter * 2;
+      message(state) {
+        return state.message
       }
     },
     mutations: {
-      setCounter(state, value) {
-        state.counter = value;
-      }
+        increment(state){
+          state.count++
+        }
     }
-  });
-   
+});
