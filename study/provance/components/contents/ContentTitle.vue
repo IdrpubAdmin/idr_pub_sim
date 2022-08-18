@@ -1,6 +1,7 @@
 <template>
     <div class="content-title">
-        <h3>{{subTitle}}<b>{{title}}</b></h3>
+        <h3>{{subTitle}} <b>{{title}}</b></h3>
+        <hr />
         <p>{{paragraph}}</p>
     </div>
 </template>

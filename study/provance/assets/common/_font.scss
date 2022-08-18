@@ -1,1 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    src: url(../static/fonts/nanum-square/NanumSquareEB.otf),
+         url(../static/fonts/nanum-square/NanumSquareEB.ttf);
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(../static/fonts/nanum-square/NanumSquareB.otf),
+         url(../static/fonts/nanum-square/NanumSquareB.ttf);
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 500;
+    src: url(../static/fonts/nanum-square/NanumSquareR.otf),
+         url(../static/fonts/nanum-square/NanumSquareR.ttf);
+} 
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(../static/fonts/nanum-square/NanumSquareL.otf),
+         url(../static/fonts/nanum-square/NanumSquareL.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    font-weight: 900;
+    src: url(../static/fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    src: url(../static/fonts/Lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    font-weight: 500;
+    src: url(../static/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: url(../static/fonts/Lato/Lato-Light.ttf);
+}

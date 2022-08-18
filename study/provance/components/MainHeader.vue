@@ -15,6 +15,7 @@ export default {
             navData : [
                 {
                     title : 'PROVENCE', 
+                    koTitle : '프로방스',
                     url : 'about', 
                     subNavData : [ 
                         {subTitle: '프로방스소개'}, 
@@ -23,6 +24,7 @@ export default {
                 },
                 {
                     title : 'VILLAGE', 
+                    koTitle : '마을동',
                     url : 'village',
                     subNavData : [ 
                         {subTitle: '식당&카페'}, 
@@ -33,6 +35,7 @@ export default {
                 },
                 {
                     title : 'TOWER', 
+                    koTitle : '주차타워',
                     url : 'tower',
                     subNavData : [ 
                         {subTitle: '주차타워'},
@@ -40,6 +43,7 @@ export default {
                 },
                 {
                     title : 'THEME', 
+                    koTitle : '힐링테마',
                     url : 'theme',
                     subNavData : [ 
                         {subTitle: '포토존'}, 
@@ -48,6 +52,7 @@ export default {
                 },
                 {
                     title : 'CUSTOMER', 
+                    koTitle : '고객센터',
                     url : 'customer',
                     subNavData : [            
                         {subTitle: '공지사항'},
@@ -57,6 +62,7 @@ export default {
                 },
                 {
                     title : 'SITEMAP', 
+                    koTitle : '사이트맵',
                     url : 'sitemap',
                 },
             ],
