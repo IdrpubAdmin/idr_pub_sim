@@ -1,11 +1,11 @@
 <template>
     <div>
-        {{a}}
+        안녕
     </div>
 </template>
 <script>
-var test = require("./store");
-console.log(test.a)
+// var test = require("./store");
+// console.log(test.a)
 module.exports = {
     data() {
         return {
