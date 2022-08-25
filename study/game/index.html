@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>game</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script language='javascript' defer>
+    function noEvent() {
+      if (event.keyCode == 116) {
+        event.keyCode= 2;
+        return false;
+      }else if(event.ctrlKey && (event.keyCode==78 || event.keyCode == 82)){
+        return false;
+      }
+    }document.onkeydown = noEvent;
+  </script>
+</html>
