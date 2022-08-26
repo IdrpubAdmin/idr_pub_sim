@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import GameStart from '@/components/GameStart'
 import GameJob from '@/components/GameJob'
-import GameUser from '@/components/GameUser'
+import GameProfile from '@/components/GameProfile'
 
 Vue.use(Router)
 
@@ -19,9 +19,9 @@ export default new Router({
       component: GameJob
     },
     {
-      path: '/user',
-      name: 'GameUser',
-      component: GameUser
+      path: '/profile',
+      name: 'GameProfile',
+      component: GameProfile
     }
   ]
 })

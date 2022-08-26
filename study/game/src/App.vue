@@ -110,4 +110,21 @@ body{
   width: 90%;
   height: 90%;
 }
+h3 {
+  font-family: sans-serif;
+  font-size: 26px;
+}
+button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font-size: 20px;
+  line-height: 44px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 </style>

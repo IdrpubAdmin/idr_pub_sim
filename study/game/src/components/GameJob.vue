@@ -9,8 +9,8 @@
     </ul>
     <div class="chose">
         <p>선택직업 : {{$store.state.job.koName}}</p>
-        <div>
-            <router-link to="/user" tag="button">선택완료</router-link>
+        <div v-show="this.$store.state.job.tf">
+            <router-link to="/Profile" tag="button">직업보기</router-link>
         </div>
     </div>
   </div>
@@ -26,10 +26,13 @@ export default {
         jobList : this.$store.state.jobList
     }
   },
+  mounted() {
+    this.$store.state.job = {}
+  },
   methods: {
     choseJob(jobData){
         this.$store.state.job = jobData
-    }
+    },
   },
 }
 </script>
@@ -37,10 +40,6 @@ export default {
 <style scoped>
     .job {
         padding-top: 40px;
-    }
-    h3 {
-        font-family: sans-serif;
-        font-size: 26px;
     }
     ul {
         width: 100%;
@@ -81,16 +80,6 @@ export default {
         margin-top: 10px;
     }
     .chose button {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        font-size: 16px;
-        line-height: 28px;
-        background-color: transparent;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-    button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        line-height: 24px;
     }
 </style>
