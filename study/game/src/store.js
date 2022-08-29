@@ -126,9 +126,7 @@ const store = new Vuex.Store({
         lv : 1
     },
     mutations: {
-        increment(state){
-            state.count++
-        }
+
     },
     plugins: [
         createPersistedState({
