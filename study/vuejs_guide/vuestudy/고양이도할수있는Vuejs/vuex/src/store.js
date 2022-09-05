@@ -3,6 +3,40 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const moduleA = {
+    namespaced: true,
+    state: {
+        count : 1
+    },
+    getters: {
+        count(state) {
+            return state.count
+        }
+    },
+    mutations: {
+        update(state) {
+            state.count += 100
+        }
+    }
+}
+
+const moduleB = {
+    namespaced: true,
+    state: {
+        count : 2
+    },
+    getters: {
+        count(state) {
+            return state.count
+        }
+    },
+    mutations: {
+        update(state) {
+            state.count += 200
+        }
+    }
+ }
+
 const store = new Vuex.Store ({
     state: {
         count: 0,
@@ -22,7 +56,13 @@ const store = new Vuex.Store ({
         doUpdate({commit}, message) {
             commit('setMessage', {message})
         }
+    },
+    modules: {
+        moduleA,
+        moduleB
     }
 })
+
+console.log(store)
 
 export default store

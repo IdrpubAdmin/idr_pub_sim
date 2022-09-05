@@ -4,6 +4,8 @@
     <div class="edit-form">
       <input type="text" :value="message" @input="doUpdate">
     </div>
+    {{ this.$store.getters['moduleA/count'] }}
+    {{ this.$store.state.moduleB.count }}
   </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
   computed: {
     message() {
       return this.$store.getters.message
-    }
+    },
   },
   methods: {
     doUpdate(e){

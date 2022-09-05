@@ -1,6 +1,7 @@
 <template>
   <div class="user">
-
+    유저
+    {{this.$store.state.jobList}}
   </div>
 </template>
 
