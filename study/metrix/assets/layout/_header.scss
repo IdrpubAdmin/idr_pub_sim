@@ -1,0 +1,17 @@
+.nav-wrap{
+    background-color: #ccc;
+    h1{
+        padding: 0 18px;
+    }
+    .after{
+        display: none;
+    }
+    .active{
+        .before{
+            display: none;
+        }
+        .after{
+            display: inline-block;
+        }
+    }
+}

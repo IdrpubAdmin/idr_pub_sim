@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrix</title>
-    <script src="plugin/vue@2.7.8/vue.js"></script>
-    <script src="plugin/vuex/vuex.js"></script>
-    <script src="plugin/vue-router/vue-router.js"></script>
-    <script src="plugin/httpVueLoader/httpVueLoader.js"></script>
+    <script src="static/plugin/vue@2.7.8/vue.js"></script>
+    <script src="static/plugin/vuex/vuex.js"></script>
+    <script src="static/plugin/vue-router/vue-router.js"></script>
+    <script src="static/plugin/httpVueLoader/httpVueLoader.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/store.js"></script>
 </head>
 <body>
     <div id="app">
-        <side-navigation></side-navigation>
-        <header-component></header-component>
-        <router-view></router-view>
+        <div class="wrapper">
+            <div class="nav-wrap">
+                <side-navigation></side-navigation>
+            </div>
+            <div class="header-wrap">
+                <header-component></header-component>
+            </div>
+            <div class="container">
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
     <script>
         var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
@@ -26,6 +36,7 @@
         var router = new VueRouter({
 	    	routes: [
 	    	  { path: '/', component: DashboardMain},
+	    	  { path: '/dashboard', component: DashboardMain},
 	    	  { path: '/orders', component: OrdersMain},
 	    	  { path: '/customers', component: CustomersMain},
 	    	  { path: '/inventory', component: InventoryMain},
@@ -35,6 +46,7 @@
 	    })
         var app = new Vue({
             el: '#app',
+            store,
             router,
             data() {
                 return {

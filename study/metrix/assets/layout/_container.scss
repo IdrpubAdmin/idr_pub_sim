@@ -1,0 +1,15 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    .nav-wrap{
+        width: 88px;
+        height: 100vh;
+    }
+    .header-wrap{
+        width: 1352px; 
+        height: 100px;
+    }
+    .container{
+        width: 1352px; 
+    }
+}

@@ -2,41 +2,17 @@
     <div>
         <h1>
             <router-link to="/">
-                <img src="images/Graph.png" alt="">
-                <span>Metrix</span>
+                <img src="static/images/navigation/Graph.png" alt="">
+                <span class="after">Metrix</span>
             </router-link>
         </h1>
         <nav>
             <ul>
-                <li>
-                    <router-link to="/">
-                        <img src="images/category.png" alt="">
-                        <span>Dashboard</span>
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/orders">
-                        Orders
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/customers">
-                        Customers
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/inventory">
-                        Inventory
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/conversations">
-                        Conversations
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/settings">
-                        Settings
+                <li v-for="(category, i) in categoryData" :key="i.category" @mouseover="gnbOn(i)" @mouseout="gnbOff(i)" ref="lnb">
+                    <router-link :to="category.title.toLowerCase()" >
+                        <img class="before" :src="'static/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
+                        <img class="after" :src="'static/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
+                        <span class="after">{{category.title}}</span>
                     </router-link>
                 </li>
             </ul>
@@ -46,6 +22,25 @@
 
 <script>
 module.exports = {
-    
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        gnbOn(i){
+            const lnb = this.$refs.lnb
+            lnb[i].classList.add('active')
+        },
+        gnbOff(i){
+            const lnb = this.$refs.lnb
+            lnb[i].classList.remove('active')
+        }
+    },
+    computed: {
+        categoryData() {
+            return this.$store.getters["NavigationData"].categoryData
+        },
+    }
 }
 </script>
