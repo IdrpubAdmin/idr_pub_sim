@@ -5,14 +5,42 @@
     .nav-wrap{
         width: $navigation-width;
         height: 100vh;
-        transition: $transition;
+        transition-property: width;
+        transition-duration: $transition;
     }
     .navactive{
         width: $navigation-active;
+        .navigation{
+            menu{
+                nav{
+                    ul{
+                        li{
+                            a{
+                                width: 233px;
+                            }
+                        }
+                    }
+                }
+                .btns{
+                    ul{
+                        li{
+                            width: 233px;
+                            &:last-child{
+                                height: 82px;
+                            }
+                            span{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     } 
-    .wrap{
+    main{
         width: calc(100% - $navigation-width);
-        transition: $transition;
+        transition-property: width;
+        transition-duration: $transition;
         .header-wrap{  
             height: 100px;
         }
@@ -20,7 +48,7 @@
 
         }
     } 
-    .wrapactive{
+    .mainactive{
         width: calc(100% - $navigation-active);
     }  
 }

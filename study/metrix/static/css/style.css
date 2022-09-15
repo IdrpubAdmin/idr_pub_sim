@@ -779,20 +779,134 @@ input, button, textarea, select, option {
   box-sizing: border-box;
 }
 
-.nav-wrap {
-  background-color: #ccc;
+.navigation {
+  padding: 14px 16px;
 }
-.nav-wrap h1 {
-  padding: 0 18px;
+.navigation h1 {
+  padding: 0 2px;
+  position: relative;
 }
-.nav-wrap .after {
-  display: none;
+.navigation h1 a img {
+  width: 52px;
+  height: 52px;
 }
-.nav-wrap .active .before {
-  display: none;
+.navigation h1 a span {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #45464E;
+  position: absolute;
+  bottom: 8px;
+  left: 60px;
 }
-.nav-wrap .active .after {
+.navigation menu {
+  margin-top: 62px;
+}
+.navigation menu .hidden-title {
+  height: 14px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  margin: auto;
+  overflow: hidden;
+}
+.navigation menu .category-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  margin: auto;
+}
+.navigation menu nav ul li {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #53545c;
+  margin-top: 12px;
+}
+.navigation menu nav ul li:first-child {
+  margin-top: 0;
+}
+.navigation menu nav ul li a {
   display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  position: relative;
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+.navigation menu nav ul li a .after {
+  display: none;
+}
+.navigation menu nav ul li .router-link-active {
+  background-color: #5570f1;
+}
+.navigation menu nav ul li .router-link-active .before {
+  display: none;
+}
+.navigation menu nav ul li .router-link-active .after {
+  display: block;
+}
+.navigation menu nav ul li .router-link-active span {
+  color: #fff;
+}
+.navigation menu .btns {
+  margin-top: 200px;
+}
+.navigation menu .btns ul li {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #1c1d22;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  position: relative;
+  background-color: rgba(255, 204, 145, 0.2);
+  margin-top: 14px;
+  transition-property: width, height;
+  transition-duration: 0.5s;
+}
+.navigation menu .btns ul li:first-child {
+  height: 46px;
+  background-color: #f4f5fa;
+  margin-top: 0;
+}
+.navigation menu .btns ul li:last-child .category-img {
+  top: 16px;
+  margin: 0;
+}
+.navigation menu .btns ul li:last-child .hidden-title {
+  top: 21px;
+  margin: 0;
+}
+.navigation menu .btns ul li:last-child .hidden-title2 {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #6e7079;
+  height: 14px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  overflow: hidden;
+}
+.navigation menu .btns ul li:last-child .hidden-img {
+  position: absolute;
+  bottom: 14px;
+  right: 53px;
+}
+.navigation menu .btns ul li .hidden-title {
+  left: 55px;
+}
+.navigation menu .btns .log-out {
+  margin-top: 20px;
 }
 
 .wrapper {
@@ -803,18 +917,32 @@ input, button, textarea, select, option {
 .wrapper .nav-wrap {
   width: 88px;
   height: 100vh;
-  transition: 0.5s;
+  transition-property: width;
+  transition-duration: 0.5s;
 }
 .wrapper .navactive {
   width: 296px;
 }
-.wrapper .wrap {
-  width: calc(100% - 88px);
-  transition: 0.5s;
+.wrapper .navactive .navigation menu nav ul li a {
+  width: 233px;
 }
-.wrapper .wrap .header-wrap {
+.wrapper .navactive .navigation menu .btns ul li {
+  width: 233px;
+}
+.wrapper .navactive .navigation menu .btns ul li:last-child {
+  height: 82px;
+}
+.wrapper .navactive .navigation menu .btns ul li span {
+  opacity: 1;
+}
+.wrapper main {
+  width: calc(100% - 88px);
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+.wrapper main .header-wrap {
   height: 100px;
 }
-.wrapper .wrapactive {
+.wrapper .mainactive {
   width: calc(100% - 296px);
 }/*# sourceMappingURL=style.css.map */
