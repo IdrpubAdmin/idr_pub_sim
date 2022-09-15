@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="navigation">
         <h1>
             <router-link to="/">
                 <img src="static/images/navigation/Graph.png" alt="">
@@ -8,7 +8,7 @@
         </h1>
         <nav>
             <ul>
-                <li v-for="(category, i) in categoryData" :key="i.category" @mouseover="gnbOn(i)" @mouseout="gnbOff(i)" ref="lnb">
+                <li v-for="(category, i) in categoryData" :key="i.category">
                     <router-link :to="category.title.toLowerCase()" >
                         <img class="before" :src="'static/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
                         <img class="after" :src="'static/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
@@ -28,13 +28,11 @@ module.exports = {
         }
     },
     methods: {
-        gnbOn(i){
-            const lnb = this.$refs.lnb
-            lnb[i].classList.add('active')
+        gnbOn(){
+            console.log('on')
         },
-        gnbOff(i){
-            const lnb = this.$refs.lnb
-            lnb[i].classList.remove('active')
+        gnbOff(){
+            console.log('off')
         }
     },
     computed: {

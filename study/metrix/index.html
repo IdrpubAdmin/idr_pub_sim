@@ -15,14 +15,16 @@
 <body>
     <div id="app">
         <div class="wrapper">
-            <div class="nav-wrap">
+            <div class="nav-wrap" @mouseover="isActive=!isActive" @mouseout="isActive=!isActive" :class="{navactive: isActive}">
                 <side-navigation></side-navigation>
             </div>
-            <div class="header-wrap">
-                <header-component></header-component>
-            </div>
-            <div class="container">
-                <router-view></router-view>
+            <div class="wrap" :class="{wrapactive: isActive}">
+                <div class="header-wrap">
+                    <header-component></header-component>
+                </div>
+                <div class="container">
+                    <router-view></router-view>
+                </div>
             </div>
         </div>
     </div>
@@ -50,9 +52,17 @@
             router,
             data() {
                 return {
-
-                  }
-	            },
+                    isActive : false
+                }
+            },
+            methods: {
+                gnbOn(){
+                    console.log(isActive)
+                },
+                gnbOff(){
+                    console.log(isActive)
+                }
+            },
             components : {
                 'side-navigation': httpVueLoader('components/common/SideNavigation.vue'),
                 'header-component': httpVueLoader('components/common/HeaderMain.vue'),

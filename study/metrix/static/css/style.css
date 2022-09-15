@@ -796,17 +796,25 @@ input, button, textarea, select, option {
 }
 
 .wrapper {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 .wrapper .nav-wrap {
   width: 88px;
   height: 100vh;
+  transition: 0.5s;
 }
-.wrapper .header-wrap {
-  width: 1352px;
+.wrapper .navactive {
+  width: 296px;
+}
+.wrapper .wrap {
+  width: calc(100% - 88px);
+  transition: 0.5s;
+}
+.wrapper .wrap .header-wrap {
   height: 100px;
 }
-.wrapper .container {
-  width: 1352px;
+.wrapper .wrapactive {
+  width: calc(100% - 296px);
 }/*# sourceMappingURL=style.css.map */

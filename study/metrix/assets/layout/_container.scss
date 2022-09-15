@@ -1,15 +1,26 @@
 .wrapper{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     .nav-wrap{
-        width: 88px;
+        width: $navigation-width;
         height: 100vh;
+        transition: $transition;
     }
-    .header-wrap{
-        width: 1352px; 
-        height: 100px;
-    }
-    .container{
-        width: 1352px; 
-    }
+    .navactive{
+        width: $navigation-active;
+    } 
+    .wrap{
+        width: calc(100% - $navigation-width);
+        transition: $transition;
+        .header-wrap{  
+            height: 100px;
+        }
+        .container{
+
+        }
+    } 
+    .wrapactive{
+        width: calc(100% - $navigation-active);
+    }  
 }
