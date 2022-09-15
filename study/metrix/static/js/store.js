@@ -1,12 +1,12 @@
 var NavigationData = {
     state: {
         categoryData : [
-            { title: "Dashboard", icon: "category" },
-            { title: "Orders", icon: "bag" },
-            { title: "Customers", icon: "user" },
-            { title: "Inventory", icon: "folder" },
-            { title: "Conversations", icon: "chat" },
-            { title: "Settings", icon: "setting" },
+            { title: "Dashboard", icon: "Category" },
+            { title: "Orders", icon: "Bag" },
+            { title: "Customers", icon: "User" },
+            { title: "Inventory", icon: "Folder" },
+            { title: "Conversations", icon: "Chat" },
+            { title: "Settings", icon: "Setting" },
         ]
     }
 }
