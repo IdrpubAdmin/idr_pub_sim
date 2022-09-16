@@ -1,3 +1,41 @@
-.nav-wrap{
-    
+header{
+    .page-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+        .title{
+            h3{
+                @include fonts ('Poppins', 20, 500, 30, #45464E);
+            }
+        }
+        .user{
+            display: flex;
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 10px;
+            }
+            .select-box{
+                width: 154px;
+                border-radius: 8px;
+                background-color: #fef5ea;
+                span{
+                    @include fonts ('Inter', 14, 400, 20, #1c1d22);
+                }
+                img{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .location{
+        border-top: solid 1px #f1f3f9;
+        padding: 4px 20px;
+        display: flex;
+        .home-icon{
+            height: 16px;
+        }
+    }
 }

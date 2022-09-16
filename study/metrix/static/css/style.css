@@ -781,6 +781,7 @@ input, button, textarea, select, option {
 
 .navigation {
   padding: 14px 16px;
+  transition: padding 0.5s;
 }
 .navigation h1 {
   padding: 0 2px;
@@ -924,6 +925,52 @@ input, button, textarea, select, option {
   color: #cc5f5f;
 }
 
+header .page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+header .page-head .title h3 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #45464E;
+}
+header .page-head .user {
+  display: flex;
+}
+header .page-head .user li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+header .page-head .user .select-box {
+  width: 154px;
+  border-radius: 8px;
+  background-color: #fef5ea;
+}
+header .page-head .user .select-box span {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1c1d22;
+}
+header .page-head .user .select-box img {
+  margin-left: 10px;
+}
+header .location {
+  border-top: solid 1px #f1f3f9;
+  padding: 4px 20px;
+  display: flex;
+}
+header .location .home-icon {
+  height: 16px;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -939,6 +986,9 @@ input, button, textarea, select, option {
 .wrapper .navactive {
   width: 296px;
 }
+.wrapper .navactive .navigation {
+  padding: 14px 32px;
+}
 .wrapper .navactive .navigation menu nav ul li a {
   width: 233px;
 }
@@ -953,9 +1003,14 @@ input, button, textarea, select, option {
   transition-property: width;
   transition-duration: 0.5s;
 }
-.wrapper main .header-wrap {
-  height: 100px;
-}
 .wrapper .mainactive {
   width: calc(100% - 296px);
+}
+.wrapper .container {
+  height: calc(100vh - 87px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background-color: #f4f5fa;
 }/*# sourceMappingURL=style.css.map */
