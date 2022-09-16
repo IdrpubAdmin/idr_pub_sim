@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     .nav-wrap{
+        position: relative;
         width: $navigation-width;
         height: 100vh;
         transition-property: width;
@@ -24,13 +25,10 @@
                 .btns{
                     ul{
                         li{
-                            width: 233px;
-                            &:last-child{
-                                height: 82px;
-                            }
-                            span{
-                                opacity: 1;
-                            }
+                            width: 233px;                 
+                        }
+                        .gift-box{
+                            height: 82px;
                         }
                     }
                 }

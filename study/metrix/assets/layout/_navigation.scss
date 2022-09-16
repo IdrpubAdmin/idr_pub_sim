@@ -65,10 +65,8 @@
             }
         }
         .btns{
-            margin-top: 200px;
-            // 
-            // 임시
-            // 
+            position: absolute;
+            top: 80%;
             ul{
                 li{
                     @include fonts ('Inter', 14, 400, 14, #1c1d22);
@@ -80,42 +78,49 @@
                     margin-top: 14px;
                     transition-property: width, height;
                     transition-duration: $transition;
-                    &:first-child{
-                        height: 46px;
-                        background-color: #f4f5fa;
-                        margin-top: 0;
-                    }
-                    &:last-child{
-                        .category-img{
-                            top: 16px;
-                            margin: 0;
-                        }
-                        .hidden-title{
-                            top: 21px;
-                            margin: 0;
-                        }
-                        .hidden-title2{
-                            @include fonts ('Inter', 12, 400, 14, #6e7079);
-                            height: 14px;
-                            position: absolute;
-                            bottom: 15px; left: 20px;
-                            overflow: hidden;
-                        }
-                        .hidden-img{
-                            position: absolute;
-                            bottom: 14px; right: 53px;
-                        }
-                    }
                     .hidden-title{
                         left: 55px;
                     }
                 }
+                .headphone-box{
+                    height: 46px;
+                    background-color: #f4f5fa;
+                    margin-top: 0;
+                }
+                .gift-box{
+                    .category-img{
+                        top: 16px;
+                        margin: 0;
+                    }
+                    .hidden-title{
+                        top: 21px;
+                        margin: 0;
+                    }
+                    .hidden-title2{
+                        @include fonts ('Inter', 12, 400, 14, #6e7079);
+                        height: 14px;
+                        position: absolute;
+                        bottom: 15px; left: 20px;
+                        overflow: hidden;
+                    }
+                    .hidden-img{
+                        position: absolute;
+                        bottom: 14px; right: 53px;
+                    }
+                }
             }
-            .log-out{
-                margin-top: 20px;
-                // 
-                // 임시
-                // 
+        }
+        .logout-box{ 
+            position: absolute;
+            bottom: 50px;
+            a{
+                display: inline-block;
+                width: 56px;
+                height: 56px;
+                position: relative;
+                .hidden-title{
+                    @include fonts ('Inter', 14, 400, 11, #cc5f5f);
+                }
             }
         }
     }

@@ -855,7 +855,8 @@ input, button, textarea, select, option {
   color: #fff;
 }
 .navigation menu .btns {
-  margin-top: 200px;
+  position: absolute;
+  top: 80%;
 }
 .navigation menu .btns ul li {
   font-family: "Inter";
@@ -872,20 +873,23 @@ input, button, textarea, select, option {
   transition-property: width, height;
   transition-duration: 0.5s;
 }
-.navigation menu .btns ul li:first-child {
+.navigation menu .btns ul li .hidden-title {
+  left: 55px;
+}
+.navigation menu .btns ul .headphone-box {
   height: 46px;
   background-color: #f4f5fa;
   margin-top: 0;
 }
-.navigation menu .btns ul li:last-child .category-img {
+.navigation menu .btns ul .gift-box .category-img {
   top: 16px;
   margin: 0;
 }
-.navigation menu .btns ul li:last-child .hidden-title {
+.navigation menu .btns ul .gift-box .hidden-title {
   top: 21px;
   margin: 0;
 }
-.navigation menu .btns ul li:last-child .hidden-title2 {
+.navigation menu .btns ul .gift-box .hidden-title2 {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -897,16 +901,27 @@ input, button, textarea, select, option {
   left: 20px;
   overflow: hidden;
 }
-.navigation menu .btns ul li:last-child .hidden-img {
+.navigation menu .btns ul .gift-box .hidden-img {
   position: absolute;
   bottom: 14px;
   right: 53px;
 }
-.navigation menu .btns ul li .hidden-title {
-  left: 55px;
+.navigation menu .logout-box {
+  position: absolute;
+  bottom: 50px;
 }
-.navigation menu .btns .log-out {
-  margin-top: 20px;
+.navigation menu .logout-box a {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+.navigation menu .logout-box a .hidden-title {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #cc5f5f;
 }
 
 .wrapper {
@@ -915,6 +930,7 @@ input, button, textarea, select, option {
   flex-wrap: wrap;
 }
 .wrapper .nav-wrap {
+  position: relative;
   width: 88px;
   height: 100vh;
   transition-property: width;
@@ -929,11 +945,8 @@ input, button, textarea, select, option {
 .wrapper .navactive .navigation menu .btns ul li {
   width: 233px;
 }
-.wrapper .navactive .navigation menu .btns ul li:last-child {
+.wrapper .navactive .navigation menu .btns ul .gift-box {
   height: 82px;
-}
-.wrapper .navactive .navigation menu .btns ul li span {
-  opacity: 1;
 }
 .wrapper main {
   width: calc(100% - 88px);

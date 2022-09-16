@@ -20,20 +20,27 @@
             </nav>
             <div class="btns">
                 <ul>
-                    <li>
-                        <img class="category-img" src="static/images/navigation/fi_headphones.png" alt="Headphone icon">
-                        <span class="hidden-title" v-show="$store.getters.isActive">Contact Support</span>
+                    <li class="headphone-box">
+                        <router-link to="/">
+                            <img class="category-img" src="static/images/navigation/fi_headphones.png" alt="Headphone icon">
+                            <span class="hidden-title" v-show="$store.getters.isActive">Contact Support</span>
+                        </router-link>
                     </li>
-                    <li>
-                        <img class="category-img" src="static/images/navigation/fi_gift.png" alt="gift icon">
-                        <span class="hidden-title" v-show="$store.getters.isActive">Free Gift Awaits You!</span>
-                        <span class="hidden-title2" v-show="$store.getters.isActive">Upgrade your account</span>
-                        <img class="hidden-img" v-show="$store.getters.isActive" src="static/images/navigation/fi_chevron-right.png" alt="right icon">
+                    <li class="gift-box">
+                        <router-link to="/">
+                            <img class="category-img" src="static/images/navigation/fi_gift.png" alt="gift icon">
+                            <span class="hidden-title" v-show="$store.getters.isActive">Free Gift Awaits You!</span>
+                            <span class="hidden-title2" v-show="$store.getters.isActive">Upgrade your account</span>
+                            <img class="hidden-img" v-show="$store.getters.isActive" src="static/images/navigation/fi_chevron-right.png" alt="right icon">
+                        </router-link>
                     </li>
                 </ul>
-                <div class="log-out">
-                    <img src="static/images/navigation/Logout.png" alt="Logout icon">
-                </div>     
+            </div>
+            <div class="logout-box">
+                <router-link to="/">
+                    <img class="category-img" src="static/images/navigation/Logout.png" alt="Logout icon">
+                    <span class="hidden-title" v-show="$store.getters.isActive">Logout</span>
+                </router-link>
             </div>
         </menu>
     </div>
