@@ -1,0 +1,64 @@
+.container{
+    height: calc(100vh - 87px);
+    .dashboard{
+        height: 100%;
+        padding: 20px 10px;
+        .cnt1{
+            display: flex;
+            justify-content: space-around;
+            article{
+                width: calc(33.33% - 20px);
+                height: 15vh;
+                background-color: #fff;
+                margin: 0 10px;
+                border-radius: 12px;
+            }
+        }
+        .cnt2{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .chart{
+                width: calc(66.66% - 20px);
+                margin: 0 10px;
+                .cnt3{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    article{
+                        width: calc(50% - 10px);
+                        height: calc(35vh - 20px);
+                        background-color: #fff;
+                        border-radius: 12px;
+                    }
+                    div{
+                        width: calc(50% - 10px);
+                        article{
+                            width: 100%;
+                            height: calc(17.5vh - 20px);
+                            margin-top: 20px;
+                            background-color: #fff;
+                            border-radius: 12px;
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+                .graph{
+                    background-color: #fff;
+                    margin-top: 20px;
+                    height: calc(35vh - 20px);
+                    border-radius: 12px;
+                }
+            }
+            .prod{
+                width: calc(33.33% - 20px);
+                height: calc(70vh - 20px);
+                background-color: #fff;
+                margin: 0 10px;
+                border-radius: 12px;
+            }
+        }
+    }
+}

@@ -1008,9 +1008,70 @@ header .location .home-icon {
 }
 .wrapper .container {
   height: calc(100vh - 87px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 60px;
   background-color: #f4f5fa;
+}
+
+.container {
+  height: calc(100vh - 87px);
+}
+.container .dashboard {
+  height: 100%;
+  padding: 20px 10px;
+}
+.container .dashboard .cnt1 {
+  display: flex;
+  justify-content: space-around;
+}
+.container .dashboard .cnt1 article {
+  width: calc(33.33% - 20px);
+  height: 15vh;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 12px;
+}
+.container .dashboard .cnt2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.container .dashboard .cnt2 .chart {
+  width: calc(66.66% - 20px);
+  margin: 0 10px;
+}
+.container .dashboard .cnt2 .chart .cnt3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .dashboard .cnt2 .chart .cnt3 article {
+  width: calc(50% - 10px);
+  height: calc(35vh - 20px);
+  background-color: #fff;
+  border-radius: 12px;
+}
+.container .dashboard .cnt2 .chart .cnt3 div {
+  width: calc(50% - 10px);
+}
+.container .dashboard .cnt2 .chart .cnt3 div article {
+  width: 100%;
+  height: calc(17.5vh - 20px);
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.container .dashboard .cnt2 .chart .cnt3 div article:first-child {
+  margin-top: 0;
+}
+.container .dashboard .cnt2 .chart .graph {
+  background-color: #fff;
+  margin-top: 20px;
+  height: calc(35vh - 20px);
+  border-radius: 12px;
+}
+.container .dashboard .cnt2 .prod {
+  width: calc(33.33% - 20px);
+  height: calc(70vh - 20px);
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 12px;
 }/*# sourceMappingURL=style.css.map */
