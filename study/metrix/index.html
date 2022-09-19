@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrix</title>
-    <script src="static/plugin/vue@2.7.8/vue.js"></script>
-    <script src="static/plugin/vuex/vuex.js"></script>
-    <script src="static/plugin/vue-router/vue-router.js"></script>
-    <script src="static/plugin/httpVueLoader/httpVueLoader.js"></script>
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/store.js"></script>
+    <script src="assets/plugin/vue@2.7.8/vue.js"></script>
+    <script src="assets/plugin/vuex/vuex.js"></script>
+    <script src="assets/plugin/vue-router/vue-router.js"></script>
+    <script src="assets/plugin/httpVueLoader/httpVueLoader.js"></script>
+    <script src="components/store.js"></script>
+    <script src="components/router.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="app">
@@ -29,40 +30,6 @@
         </div>
     </div>
     <script>
-        var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
-        var OrdersMain = httpVueLoader('components/orders/OrdersMain.vue');
-        var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
-        var InventoryMain = httpVueLoader('components/inventory/InventoryMain.vue');
-        var ConversationsMain = httpVueLoader('components/conversations/ConversationsMain.vue');
-        var SettingsMain = httpVueLoader('components/settings/SettingsMain.vue');
-        var HiMain1 = httpVueLoader('components/orders/HiMain1.vue')
-        var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
-        var router = new VueRouter({
-	    	routes: [
-	    	  { path: '/', component: DashboardMain},
-	    	  { path: '/dashboard', component: DashboardMain},
-	    	  { 
-                path: '/orders', 
-                component: OrdersMain,
-                children:[
-                    {
-                        name: 'test1',
-                        path: '',
-                        component: HiMain1
-                    },
-                    {
-                        name: 'test2',
-                        path: 'test',
-                        component: HiMain2
-                    }
-                ],
-              },
-	    	  { path: '/customers', component: CustomersMain},
-	    	  { path: '/inventory', component: InventoryMain},
-	    	  { path: '/conversations', component: ConversationsMain},
-	    	  { path: '/settings', component: SettingsMain},
-  	    	]
-	    })
         var app = new Vue({
             el: '#app',
             store,

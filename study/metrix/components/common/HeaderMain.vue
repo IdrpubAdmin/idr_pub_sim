@@ -8,23 +8,23 @@
             <ul class="user">
                 <li class="select-box">
                     <span>Nanny’s Shop</span>
-                    <img src="static/images/header/fi_chevron-down.png" alt="down icon">
+                    <img src="assets/images/header/fi_chevron-down.png" alt="down icon">
                 </li>
                 <li class="alarm-icon">
                     <router-link to="/">
-                        <img src="static/images/header/Notification.png" alt="notification icon">
+                        <img src="assets/images/header/Notification.png" alt="notification icon">
                     </router-link>
                 </li>
                 <li class="profile">
                     <router-link to="/">
-                        <img src="static/images/header/profile1.png" alt="profile img">
+                        <img src="assets/images/header/profile1.png" alt="profile img">
                     </router-link>
                 </li>
             </ul>
         </div>
         <div class="location">
             <div class="home-icon">
-                <img src="static/images/header/Home.png" alt="home icon">
+                <img src="assets/images/header/Home.png" alt="home icon">
             </div>
             <div class="breadcrumb">
                 <span>{{$route.path.slice(1)}}</span>

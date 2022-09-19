@@ -2,7 +2,7 @@
     <div class="navigation">
         <h1>
             <router-link to="/">
-                <img src="static/images/navigation/Graph.png" alt="logo">
+                <img src="assets/images/navigation/Graph.png" alt="logo">
                 <span v-show="$store.getters.isActive">Metrix</span>
             </router-link>
         </h1>
@@ -11,8 +11,8 @@
                 <ul>
                     <li v-for="(category, i) in categoryData" :key="i.category">
                         <router-link :to="category.path" exact>
-                            <img class="before category-img" :src="'static/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
-                            <img class="after category-img" :src="'static/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
+                            <img class="before category-img" :src="'assets/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
+                            <img class="after category-img" :src="'assets/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
                             <span class="hidden-title" v-show="$store.getters.isActive">{{category.title}}</span>
                         </router-link>
                     </li>
@@ -22,23 +22,23 @@
                 <ul>
                     <li class="headphone-box">
                         <router-link to="/">
-                            <img class="category-img" src="static/images/navigation/fi_headphones.png" alt="Headphone icon">
+                            <img class="category-img" src="assets/images/navigation/fi_headphones.png" alt="Headphone icon">
                             <span class="hidden-title" v-show="$store.getters.isActive">Contact Support</span>
                         </router-link>
                     </li>
                     <li class="gift-box">
                         <router-link to="/">
-                            <img class="category-img" src="static/images/navigation/fi_gift.png" alt="gift icon">
+                            <img class="category-img" src="assets/images/navigation/fi_gift.png" alt="gift icon">
                             <span class="hidden-title" v-show="$store.getters.isActive">Free Gift Awaits You!</span>
                             <span class="hidden-title2" v-show="$store.getters.isActive">Upgrade your account</span>
-                            <img class="hidden-img" v-show="$store.getters.isActive" src="static/images/navigation/fi_chevron-right.png" alt="right icon">
+                            <img class="hidden-img" v-show="$store.getters.isActive" src="assets/images/navigation/fi_chevron-right.png" alt="right icon">
                         </router-link>
                     </li>
                 </ul>
             </div>
             <div class="logout-box">
                 <router-link to="/">
-                    <img class="category-img" src="static/images/navigation/Logout.png" alt="Logout icon">
+                    <img class="category-img" src="assets/images/navigation/Logout.png" alt="Logout icon">
                     <span class="hidden-title" v-show="$store.getters.isActive">Logout</span>
                 </router-link>
             </div>
