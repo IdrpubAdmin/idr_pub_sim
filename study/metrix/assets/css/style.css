@@ -970,6 +970,26 @@ header .location {
 header .location .home-icon {
   height: 16px;
 }
+header .location .breadcrumb {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #8b8d97;
+}
+header .location .breadcrumb ul {
+  display: flex;
+}
+header .location .breadcrumb ul li {
+  margin-left: 10px;
+}
+header .location .breadcrumb ul li a:hover {
+  color: #5570f1;
+}
+header .location .breadcrumb ul li::before {
+  content: "/";
+  margin-right: 10px;
+}
 
 .wrapper {
   width: 100%;
@@ -1018,57 +1038,105 @@ header .location .home-icon {
   height: 100%;
   padding: 20px 10px;
 }
-.container .dashboard .cnt1 {
+.container .dashboard .summary:first-child .header .icon {
+  background-color: rgba(85, 112, 241, 0.12);
+}
+.container .dashboard .summary .header {
+  padding: 15px;
+}
+.container .dashboard .summary .header .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(255, 204, 145, 0.16);
+  position: relative;
+}
+.container .dashboard .summary .header .icon img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.container .dashboard .summary .texts {
+  margin-top: 15px;
+}
+.container .dashboard .summary .texts ul {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.container .dashboard .summary .texts ul li {
+  width: 100%;
+  margin: 0 15px;
+}
+.container .dashboard .summary .texts ul li .text {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #8b8d97;
+}
+.container .dashboard .summary .texts ul li .data {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+  margin-top: 10px;
+}
+.container .dashboard .cnts1 {
   display: flex;
   justify-content: space-around;
 }
-.container .dashboard .cnt1 article {
+.container .dashboard .cnts1 article {
   width: calc(33.33% - 20px);
   height: 15vh;
   background-color: #fff;
   margin: 0 10px;
   border-radius: 12px;
 }
-.container .dashboard .cnt2 {
+.container .dashboard .cnts2 {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-.container .dashboard .cnt2 .chart {
+.container .dashboard .cnts2 .chart {
   width: calc(66.66% - 20px);
   margin: 0 10px;
 }
-.container .dashboard .cnt2 .chart .cnt3 {
+.container .dashboard .cnts2 .chart .cnts3 {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.container .dashboard .cnt2 .chart .cnt3 article {
+.container .dashboard .cnts2 .chart .cnts3 article {
   width: calc(50% - 10px);
   height: calc(35vh - 20px);
   background-color: #fff;
   border-radius: 12px;
 }
-.container .dashboard .cnt2 .chart .cnt3 div {
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 {
   width: calc(50% - 10px);
 }
-.container .dashboard .cnt2 .chart .cnt3 div article {
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 article {
   width: 100%;
   height: calc(17.5vh - 20px);
   margin-top: 20px;
   background-color: #fff;
   border-radius: 12px;
 }
-.container .dashboard .cnt2 .chart .cnt3 div article:first-child {
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 article:first-child {
   margin-top: 0;
 }
-.container .dashboard .cnt2 .chart .graph {
+.container .dashboard .cnts2 .chart .graph {
   background-color: #fff;
   margin-top: 20px;
   height: calc(35vh - 20px);
   border-radius: 12px;
 }
-.container .dashboard .cnt2 .prod {
+.container .dashboard .cnts2 .prod {
   width: calc(33.33% - 20px);
   height: calc(70vh - 20px);
   background-color: #fff;

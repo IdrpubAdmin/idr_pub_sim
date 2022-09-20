@@ -8,27 +8,79 @@ var HiMain1 = httpVueLoader('components/orders/HiMain1.vue')
 var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
 var router = new VueRouter({
 	routes: [
-	  { path: '/', component: DashboardMain},
-	  { path: '/dashboard', component: DashboardMain},
 	  { 
-        path: '/orders', 
-        component: OrdersMain,
-        children:[
-            {
-                name: 'test1',
-                path: '',
-                component: HiMain1
-            },
-            {
-                name: 'test2',
-                path: 'test',
-                component: HiMain2
-            }
+      name: 'dashboard',
+      path: '/', 
+      component: DashboardMain, 
+      meta: {
+        title: 'Dashboard'
+      }
+    },
+	  { 
+      name: 'dashboard',
+      path: '/dashboard', 
+      component: DashboardMain,
+      meta: {
+       title: 'Dashboard'
+      } 
+    },
+	  { 
+      name: 'orders',
+      path: '/orders', 
+      component: OrdersMain,
+      meta: {
+        title: 'Orders'
+      },
+      children:[
+          {
+              name: 'ordersmain',
+              path: '',
+              component: HiMain1,
+              meta: {
+                title: 'Orders'
+              },
+          },
+          {
+              name: 'vieworder',
+              path: 'vieworder',
+              component: HiMain2,
+              meta: {
+                title: 'Orders'
+              },
+          }
         ],
       },
-	  { path: '/customers', component: CustomersMain},
-	  { path: '/inventory', component: InventoryMain},
-	  { path: '/conversations', component: ConversationsMain},
-	  { path: '/settings', component: SettingsMain},
+	  { 
+      name: 'customers',
+      path: '/customers', 
+      component: CustomersMain,
+      meta: {
+        title: 'Customers'
+      },
+    },
+	  { 
+      name: 'inventory',
+      path: '/inventory', 
+      component: InventoryMain,
+      meta: {
+        title: 'Inventory'
+      },
+    },
+	  { 
+      name: 'conversations',
+      path: '/conversations', 
+      component: ConversationsMain,
+      meta: {
+        title: 'Conversations'
+      },
+    },
+	  { 
+      name: 'settings',
+      path: '/settings', 
+      component: SettingsMain,
+      meta: {
+        title: 'Settings'
+      },
+    },
 	]
 })

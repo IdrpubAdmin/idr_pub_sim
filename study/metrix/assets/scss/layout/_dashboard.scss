@@ -3,7 +3,50 @@
     .dashboard{
         height: 100%;
         padding: 20px 10px;
-        .cnt1{
+        .summary{
+            &:first-child{
+                .header{
+                    .icon{
+                        background-color: rgba(85, 112, 241, 0.12);
+                    }
+                }
+            } 
+            .header{
+                padding: 15px;
+                .icon{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 8px;
+                    background-color: rgba(255, 204, 145, 0.16);
+                    position: relative;                         
+                    img{
+                        position: absolute;
+                        top: 0; bottom: 0; left: 0; right: 0;
+                        margin: auto;
+                    }
+                }
+            }
+            .texts{
+                margin-top: 15px;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-grow: 1;
+                    li{
+                        width: 100%;
+                        margin: 0 15px;
+                        .text{
+                            @include fonts ('Inter', 14, 400, 14, #8b8d97);
+                        }
+                        .data{
+                            @include fonts ('Inter', 20, 500, 20, #45464e);
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .cnts1{
             display: flex;
             justify-content: space-around;
             article{
@@ -14,14 +57,14 @@
                 border-radius: 12px;
             }
         }
-        .cnt2{
+        .cnts2{
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             .chart{
                 width: calc(66.66% - 20px);
                 margin: 0 10px;
-                .cnt3{
+                .cnts3{
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
@@ -31,7 +74,7 @@
                         background-color: #fff;
                         border-radius: 12px;
                     }
-                    div{
+                    .cnts4{
                         width: calc(50% - 10px);
                         article{
                             width: 100%;

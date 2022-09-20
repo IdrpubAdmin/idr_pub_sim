@@ -37,5 +37,21 @@ header{
         .home-icon{
             height: 16px;
         }
+        .breadcrumb{
+            @include fonts('Inter', 12, 400, 16, #8b8d97);
+            ul{
+                display: flex;
+                li{
+                    margin-left: 10px;
+                    a:hover{
+                        color: #5570f1;
+                    }
+                }
+                li::before{
+                    content: '/';
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 }

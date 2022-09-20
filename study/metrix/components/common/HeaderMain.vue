@@ -1,9 +1,11 @@
 <template>
     <header>
         <div class="page-head">
-            <!-- 이것보다는 부모에게 받아오는 방식으로 바꾸기 -->
-            <div class="title" v-for="(category, i) in categoryData" :key="i.category" v-show="categoryData[i].path === $route.path">
-                <h3>{{category.title}}</h3>
+            <!-- <div class="title" v-for="(category, i) in categoryData" :key="i.category" v-show="categoryData[i].path === $route.path">
+                <h3>{{$route.name}}</h3>
+            </div> -->
+            <div class="title">
+                <h3>{{title()}}</h3>
             </div>
             <ul class="user">
                 <li class="select-box">
@@ -27,7 +29,13 @@
                 <img src="assets/images/header/Home.png" alt="home icon">
             </div>
             <div class="breadcrumb">
-                <span>{{$route.path.slice(1)}}</span>
+                <ul>
+                    <li v-for="(key,i) in breadcrumb" :key="i.key" v-show="breadcrumb[i].length > 0">
+                        <router-link :to="{name:breadcrumb[i]}">
+                            {{breadcrumb[i]}}
+                        </router-link>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -39,6 +47,14 @@ module.exports = {
         categoryData() {
             return this.$store.getters["NavigationData"].categoryData
         },
+        breadcrumb() {
+            return this.$route.path.split('/');
+        }
+    },
+    methods: {
+        title() {
+            return this.$route.meta.title
+        }
     },
 }
 </script>
