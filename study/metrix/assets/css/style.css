@@ -909,7 +909,7 @@ input, button, textarea, select, option {
 }
 .navigation menu .logout-box {
   position: absolute;
-  bottom: 50px;
+  top: 92%;
 }
 .navigation menu .logout-box a {
   display: inline-block;
