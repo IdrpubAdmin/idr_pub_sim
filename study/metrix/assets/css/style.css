@@ -779,6 +779,46 @@ input, button, textarea, select, option {
   box-sizing: border-box;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+button {
+  background: transparent;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.b {
+  color: #5570f1;
+}
+
+.tal {
+  text-align-last: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tac {
+  text-align: center;
+}
+
 .navigation {
   padding: 14px 16px;
   transition: padding 0.5s;
@@ -925,6 +965,133 @@ input, button, textarea, select, option {
   color: #cc5f5f;
 }
 
+.auth-wrap {
+  position: relative;
+}
+.auth-wrap .container section {
+  width: 443px;
+  height: 680px;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 44px 34px;
+  background-color: #fff;
+}
+.auth-wrap .container section .login-box h1 {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+.auth-wrap .container section .login-box h1 img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.auth-wrap .container section .login-box .texts {
+  margin-top: 30px;
+  text-align: center;
+}
+.auth-wrap .container section .login-box .texts h3 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000;
+}
+.auth-wrap .container section .login-box .texts p {
+  margin-top: 8px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
+}
+.auth-wrap .container section .login-box .login-form {
+  width: 100%;
+  margin-top: 60px;
+}
+.auth-wrap .container section .login-box .login-form .id-box {
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+}
+.auth-wrap .container section .login-box .login-form .id-box .image {
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+.auth-wrap .container section .login-box .login-form .id-box .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.auth-wrap .container section .login-box .login-form .id-box input {
+  width: calc(100% - 56px);
+  height: 56px;
+}
+.auth-wrap .container section .login-box .login-form .password-box {
+  margin-top: 30px;
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+}
+.auth-wrap .container section .login-box .login-form .password-box .image {
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+.auth-wrap .container section .login-box .login-form .password-box .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.auth-wrap .container section .login-box .login-form .password-box input {
+  width: calc(100% - 102px);
+  height: 56px;
+}
+.auth-wrap .container section .login-box .login-form .password-box button {
+  width: 46px;
+  height: 56px;
+}
+.auth-wrap .container section .login-box p {
+  margin-top: 8px;
+}
+.auth-wrap .container section .login-box .signup-btn {
+  width: 100%;
+  margin-top: 48px;
+  text-align: center;
+}
+.auth-wrap .container section .login-box .btn {
+  text-align: center;
+  margin-top: 48px;
+}
+.auth-wrap .container section .login-box .btn .login-btn {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+  width: 180px;
+  height: 58px;
+  border-radius: 12px;
+  background-color: #5570f1;
+  margin: 0 auto;
+}
+
 header .page-head {
   display: flex;
   justify-content: space-between;
@@ -995,6 +1162,12 @@ header .location .breadcrumb ul li::before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+.wrapper .auth-wrap {
+  width: 100%;
+}
+.wrapper .auth-wrap .header-wrap {
+  padding: 12px 82px;
 }
 .wrapper .nav-wrap {
   position: relative;

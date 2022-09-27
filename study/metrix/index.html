@@ -15,18 +15,23 @@
 </head>
 <body>
     <div id="app">
-        <div class="wrapper">
-            <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{navactive: $store.getters.isActive}">
-                <side-navigation></side-navigation>
-            </div>
-            <main :class="{mainactive: $store.getters.isActive}">
-                <div class="header-wrap">
-                    <header-component></header-component>
+        <div class="wrapper">   
+            <template v-if='$store.getters.Login'>
+                <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{navactive: $store.getters.isActive}">
+                    <side-navigation></side-navigation>
                 </div>
-                <div class="container">
-                    <router-view></router-view>
-                </div>
-            </main>
+                <main :class="{mainactive: $store.getters.isActive}">
+                    <div class="header-wrap">
+                        <header-component></header-component>
+                    </div>
+                    <div class="container">
+                        <router-view></router-view>
+                    </div>
+                </main>
+            </template> 
+            <template v-else>
+                <auth-main></auth-main>
+            </template>
         </div>
     </div>
     <script>
@@ -36,13 +41,25 @@
             router,
             data() {
                 return {
-                    
+
                 }
             },
             components: {
+                'auth-main': httpVueLoader('components/common/AuthMain.vue'),
                 'side-navigation': httpVueLoader('components/common/SideNavigation.vue'),
                 'header-component': httpVueLoader('components/common/HeaderMain.vue'),
             },
+            categoryData() {
+                return this.$store.getters.login
+            },
+            mounted() {
+                console.log(this.$store.state.login+'2')
+            },
+            watch:{
+                hi: function(){
+                    this.$store.state.login
+                }
+            }
         })
     </script>
     <script type="module">

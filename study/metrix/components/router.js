@@ -1,4 +1,8 @@
 var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
+
+var LogIn = httpVueLoader('components/common/LogIn.vue');
+var SignUp = httpVueLoader('components/common/SingUp.vue');
+
 var OrdersMain = httpVueLoader('components/orders/OrdersMain.vue');
 var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
 var InventoryMain = httpVueLoader('components/inventory/InventoryMain.vue');
@@ -14,7 +18,17 @@ var router = new VueRouter({
       component: DashboardMain, 
       meta: {
         title: 'Dashboard'
-      }
+      },
+      // redirect: '/login'
+      // beforeEnter: (to, from, next) => {
+      //   if(store.state.login === false){
+      //     next({
+      //       path: '/login'
+      //     })
+      //   }else{
+      //     next()
+      //   }
+      // }
     },
 	  { 
       name: 'dashboard',
@@ -22,7 +36,7 @@ var router = new VueRouter({
       component: DashboardMain,
       meta: {
        title: 'Dashboard'
-      } 
+      },
     },
 	  { 
       name: 'orders',

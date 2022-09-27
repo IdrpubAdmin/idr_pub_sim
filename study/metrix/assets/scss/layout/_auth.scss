@@ -1,0 +1,115 @@
+.auth-wrap{
+    position: relative;
+    .header-wrap{
+        header{
+            h1{
+                a{
+                    img{}
+                }
+            }
+        }
+    }
+    .container{
+        section{
+            width: 443px;
+            height: 680px;
+            border-radius: 12px;
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0; 
+            margin: auto;
+            padding: 44px 34px;
+            background-color: #fff;
+            .login-box{     
+                h1{
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        top: 0; bottom: 0; right: 0; left: 0;
+                        margin: auto;
+                    }
+                }
+                .texts{
+                    margin-top: 30px;
+                    text-align: center;
+                    h3{
+                        @include fonts('Poppins', 20, 500, 30, #000);
+                    }
+                    p{
+                        margin-top: 8px;
+                        @include fonts('Inter', 14, 400, 17, #8b8d97);
+                    }
+                }
+                .login-form{
+                    width: 100%;
+                    margin-top: 60px;
+                    .id-box{
+                        display: flex;
+                        border-radius: 8px;
+                        background-color: rgba(239, 241, 249, 0.6);
+                        .image{
+                            width: 56px;
+                            height: 56px;
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0; bottom: 0; right: 0; left: 0;
+                                margin: auto;
+                            }
+                        }
+                        input{
+                            width: calc(100% - 56px);
+                            height: 56px;
+                        }
+                    }
+                    .password-box{
+                        margin-top: 30px;
+                        display: flex;
+                        border-radius: 8px;
+                        background-color: rgba(239, 241, 249, 0.6);
+                        .image{
+                            width: 56px;
+                            height: 56px;
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0; bottom: 0; right: 0; left: 0;
+                                margin: auto;
+                            }
+                        }
+                        input{
+                            width: calc(100% - 102px);
+                            height: 56px;
+                        }
+                        button{
+                            width: 46px;
+                            height: 56px;
+                        }
+                    }
+                }
+                p{
+                    margin-top: 8px;
+                }
+                .signup-btn{
+                    width: 100%;
+                    margin-top: 48px;
+                    text-align: center; 
+                }
+                .btn{
+                    text-align: center;
+                    margin-top: 48px;
+                    .login-btn{
+                        @include fonts('Inter', 20, 400, 30, #fff);
+                        width: 180px;
+                        height: 58px;
+                        border-radius: 12px;
+                        background-color: #5570f1;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
