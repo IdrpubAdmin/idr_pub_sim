@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrix</title>
+    <script src="assets/plugin/vue@2.7.8/vue.js"></script>
+    <script src="assets/plugin/vuex/vuex.js"></script>
+    <script src="assets/plugin/vue-router/vue-router.js"></script>
+    <script src="assets/plugin/httpVueLoader/httpVueLoader.js"></script>
+    <script src="components/store.js"></script>
+    <script src="components/router.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="wrapper">   
+            <template v-if='$store.getters.Login'>
+                <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{navactive: $store.getters.isActive}">
+                    <side-navigation></side-navigation>
+                </div>
+                <main :class="{mainactive: $store.getters.isActive}">
+                    <div class="header-wrap">
+                        <header-component></header-component>
+                    </div>
+                    <div class="container">
+                        <router-view></router-view>
+                    </div>
+                </main>
+            </template> 
+            <template v-else>
+                <auth-main></auth-main>
+            </template>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            store,
+            router,
+            data() {
+                return {
+
+                }
+            },
+            components: {
+                'auth-main': httpVueLoader('components/common/AuthMain.vue'),
+                'side-navigation': httpVueLoader('components/common/SideNavigation.vue'),
+                'header-component': httpVueLoader('components/common/HeaderMain.vue'),
+            },
+            categoryData() {
+                return this.$store.getters.login
+            },
+            mounted() {
+                console.log(this.$store.state.login+'2')
+            },
+            watch:{
+                hi: function(){
+                    this.$store.state.login
+                }
+            }
+        })
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC3jhAWYs45AZCdn7rM7LeaxrzGWd6Cw6Y",
+          authDomain: "metrix-18dbb.firebaseapp.com",
+          projectId: "metrix-18dbb",
+          storageBucket: "metrix-18dbb.appspot.com",
+          messagingSenderId: "763897107951",
+          appId: "1:763897107951:web:145e44247c7343aa9cd21a",
+          measurementId: "G-F4DEGS1190"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
