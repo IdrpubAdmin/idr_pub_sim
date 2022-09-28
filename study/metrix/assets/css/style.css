@@ -1489,6 +1489,7 @@ header .location .breadcrumb ul li::before {
 }
 .settings section article .contents .profile ul li .input-box {
   display: flex;
+  height: 52px;
   border-radius: 8px;
   background-color: rgba(239, 241, 249, 0.6);
   margin-top: 8px;

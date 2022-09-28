@@ -41,7 +41,9 @@
                     <li>
                         <p>Phone Number</p>
                         <div class="input-box no-img">
-                            <input type="text" value="">
+                            <select name="" id="">
+                                <option value="" selected>+234</option>
+                            </select>
                             <input type="text" value="08065650633">
                         </div>
                     </li>
@@ -62,11 +64,15 @@
                     </li>
                     <li>
                         <p>Country</p>
-                        <input type="text">
+                        <select name="" id="">
+                            <option value="" selected>Nigeria</option>
+                        </select>
                     </li>
                     <li>
                         <p>State</p>
-                        <input type="text">
+                        <select name="" id="">
+                            <option value="" selected>Lagos</option>
+                        </select>
                     </li>
                 </ul>
             </div>
