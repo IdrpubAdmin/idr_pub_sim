@@ -2,6 +2,8 @@
 
 퍼블리싱 산출물 디렉토리 구조
 ---
+
+
 - 폴더 구조
 ```markdown
 metrix
@@ -18,6 +20,7 @@ metrix
    ├  main : 메인페이지
    └  index : 페이지별 link
 ```
+
 
 - 컴포넌트 구조
 ```markdown
@@ -38,11 +41,9 @@ components
    │  └  OrdersMain  : orders 페이지 메인
    └  settings  : settings 페이지 컴포넌트
       └  SettingsMain  : settings 페이지 메인
-
 ```
 
-퍼블리싱 작업내용
----
+
 - style.scss 구조
   ```
   @import
@@ -60,4 +61,9 @@ components
 	'layout/dashboard.scss',
 	'layout/settings.scss'
   ```
+
+  
+
+퍼블리싱 작업내용
+---
 - 기본폰트 : Poppins, Inter
