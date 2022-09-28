@@ -30,7 +30,7 @@
             </div>
             <div class="breadcrumb">
                 <ul>
-                    <li v-for="(key,i) in breadcrumb" :key="i.key" v-show="breadcrumb[i].length > 0">
+                    <li v-for="(key,i) in breadcrumb" :key="i+key" v-show="breadcrumb[i].length > 0">
                         <router-link :to="{name:breadcrumb[i]}">
                             {{breadcrumb[i]}}
                         </router-link>

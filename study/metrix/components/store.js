@@ -16,23 +16,15 @@ var store = new Vuex.Store({
         NavigationData: NavigationData,
     },
     state: {
-        login : false, 
+        login : true, 
         isActive : false 
     },
     mutations: {
         checkLogin(state){
-            if (state.login===false){
-                state.login = true
-            } else {
-                state.login = false
-            }
+            state.login =! state.login
         },
         checkActive(state){
-            if (state.isActive===false){
-                state.isActive = true
-            } else {
-                state.isActive = false
-            }
+            state.isActive =! state.isActive
         }
     },
     getters: {

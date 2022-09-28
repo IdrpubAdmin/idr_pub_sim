@@ -9,7 +9,7 @@
         <menu>
             <nav> 
                 <ul>
-                    <li v-for="(category, i) in categoryData" :key="i.category">
+                    <li v-for="(category, i) in categoryData" :key="i+category">
                         <router-link :to="category.path" :exact="i===0">
                             <img class="before category-img" :src="'assets/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
                             <img class="after category-img" :src="'assets/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
