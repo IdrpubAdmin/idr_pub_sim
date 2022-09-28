@@ -8,6 +8,10 @@ var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
 var InventoryMain = httpVueLoader('components/inventory/InventoryMain.vue');
 var ConversationsMain = httpVueLoader('components/conversations/ConversationsMain.vue');
 var SettingsMain = httpVueLoader('components/settings/SettingsMain.vue');
+var SettingsAccount = httpVueLoader('components/settings/SettingsAccount.vue');
+var SettingsBusiness = httpVueLoader('components/settings/SettingsBusiness.vue');
+var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue');
+
 var HiMain1 = httpVueLoader('components/orders/HiMain1.vue')
 var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
 var router = new VueRouter({
@@ -95,6 +99,32 @@ var router = new VueRouter({
       meta: {
         title: 'Settings'
       },
+      children:[
+        {
+            name: 'account',
+            path: '',
+            component: SettingsAccount,
+            meta: {
+              title: 'Setting'
+            },
+        },
+        {
+            name: 'business',
+            path: 'business',
+            component: SettingsBusiness,
+            meta: {
+              title: 'Setting'
+            },
+        },
+        {
+          name: 'security',
+          path: 'security',
+          component: SettingsSecurity,
+          meta: {
+            title: 'Setting'
+          },
+        }
+      ],
     },
 	]
 })

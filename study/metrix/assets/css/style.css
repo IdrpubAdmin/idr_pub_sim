@@ -807,6 +807,18 @@ button {
   color: #5570f1;
 }
 
+.g {
+  color: #519c66;
+}
+
+.r {
+  color: #cc5f5f;
+}
+
+.w {
+  color: #fff;
+}
+
 .tal {
   text-align-last: left;
 }
@@ -1211,11 +1223,21 @@ header .location .breadcrumb ul li::before {
   height: 100%;
   padding: 20px 10px;
 }
+.container .dashboard section .prod, .container .dashboard section .graph {
+  padding: 20px;
+}
+.container .dashboard section .prod .header, .container .dashboard section .graph .header {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.container .dashboard .summary {
+  padding: 15px;
+}
 .container .dashboard .summary:first-child .header .icon {
   background-color: rgba(85, 112, 241, 0.12);
-}
-.container .dashboard .summary .header {
-  padding: 15px;
 }
 .container .dashboard .summary .header .icon {
   width: 36px;
@@ -1233,7 +1255,7 @@ header .location .breadcrumb ul li::before {
   margin: auto;
 }
 .container .dashboard .summary .texts {
-  margin-top: 15px;
+  margin-top: 32px;
 }
 .container .dashboard .summary .texts ul {
   display: flex;
@@ -1242,7 +1264,6 @@ header .location .breadcrumb ul li::before {
 }
 .container .dashboard .summary .texts ul li {
   width: 100%;
-  margin: 0 15px;
 }
 .container .dashboard .summary .texts ul li .text {
   font-family: "Inter";
@@ -1255,7 +1276,7 @@ header .location .breadcrumb ul li::before {
   font-family: "Inter";
   font-size: 20px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 30px;
   color: #45464e;
   margin-top: 10px;
 }
@@ -1284,6 +1305,9 @@ header .location .breadcrumb ul li::before {
   display: flex;
   justify-content: space-between;
 }
+.container .dashboard .cnts2 .chart .cnts3 .graph {
+  margin-top: 0;
+}
 .container .dashboard .cnts2 .chart .cnts3 article {
   width: calc(50% - 10px);
   height: calc(35vh - 20px);
@@ -1303,6 +1327,15 @@ header .location .breadcrumb ul li::before {
 .container .dashboard .cnts2 .chart .cnts3 .cnts4 article:first-child {
   margin-top: 0;
 }
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb {
+  background-color: #5570f1;
+}
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb .header .icon {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb .texts ul li p {
+  color: #fff;
+}
 .container .dashboard .cnts2 .chart .graph {
   background-color: #fff;
   margin-top: 20px;
@@ -1314,5 +1347,181 @@ header .location .breadcrumb ul li::before {
   height: calc(70vh - 20px);
   background-color: #fff;
   margin: 0 10px;
+  border-radius: 12px;
+}
+.container .dashboard .cnts2 .prod ul {
+  margin-top: 20px;
+}
+.container .dashboard .cnts2 .prod ul li {
+  display: flex;
+  border-bottom: 1px solid #f1f3f9;
+  padding: 10px 0;
+}
+.container .dashboard .cnts2 .prod ul li:first-child {
+  padding-top: 0;
+}
+.container .dashboard .cnts2 .prod ul li .img {
+  width: 49px;
+  height: 49px;
+  margin-right: 15px;
+}
+.container .dashboard .cnts2 .prod ul li .texts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .prod-name {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #45464e;
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .prod-price {
+  margin-top: 5px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #33343a;
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .prod-date {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #a6a8b1;
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .prod-state {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #cc5f5f;
+  margin-top: 5px;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .pending {
+  background-color: rgba(245, 126, 119, 0.12);
+}
+.container .dashboard .cnts2 .prod ul li .texts .text .completed {
+  color: #519c66;
+  background-color: rgba(50, 147, 111, 0.12);
+}
+
+.settings {
+  padding: 20px;
+}
+.settings section {
+  height: calc(100vh - 127px);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px 36px;
+}
+.settings section .nav ul {
+  width: 400px;
+  display: flex;
+  flex-grow: 1;
+}
+.settings section .nav ul li {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #abafb1;
+  width: 100%;
+  text-align: center;
+}
+.settings section .nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.settings section .nav ul li .router-link-active {
+  border-bottom: 3px solid #5570f1;
+  color: #2b2f32;
+}
+.settings section article {
+  margin-top: 20px;
+}
+.settings section article .settings-header {
+  display: flex;
+  justify-content: space-between;
+}
+.settings section article .settings-header h5 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 58px;
+  color: #45464e;
+}
+.settings section article .settings-header .btn {
+  width: 180px;
+  border-radius: 12px;
+  background-color: #5570f1;
+  text-align: center;
+}
+.settings section article .settings-header .btn button {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 58px;
+  color: #fff;
+}
+.settings section article .contents {
+  margin-top: 60px;
+  display: flex;
+}
+.settings section article .contents .profile {
+  width: 375px;
+}
+.settings section article .contents .profile ul li {
+  margin-top: 16px;
+}
+.settings section article .contents .profile ul li p {
+  text-indent: 5px;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #5e6366;
+}
+.settings section article .contents .profile ul li .input-box {
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+  margin-top: 8px;
+}
+.settings section article .contents .profile ul li .input-box .image {
+  width: 56px;
+  height: 52px;
+  position: relative;
+}
+.settings section article .contents .profile ul li .input-box .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.settings section article .contents .profile ul li .input-box input {
+  padding: 9px 16px 9px 0;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5e6366;
+  width: calc(100% - 56px);
+}
+.settings section article .contents .profile ul li .no-img input {
+  padding-left: 16px;
+}
+.settings section article .contents .image {
+  width: 300px;
+  text-align: right;
+}
+.settings section article .contents .image img {
   border-radius: 12px;
 }/*# sourceMappingURL=style.css.map */

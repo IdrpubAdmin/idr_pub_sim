@@ -66,9 +66,13 @@
         <section class="cnts2">
             <div class="chart">
                 <div class="cnts3">
-                    <article>그래프</article>
+                    <article class="graph">
+                        <div class="header">
+                            <h5>Marketting</h5>
+                        </div>
+                    </article>
                     <div class="cnts4">
-                        <article class="summary">
+                        <article class="summary bgcb">
                             <div class="header">
                                 <div class="icon">
                                     <img src="assets/images/dashboard/Folder.png" alt="">
@@ -108,7 +112,11 @@
                         </article>
                     </div>
                 </div>
-                <article class="graph">막대그래프</article>
+                <article class="graph">
+                    <div class="header">
+                        <h5>Summary</h5>
+                    </div>
+                </article>
             </div>
             <article class="prod">
                 <div class="header">
@@ -117,46 +125,136 @@
                 <ul>
                     <li>
                         <div class="img">
-                            <img src="" alt="">
+                            <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
                         </div>
                         <div class="texts">
                             <div class="text">
-                                <p>iPhone 13</p>
-                                <p>₦730,000.00 x 1</p>
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
                             </div>
                             <div class="text">
-                                <p>12 Sept 2022</p>
-                                <p>Pending</p>
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state pending">Pending</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="img">
-                            <img src="" alt="">
+                            <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
                         </div>
                         <div class="texts">
                             <div class="text">
-                                <p>iPhone 13</p>
-                                <p>₦730,000.00 x 1</p>
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
                             </div>
                             <div class="text">
-                                <p>12 Sept 2022</p>
-                                <p>Pending</p>
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state completed">Completed</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="img">
-                            <img src="" alt="">
+                            <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
                         </div>
                         <div class="texts">
                             <div class="text">
-                                <p>iPhone 13</p>
-                                <p>₦730,000.00 x 1</p>
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
                             </div>
                             <div class="text">
-                                <p>12 Sept 2022</p>
-                                <p>Pending</p>
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state pending">Pending</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state completed">Completed</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state completed">Completed</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state completed">Completed</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state pending">Pending</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state pending">Pending</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
+                        </div>
+                        <div class="texts">
+                            <div class="text">
+                                <p class="prod-name">iPhone 13</p>
+                                <p class="prod-price">₦730,000.00 x 1</p>
+                            </div>
+                            <div class="text">
+                                <p class="prod-date">12 Sept 2022</p>
+                                <p class="prod-state pending">Pending</p>
                             </div>
                         </div>
                     </li>

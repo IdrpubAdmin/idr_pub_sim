@@ -3,7 +3,18 @@
     .dashboard{
         height: 100%;
         padding: 20px 10px;
+
+        section{
+            .prod,.graph{
+                padding: 20px;
+                .header{
+                    @include fonts('Inter', 16, 500, 20, #45464e)
+                }
+            }
+        }
+
         .summary{
+            padding: 15px;
             &:first-child{
                 .header{
                     .icon{
@@ -12,7 +23,6 @@
                 }
             } 
             .header{
-                padding: 15px;
                 .icon{
                     width: 36px;
                     height: 36px;
@@ -27,19 +37,18 @@
                 }
             }
             .texts{
-                margin-top: 15px;
+                margin-top: 32px;
                 ul{
                     display: flex;
                     justify-content: space-between;
                     flex-grow: 1;
                     li{
                         width: 100%;
-                        margin: 0 15px;
                         .text{
                             @include fonts ('Inter', 14, 400, 14, #8b8d97);
                         }
                         .data{
-                            @include fonts ('Inter', 20, 500, 20, #45464e);
+                            @include fonts ('Inter', 20, 500, 30, #45464e);
                             margin-top: 10px;
                         }
                     }
@@ -68,6 +77,9 @@
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
+                    .graph{
+                        margin-top: 0;
+                    }
                     article{
                         width: calc(50% - 10px);
                         height: calc(35vh - 20px);
@@ -86,7 +98,24 @@
                                 margin-top: 0;
                             }
                         }
-                    }
+                        .bgcb{
+                            background-color: $b;
+                            .header{
+                                .icon{
+                                    background-color: rgba(255, 255, 255, 0.16);
+                                }
+                            }
+                            .texts{
+                                ul{
+                                    li{
+                                        p{
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }    
                 }
                 .graph{
                     background-color: #fff;
@@ -100,7 +129,54 @@
                 height: calc(70vh - 20px);
                 background-color: #fff;
                 margin: 0 10px;
-                border-radius: 12px;
+                border-radius: 12px; 
+                ul{
+                    margin-top: 20px;
+                    li{
+                        display: flex;
+                        border-bottom: 1px solid #f1f3f9;
+                        padding: 10px 0;
+                        &:first-child{
+                            padding-top: 0;
+                        }
+                        .img{
+                            width: 49px;
+                            height: 49px;
+                            margin-right: 15px;
+                        }
+                        .texts{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            .text{
+                                .prod-name{
+                                    @include fonts('Inter', 14, 400, 20, #45464e);
+                                }
+                                .prod-price{
+                                    margin-top: 5px;
+                                    @include fonts('Inter', 14, 500, 20, #33343a);
+                                }
+                                .prod-date{
+                                    @include fonts('Inter', 12, 400, 20, #a6a8b1);
+                                }
+                                .prod-state{
+                                    @include fonts('Inter', 12, 400, 20, #cc5f5f);
+                                    margin-top: 5px;
+                                    padding: 0 15px;
+                                    border-radius: 8px;
+                                }   
+                                .pending{
+                                    background-color: rgba(245, 126, 119, 0.12);
+                                }
+                                .completed{
+                                    color: #519c66;
+                                    background-color: rgba(50, 147, 111, 0.12);
+                                }
+
+                            }
+                        }
+                    }
+                }
             }
         }
     }

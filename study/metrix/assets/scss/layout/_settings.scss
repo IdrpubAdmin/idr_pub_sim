@@ -1,0 +1,98 @@
+.settings{
+    padding: 20px;
+    section{
+        height: calc(100vh - 127px);
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 16px 36px;
+        .nav{
+            ul{
+                width: 400px;
+                display: flex;
+                flex-grow: 1;
+                li{
+                    @include fonts('Inter', 16, 400, 40, #abafb1);
+                    width: 100%;
+                    text-align: center;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .router-link-active{
+                        border-bottom: 3px solid #5570f1;
+                        color: #2b2f32;
+                    }
+                }
+            }
+        }
+        article{
+            margin-top: 20px;
+            .settings-header{
+                display: flex;
+                justify-content: space-between;
+                h5{
+                    @include fonts('Poppins', 20, 500, 58, #45464e);
+                }
+                .btn{
+                    width: 180px;
+                    border-radius: 12px;
+                    background-color: #5570f1;
+                    text-align: center;
+                    button{
+                        @include fonts('Inter', 20, 400, 58, #fff);
+                    }
+                }
+            }
+            .contents{
+                margin-top: 60px;
+                display: flex;
+                .profile{
+                    width: 375px;
+                    ul{
+                        li{
+                            margin-top: 16px;
+                            p{
+                                text-indent: 5px;
+                                @include fonts('Inter', 12, 400, 15, #5e6366)
+                            }
+                            .input-box{
+                                display: flex;
+                                border-radius: 8px;
+                                background-color: rgba(239, 241, 249, 0.6);
+                                margin-top: 8px;
+                                .image{
+                                    width: 56px;
+                                    height: 52px;
+                                    position: relative;
+                                    img{
+                                        position: absolute;
+                                        top: 0; bottom: 0; right: 0; left: 0;
+                                        margin: auto;
+                                    }
+                                }
+                                input{
+                                    padding: 9px 16px 9px 0;
+                                    @include fonts('Inter', 16, 400, 20, #5e6366);
+                                    width: calc(100% - 56px);
+                                }
+                            }
+                            .no-img{
+                                input{
+                                    padding-left: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .image{
+                    width: 300px;
+                    text-align: right;
+                    img{
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
