@@ -1,7 +1,7 @@
 var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
 
 var LogIn = httpVueLoader('components/common/LogIn.vue');
-var SignUp = httpVueLoader('components/common/SingUp.vue');
+var SignUp = httpVueLoader('components/common/SignUp.vue');
 
 var OrdersMain = httpVueLoader('components/orders/OrdersMain.vue');
 var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
@@ -16,6 +16,22 @@ var HiMain1 = httpVueLoader('components/orders/HiMain1.vue')
 var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
 var router = new VueRouter({
 	routes: [
+    { 
+      name: 'login',
+      path: '/login', 
+      component: LogIn,
+      meta: {
+        title: 'Auth'
+      },
+    },
+    { 
+      name: 'signup',
+      path: '/signup', 
+      component: SignUp,
+      meta: {
+        title: 'Auth'
+      },
+    },
 	  { 
       name: 'dashboard',
       path: '/', 

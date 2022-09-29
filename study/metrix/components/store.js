@@ -16,13 +16,13 @@ var store = new Vuex.Store({
         NavigationData: NavigationData,
     },
     state: {
-        login : true, 
+        // login : true, 
         isActive : false 
     },
     mutations: {
-        checkLogin(state){
-            state.login =! state.login
-        },
+        // checkLogin(state){
+        //     state.login =! state.login
+        // },
         checkActive(state){
             state.isActive =! state.isActive
         }
@@ -31,16 +31,16 @@ var store = new Vuex.Store({
         NavigationData: function NavigationData(state) {
             return state.NavigationData;
         },
-        Login(state){
-            return state.login
-        },
+        // Login(state){
+        //     return state.login
+        // },
         isActive(state){
             return state.isActive
         },
     },
     actions: {
-        checkLogin({commit}) {
-            commit('checkLogin')
-        }
+        // checkLogin({commit}) {
+        //     commit('checkLogin')
+        // }
     }
 });

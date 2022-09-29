@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="logout-box">
-                <router-link to="/">
+                <router-link to="/login">
                     <img class="category-img" src="assets/images/navigation/Logout.png" alt="Logout icon">
                     <span class="hidden-title" v-show="$store.getters.isActive">Logout</span>
                 </router-link>

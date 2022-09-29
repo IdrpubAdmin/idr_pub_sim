@@ -5,7 +5,7 @@
                 <h3>{{$route.name}}</h3>
             </div> -->
             <div class="title">
-                <h3>{{title()}}</h3>
+                <h3>{{$route.meta.title}}</h3>
             </div>
             <ul class="user">
                 <li class="select-box">
@@ -49,11 +49,6 @@ module.exports = {
         },
         breadcrumb() {
             return this.$route.path.split('/');
-        }
-    },
-    methods: {
-        title() {
-            return this.$route.meta.title
         }
     },
 }

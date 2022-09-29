@@ -11,16 +11,8 @@
         </div>
         <div class="container">
             <section>
-                <log-in></log-in>
+                <router-view></router-view>
             </section>
         </div>
     </div>
 </template>
-
-<script>
-module.exports = {
-    components : {
-        'log-in': httpVueLoader('components/common/LogIn.vue'),
-    }
-}
-</script>
