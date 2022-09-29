@@ -1234,32 +1234,42 @@ header .location .breadcrumb ul li::before {
 }
 .container .dashboard {
   height: 100%;
-  padding: 20px 10px;
-}
-.container .dashboard section .prod, .container .dashboard section .graph {
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 18% 18% 18% 40%;
+  gap: 20px;
 }
-.container .dashboard section .prod .header, .container .dashboard section .graph .header {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #45464e;
+.container .dashboard article {
+  background-color: #fff;
+  border-radius: 12px;
+}
+.container .dashboard article:nth-child(4) {
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.container .dashboard article:nth-child(7) {
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+.container .dashboard article:nth-child(8) {
+  grid-column: 1/3;
+  grid-row: 4/5;
 }
 .container .dashboard .summary {
   padding: 15px;
 }
-.container .dashboard .summary:first-child .header .icon {
-  background-color: rgba(85, 112, 241, 0.12);
-}
-.container .dashboard .summary .header .icon {
+.container .dashboard .summary .header .icon-box {
   width: 36px;
   height: 36px;
   border-radius: 8px;
   background-color: rgba(255, 204, 145, 0.16);
   position: relative;
 }
-.container .dashboard .summary .header .icon img {
+.container .dashboard .summary .header .icon-box.point {
+  background-color: rgba(85, 112, 241, 0.12);
+}
+.container .dashboard .summary .header .icon-box img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1267,25 +1277,23 @@ header .location .breadcrumb ul li::before {
   right: 0;
   margin: auto;
 }
-.container .dashboard .summary .texts {
-  margin-top: 32px;
-}
-.container .dashboard .summary .texts ul {
+.container .dashboard .summary ul {
   display: flex;
   justify-content: space-between;
+  margin-top: 32px;
   flex-grow: 1;
 }
-.container .dashboard .summary .texts ul li {
+.container .dashboard .summary ul li {
   width: 100%;
 }
-.container .dashboard .summary .texts ul li .text {
+.container .dashboard .summary ul li .tit {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   color: #8b8d97;
 }
-.container .dashboard .summary .texts ul li .data {
+.container .dashboard .summary ul li .value {
   font-family: "Inter";
   font-size: 20px;
   font-weight: 500;
@@ -1293,104 +1301,77 @@ header .location .breadcrumb ul li::before {
   color: #45464e;
   margin-top: 10px;
 }
-.container .dashboard .cnts1 {
-  display: flex;
-  justify-content: space-around;
-}
-.container .dashboard .cnts1 article {
-  width: calc(33.33% - 20px);
-  height: 15vh;
-  background-color: #fff;
-  margin: 0 10px;
-  border-radius: 12px;
-}
-.container .dashboard .cnts2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.container .dashboard .cnts2 .chart {
-  width: calc(66.66% - 20px);
-  margin: 0 10px;
-}
-.container .dashboard .cnts2 .chart .cnts3 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.container .dashboard .cnts2 .chart .cnts3 .graph {
-  margin-top: 0;
-}
-.container .dashboard .cnts2 .chart .cnts3 article {
-  width: calc(50% - 10px);
-  height: calc(35vh - 20px);
-  background-color: #fff;
-  border-radius: 12px;
-}
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 {
-  width: calc(50% - 10px);
-}
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 article {
-  width: 100%;
-  height: calc(17.5vh - 20px);
-  margin-top: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-}
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 article:first-child {
-  margin-top: 0;
-}
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb {
+.container .dashboard .point {
   background-color: #5570f1;
 }
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb .header .icon {
+.container .dashboard .point .header .icon-box {
   background-color: rgba(255, 255, 255, 0.16);
 }
-.container .dashboard .cnts2 .chart .cnts3 .cnts4 .bgcb .texts ul li p {
+.container .dashboard .point ul li .tit {
   color: #fff;
 }
-.container .dashboard .cnts2 .chart .graph {
-  background-color: #fff;
+.container .dashboard .point ul li .value {
+  color: #fff;
+}
+.container .dashboard .circle-chart {
+  padding: 20px;
+}
+.container .dashboard .circle-chart .title {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.container .dashboard .bar-chart {
+  padding: 20px;
+}
+.container .dashboard .bar-chart .title {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.container .dashboard .products {
+  padding: 20px;
+}
+.container .dashboard .products .title {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.container .dashboard .products ul {
   margin-top: 20px;
-  height: calc(35vh - 20px);
-  border-radius: 12px;
 }
-.container .dashboard .cnts2 .prod {
-  width: calc(33.33% - 20px);
-  height: calc(70vh - 20px);
-  background-color: #fff;
-  margin: 0 10px;
-  border-radius: 12px;
-}
-.container .dashboard .cnts2 .prod ul {
-  margin-top: 20px;
-}
-.container .dashboard .cnts2 .prod ul li {
+.container .dashboard .products ul li {
   display: flex;
   border-bottom: 1px solid #f1f3f9;
   padding: 10px 0;
 }
-.container .dashboard .cnts2 .prod ul li:first-child {
+.container .dashboard .products ul li:first-child {
   padding-top: 0;
 }
-.container .dashboard .cnts2 .prod ul li .img {
+.container .dashboard .products ul li .img {
   width: 49px;
   height: 49px;
   margin-right: 15px;
 }
-.container .dashboard .cnts2 .prod ul li .texts {
+.container .dashboard .products ul li .texts {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .prod-name {
+.container .dashboard .products ul li .texts .text .prod-name {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #45464e;
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .prod-price {
+.container .dashboard .products ul li .texts .text .prod-price {
   margin-top: 5px;
   font-family: "Inter";
   font-size: 14px;
@@ -1398,14 +1379,14 @@ header .location .breadcrumb ul li::before {
   line-height: 20px;
   color: #33343a;
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .prod-date {
+.container .dashboard .products ul li .texts .text .prod-date {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   color: #a6a8b1;
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .prod-state {
+.container .dashboard .products ul li .texts .text .prod-state {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -1415,10 +1396,10 @@ header .location .breadcrumb ul li::before {
   padding: 0 15px;
   border-radius: 8px;
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .pending {
+.container .dashboard .products ul li .texts .text .pending {
   background-color: rgba(245, 126, 119, 0.12);
 }
-.container .dashboard .cnts2 .prod ul li .texts .text .completed {
+.container .dashboard .products ul li .texts .text .completed {
   color: #519c66;
   background-color: rgba(50, 147, 111, 0.12);
 }
