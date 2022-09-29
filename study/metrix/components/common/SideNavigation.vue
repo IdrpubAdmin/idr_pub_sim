@@ -1,6 +1,6 @@
 <template>
     <div class="navigation">
-        <h1>
+        <h1 class="logo">
             <router-link to="/">
                 <img src="assets/images/navigation/Graph.png" alt="logo">
                 <span v-show="$store.getters.isActive">Metrix</span>
@@ -9,7 +9,7 @@
         <menu>
             <nav> 
                 <ul>
-                    <li v-for="(category, i) in categoryData" :key="i+category">
+                    <li v-for="(category, i) in categoryData" :key="category.id">
                         <router-link :to="category.path" :exact="i===0">
                             <img class="before category-img" :src="'assets/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
                             <img class="after category-img" :src="'assets/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">

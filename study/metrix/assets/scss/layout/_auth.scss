@@ -1,37 +1,43 @@
 .auth-wrap{
     position: relative;
+    width: 100%;
     .header-wrap{
-        header{
-            h1{
-                a{
-                    img{}
-                }
-            }
+        padding: 14px 82px;
+        @include mdq-tablet{
+            display: none;
         }
     }
-    .container{
-        section{
+    .auth-container{
+        height: calc(100vh - 82px);
+        background-color: #f4f5fa;
+        @include mdq-tablet{
+            height: 100vh;
+        }
+        .auth-cnt{
             width: 443px;
-            height: 680px;
+            height: 627px;
             border-radius: 12px;
-            position: absolute;
-            top: 0; bottom: 0; left: 0; right: 0; 
-            margin: auto;
+            @include center-align;
             padding: 44px 34px;
             background-color: #fff;
-            .login-box{     
+            @include mdq-tablet{
+                max-width: 443px;
+                width: 90%;
+            }
+            &.height-plus{
+                height: 680px;
+            }
+            section{     
                 h1{
                     width: 60px;
                     height: 60px;
                     margin: 0 auto;
                     position: relative;
                     img{
-                        position: absolute;
-                        top: 0; bottom: 0; right: 0; left: 0;
-                        margin: auto;
+                        @include center-align;
                     }
                 }
-                .texts{
+                .greetings{
                     margin-top: 30px;
                     text-align: center;
                     h3{
@@ -42,10 +48,10 @@
                         @include fonts('Inter', 14, 400, 17, #8b8d97);
                     }
                 }
-                .login-form{
+                form{
                     width: 100%;
                     margin-top: 60px;
-                    .id-box{
+                    .input-box{
                         display: flex;
                         border-radius: 8px;
                         background-color: rgba(239, 241, 249, 0.6);
@@ -54,9 +60,7 @@
                             height: 56px;
                             position: relative;
                             img{
-                                position: absolute;
-                                top: 0; bottom: 0; right: 0; left: 0;
-                                margin: auto;
+                                @include center-align;
                             }
                         }
                         input{
@@ -66,47 +70,44 @@
                     }
                     .password-box{
                         margin-top: 30px;
-                        display: flex;
-                        border-radius: 8px;
-                        background-color: rgba(239, 241, 249, 0.6);
-                        .image{
-                            width: 56px;
-                            height: 56px;
-                            position: relative;
-                            img{
-                                position: absolute;
-                                top: 0; bottom: 0; right: 0; left: 0;
-                                margin: auto;
-                            }
-                        }
                         input{
                             width: calc(100% - 102px);
-                            height: 56px;
                         }
-                        button{
+                        .hidden-btn{
                             width: 46px;
                             height: 56px;
                         }
                     }
+                    .email-box{
+                        margin-top: 30px;
+                    }
                 }
-                p{
+                .lock-link{
+                    @include fonts('Inter', 14, 400, 17, $b);
                     margin-top: 8px;
+                    text-align: right;
                 }
-                .signup-btn{
-                    width: 100%;
+                .join-us-link{
                     margin-top: 48px;
                     text-align: center; 
+                    @include fonts('Inter', 14, 400, 17, #8b8d97);
+                    span{
+                        color: $b;
+                    }
                 }
-                .btn{
+                .login-btn{
                     text-align: center;
+                    width: 180px;
+                    height: 58px;
+                    margin: 0 auto;
                     margin-top: 48px;
-                    .login-btn{
-                        @include fonts('Inter', 20, 400, 30, #fff);
-                        width: 180px;
-                        height: 58px;
+                    a{
+                        @include fonts('Inter', 20, 400, 58, #fff);
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
                         border-radius: 12px;
                         background-color: #5570f1;
-                        margin: 0 auto;
                     }
                 }
             }

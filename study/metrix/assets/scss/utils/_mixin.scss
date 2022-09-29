@@ -5,3 +5,23 @@
     line-height: #{$lh}px;
     color: $c;
 }
+@mixin center-align {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+}
+@mixin mdq-mobile {
+    @media (max-width: $mobile-width) {
+        @content;    
+    }
+}
+@mixin mdq-tablet {
+    @media (max-width: $tablet-width) {
+        @content;    
+    }
+}
+@mixin mdq-desktop {
+    @media (max-width: $desktop-width) {
+        @content;    
+    }
+}

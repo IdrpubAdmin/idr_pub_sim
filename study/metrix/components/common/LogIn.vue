@@ -1,20 +1,17 @@
 <template>
     <div class="login-box">
-        <h1>
-            <img src="assets/images/navigation/Graph.png" alt="logo">
-        </h1>
-        <div class="texts">
+        <div class="greetings">
             <h3>Welcome back!</h3>
             <p>Login to your account</p>
         </div>
         <form class="login-form">
-            <div class="id-box">
+            <div class="id-box input-box">
                 <div class="image">
                     <img src="assets/images/auth/Message.png" alt="Message icon">
                 </div>
                 <input type="text" placeholder="Email Address">
             </div>
-            <div class="password-box">
+            <div class="password-box input-box">
                 <div class="image">
                     <img src="assets/images/auth/Lock.png" alt="Lock icon">
                 </div>
@@ -24,10 +21,7 @@
                 </button>
             </div>
         </form>
-        <p class="b tar mt8">Recover Password</p>
-        <router-link to="/signup" class="signup-btn">Don’t have an account?<span class="b">Sign Up</span></router-link>          
-        <div class="btn">
-            <router-link to="/" class="login-btn">Login</router-link>
-        </div>
+        <p class="lock-link">Recover Password</p>
+        <p class="join-us-link"><router-link to="/signup">Don’t have an account? <span class="b">Sign Up</span></router-link></p>          
     </div>
 </template>
