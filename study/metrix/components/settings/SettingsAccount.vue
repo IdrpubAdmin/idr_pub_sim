@@ -40,8 +40,8 @@
                     </li>
                     <li>
                         <p>Phone Number</p>
-                        <div class="input-box no-img">
-                            <select name="" id="">
+                        <div class="input-box no-icon phone-box">
+                            <select name="" id="" class="country">
                                 <option value="" selected>+234</option>
                             </select>
                             <input type="text" value="08065650633">
@@ -49,7 +49,7 @@
                     </li>
                     <li>
                         <p>Address</p>
-                        <div class="input-box phone-num">
+                        <div class="input-box">
                             <div class="image">
                                 <img src="assets/images/settings/Location.png" alt="location icon">
                             </div>
@@ -58,21 +58,27 @@
                     </li>
                     <li>
                         <p>City</p>
-                        <div class="input-box no-img">
+                        <div class="input-box no-icon">
                             <input type="text" value="Yaba">
                         </div>
                     </li>
-                    <li>
-                        <p>Country</p>
-                        <select name="" id="">
-                            <option value="" selected>Nigeria</option>
-                        </select>
-                    </li>
-                    <li>
-                        <p>State</p>
-                        <select name="" id="">
-                            <option value="" selected>Lagos</option>
-                        </select>
+                    <li class="double">
+                        <div class="select-box">
+                            <p>Country</p>
+                            <div class="input-box">
+                                <select name="" id="">
+                                    <option value="" selected>Nigeria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-box">
+                            <p>State</p>
+                            <div class="input-box">
+                                <select name="" id="">
+                                    <option value="" selected>Lagos</option>
+                                </select>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -92,7 +98,5 @@
 </template>
 
 <script>
-module.exports = {
 
-}
 </script>

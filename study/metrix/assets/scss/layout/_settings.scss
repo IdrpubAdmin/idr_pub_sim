@@ -20,7 +20,7 @@
                         height: 100%;
                     }
                     .router-link-active{
-                        border-bottom: 3px solid #5570f1;
+                        border-bottom: 4px solid #5570f1;
                         color: #2b2f32;
                     }
                 }
@@ -45,13 +45,16 @@
                 }
             }
             .contents{
-                margin-top: 60px;
+                margin-top: 30px;
                 display: flex;
                 .profile{
                     width: 375px;
                     ul{
                         li{
                             margin-top: 16px;
+                            &:first-child{
+                                margin-top: 0;
+                            }
                             p{
                                 text-indent: 5px;
                                 @include fonts('Inter', 12, 400, 15, #5e6366)
@@ -77,11 +80,38 @@
                                     @include fonts('Inter', 16, 400, 20, #5e6366);
                                     width: calc(100% - 56px);
                                 }
+                                select{
+                                    background-color: transparent;
+                                    width: 180px;
+                                    @include fonts('Inter', 16, 400, 20, #5e6366);
+                                    padding: 0 16px;
+                                }
                             }
-                            .no-img{
+                            .phone-box{
+                                background-color: #fff;
+                                .country{
+                                    background-color: rgba(239, 241, 249, 0.6);
+                                    background-image: url('../images/settings/Arrow-Down2.png');
+                                    color: #abafb1;
+                                    border-radius: 8px;
+                                    margin-right: 6px;
+                                }
+                                input{
+                                    background-color: rgba(239, 241, 249, 0.6);
+                                    border-radius: 8px;
+                                }
+                            }
+                            .no-icon{
                                 input{
                                     padding-left: 16px;
                                 }
+                            }                        
+                        }
+                        .double{
+                            display: flex;
+                            justify-content: space-between;
+                            .select-box{
+                                width: calc(50% - 6px);
                             }
                         }
                     }

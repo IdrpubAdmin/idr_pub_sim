@@ -17,7 +17,8 @@ var store = new Vuex.Store({
     },
     state: {
         // login : true, 
-        isActive : false 
+        isActive : false,
+        newOrder : false,
     },
     mutations: {
         // checkLogin(state){
@@ -25,6 +26,13 @@ var store = new Vuex.Store({
         // },
         checkActive(state){
             state.isActive = !state.isActive
+        },
+        toggleModal(state, payload){
+            state.newOrder = !state.newOrder
+            // state.payload = !state.payload
+            // if(payload = state.newOrder){
+            //     console.log(payload)
+            // }
         }
     },
     getters: {
@@ -37,6 +45,10 @@ var store = new Vuex.Store({
         isActive(state){
             return state.isActive
         },
+        newOrder(state, payload){
+            console.log(payload)
+            return state.newOrder
+        }
     },
     actions: {
         // checkLogin({commit}) {

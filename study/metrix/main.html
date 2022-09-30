@@ -9,11 +9,8 @@
     <script src="assets/plugin/vuex/vuex.js"></script>
     <script src="assets/plugin/vue-router/vue-router.js"></script>
     <script src="assets/plugin/httpVueLoader/httpVueLoader.js"></script>
-    <!-- <script src="assets/plugin/toast-ui/toast.js"></script> -->
     <script src="components/store.js"></script>
     <script src="components/router.js"></script>
-    <!-- <link rel="stylesheet" href="assets/plugin/toast-ui/toast.css"> -->
-    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -34,30 +31,11 @@
                         <router-view></router-view>
                     </div>
                 </main>
-            </template> 
+            </template>
+            <new-order v-if="$store.getters.newOrder"></new-order>
         </div>
     </div>
-    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
     <script>
-        // const Chart = toastui.Chart;
-        // const el = document.getElementById('chart');
-        // const data = {
-        //   categories: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        //   series: [
-        //     {
-        //       name: 'Budget',
-        //       data: [5000, 3000, 5000, 7000, 6000, 4000, 1000],
-        //     },
-        //     {
-        //       name: 'Income',
-        //       data: [8000, 4000, 7000, 2000, 6000, 3000, 5000],
-        //     },
-        //   ],
-        // };
-        // const options = {
-        //   chart: { width: 700, height: 400 },
-        // };
-        // const chart = Chart.barChart({ el, data, options });
         var app = new Vue({
             el: '#app',
             store,
@@ -66,6 +44,7 @@
                 'auth-main': httpVueLoader('components/common/AuthMain.vue'),
                 'side-navigation': httpVueLoader('components/common/SideNavigation.vue'),
                 'header-component': httpVueLoader('components/common/HeaderMain.vue'),
+                'new-order' : httpVueLoader('components/orders/NewOrder.vue')
             },
             categoryData() {
                 return this.$store.getters.login

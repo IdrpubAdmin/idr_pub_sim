@@ -12,7 +12,7 @@ var SettingsAccount = httpVueLoader('components/settings/SettingsAccount.vue');
 var SettingsBusiness = httpVueLoader('components/settings/SettingsBusiness.vue');
 var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue');
 
-var HiMain1 = httpVueLoader('components/orders/HiMain1.vue')
+var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue')
 var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
 var router = new VueRouter({
 	routes: [
@@ -39,16 +39,6 @@ var router = new VueRouter({
       meta: {
         title: 'Dashboard'
       },
-      // redirect: '/login'
-      // beforeEnter: (to, from, next) => {
-      //   if(store.state.login === false){
-      //     next({
-      //       path: '/login'
-      //     })
-      //   }else{
-      //     next()
-      //   }
-      // }
     },
 	  { 
       name: 'dashboard',
@@ -69,7 +59,7 @@ var router = new VueRouter({
           {
               name: 'ordersmain',
               path: '',
-              component: HiMain1,
+              component: OrdersSummary,
               meta: {
                 title: 'Orders'
               },

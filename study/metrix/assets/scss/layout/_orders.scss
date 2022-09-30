@@ -1,0 +1,64 @@
+.orders{
+    padding: 20px;
+    .orders-header{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            @include fonts('Inter', 16, 500, 36, #45464e)
+        }
+        .btn{
+            background-color: $b;
+            padding: 6px 16px;
+            border-radius: 12px;
+            button{
+                display: flex;
+                img{
+                    margin-right: 12px;
+                }
+                span{
+                    @include fonts('Inter', 14, 400, 24, #fff)
+                }
+            }
+        }
+    }
+    article{
+        background-color: #fff;
+        border-radius: 12px;
+    }
+    .contents{
+        height: calc(100vh - 183px);
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 3fr 3fr 2fr;
+        grid-template-rows: 20% auto;
+        gap: 20px;
+        .orders-list {
+            padding: 20px;
+            grid-column: 1/4;
+            grid-row: 2/3;
+            .title{
+                @include fonts('Inter', 16, 500, 20, #45464e)
+            }
+        }
+    }
+}
+
+.new-order{
+    width: 850px;
+    height: 740px;
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h3{
+            @include fonts('Poppins', 20, 500, 32, #000)
+        }
+        .btn{
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            border-radius: 8px;
+            background-color: #fff2e2;
+        }
+    }
+}

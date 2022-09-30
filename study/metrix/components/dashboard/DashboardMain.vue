@@ -5,6 +5,9 @@
                 <div class="icon-box point">
                     <img src="assets/images/dashboard/Graph.png" alt="graph icon">
                 </div>
+                <div class="period-select">
+                    
+                </div>
             </div>
             <ul>
                 <li>
@@ -59,7 +62,6 @@
             <div class="title">
                 <h5>Marketting</h5>
             </div>
-            <div id="chart"></div>
         </article>
         <article class="summary point">
             <div class="header">
@@ -229,7 +231,3 @@
         </article>
     </div>
 </template>
-
-<script>
-        
-</script>
