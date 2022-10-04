@@ -32,7 +32,7 @@
                     </div>
                 </main>
             </template>
-            <new-order v-if="$store.getters.newOrder"></new-order>
+            <new-order v-if="$store.getters.modalActive.includes('newOrder')"></new-order>
         </div>
     </div>
     <script>

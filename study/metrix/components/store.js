@@ -18,7 +18,8 @@ var store = new Vuex.Store({
     state: {
         // login : true, 
         isActive : false,
-        newOrder : false,
+        modalActive : [],
+        btnActive : []
     },
     mutations: {
         // checkLogin(state){
@@ -28,11 +29,31 @@ var store = new Vuex.Store({
             state.isActive = !state.isActive
         },
         toggleModal(state, payload){
-            state.newOrder = !state.newOrder
-            // state.payload = !state.payload
+            if(state.modalActive.includes(payload)){
+                for(let i = 0; i < state.modalActive.length; i++) {
+                    if(state.modalActive[i] === payload) {
+                        state.modalActive.splice(i, 1);
+                        i--;
+                    }
+                }
+            }else{
+                state.modalActive.push(payload);
+            }
             // if(payload = state.newOrder){
             //     console.log(payload)
             // }
+        },
+        toggleBtn(state, payload){
+            if(state.btnActive.includes(payload)){
+                for(let i = 0; i < state.btnActive.length; i++) {
+                    if(state.btnActive[i] === payload) {
+                        state.btnActive.splice(i, 1);
+                        i--;
+                    }
+                }
+            }else{
+                state.btnActive.push(payload);
+            }
         }
     },
     getters: {
@@ -45,10 +66,12 @@ var store = new Vuex.Store({
         isActive(state){
             return state.isActive
         },
-        newOrder(state, payload){
-            console.log(payload)
-            return state.newOrder
-        }
+        modalActive(state){
+            return state.modalActive
+        },
+        btnActive(state){
+            return state.btnActive
+        }, 
     },
     actions: {
         // checkLogin({commit}) {

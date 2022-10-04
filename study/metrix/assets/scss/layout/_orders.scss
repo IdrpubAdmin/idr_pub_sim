@@ -4,7 +4,7 @@
         display: flex;
         justify-content: space-between;
         h3{
-            @include fonts('Inter', 16, 500, 36, #45464e)
+            @include fonts('Inter', 16, 500, 36, #45464e);
         }
         .btn{
             background-color: $b;
@@ -16,7 +16,7 @@
                     margin-right: 12px;
                 }
                 span{
-                    @include fonts('Inter', 14, 400, 24, #fff)
+                    @include fonts('Inter', 14, 400, 24, #fff);
                 }
             }
         }
@@ -37,7 +37,7 @@
             grid-column: 1/4;
             grid-row: 2/3;
             .title{
-                @include fonts('Inter', 16, 500, 20, #45464e)
+                @include fonts('Inter', 16, 500, 20, #45464e);
             }
         }
     }
@@ -51,7 +51,7 @@
         display: flex;
         justify-content: space-between;
         h3{
-            @include fonts('Poppins', 20, 500, 32, #000)
+            @include fonts('Poppins', 20, 500, 32, #000);
         }
         .btn{
             width: 32px;
@@ -59,6 +59,49 @@
             padding: 4px;
             border-radius: 8px;
             background-color: #fff2e2;
+        }
+    }
+    section{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        article{
+            width: calc(50% - 50px);
+            .modal-title{
+                display: flex;
+                justify-content: space-between;
+                h5{
+                    @include fonts('Inter', 16, 500, 20, #8b8d97);
+                }
+                .btn-area{
+                    display: flex;
+                    p{
+                        @include fonts('Inter', 14, 400, 20, #83898c);
+                        margin-right: 20px;
+                    }
+                    .btn{
+                        width: 40px;
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: rgba(85, 112, 241, 0.12);
+                        padding: 2px;
+                        cursor: pointer;
+                        button{
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background-color: #bbc5cb;
+                        }
+                    }     
+                    .btnactive{
+                        text-align: right;
+                        background-color: #5570f1;
+                        button{
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
         }
     }
 }
