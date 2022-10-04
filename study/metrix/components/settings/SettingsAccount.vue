@@ -11,7 +11,7 @@
         <div class="contents">
             <div class="profile">
                 <ul>
-                    <li>
+                    <li class="input-box-area">
                         <p>First Name</p>
                         <div class="input-box">
                             <div class="image">
@@ -20,7 +20,7 @@
                             <input type="text" value="Usman">
                         </div>
                     </li>
-                    <li>
+                    <li class="input-box-area">
                         <p>Last Name</p>
                         <div class="input-box">
                             <div class="image">
@@ -29,7 +29,7 @@
                             <input type="text" value="Ndako">
                         </div>
                     </li>
-                    <li>
+                    <li class="input-box-area">
                         <p>Email</p>
                         <div class="input-box">
                             <div class="image">
@@ -38,16 +38,39 @@
                             <input type="text" value="usmanndako@gmail.com">
                         </div>
                     </li>
-                    <li>
+                    <li class="input-box-area">
                         <p>Phone Number</p>
                         <div class="input-box no-icon phone-box">
-                            <select name="" id="" class="country">
-                                <option value="" selected>+234</option>
-                            </select>
+                            <div class="select-box">
+                                <div class="selected" @click="toggleBtn('settingSelect01')">
+                                    <div class="value">
+                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                        +234
+                                    </div>
+                                </div>
+                                <ul v-show="btnActive.includes('settingSelect01')">
+                                    <li class="option">
+                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                        +234
+                                    </li>
+                                    <li class="option">
+                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                        +234
+                                    </li>
+                                    <li class="option">
+                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                        +234
+                                    </li>
+                                    <li class="option">
+                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                        +234
+                                    </li>
+                                </ul>
+                            </div>
                             <input type="text" value="08065650633">
                         </div>
                     </li>
-                    <li>
+                    <li class="input-box-area">
                         <p>Address</p>
                         <div class="input-box">
                             <div class="image">
@@ -56,27 +79,39 @@
                             <input type="text" value="No. 93 Skyfield Apartments">
                         </div>
                     </li>
-                    <li>
+                    <li class="input-box-area">
                         <p>City</p>
                         <div class="input-box no-icon">
                             <input type="text" value="Yaba">
                         </div>
                     </li>
-                    <li class="double">
-                        <div class="select-box">
+                    <li class="input-box-area double">
+                        <div class="select-box-area">
                             <p>Country</p>
-                            <div class="input-box">
-                                <select name="" id="">
-                                    <option value="" selected>Nigeria</option>
-                                </select>
+                            <div class="select-box">
+                                <div class="selected" @click="toggleBtn('settingSelect02')">
+                                    <div class="value">Nigeria</div>
+                                </div>
+                                <ul v-show="btnActive.includes('settingSelect02')">
+                                    <li class="option">Nigeria</li>
+                                    <li class="option">Nigeria</li>
+                                    <li class="option">Nigeria</li>
+                                    <li class="option">Nigeria</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="select-box">
+                        <div class="select-box-area">
                             <p>State</p>
-                            <div class="input-box">
-                                <select name="" id="">
-                                    <option value="" selected>Lagos</option>
-                                </select>
+                            <div class="select-box">
+                                <div class="selected" @click="toggleBtn('settingSelect03')">
+                                    <div class="value">Lagos</div>
+                                </div>
+                                <ul v-show="btnActive.includes('settingSelect03')">
+                                    <li class="option">Lagos</li>
+                                    <li class="option">Lagos</li>
+                                    <li class="option">Lagos</li>
+                                    <li class="option">Lagos</li>
+                                </ul>
                             </div>
                         </div>
                     </li>
@@ -98,5 +133,16 @@
 </template>
 
 <script>
-
+module.exports = {
+    data() {
+        return {
+            btnActive : this.$store.getters.btnActive
+        }
+    },
+    methods: {
+        toggleBtn(payload){
+            this.$store.commit('toggleBtn', payload)
+        }
+    },
+}
 </script>

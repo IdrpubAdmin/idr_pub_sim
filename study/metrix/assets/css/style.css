@@ -799,39 +799,72 @@ body {
   min-width: 360px;
 }
 
-select {
-  appearance: none;
-  border: 0;
-  background-image: url("../images/settings/fi_chevron-down.png");
-  background-repeat: no-repeat;
-  background-position: center right 16px;
+.input-box {
+  display: flex;
+  height: 52px;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+  margin-top: 8px;
 }
-
-select option {
-  border: 1px solid red;
-  background: rgba(239, 241, 249, 0.6);
+.input-box .image {
+  width: 56px;
+  height: 52px;
+  position: relative;
+}
+.input-box .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.input-box input {
+  padding: 9px 16px 9px 0;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   color: #5e6366;
-  padding: 3px 0;
+  width: calc(100% - 56px);
 }
 
-.select-box-area {
-  appearance: none;
-  border: 0;
+.select-box {
+  position: relative;
   background-image: url("../images/settings/fi_chevron-down.png");
   background-repeat: no-repeat;
   background-position: center right 16px;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+  cursor: pointer;
 }
-.select-box-area .selected .value {
-  line-height: 52px;
+.select-box .selected {
+  padding: 16px;
 }
-.select-box-area ul .option {
-  height: 52px;
-  line-height: 52px;
+.select-box .selected .value {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #abafb1;
 }
-
-.select-box-area {
+.select-box ul {
   width: 100%;
-  height: 52px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 10;
+  border: 1px solid #000;
+}
+.select-box ul .option {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #abafb1;
+  padding: 10px;
+}
+.select-box ul .option:hover {
+  color: #000;
 }
 
 .summary {
@@ -887,6 +920,7 @@ select option {
   background-color: rgba(163, 163, 163, 0.2);
   position: absolute;
   display: block;
+  z-index: 999;
 }
 .modal-wrap .modal-container {
   position: absolute;
@@ -1225,20 +1259,30 @@ header .page-head .user li {
   align-items: center;
   margin: 0 10px;
 }
-header .page-head .user .select-box {
+header .page-head .user li .select-box {
   width: 154px;
-  border-radius: 8px;
   background-color: #fef5ea;
+  background-size: 20px;
+  background-position: center right 12px;
 }
-header .page-head .user .select-box span {
+header .page-head .user li .select-box .selected {
+  padding: 6px 12px;
+}
+header .page-head .user li .select-box .selected .value {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #1c1d22;
 }
-header .page-head .user .select-box img {
-  margin-left: 10px;
+header .page-head .user li .select-box ul .option {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #abafb1;
+  justify-content: left;
+  margin: 0;
 }
 header .location {
   border-top: solid 1px #f1f3f9;
@@ -1525,7 +1569,7 @@ header .location .breadcrumb ul li::before {
   margin-top: 30px;
 }
 .new-order section article {
-  width: calc(50% - 50px);
+  width: calc(50% - 25px);
 }
 .new-order section article .modal-title {
   display: flex;
@@ -1569,6 +1613,91 @@ header .location .breadcrumb ul li::before {
 }
 .new-order section article .modal-title .btn-area .btnactive button {
   background-color: #fff;
+}
+.new-order section article .form {
+  margin-top: 27px;
+}
+.new-order section article .form .form-item {
+  margin-top: 24px;
+}
+.new-order section article .form .form-item:first-child {
+  margin-top: 0;
+}
+.new-order section article .form .form-item p {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #53545c;
+}
+.new-order section article .form .form-item .state-sel {
+  margin-top: 8px;
+}
+.new-order section article .form .form-item .state-sel .selected .value {
+  color: #5e6366;
+}
+.new-order section article .form .form-item textarea {
+  width: 100%;
+  height: 124px;
+  padding: 16px;
+  border: 0;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+}
+.new-order section article .form .form-item textarea::placeholder {
+  color: #abafb1;
+}
+.new-order section article .form .double {
+  display: flex;
+  justify-content: space-between;
+}
+.new-order section article .form .double .select-box {
+  width: calc(50% - 6px);
+}
+.new-order section article .form .double .input-box {
+  width: calc(50% - 6px);
+}
+.new-order section article .form .double .input-box input {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #abafb1;
+}
+.new-order section article .search {
+  margin-top: 27px;
+  background-color: #fff;
+  border: solid 1px #cfd3d4;
+}
+.new-order section article .search input::placeholder {
+  color: #abafb1;
+}
+.new-order .modal-btns {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.new-order .modal-btns button {
+  width: 180px;
+  height: 58px;
+  border-radius: 12px;
+  border: solid 2px #5570f1;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #5570f1;
+}
+.new-order .modal-btns button.point {
+  color: #fff;
+  background-color: #5570f1;
 }
 
 .settings {
@@ -1637,13 +1766,13 @@ header .location .breadcrumb ul li::before {
 .settings section article .contents .profile {
   width: 375px;
 }
-.settings section article .contents .profile ul li {
+.settings section article .contents .profile ul .input-box-area {
   margin-top: 16px;
 }
-.settings section article .contents .profile ul li:first-child {
+.settings section article .contents .profile ul .input-box-area:first-child {
   margin-top: 0;
 }
-.settings section article .contents .profile ul li p {
+.settings section article .contents .profile ul .input-box-area p {
   text-indent: 5px;
   font-family: "Inter";
   font-size: 12px;
@@ -1651,71 +1780,51 @@ header .location .breadcrumb ul li::before {
   line-height: 15px;
   color: #5e6366;
 }
-.settings section article .contents .profile ul li .input-box {
-  display: flex;
-  height: 52px;
-  border-radius: 8px;
-  background-color: rgba(239, 241, 249, 0.6);
-  margin-top: 8px;
-}
-.settings section article .contents .profile ul li .input-box .image {
-  width: 56px;
-  height: 52px;
-  position: relative;
-}
-.settings section article .contents .profile ul li .input-box .image img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-.settings section article .contents .profile ul li .input-box input {
-  padding: 9px 16px 9px 0;
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #5e6366;
-  width: calc(100% - 56px);
-}
-.settings section article .contents .profile ul li .input-box select {
-  background-color: transparent;
-  width: 180px;
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #5e6366;
-  padding: 0 16px;
-}
-.settings section article .contents .profile ul li .phone-box {
+.settings section article .contents .profile ul .input-box-area .phone-box {
   background-color: #fff;
 }
-.settings section article .contents .profile ul li .phone-box .country {
-  background-color: rgba(239, 241, 249, 0.6);
-  background-image: url("../images/settings/Arrow-Down2.png");
-  color: #abafb1;
-  border-radius: 8px;
+.settings section article .contents .profile ul .input-box-area .phone-box .select-box {
+  width: 142px;
   margin-right: 6px;
+  background-image: url("../images/settings/Arrow-Down2.png");
 }
-.settings section article .contents .profile ul li .phone-box input {
+.settings section article .contents .profile ul .input-box-area .phone-box .select-box .selected .value {
+  display: flex;
+  align-items: center;
+}
+.settings section article .contents .profile ul .input-box-area .phone-box .select-box .selected .value img {
+  margin-right: 8px;
+}
+.settings section article .contents .profile ul .input-box-area .phone-box .select-box ul .option {
+  display: flex;
+  align-items: center;
+}
+.settings section article .contents .profile ul .input-box-area .phone-box .select-box ul .option img {
+  margin-right: 8px;
+  height: 20px;
+}
+.settings section article .contents .profile ul .input-box-area .phone-box input {
+  width: calc(100% - 148px);
   background-color: rgba(239, 241, 249, 0.6);
   border-radius: 8px;
 }
-.settings section article .contents .profile ul li .no-icon input {
+.settings section article .contents .profile ul .input-box-area .no-icon input {
   padding-left: 16px;
 }
 .settings section article .contents .profile ul .double {
   display: flex;
   justify-content: space-between;
 }
-.settings section article .contents .profile ul .double .select-box {
+.settings section article .contents .profile ul .double .select-box-area {
   width: calc(50% - 6px);
 }
+.settings section article .contents .profile ul .double .select-box-area .select-box {
+  margin-top: 10px;
+}
+.settings section article .contents .profile ul .double .select-box-area .select-box .selected .value {
+  color: #5e6366;
+}
 .settings section article .contents .image {
-  width: 300px;
   text-align: right;
 }
 .settings section article .contents .image img {

@@ -50,7 +50,7 @@
                 .profile{
                     width: 375px;
                     ul{
-                        li{
+                        .input-box-area{
                             margin-top: 16px;
                             &:first-child{
                                 margin-top: 0;
@@ -59,44 +59,34 @@
                                 text-indent: 5px;
                                 @include fonts('Inter', 12, 400, 15, #5e6366)
                             }
-                            .input-box{
-                                display: flex;
-                                height: 52px;
-                                border-radius: 8px;
-                                background-color: rgba(239, 241, 249, 0.6);
-                                margin-top: 8px;
-                                .image{
-                                    width: 56px;
-                                    height: 52px;
-                                    position: relative;
-                                    img{
-                                        position: absolute;
-                                        top: 0; bottom: 0; right: 0; left: 0;
-                                        margin: auto;
+                            .phone-box{
+                                background-color: #fff;
+                                .select-box{
+                                    width: 142px;
+                                    margin-right: 6px;
+                                    background-image: url('../images/settings/Arrow-Down2.png');
+                                    .selected{
+                                        .value{
+                                            display: flex;
+                                            align-items: center;
+                                            img{
+                                                margin-right: 8px;
+                                            }
+                                        }
+                                    }
+                                    ul{
+                                        .option{
+                                            display: flex;
+                                            align-items: center;
+                                            img{
+                                                margin-right: 8px;
+                                                height: 20px;
+                                            }
+                                        }
                                     }
                                 }
                                 input{
-                                    padding: 9px 16px 9px 0;
-                                    @include fonts('Inter', 16, 400, 20, #5e6366);
-                                    width: calc(100% - 56px);
-                                }
-                                select{
-                                    background-color: transparent;
-                                    width: 180px;
-                                    @include fonts('Inter', 16, 400, 20, #5e6366);
-                                    padding: 0 16px;
-                                }
-                            }
-                            .phone-box{
-                                background-color: #fff;
-                                .country{
-                                    background-color: rgba(239, 241, 249, 0.6);
-                                    background-image: url('../images/settings/Arrow-Down2.png');
-                                    color: #abafb1;
-                                    border-radius: 8px;
-                                    margin-right: 6px;
-                                }
-                                input{
+                                    width: calc(100% - 148px);
                                     background-color: rgba(239, 241, 249, 0.6);
                                     border-radius: 8px;
                                 }
@@ -110,14 +100,21 @@
                         .double{
                             display: flex;
                             justify-content: space-between;
-                            .select-box{
+                            .select-box-area{
                                 width: calc(50% - 6px);
+                                .select-box{
+                                    margin-top: 10px;
+                                    .selected{
+                                        .value{
+                                            color: #5e6366;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
                 .image{
-                    width: 300px;
                     text-align: right;
                     img{
                         border-radius: 12px;

@@ -3,7 +3,7 @@
         <div class="orders-header">
             <h3>Orders Summary</h3>
             <div class="btn">
-                <button @click="$store.commit('toggleModal', 'newOrder')">
+                <button @click="toggleModal('newOrder')">
                     <img src="assets/images/orders/fi_plus.png" alt="plus icon">
                     <span>Create a New Order</span>
                 </button>
@@ -77,3 +77,13 @@
         </div>
     </section>
 </template>
+
+<script>
+module.exports = {
+    methods: {
+        toggleModal(payload){
+            this.$store.commit('toggleModal', payload)
+        },
+    },
+}
+</script>

@@ -8,9 +8,17 @@
                 <h3>{{$route.meta.title}}</h3>
             </div>
             <ul class="user">
-                <li class="select-box">
-                    <span>Nanny’s Shop</span>
-                    <img src="assets/images/header/fi_chevron-down.png" alt="down icon">
+                <li>
+                    <div class="select-box">
+                        <div class="selected" @click="toggleBtn('headerSelect01')">
+                            <div class="value">Nanny’s Shop</div>
+                        </div>
+                        <ul v-show="btnActive.includes('headerSelect01')">
+                            <li class="option">Nanny’s Shop</li>
+                            <li class="option">Nanny’s Shop</li>
+                            <li class="option">Nanny’s Shop</li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="alarm-icon">
                     <router-link to="/">
@@ -43,6 +51,16 @@
 
 <script>
 module.exports = {
+    data() {
+        return {
+            btnActive : this.$store.getters.btnActive
+        }
+    },
+    methods: {
+        toggleBtn(payload){
+            this.$store.commit('toggleBtn', payload)
+        }
+    },
     computed: {
         categoryData() {
             return this.$store.getters["NavigationData"].categoryData
