@@ -111,14 +111,6 @@
                     }
                     p{
                         @include fonts('Inter', 12, 400, 15, #53545c);
-                    }
-                    .state-sel{
-                        margin-top: 8px;
-                        .selected{
-                            .value{
-                                color: #5e6366;
-                            }
-                        }
                     }       
                     textarea{
                         width: 100%;
@@ -131,6 +123,14 @@
                     }
                     textarea::placeholder{
                         color: #abafb1;
+                    }
+                }
+                .state-sel{
+                    .selected{
+                        margin-top: 8px;
+                        .value{
+                            color: #5e6366;
+                        }
                     }
                 }
                 .double{

@@ -9,16 +9,11 @@
             </div>
             <ul class="user">
                 <li>
-                    <div class="select-box">
-                        <div class="selected" @click="toggleBtn('headerSelect01')">
-                            <div class="value">Nanny’s Shop</div>
-                        </div>
-                        <ul v-show="btnActive.includes('headerSelect01')">
-                            <li class="option">Nanny’s Shop</li>
-                            <li class="option">Nanny’s Shop</li>
-                            <li class="option">Nanny’s Shop</li>
-                        </ul>
-                    </div>
+                    <select-box
+                        :option="['Nanny’s Shop', 'Nanny’s Shop', 'Nanny’s Shop']"
+                        :selected="'Nanny’s Shop'"
+                        :name="'headerSelect01'"
+                    ></select-box>
                 </li>
                 <li class="alarm-icon">
                     <router-link to="/">
@@ -51,16 +46,6 @@
 
 <script>
 module.exports = {
-    data() {
-        return {
-            btnActive : this.$store.getters.btnActive
-        }
-    },
-    methods: {
-        toggleBtn(payload){
-            this.$store.commit('toggleBtn', payload)
-        }
-    },
     computed: {
         categoryData() {
             return this.$store.getters["NavigationData"].categoryData
@@ -69,5 +54,8 @@ module.exports = {
             return this.$route.path.split('/');
         }
     },
+    components: {
+        'select-box' : SelectBox
+    }
 }
 </script>

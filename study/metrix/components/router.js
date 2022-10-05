@@ -14,6 +14,9 @@ var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue')
 
 var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue')
 var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
+
+var SelectBox = httpVueLoader('components/common/SelectBox.vue')
+
 var router = new VueRouter({
 	routes: [
     { 

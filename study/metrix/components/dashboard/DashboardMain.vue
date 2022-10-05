@@ -1,66 +1,100 @@
 <template>
     <div class="dashboard">
         <article class="summary">
-            <div class="header">
+            <div class="header no-bg-sel">
                 <div class="icon-box point">
                     <img src="assets/images/dashboard/Graph.png" alt="graph icon">
                 </div>
-                <div class="period-select">
-                    
-                </div>
+                <select-box
+                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
+                    :selected="'This Week'"
+                    :name="'dashSelect01'"
+                ></select-box>
             </div>
             <ul>
                 <li>
                     <p class="tit">Sales</p>
-                    <p class="value">₦<span>4,000,000.00</span></p>
+                    <dl class="value">
+                        <dt>₦<span>4,000,000.00</span></dt>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Volume</p>
-                    <p class="value"><span>450</span></p>
+                    <dl class="value">
+                        <dt>₦<span>450</span></dt>
+                        <dd class="plus">+<span>20.00</span>%</dd>
+                    </dl>
                 </li>
             </ul>
         </article>
         <article class="summary">
-            <div class="header">
+            <div class="header no-bg-sel">
                 <div class="icon-box">
                     <img src="assets/images/dashboard/User.png" alt="user icon">
                 </div>
+                <select-box
+                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
+                    :selected="'This Week'"
+                    :name="'dashSelect02'"
+                ></select-box>
             </div>
             <ul>
                 <li>
                     <p class="tit">Customers</p>
-                    <p class="value"><span>1,250</span></p>
+                    <dl class="value">
+                        <dt><span>1,250</span></dt>
+                        <dd class="plus">+<span>15.80</span>%</dd>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Active</p>
-                    <p class="value"><span>1,180</span></p>
+                    <dl class="value">
+                        <dt><span>1,180</span></dt>
+                        <dd class="minus">-<span>4.90</span>%</dd>
+                    </dl>
                 </li>
             </ul>
         </article>
         <article class="summary">
-            <div class="header">
+            <div class="header no-bg-sel">
                 <div class="icon-box">
                     <img src="assets/images/dashboard/Bag.png" alt="bag">
                 </div>
+                <select-box
+                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
+                    :selected="'This Week'"
+                    :name="'dashSelect03'"
+                ></select-box>
             </div>
             <ul>
                 <li>
                     <p class="tit">All Orders</p>
-                    <p class="value"><span>450</span></p>
+                    <dl class="value">
+                        <dt><span>450</span></dt>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Pending</p>
-                    <p class="value"><span>5</span></p>
+                    <dl class="value">
+                        <dt><span>5</span></dt>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Completed</p>
-                    <p class="value"><span>445</span></p>
+                    <dl class="value">
+                        <dt><span>445</span></dt>
+                    </dl>
                 </li>
             </ul>
         </article>
         <article class="circle-chart">
-            <div class="title">
+            <div class="title no-bg-sel">
                 <h5>Marketting</h5>
+                <select-box
+                :option="['This Day', 'This Week', 'This Month', 'This Year']"
+                :selected="'This Week'"
+                :name="'dashSelect04'"
+            ></select-box>
             </div>
         </article>
         <article class="summary point">
@@ -72,28 +106,43 @@
             <ul>
                 <li>
                     <p class="tit">All Products</p>
-                    <p class="value"><span>45</span></p>
+                    <dl class="value">
+                        <dt><span>45</span></dt>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Active</p>
-                    <p class="value"><span>32</span></p>
+                    <dl class="value">
+                        <dt><span>32</span></dt>
+                        <dd class="plus">+<span>24</span>%</dd>
+                    </dl>
                 </li>
             </ul>
         </article>
         <article class="summary">
-            <div class="header">
+            <div class="header no-bg-sel">
                 <div class="icon-box">
                     <img src="assets/images/dashboard/fi_shopping-cart.png" alt="cart icon">
                 </div>
+                <select-box
+                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
+                    :selected="'This Week'"
+                    :name="'dashSelect05'"
+                ></select-box>
             </div>
             <ul>
                 <li>
                     <p class="tit">Abandoned Cart</p>
-                    <p class="value"><span>20</span>%</p>
+                    <dl class="value">
+                        <dt><span>20</span>%</dt>
+                        <dd class="plus">+<span>0.00</span>%</dd>
+                    </dl>
                 </li>
                 <li>
                     <p class="tit">Customers</p>
-                    <p class="value"><span>30</span></p>
+                    <dl class="value">
+                        <dt><span>30</span></dt>
+                    </dl>
                 </li>
             </ul>
         </article>
@@ -226,8 +275,30 @@
         </article>
         <article class="bar-chart">
             <div class="title">
-                <h5>Summary</h5>
+                <div class="tit-sel">
+                    <h5>Summary</h5>
+                    <select-box
+                        :option="['Sales', 'Sales', 'Sales', 'Sales']"
+                        :selected="'Sales'"
+                        :name="'dashSelect06'"
+                    ></select-box>
+                </div>
+                <div class="no-bg-sel">
+                    <select-box
+                        :option="['Last 7 Days', 'Last 7 Days', 'Last 7 Days']"
+                        :selected="'Last 7 Days'"
+                        :name="'dashSelect07'"
+                    ></select-box>
+                </div>
             </div>
         </article>
     </div>
 </template>
+
+<script>
+module.exports = {
+    components : {
+        'select-box' : SelectBox
+    },
+}
+</script>

@@ -64,6 +64,9 @@ body{
 .summary{
     padding: 15px;
     .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .icon-box{
             width: 36px;
             height: 36px;
@@ -93,6 +96,21 @@ body{
             .value{
                 @include fonts ('Inter', 20, 500, 30, #45464e);
                 margin-top: 10px;
+                display: flex;
+                align-items: center;
+                dt{
+                    margin-right: 7px;
+                }
+                dd{
+                    @include fonts ('Inter', 12, 400, 15, #fff);
+                    &.plus{
+                        color: #519c66;
+                    }
+                    &.minus{
+                        color: #cc5f5f;
+                    }
+                }
+
             }
         }
     }

@@ -10,6 +10,40 @@
         article{
             background-color: #fff;
             border-radius: 12px;
+            .no-bg-sel{
+                .select-box{
+                    background-color: #fff;
+                    background-image: url('../images/settings/fi_chevron-down.png');
+                    background-size: 16px;
+                    background-position: center right 0px;
+                    height: 16px;
+                    .selected{
+                        padding: 0;
+                        padding-left: 6px;
+                        padding-right: 23px;
+                        .value{
+                            @include fonts('Inter', 12, 400, 16, #bec0ca);
+                        }
+                    }
+                    ul{
+                        display: block;
+                        margin-top: 0;
+                        .option{
+                            @include fonts('Inter', 12, 400, 16, #bec0ca);
+                            padding: 5px;
+                            &:hover{
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .title{
+                @include fonts('Inter', 16, 500, 30, #45464e);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
         article:nth-child(4) {
             grid-column: 1/2;
@@ -37,27 +71,46 @@
                     }
                     .value{
                         color: #fff;
+                        dd{
+                            color: #dbdeee;
+                        }
                     }
                 }
             }
         }
         .circle-chart{
             padding: 20px;
-            .title{
-                @include fonts('Inter', 16, 500, 20, #45464e)
-            }
         }
         .bar-chart{
             padding: 20px;
             .title{
-                @include fonts('Inter', 16, 500, 20, #45464e)
+                .tit-sel{
+                    display: flex;
+                    h5{
+                        margin-right: 20px;
+                    }
+                    .select-box{
+                        width: 100%;
+                        background-color: rgba(85, 112, 241, 0.08);
+                        background-image: url('../images/dashboard/fi_chevron-down2.png');
+                        background-position: center right 11px;
+                        .selected{
+                            padding: 5px 50px 5px 11px;
+                            .value{
+                                @include fonts('Inter', 14, 400, 20, #5570f1);
+                            }
+                        }
+                        ul{
+                            .option{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
         .products{
             padding: 20px;
-            .title{
-                @include fonts('Inter', 16, 500, 20, #45464e)
-            }
             ul{
                 margin-top: 20px;
                 li{

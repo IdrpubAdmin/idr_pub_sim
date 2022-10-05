@@ -54,7 +54,7 @@ var store = new Vuex.Store({
             }else{
                 state.btnActive.push(payload);
             }
-        }
+        },
     },
     getters: {
         NavigationData: function NavigationData(state) {

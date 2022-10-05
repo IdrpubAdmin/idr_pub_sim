@@ -22,41 +22,23 @@
                     </div>
                     <ul class="form">
                         <li class="form-item">
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('newOrderSelect01')">
-                                    <div class="value">Select Customer</div>
-                                </div>
-                                <ul v-show="btnActive.includes('newOrderSelect01')">
-                                    <li class="option">Select Customer</li>
-                                    <li class="option">Select Customer1</li>
-                                    <li class="option">Select Customer2</li>
-                                    <li class="option">Select Customer3</li>
-                                </ul>
-                            </div>   
+                            <select-box
+                                :option="['Select Customer', 'Select Customer1', 'Select Customer2', 'Select Customer3']"
+                                :selected="'Select Customer'"
+                                :name="'newOrderSelect01'"
+                            ></select-box>
                         </li>   
                         <li class="form-item double">
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('newOrderSelect02')">
-                                    <div class="value">Payment Type</div>
-                                </div>
-                                <ul v-show="btnActive.includes('newOrderSelect02')">
-                                    <li class="option">Payment Type</li>
-                                    <li class="option">Payment Type</li>
-                                    <li class="option">Payment Type</li>
-                                    <li class="option">Payment Type</li>
-                                </ul>
-                            </div>
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('newOrderSelect03')">
-                                    <div class="value">Order Type</div>
-                                </div>
-                                <ul v-show="btnActive.includes('newOrderSelect03')">
-                                    <li class="option">Order Type</li>
-                                    <li class="option">Order Type</li>
-                                    <li class="option">Order Type</li>
-                                    <li class="option">Order Type</li>
-                                </ul>
-                            </div>
+                            <select-box
+                                :option="['Payment Type', 'Payment Type1', 'Payment Type2', 'Payment Type3']"
+                                :selected="'Payment Type'"
+                                :name="'newOrderSelect02'"
+                            ></select-box>
+                            <select-box
+                                :option="['Order Type', 'Order Type1', 'Order Type2', 'Order Type3']"
+                                :selected="'Order Type'"
+                                :name="'newOrderSelect03'"
+                            ></select-box>
                         </li>
                         <li class="form-item">
                             <p>Order Time & Date</p>
@@ -75,18 +57,13 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="form-item">
+                        <li class="form-item state-sel">
                             <p>Order Status</p>
-                            <div class="select-box state-sel">
-                                <div class="selected" @click="toggleBtn('newOrderSelect04')">
-                                    <div class="value">Pending</div>
-                                </div>
-                                <ul v-show="btnActive.includes('newOrderSelect04')">
-                                    <li class="option">Pending</li>
-                                    <li class="option">Completed</li>
-                                    <li class="option">In-Progress</li>
-                                </ul>
-                            </div>
+                            <select-box
+                                :option="['Pending', 'Completed', 'In-Progress']"
+                                :selected="'Pending'"
+                                :name="'newOrderSelect04'"
+                            ></select-box>
                         </li>
                         <li class="form-item">
                             <textarea name="" id="" cols="30" rows="10" placeholder="Order Note"></textarea>
@@ -128,5 +105,8 @@ module.exports = {
             this.$store.commit('toggleBtn', payload)
         }
     },
+    components: {
+        'select-box' : SelectBox
+    }
 }
 </script>
