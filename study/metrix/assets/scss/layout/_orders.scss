@@ -1,37 +1,6 @@
 .orders{
-    padding: 20px;
-    .orders-header{
-        display: flex;
-        justify-content: space-between;
-        h3{
-            @include fonts('Inter', 16, 500, 36, #45464e);
-        }
-        .btn{
-            background-color: $b;
-            padding: 6px 16px;
-            border-radius: 12px;
-            button{
-                display: flex;
-                img{
-                    margin-right: 12px;
-                }
-                span{
-                    @include fonts('Inter', 14, 400, 24, #fff);
-                }
-            }
-        }
-    }
-    article{
-        background-color: #fff;
-        border-radius: 12px;
-    }
     .contents{
-        height: calc(100vh - 183px);
-        margin-top: 20px;
-        display: grid;
         grid-template-columns: 3fr 3fr 2fr;
-        grid-template-rows: 20% auto;
-        gap: 20px;
         .orders-list {
             padding: 20px;
             grid-column: 1/4;
@@ -41,26 +10,69 @@
             }
         }
     }
+    .main-order{
+
+    }
+    .view-order{
+        .contents{
+            .summary{
+                ul{
+                    margin-top: 30px;
+                    li{
+                        width: calc(50% - 16px);
+                        .tit{
+                            font-size: 12px;
+                        }
+                        .value{
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+            .profile{
+                .header{
+                    align-items: start;
+                    .user{
+                        display: flex;
+                        align-items: center;
+                        .icon-box{
+                            width: 45px;
+                            height: 45px;
+                            margin-right: 24px;
+                        }
+                        .value{
+                            .name{
+                                @include fonts('Inter', 14, 400, 17, #8b8d97);
+                            }
+                            .since{
+                                @include fonts('Inter', 12, 400, 15, #8b8d97);
+                                span{
+                                    color: #2c2d33;
+                                }
+                            }
+                        }
+                    }    
+                    .state{
+                        padding: 4px 11px;
+                        border-radius: 8px;
+                        &.pending{
+                            background-color: #fff2e2;
+                        }
+                        span{
+                            @include fonts('Inter', 12, 400, 15, #1c1d22);
+                        }
+                    }      
+                }
+            }
+        }
+    }
 }
 
 .new-order{
     width: 850px;
     height: 740px;
-    .header{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        h3{
-            @include fonts('Poppins', 20, 500, 32, #000);
-        }
-        .btn{
-            width: 32px;
-            height: 32px;
-            padding: 4px;
-            border-radius: 8px;
-            background-color: #fff2e2;
-        }
-    }
     section{
         display: flex;
         justify-content: space-between;
@@ -159,20 +171,5 @@
     }
     .modal-btns{
         width: 50%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 40px;
-        button{
-            width: 180px;
-            height: 58px;
-            border-radius: 12px;
-            border: solid 2px #5570f1;
-            @include fonts('Inter', 20, 400, 30, #5570f1);
-            &.point{
-                color: #fff;
-                background-color: #5570f1;
-            }
-        }
     }
 }

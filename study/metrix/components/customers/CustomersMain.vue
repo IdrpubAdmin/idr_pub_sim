@@ -1,11 +1,5 @@
 <template>
-    <div>
-        customers
+    <div class="customers">
+        <router-view></router-view>
     </div>
 </template>
-
-<script>
-module.exports = {
-    
-}
-</script>

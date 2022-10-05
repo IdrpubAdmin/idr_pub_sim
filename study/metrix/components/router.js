@@ -1,19 +1,23 @@
 var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
 
-var LogIn = httpVueLoader('components/common/LogIn.vue');
-var SignUp = httpVueLoader('components/common/SignUp.vue');
-
 var OrdersMain = httpVueLoader('components/orders/OrdersMain.vue');
+var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue')
+var ViewOrder = httpVueLoader('components/orders/ViewOrder.vue')
+
 var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
+var CustomersSummary = httpVueLoader('components/customers/CustomersSummary.vue')
+var ViewCustomer = httpVueLoader('components/customers/ViewCustomer.vue')
+
 var InventoryMain = httpVueLoader('components/inventory/InventoryMain.vue');
 var ConversationsMain = httpVueLoader('components/conversations/ConversationsMain.vue');
+
 var SettingsMain = httpVueLoader('components/settings/SettingsMain.vue');
 var SettingsAccount = httpVueLoader('components/settings/SettingsAccount.vue');
 var SettingsBusiness = httpVueLoader('components/settings/SettingsBusiness.vue');
 var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue');
 
-var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue')
-var HiMain2 = httpVueLoader('components/orders/HiMain2.vue')
+var LogIn = httpVueLoader('components/common/LogIn.vue');
+var SignUp = httpVueLoader('components/common/SignUp.vue');
 
 var SelectBox = httpVueLoader('components/common/SelectBox.vue')
 
@@ -70,7 +74,7 @@ var router = new VueRouter({
           {
               name: 'vieworder',
               path: 'vieworder',
-              component: HiMain2,
+              component: ViewOrder,
               meta: {
                 title: 'Orders'
               },
@@ -84,6 +88,24 @@ var router = new VueRouter({
       meta: {
         title: 'Customers'
       },
+      children:[
+        {
+            name: 'customersmain',
+            path: '',
+            component: CustomersSummary,
+            meta: {
+              title: 'Customers'
+            },
+        },
+        {
+            name: 'viewcustomer',
+            path: 'viewcustomer',
+            component: ViewCustomer,
+            meta: {
+              title: 'Customers'
+            },
+        }
+      ],
     },
 	  { 
       name: 'inventory',
@@ -100,6 +122,7 @@ var router = new VueRouter({
       meta: {
         title: 'Conversations'
       },
+      redirect:'/'
     },
 	  { 
       name: 'settings',
@@ -110,20 +133,21 @@ var router = new VueRouter({
       },
       children:[
         {
-            name: 'account',
-            path: '',
-            component: SettingsAccount,
-            meta: {
-              title: 'Setting'
-            },
+          name: 'account',
+          path: '',
+          component: SettingsAccount,
+          meta: {
+            title: 'Setting'
+          },
         },
         {
-            name: 'business',
-            path: 'business',
-            component: SettingsBusiness,
-            meta: {
-              title: 'Setting'
-            },
+          name: 'business',
+          path: 'business',
+          component: SettingsBusiness,
+          meta: {
+            title: 'Setting'
+          },
+          redirect:{name:'account'}
         },
         {
           name: 'security',
@@ -132,6 +156,7 @@ var router = new VueRouter({
           meta: {
             title: 'Setting'
           },
+          redirect:{name:'account'}
         }
       ],
     },

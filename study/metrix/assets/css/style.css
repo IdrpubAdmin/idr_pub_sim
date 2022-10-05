@@ -867,6 +867,41 @@ body {
   color: #000;
 }
 
+article .no-bg-sel .select-box {
+  background-color: #fff;
+  background-image: url("../images/settings/fi_chevron-down.png");
+  background-size: 16px;
+  background-position: center right 0px;
+  height: 16px;
+}
+article .no-bg-sel .select-box .selected {
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 23px;
+}
+article .no-bg-sel .select-box .selected .value {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #bec0ca;
+}
+article .no-bg-sel .select-box ul {
+  display: block;
+  margin-top: 0;
+}
+article .no-bg-sel .select-box ul .option {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #bec0ca;
+  padding: 5px;
+}
+article .no-bg-sel .select-box ul .option:hover {
+  color: #000;
+}
+
 .summary {
   padding: 15px;
 }
@@ -908,6 +943,9 @@ body {
   font-weight: 400;
   line-height: 14px;
   color: #8b8d97;
+}
+.summary ul li .tit.point {
+  color: #cc5f5f;
 }
 .summary ul li .value {
   font-family: "Inter";
@@ -956,6 +994,162 @@ body {
   padding: 28px 24px;
   background-color: #fff;
   border-radius: 12px;
+}
+.modal-wrap .modal-container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-wrap .modal-container .header h3 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #000;
+}
+.modal-wrap .modal-container .header .btn {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #fff2e2;
+}
+.modal-wrap .modal-container .modal-btns {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.modal-wrap .modal-container .modal-btns button {
+  width: 180px;
+  height: 58px;
+  border-radius: 12px;
+  border: solid 2px #5570f1;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #5570f1;
+}
+.modal-wrap .modal-container .modal-btns button.point {
+  color: #fff;
+  background-color: #5570f1;
+}
+
+.orders, .customers {
+  padding: 20px;
+}
+.orders .orders-header, .orders .customers-header, .customers .orders-header, .customers .customers-header {
+  display: flex;
+  justify-content: space-between;
+}
+.orders .orders-header h3, .orders .customers-header h3, .customers .orders-header h3, .customers .customers-header h3 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #45464e;
+}
+.orders .orders-header .btn, .orders .customers-header .btn, .customers .orders-header .btn, .customers .customers-header .btn {
+  background-color: #5570f1;
+  padding: 6px 16px;
+  border-radius: 12px;
+}
+.orders .orders-header .btn button, .orders .customers-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button {
+  display: flex;
+}
+.orders .orders-header .btn button img, .orders .customers-header .btn button img, .customers .orders-header .btn button img, .customers .customers-header .btn button img {
+  margin-right: 12px;
+}
+.orders .orders-header .btn button span, .orders .customers-header .btn button span, .customers .orders-header .btn button span, .customers .customers-header .btn button span {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+.orders .view-section .view-header ul, .customers .view-section .view-header ul {
+  display: flex;
+}
+.orders .view-section .view-header ul li, .customers .view-section .view-header ul li {
+  display: flex;
+  margin-right: 24px;
+}
+.orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #45464e;
+}
+.orders .view-section .view-header ul li p span, .customers .view-section .view-header ul li p span {
+  color: #8b8d97;
+}
+.orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image {
+  width: 36px;
+  height: 36px;
+  margin-left: 4px;
+  position: relative;
+}
+.orders .view-section .view-header ul li .image img, .customers .view-section .view-header ul li .image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.orders .view-section .view-header .btns, .customers .view-section .view-header .btns {
+  display: flex;
+}
+.orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box {
+  width: 200px;
+  background-image: url("../images/orders/fi_chevron-down.png");
+  background-color: #1c1d22;
+  border-radius: 12px;
+  margin-right: 24px;
+}
+.orders .view-section .view-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected {
+  padding: 8px 16px;
+}
+.orders .view-section .view-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+}
+.orders .view-section .view-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul {
+  display: block;
+}
+.orders .view-section .view-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option {
+  font-size: 14px;
+}
+.orders .view-section .view-header .btns .btn, .customers .view-section .view-header .btns .btn {
+  background-color: #cc5f5f;
+  padding: 0 16px;
+  border-radius: 12px;
+}
+.orders .view-section .view-header .btns .btn a, .customers .view-section .view-header .btns .btn a {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.orders article, .customers article {
+  background-color: #fff;
+  border-radius: 12px;
+}
+.orders .contents, .customers .contents {
+  height: calc(100vh - 183px);
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 20% auto;
 }
 
 .navigation {
@@ -1391,40 +1585,6 @@ header .location .breadcrumb ul li::before {
   background-color: #fff;
   border-radius: 12px;
 }
-.container .dashboard article .no-bg-sel .select-box {
-  background-color: #fff;
-  background-image: url("../images/settings/fi_chevron-down.png");
-  background-size: 16px;
-  background-position: center right 0px;
-  height: 16px;
-}
-.container .dashboard article .no-bg-sel .select-box .selected {
-  padding: 0;
-  padding-left: 6px;
-  padding-right: 23px;
-}
-.container .dashboard article .no-bg-sel .select-box .selected .value {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #bec0ca;
-}
-.container .dashboard article .no-bg-sel .select-box ul {
-  display: block;
-  margin-top: 0;
-}
-.container .dashboard article .no-bg-sel .select-box ul .option {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #bec0ca;
-  padding: 5px;
-}
-.container .dashboard article .no-bg-sel .select-box ul .option:hover {
-  color: #000;
-}
 .container .dashboard article .title {
   font-family: "Inter";
   font-size: 16px;
@@ -1447,19 +1607,19 @@ header .location .breadcrumb ul li::before {
   grid-column: 1/3;
   grid-row: 4/5;
 }
-.container .dashboard .point {
+.container .dashboard .folder {
   background-color: #5570f1;
 }
-.container .dashboard .point .header .icon-box {
+.container .dashboard .folder .header .icon-box {
   background-color: rgba(255, 255, 255, 0.16);
 }
-.container .dashboard .point ul li .tit {
+.container .dashboard .folder ul li .tit {
   color: #fff;
 }
-.container .dashboard .point ul li .value {
+.container .dashboard .folder ul li .value {
   color: #fff;
 }
-.container .dashboard .point ul li .value dd {
+.container .dashboard .folder ul li .value dd {
   color: #dbdeee;
 }
 .container .dashboard .circle-chart {
@@ -1557,49 +1717,8 @@ header .location .breadcrumb ul li::before {
   background-color: rgba(50, 147, 111, 0.12);
 }
 
-.orders {
-  padding: 20px;
-}
-.orders .orders-header {
-  display: flex;
-  justify-content: space-between;
-}
-.orders .orders-header h3 {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 36px;
-  color: #45464e;
-}
-.orders .orders-header .btn {
-  background-color: #5570f1;
-  padding: 6px 16px;
-  border-radius: 12px;
-}
-.orders .orders-header .btn button {
-  display: flex;
-}
-.orders .orders-header .btn button img {
-  margin-right: 12px;
-}
-.orders .orders-header .btn button span {
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #fff;
-}
-.orders article {
-  background-color: #fff;
-  border-radius: 12px;
-}
 .orders .contents {
-  height: calc(100vh - 183px);
-  margin-top: 20px;
-  display: grid;
   grid-template-columns: 3fr 3fr 2fr;
-  grid-template-rows: 20% auto;
-  gap: 20px;
 }
 .orders .contents .orders-list {
   padding: 20px;
@@ -1613,29 +1732,67 @@ header .location .breadcrumb ul li::before {
   line-height: 20px;
   color: #45464e;
 }
+.orders .view-order .contents .summary ul {
+  margin-top: 30px;
+}
+.orders .view-order .contents .summary ul li {
+  width: calc(50% - 16px);
+}
+.orders .view-order .contents .summary ul li .tit {
+  font-size: 12px;
+}
+.orders .view-order .contents .summary ul li .value {
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 8px;
+}
+.orders .view-order .contents .profile .header {
+  align-items: start;
+}
+.orders .view-order .contents .profile .header .user {
+  display: flex;
+  align-items: center;
+}
+.orders .view-order .contents .profile .header .user .icon-box {
+  width: 45px;
+  height: 45px;
+  margin-right: 24px;
+}
+.orders .view-order .contents .profile .header .user .value .name {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
+}
+.orders .view-order .contents .profile .header .user .value .since {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+}
+.orders .view-order .contents .profile .header .user .value .since span {
+  color: #2c2d33;
+}
+.orders .view-order .contents .profile .header .state {
+  padding: 4px 11px;
+  border-radius: 8px;
+}
+.orders .view-order .contents .profile .header .state.pending {
+  background-color: #fff2e2;
+}
+.orders .view-order .contents .profile .header .state span {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #1c1d22;
+}
 
 .new-order {
   width: 850px;
   height: 740px;
-}
-.new-order .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.new-order .header h3 {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 32px;
-  color: #000;
-}
-.new-order .header .btn {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  border-radius: 8px;
-  background-color: #fff2e2;
 }
 .new-order section {
   display: flex;
@@ -1753,25 +1910,35 @@ header .location .breadcrumb ul li::before {
 }
 .new-order .modal-btns {
   width: 50%;
-  margin: 0 auto;
+}
+
+.customers .contents {
+  grid-template-columns: 1fr 1fr;
+}
+.customers .contents .customers-list {
+  padding: 20px;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.customers .contents .customers-list .title {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+
+.new-customer {
+  width: 423px;
+  height: 513px;
+}
+.new-customer section {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
 }
-.new-order .modal-btns button {
-  width: 180px;
-  height: 58px;
-  border-radius: 12px;
-  border: solid 2px #5570f1;
-  font-family: "Inter";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  color: #5570f1;
-}
-.new-order .modal-btns button.point {
-  color: #fff;
-  background-color: #5570f1;
+.new-customer .modal-btns {
+  width: 100%;
 }
 
 .settings {

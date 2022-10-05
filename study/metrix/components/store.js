@@ -29,7 +29,7 @@ var store = new Vuex.Store({
             state.isActive = !state.isActive
         },
         toggleModal(state, payload){
-            if(state.modalActive.includes(payload)){
+            if(state.modalActive.includes(payload)){ 
                 for(let i = 0; i < state.modalActive.length; i++) {
                     if(state.modalActive[i] === payload) {
                         state.modalActive.splice(i, 1);

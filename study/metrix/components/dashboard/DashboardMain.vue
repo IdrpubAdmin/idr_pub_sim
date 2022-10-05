@@ -21,7 +21,7 @@
                 <li>
                     <p class="tit">Volume</p>
                     <dl class="value">
-                        <dt>₦<span>450</span></dt>
+                        <dt><span>450</span></dt>
                         <dd class="plus">+<span>20.00</span>%</dd>
                     </dl>
                 </li>
@@ -97,7 +97,7 @@
             ></select-box>
             </div>
         </article>
-        <article class="summary point">
+        <article class="summary folder">
             <div class="header">
                 <div class="icon-box">
                     <img src="assets/images/dashboard/Folder.png" alt="folder icon">
@@ -119,7 +119,7 @@
                 </li>
             </ul>
         </article>
-        <article class="summary">
+        <article class="summary cart">
             <div class="header no-bg-sel">
                 <div class="icon-box">
                     <img src="assets/images/dashboard/fi_shopping-cart.png" alt="cart icon">
@@ -132,7 +132,7 @@
             </div>
             <ul>
                 <li>
-                    <p class="tit">Abandoned Cart</p>
+                    <p class="tit point">Abandoned Cart</p>
                     <dl class="value">
                         <dt><span>20</span>%</dt>
                         <dd class="plus">+<span>0.00</span>%</dd>
