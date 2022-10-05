@@ -108,6 +108,11 @@
                 </div>
                 <div>
                     <router-link :to="{name:'vieworder'}">어딘가에있을</router-link>
+                    <div id="grid"></div>
+                    <grid
+                      :data="gridProps.data"
+                      :columns="gridProps.columns"
+                    ></grid>
                 </div>
             </article>
         </div>
@@ -117,12 +122,37 @@
 <script>
 module.exports = {
     components : {
-        'select-box' : SelectBox
+        'select-box' : SelectBox,
+        grid: Grid
     },
     methods: {
         toggleModal(payload){
             this.$store.commit('toggleModal', payload)
         },
     },
+    created() {
+        this.gridProps = {
+            data: [
+                {
+                  name: 'Beautiful Lies',
+                  artist: 'Birdy'
+                },
+                {
+                  name: 'X',
+                  artist: 'Ed Sheeran'
+                }
+            ],
+            columns: [
+                {
+                  header: 'Name',
+                  name: 'name'
+                },
+                {
+                  header: 'Artist',
+                  name: 'artist'
+                }
+            ]
+        };
+    }
 }
 </script>
