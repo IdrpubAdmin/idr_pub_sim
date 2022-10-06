@@ -1,4 +1,5 @@
 var NavigationData = {
+    namespaced: true,
     state: {
         categoryData : [
             { id: 1, title: "Dashboard", icon: "Category", path: "/"},
@@ -12,8 +13,10 @@ var NavigationData = {
 }
 
 var store = new Vuex.Store({
+    namespaced: true,
     modules: {
-        NavigationData: NavigationData,
+        NavigationData : NavigationData,
+        tableData : tableData,
     },
     state: {
         // login : true, 
@@ -27,6 +30,7 @@ var store = new Vuex.Store({
         // },
         checkActive(state){
             state.isActive = !state.isActive
+            console.log(state.tableData.viewOrder)
         },
         toggleModal(state, payload){
             if(state.modalActive.includes(payload)){ 
@@ -59,6 +63,9 @@ var store = new Vuex.Store({
     getters: {
         NavigationData: function NavigationData(state) {
             return state.NavigationData;
+        },
+        tableData: function tableData(state) {
+            return state.tableData;
         },
         // Login(state){
         //     return state.login

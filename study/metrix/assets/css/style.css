@@ -1152,6 +1152,39 @@ article .no-bg-sel .select-box ul .option:hover {
   grid-template-rows: 20% auto;
 }
 
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+table tr td input[type=checkbox], table tr th input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: solid 1px #cfd3d4;
+  appearance: none;
+  cursor: pointer;
+}
+table tr td input[type=checkbox]:checked, table tr th input[type=checkbox]:checked {
+  background: #cfd3d4;
+  border: none;
+}
+table thead {
+  border-top: 1px solid #e1e2e9;
+  border-bottom: 1px solid #e1e2e9;
+}
+table thead tr th {
+  padding: 14px 0;
+  vertical-align: middle;
+}
+table thead tr .check {
+  width: 24px;
+}
+table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+
 .navigation {
   padding: 14px 16px;
   transition: padding 0.5s;

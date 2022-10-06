@@ -295,3 +295,48 @@ article{
         grid-template-rows: 20% auto;
     }
 }
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    tr{
+        td,th{
+            input[type="checkbox"] {
+                width: 24px;
+                height: 24px;
+                border-radius: 8px;
+                border: solid 1px #cfd3d4;
+                appearance: none;
+                cursor: pointer;
+              }
+            
+              input[type="checkbox"]:checked {
+                background: #cfd3d4;
+                border: none;
+              }
+        }
+    }
+    thead{
+        border-top: 1px solid #e1e2e9;
+        border-bottom: 1px solid #e1e2e9;
+        tr{
+            th{
+                padding: 14px 0;
+                vertical-align: middle;
+            }
+            .check{
+                width: 24px;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                text-align: center; 
+                vertical-align: middle;
+                padding: 6px 0;
+            }
+        }
+
+    }
+}
