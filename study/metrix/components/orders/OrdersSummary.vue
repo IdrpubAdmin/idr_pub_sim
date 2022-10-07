@@ -102,13 +102,14 @@
                     </li>
                 </ul>
             </article>
-            <article class="orders-list">
+            <article class="table-area">
                 <div class="title">
                     <h5>Customer Orders</h5>
                 </div>
                 <div>
-                    <router-link :to="{name:'vieworder'}">어딘가에있을</router-link>
-                    <div id="order-grid"></div>
+                    <table-box
+                        :table="tableData"
+                    ></table-box>
                 </div>
             </article>
         </div>
@@ -117,82 +118,19 @@
 
 <script>
 module.exports = {
+    data() {
+        return {
+            tableData : this.$store.getters["tableData/mainOrder"]
+        }
+    },
     components : {
         'select-box' : SelectBox,
+        'table-box' : TableBox
     },
     methods: {
         toggleModal(payload){
             this.$store.commit('toggleModal', payload)
         },
-    },
-    mounted() {
-        var grid = new tui.Grid({
-            el: document.getElementById('order-grid'),
-            // 우클릭시 버튼 안나오게
-            contextMenu: null,      
-            rowHeaders: [
-              { type: 'checkbox', width: 12, align: 'center', valign: 'middle' }
-            ],
-            columns: [
-                {
-                    header: 'Customer Name',
-                    name: 'name',
-                },
-                {
-                    header: 'Order Date',
-                    name: 'date',
-                },
-                {
-                    header: 'Order Type',
-                    name: 'type',
-                },
-                {
-                    header: 'Tracking ID',
-                    name: 'id',
-                },
-                {
-                    header: 'Order Total',
-                    name: 'total',
-                },
-                {
-                    header: 'Action',
-                    name: 'action',
-                    editor: {
-                        type: 'select',
-                        options: [
-                            {txet:'Completed', value:'Completed'},
-                            {txet:'In-Progress', value:'In-Progress'},
-                            {txet:'Pending', value:'Pending'},
-                        ]
-                    }
-                },
-                {
-                    header: 'Status',
-                    name: 'state',
-                },
-            ]
-        });
-        var gridData = [
-            {
-                name: `<router-link :to="{name:'vieworder'}">Janet Adebayo</router-link>`,
-                date: '12 Aug 2022 - 12:25 am',
-                type: 'Home Delivery',
-                id: '9348fjr73',
-                total: '₦25,000.00',
-                action: `Completed`,
-                state: 'Completed',
-            },
-            {
-                name: 'Janet Adebayo',
-                date: '12 Aug 2022 - 12:25 am',
-                type: 'Home Delivery',
-                id: '9348fjr73',
-                total: '₦25,000.00',
-                action: 'Completed',
-                state: 'Completed',
-            },
-        ];
-        grid.resetData( gridData );
     },
 }
 </script>

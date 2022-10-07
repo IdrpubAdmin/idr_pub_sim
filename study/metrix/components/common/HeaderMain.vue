@@ -1,9 +1,6 @@
 <template>
     <header>
         <div class="page-head">
-            <!-- <div class="title" v-for="(category, i) in categoryData" :key="i.category" v-show="categoryData[i].path === $route.path">
-                <h3>{{$route.name}}</h3>
-            </div> -->
             <div class="title">
                 <h3>{{$route.meta.title}}</h3>
             </div>
@@ -31,11 +28,11 @@
             <div class="home-icon">
                 <img src="assets/images/header/Home.png" alt="home icon">
             </div>
-            <div class="breadcrumb">
+            <div class="breadcrumb" v-for="(breadcrumb,i) in BreadCrumbData" :key="i" v-if="BreadCrumbData[i].name.includes($route.name)">
                 <ul>
-                    <li v-for="(key,i) in breadcrumb" :key="i+key" v-show="breadcrumb[i].length > 0">
-                        <router-link :to="{name:breadcrumb[i]}">
-                            {{breadcrumb[i]}}
+                    <li v-for="data in breadcrumb.data" :key="data.id">
+                        <router-link :to="{name: data.path}">
+                            {{data.title}}
                         </router-link>
                     </li>
                 </ul>
@@ -50,8 +47,8 @@ module.exports = {
         categoryData() {
             return this.$store.getters["NavigationData"].categoryData
         },
-        breadcrumb() {
-            return this.$route.path.split('/');
+        BreadCrumbData() {
+            return this.$store.getters["BreadCrumbData"].BreadCrumb
         }
     },
     components: {

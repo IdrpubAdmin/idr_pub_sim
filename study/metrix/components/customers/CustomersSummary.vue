@@ -78,12 +78,14 @@
                     </li>
                 </ul>
             </article>
-            <article class="customers-list">
+            <article class="table-area">
                 <div class="title">
                     <h5>Customer Orders</h5>
                 </div>
                 <div>
-                    <router-link :to="{name:'viewcustomer'}">어딘가에있을</router-link>
+                    <table-box
+                        :table="tableData"
+                    ></table-box>
                 </div>
             </article>
         </div>
@@ -92,8 +94,14 @@
 
 <script>
 module.exports = {
+    data() {
+        return {
+            tableData : this.$store.getters["tableData/mainCustom"]
+        }
+    },
     components : {
-        'select-box' : SelectBox
+        'select-box' : SelectBox,
+        'table-box' : TableBox
     },
     methods: {
         toggleModal(payload){

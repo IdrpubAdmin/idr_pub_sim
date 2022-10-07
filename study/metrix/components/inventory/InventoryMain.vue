@@ -1,11 +1,5 @@
 <template>
-    <div>
-        Inventory
+    <div class="inventory">
+        <router-view></router-view>
     </div>
 </template>
-
-<script>
-module.exports = {
-    
-}
-</script>

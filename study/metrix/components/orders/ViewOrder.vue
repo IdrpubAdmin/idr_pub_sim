@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="contents">
-            <article class="summary profile">
+            <article class="summary user-sum profile">
                 <div class="header">
                     <div class="user">
                         <div class="icon-box">
@@ -53,7 +53,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="summary">
+            <article class="summary user-sum">
                 <div class="header">
                     <div class="icon-box">
                         <img src="assets/images/orders/Location.png" alt="location icon">
@@ -70,7 +70,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="summary">
+            <article class="summary user-sum">
                 <div class="header">
                     <div class="icon-box">
                         <img src="assets/images/orders/fi_credit-card.png" alt="card icon">
@@ -87,34 +87,13 @@
                     </li>
                 </ul>
             </article>
-            <article class="orders-list">
+            <article class="table-area">
                 <div class="title">
-                    <h5>Itmes</h5>
+                    <h5>Itmes <span>{{viewOrder.tBody.length}}<span></h5>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th v-for="tHead in viewOrder.tHead" 
-                                :key="tHead.id + tHead.name" 
-                                :class="tHead.class" 
-                                v-html="tHead.name"
-                            ></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="tBody in viewOrder.tBody"
-                            :key="tBody.id + tBody.name"
-                        >
-                            <td v-for="(name,i) in tBody.name"
-                                :key="i"
-                            >
-                            <template v-if="name == 'cheack-box'"><input type="checkbox"></template>
-                            <template v-else-if="name == 'router-link'"><router-link :to="{name:'name'}">{{name}}</router-link></template>
-                            <template v-else>{{name}}</template> 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <table-box
+                    :table="tableData"
+                ></table-box>
             </article>
         </div>
     </section>
@@ -122,14 +101,19 @@
 
 <script>
 module.exports = {
+    data() {
+        return {
+            tableData : this.$store.getters["tableData/viewOrder"]
+        }
+    },
     computed: {
         viewOrder() {
-            return this.$store.getters["tableData"].viewOrder
+            return this.$store.getters["tableData/viewOrder"]
         },
     },
     components: {
-        'select-box' : SelectBox
+        'select-box' : SelectBox,
+        'table-box' : TableBox
     },
-    // console.log(this.$store.getters["tableData"].viewOrder.tBody[1].name[0])
 }
 </script> 

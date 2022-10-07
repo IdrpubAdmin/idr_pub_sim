@@ -199,11 +199,9 @@ article{
     } 
 }
 
-
-
-.orders,.customers{
+.orders,.customers,.inventory{
     padding: 20px;
-    .orders-header,.customers-header{
+    .orders-header,.customers-header,.inventory-header{
         display: flex;
         justify-content: space-between;
         h3{
@@ -214,6 +212,15 @@ article{
             padding: 6px 16px;
             border-radius: 12px;
             button{
+                display: flex;
+                img{
+                    margin-right: 12px;
+                }
+                span{
+                    @include fonts('Inter', 14, 400, 24, #fff);
+                }
+            }
+            a{
                 display: flex;
                 img{
                     margin-right: 12px;
@@ -282,6 +289,65 @@ article{
                 }
             }
         }
+        .contents{
+            .user-sum{
+                ul{
+                    margin-top: 30px;
+                    li{
+                        width: calc(50% - 16px);
+                        .tit{
+                            font-size: 12px;
+                        }
+                        .value{
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+            .profile{
+                .header{
+                    align-items: start;
+                    .user{
+                        display: flex;
+                        align-items: center;
+                        .icon-box{
+                            width: 45px;
+                            height: 45px;
+                            margin-right: 24px;
+                        }
+                        .value{
+                            .name{
+                                @include fonts('Inter', 14, 400, 17, #8b8d97);
+                            }
+                            .since{
+                                @include fonts('Inter', 12, 400, 15, #8b8d97);
+                                span{
+                                    color: #2c2d33;
+                                }
+                            }
+                        }
+                    }    
+                    .state{
+                        padding: 4px 11px;
+                        border-radius: 8px;
+                        &.pending{
+                            background-color: #fff2e2;
+                        }
+                        &.completed{
+                            background-color: rgba(50, 147, 111, 0.16);
+                            span{
+                                color: #519c66;
+                            }
+                        }
+                        span{
+                            @include fonts('Inter', 12, 400, 15, #1c1d22);
+                        }
+                    }      
+                }
+            }
+        }
     }
     article{
         background-color: #fff;
@@ -321,22 +387,82 @@ table{
         border-bottom: 1px solid #e1e2e9;
         tr{
             th{
+                @include fonts('Inter', 14, 400, 0, #2c2d33);
                 padding: 14px 0;
                 vertical-align: middle;
-            }
-            .check{
-                width: 24px;
+                text-align: left;
+                &.check{
+                    width: 24px;
+                    height: 24px;
+                    padding-right: 22px;
+                }
+                span{
+                    margin-right: 5px;
+                }
+                img{
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
             }
         }
     }
     tbody{
+        border-bottom: 1px solid #e1e2e9;
         tr{
             td{
-                text-align: center; 
+                @include fonts('Inter', 14, 400, 17, #6e7079);
                 vertical-align: middle;
-                padding: 6px 0;
+                padding: 12px 0;
+                b{
+                    margin-right: 5px;
+                }
+                img{
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+            .pending{
+                b{
+                    @include fonts('Inter', 12, 400, 15, #1c1d22);
+                    padding: 4px 11px;
+                    border-radius: 8px;
+                    background-color: #fff2e2;
+                }
+            }
+            .completed{
+                b{
+                    @include fonts('Inter', 12, 400, 15, #519c66);
+                    padding: 4px 11px;
+                    border-radius: 8px;
+                    background-color: rgba(50, 147, 111, 0.16);
+                }
+            }
+            .in-progress{
+                b{
+                    @include fonts('Inter', 12, 400, 15, #5570f1);
+                    padding: 4px 11px;
+                    border-radius: 8px;
+                    background-color: rgba(85, 112, 241, 0.16);
+                }
+            }
+            .select-box {
+                display: inline-block;
+                background-image: url('../images/table/fi_chevron-down.png');
+                background-position: center right 11px;
+                background-color: rgba(94, 99, 102, 0.08);
+                .selected{
+                    padding: 4px 35px 4px 11px;
+                    .value{
+                        @include fonts('Inter', 12, 400, 15, #8b8d97);
+                    }
+                }
+                ul{
+                    .option{
+                        @include fonts('Inter', 12, 400, 15, #8b8d97);
+                        padding: 5px;
+                    }
+                }
             }
         }
-
     }
 }

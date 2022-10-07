@@ -1036,62 +1036,75 @@ article .no-bg-sel .select-box ul .option:hover {
   background-color: #5570f1;
 }
 
-.orders, .customers {
+.orders, .customers, .inventory {
   padding: 20px;
 }
-.orders .orders-header, .orders .customers-header, .customers .orders-header, .customers .customers-header {
+.orders .orders-header, .orders .customers-header, .orders .inventory-header, .customers .orders-header, .customers .customers-header, .customers .inventory-header, .inventory .orders-header, .inventory .customers-header, .inventory .inventory-header {
   display: flex;
   justify-content: space-between;
 }
-.orders .orders-header h3, .orders .customers-header h3, .customers .orders-header h3, .customers .customers-header h3 {
+.orders .orders-header h3, .orders .customers-header h3, .orders .inventory-header h3, .customers .orders-header h3, .customers .customers-header h3, .customers .inventory-header h3, .inventory .orders-header h3, .inventory .customers-header h3, .inventory .inventory-header h3 {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 36px;
   color: #45464e;
 }
-.orders .orders-header .btn, .orders .customers-header .btn, .customers .orders-header .btn, .customers .customers-header .btn {
+.orders .orders-header .btn, .orders .customers-header .btn, .orders .inventory-header .btn, .customers .orders-header .btn, .customers .customers-header .btn, .customers .inventory-header .btn, .inventory .orders-header .btn, .inventory .customers-header .btn, .inventory .inventory-header .btn {
   background-color: #5570f1;
   padding: 6px 16px;
   border-radius: 12px;
 }
-.orders .orders-header .btn button, .orders .customers-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button {
+.orders .orders-header .btn button, .orders .customers-header .btn button, .orders .inventory-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button, .customers .inventory-header .btn button, .inventory .orders-header .btn button, .inventory .customers-header .btn button, .inventory .inventory-header .btn button {
   display: flex;
 }
-.orders .orders-header .btn button img, .orders .customers-header .btn button img, .customers .orders-header .btn button img, .customers .customers-header .btn button img {
+.orders .orders-header .btn button img, .orders .customers-header .btn button img, .orders .inventory-header .btn button img, .customers .orders-header .btn button img, .customers .customers-header .btn button img, .customers .inventory-header .btn button img, .inventory .orders-header .btn button img, .inventory .customers-header .btn button img, .inventory .inventory-header .btn button img {
   margin-right: 12px;
 }
-.orders .orders-header .btn button span, .orders .customers-header .btn button span, .customers .orders-header .btn button span, .customers .customers-header .btn button span {
+.orders .orders-header .btn button span, .orders .customers-header .btn button span, .orders .inventory-header .btn button span, .customers .orders-header .btn button span, .customers .customers-header .btn button span, .customers .inventory-header .btn button span, .inventory .orders-header .btn button span, .inventory .customers-header .btn button span, .inventory .inventory-header .btn button span {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #fff;
 }
-.orders .view-section .view-header ul, .customers .view-section .view-header ul {
+.orders .orders-header .btn a, .orders .customers-header .btn a, .orders .inventory-header .btn a, .customers .orders-header .btn a, .customers .customers-header .btn a, .customers .inventory-header .btn a, .inventory .orders-header .btn a, .inventory .customers-header .btn a, .inventory .inventory-header .btn a {
   display: flex;
 }
-.orders .view-section .view-header ul li, .customers .view-section .view-header ul li {
+.orders .orders-header .btn a img, .orders .customers-header .btn a img, .orders .inventory-header .btn a img, .customers .orders-header .btn a img, .customers .customers-header .btn a img, .customers .inventory-header .btn a img, .inventory .orders-header .btn a img, .inventory .customers-header .btn a img, .inventory .inventory-header .btn a img {
+  margin-right: 12px;
+}
+.orders .orders-header .btn a span, .orders .customers-header .btn a span, .orders .inventory-header .btn a span, .customers .orders-header .btn a span, .customers .customers-header .btn a span, .customers .inventory-header .btn a span, .inventory .orders-header .btn a span, .inventory .customers-header .btn a span, .inventory .inventory-header .btn a span {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+.orders .view-section .view-header ul, .customers .view-section .view-header ul, .inventory .view-section .view-header ul {
+  display: flex;
+}
+.orders .view-section .view-header ul li, .customers .view-section .view-header ul li, .inventory .view-section .view-header ul li {
   display: flex;
   margin-right: 24px;
 }
-.orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p {
+.orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p, .inventory .view-section .view-header ul li p {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 36px;
   color: #45464e;
 }
-.orders .view-section .view-header ul li p span, .customers .view-section .view-header ul li p span {
+.orders .view-section .view-header ul li p span, .customers .view-section .view-header ul li p span, .inventory .view-section .view-header ul li p span {
   color: #8b8d97;
 }
-.orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image {
+.orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image, .inventory .view-section .view-header ul li .image {
   width: 36px;
   height: 36px;
   margin-left: 4px;
   position: relative;
 }
-.orders .view-section .view-header ul li .image img, .customers .view-section .view-header ul li .image img {
+.orders .view-section .view-header ul li .image img, .customers .view-section .view-header ul li .image img, .inventory .view-section .view-header ul li .image img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1099,38 +1112,38 @@ article .no-bg-sel .select-box ul .option:hover {
   right: 0;
   margin: auto;
 }
-.orders .view-section .view-header .btns, .customers .view-section .view-header .btns {
+.orders .view-section .view-header .btns, .customers .view-section .view-header .btns, .inventory .view-section .view-header .btns {
   display: flex;
 }
-.orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box {
+.orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box, .inventory .view-section .view-header .btns .select-box {
   width: 200px;
   background-image: url("../images/orders/fi_chevron-down.png");
   background-color: #1c1d22;
   border-radius: 12px;
   margin-right: 24px;
 }
-.orders .view-section .view-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected {
+.orders .view-section .view-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected, .inventory .view-section .view-header .btns .select-box .selected {
   padding: 8px 16px;
 }
-.orders .view-section .view-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value {
+.orders .view-section .view-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value, .inventory .view-section .view-header .btns .select-box .selected .value {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #fff;
 }
-.orders .view-section .view-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul {
+.orders .view-section .view-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul, .inventory .view-section .view-header .btns .select-box ul {
   display: block;
 }
-.orders .view-section .view-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option {
+.orders .view-section .view-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option, .inventory .view-section .view-header .btns .select-box ul .option {
   font-size: 14px;
 }
-.orders .view-section .view-header .btns .btn, .customers .view-section .view-header .btns .btn {
+.orders .view-section .view-header .btns .btn, .customers .view-section .view-header .btns .btn, .inventory .view-section .view-header .btns .btn {
   background-color: #cc5f5f;
   padding: 0 16px;
   border-radius: 12px;
 }
-.orders .view-section .view-header .btns .btn a, .customers .view-section .view-header .btns .btn a {
+.orders .view-section .view-header .btns .btn a, .customers .view-section .view-header .btns .btn a, .inventory .view-section .view-header .btns .btn a {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -1140,11 +1153,74 @@ article .no-bg-sel .select-box ul .option:hover {
   height: 100%;
   display: inline-block;
 }
-.orders article, .customers article {
+.orders .view-section .contents .user-sum ul, .customers .view-section .contents .user-sum ul, .inventory .view-section .contents .user-sum ul {
+  margin-top: 30px;
+}
+.orders .view-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li {
+  width: calc(50% - 16px);
+}
+.orders .view-section .contents .user-sum ul li .tit, .customers .view-section .contents .user-sum ul li .tit, .inventory .view-section .contents .user-sum ul li .tit {
+  font-size: 12px;
+}
+.orders .view-section .contents .user-sum ul li .value, .customers .view-section .contents .user-sum ul li .value, .inventory .view-section .contents .user-sum ul li .value {
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 8px;
+}
+.orders .view-section .contents .profile .header, .customers .view-section .contents .profile .header, .inventory .view-section .contents .profile .header {
+  align-items: start;
+}
+.orders .view-section .contents .profile .header .user, .customers .view-section .contents .profile .header .user, .inventory .view-section .contents .profile .header .user {
+  display: flex;
+  align-items: center;
+}
+.orders .view-section .contents .profile .header .user .icon-box, .customers .view-section .contents .profile .header .user .icon-box, .inventory .view-section .contents .profile .header .user .icon-box {
+  width: 45px;
+  height: 45px;
+  margin-right: 24px;
+}
+.orders .view-section .contents .profile .header .user .value .name, .customers .view-section .contents .profile .header .user .value .name, .inventory .view-section .contents .profile .header .user .value .name {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
+}
+.orders .view-section .contents .profile .header .user .value .since, .customers .view-section .contents .profile .header .user .value .since, .inventory .view-section .contents .profile .header .user .value .since {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+}
+.orders .view-section .contents .profile .header .user .value .since span, .customers .view-section .contents .profile .header .user .value .since span, .inventory .view-section .contents .profile .header .user .value .since span {
+  color: #2c2d33;
+}
+.orders .view-section .contents .profile .header .state, .customers .view-section .contents .profile .header .state, .inventory .view-section .contents .profile .header .state {
+  padding: 4px 11px;
+  border-radius: 8px;
+}
+.orders .view-section .contents .profile .header .state.pending, .customers .view-section .contents .profile .header .state.pending, .inventory .view-section .contents .profile .header .state.pending {
+  background-color: #fff2e2;
+}
+.orders .view-section .contents .profile .header .state.completed, .customers .view-section .contents .profile .header .state.completed, .inventory .view-section .contents .profile .header .state.completed {
+  background-color: rgba(50, 147, 111, 0.16);
+}
+.orders .view-section .contents .profile .header .state.completed span, .customers .view-section .contents .profile .header .state.completed span, .inventory .view-section .contents .profile .header .state.completed span {
+  color: #519c66;
+}
+.orders .view-section .contents .profile .header .state span, .customers .view-section .contents .profile .header .state span, .inventory .view-section .contents .profile .header .state span {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #1c1d22;
+}
+.orders article, .customers article, .inventory article {
   background-color: #fff;
   border-radius: 12px;
 }
-.orders .contents, .customers .contents {
+.orders .contents, .customers .contents, .inventory .contents {
   height: calc(100vh - 183px);
   margin-top: 20px;
   display: grid;
@@ -1173,16 +1249,99 @@ table thead {
   border-bottom: 1px solid #e1e2e9;
 }
 table thead tr th {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 0px;
+  color: #2c2d33;
   padding: 14px 0;
   vertical-align: middle;
+  text-align: left;
 }
-table thead tr .check {
+table thead tr th.check {
   width: 24px;
+  height: 24px;
+  padding-right: 22px;
+}
+table thead tr th span {
+  margin-right: 5px;
+}
+table thead tr th img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+table tbody {
+  border-bottom: 1px solid #e1e2e9;
 }
 table tbody tr td {
-  text-align: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #6e7079;
   vertical-align: middle;
-  padding: 6px 0;
+  padding: 12px 0;
+}
+table tbody tr td b {
+  margin-right: 5px;
+}
+table tbody tr td img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+table tbody tr .pending b {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #1c1d22;
+  padding: 4px 11px;
+  border-radius: 8px;
+  background-color: #fff2e2;
+}
+table tbody tr .completed b {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #519c66;
+  padding: 4px 11px;
+  border-radius: 8px;
+  background-color: rgba(50, 147, 111, 0.16);
+}
+table tbody tr .in-progress b {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #5570f1;
+  padding: 4px 11px;
+  border-radius: 8px;
+  background-color: rgba(85, 112, 241, 0.16);
+}
+table tbody tr .select-box {
+  display: inline-block;
+  background-image: url("../images/table/fi_chevron-down.png");
+  background-position: center right 11px;
+  background-color: rgba(94, 99, 102, 0.08);
+}
+table tbody tr .select-box .selected {
+  padding: 4px 35px 4px 11px;
+}
+table tbody tr .select-box .selected .value {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+}
+table tbody tr .select-box ul .option {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+  padding: 5px;
 }
 
 .navigation {
@@ -1753,74 +1912,23 @@ header .location .breadcrumb ul li::before {
 .orders .contents {
   grid-template-columns: 3fr 3fr 2fr;
 }
-.orders .contents .orders-list {
+.orders .contents .table-area {
   padding: 20px;
   grid-column: 1/4;
   grid-row: 2/3;
 }
-.orders .contents .orders-list .title {
+.orders .contents .table-area .title {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   color: #45464e;
 }
-.orders .view-order .contents .summary ul {
-  margin-top: 30px;
+.orders .view-order .table-area .title h5 span {
+  color: #5570f1;
 }
-.orders .view-order .contents .summary ul li {
-  width: calc(50% - 16px);
-}
-.orders .view-order .contents .summary ul li .tit {
-  font-size: 12px;
-}
-.orders .view-order .contents .summary ul li .value {
-  font-size: 14px;
-  line-height: 17px;
-  margin-top: 8px;
-}
-.orders .view-order .contents .profile .header {
-  align-items: start;
-}
-.orders .view-order .contents .profile .header .user {
-  display: flex;
-  align-items: center;
-}
-.orders .view-order .contents .profile .header .user .icon-box {
-  width: 45px;
-  height: 45px;
-  margin-right: 24px;
-}
-.orders .view-order .contents .profile .header .user .value .name {
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  color: #8b8d97;
-}
-.orders .view-order .contents .profile .header .user .value .since {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
-  color: #8b8d97;
-}
-.orders .view-order .contents .profile .header .user .value .since span {
-  color: #2c2d33;
-}
-.orders .view-order .contents .profile .header .state {
-  padding: 4px 11px;
-  border-radius: 8px;
-}
-.orders .view-order .contents .profile .header .state.pending {
-  background-color: #fff2e2;
-}
-.orders .view-order .contents .profile .header .state span {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
-  color: #1c1d22;
+.orders .view-order .table-area table thead tr .image {
+  width: 58px;
 }
 
 .new-order {
@@ -1945,20 +2053,60 @@ header .location .breadcrumb ul li::before {
   width: 50%;
 }
 
-.customers .contents {
+.inventory .contents {
   grid-template-columns: 1fr 1fr;
 }
-.customers .contents .customers-list {
+.inventory .contents .table-area {
   padding: 20px;
   grid-column: 1/3;
   grid-row: 2/3;
 }
-.customers .contents .customers-list .title {
+.inventory .contents .table-area .title {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   color: #45464e;
+}
+.inventory .folder {
+  background-color: #5570f1;
+}
+.inventory .folder .header .icon-box {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.inventory .folder ul li .tit {
+  color: #fff;
+}
+.inventory .folder ul li .value {
+  color: #fff;
+}
+.inventory .folder ul li .value dd {
+  color: #dbdeee;
+}
+
+.customers .contents {
+  grid-template-columns: 1fr 1fr;
+}
+.customers .contents .table-area {
+  padding: 20px;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.customers .contents .table-area .title {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.customers .view-custom .contents {
+  grid-template-columns: 4fr 5fr 3fr;
+  grid-template-rows: 20% 20% auto;
+}
+.customers .view-custom .contents .table-area {
+  padding: 20px;
+  grid-column: 1/4;
+  grid-row: 3/4;
 }
 
 .new-customer {

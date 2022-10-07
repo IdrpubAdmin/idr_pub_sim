@@ -1,7 +1,7 @@
 .orders{
     .contents{
         grid-template-columns: 3fr 3fr 2fr;
-        .orders-list {
+        .table-area {
             padding: 20px;
             grid-column: 1/4;
             grid-row: 2/3;
@@ -10,60 +10,22 @@
             }
         }
     }
-    .main-order{
-
-    }
     .view-order{
-        .contents{
-            .summary{
-                ul{
-                    margin-top: 30px;
-                    li{
-                        width: calc(50% - 16px);
-                        .tit{
-                            font-size: 12px;
-                        }
-                        .value{
-                            font-size: 14px;
-                            line-height: 17px;
-                            margin-top: 8px;
-                        }
+        .table-area{
+            .title{
+                h5{
+                    span{
+                        color: #5570f1;
                     }
                 }
             }
-            .profile{
-                .header{
-                    align-items: start;
-                    .user{
-                        display: flex;
-                        align-items: center;
-                        .icon-box{
-                            width: 45px;
-                            height: 45px;
-                            margin-right: 24px;
+            table{
+                thead{
+                    tr{
+                        .image{
+                            width: 58px;
                         }
-                        .value{
-                            .name{
-                                @include fonts('Inter', 14, 400, 17, #8b8d97);
-                            }
-                            .since{
-                                @include fonts('Inter', 12, 400, 15, #8b8d97);
-                                span{
-                                    color: #2c2d33;
-                                }
-                            }
-                        }
-                    }    
-                    .state{
-                        padding: 4px 11px;
-                        border-radius: 8px;
-                        &.pending{
-                            background-color: #fff2e2;
-                        }
-                        span{
-                            @include fonts('Inter', 12, 400, 15, #1c1d22);
-                        }
-                    }      
+                    }
                 }
             }
         }
