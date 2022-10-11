@@ -11,10 +11,10 @@
     <script src="assets/plugin/httpVueLoader/httpVueLoader.js"></script>
     <script src="assets/js/table_data.js"></script>
     <script src="components/store.js"></script>
-    <script src="assets/plugin/toast-ui/tui_grid.js"></script>
+    <script src="assets/plugin/toast-ui/toast.js"></script>
     <script src="components/router.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/plugin/toast-ui/tui_grid.css" />
+    <link rel="stylesheet" href="assets/plugin/toast-ui/toast.css" />
 </head>
 <body>
     <div id="app">
@@ -38,6 +38,7 @@
             <new-order v-if="$store.getters.modalActive.includes('newOrder')"></new-order>
             <new-customer v-if="$store.getters.modalActive.includes('newCustomer')"></new-order>
         </div>
+        <div id="chart"></div>
     </div>
     <script>
         var app = new Vue({

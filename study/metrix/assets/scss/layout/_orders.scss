@@ -5,9 +5,6 @@
             padding: 20px;
             grid-column: 1/4;
             grid-row: 2/3;
-            .title{
-                @include fonts('Inter', 16, 500, 20, #45464e);
-            }
         }
     }
     .view-order{
@@ -20,10 +17,10 @@
                 }
             }
             table{
-                thead{
+                tbody{
                     tr{
-                        .image{
-                            width: 58px;
+                        td{
+                            padding: 6px 0;
                         }
                     }
                 }

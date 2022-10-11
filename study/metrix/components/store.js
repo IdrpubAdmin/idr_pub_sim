@@ -92,15 +92,11 @@ var store = new Vuex.Store({
         tableData : tableData,
     },
     state: {
-        // login : true, 
         isActive : false,
         modalActive : [],
         btnActive : []
     },
     mutations: {
-        // checkLogin(state){
-        //     state.login = !state.login
-        // },
         checkActive(state){
             state.isActive = !state.isActive
         },
@@ -115,9 +111,6 @@ var store = new Vuex.Store({
             }else{
                 state.modalActive.push(payload);
             }
-            // if(payload = state.newOrder){
-            //     console.log(payload)
-            // }
         },
         toggleBtn(state, payload){
             if(state.btnActive.includes(payload)){
@@ -142,9 +135,6 @@ var store = new Vuex.Store({
         tableData: function tableData(state) {
             return state.tableData;
         },
-        // Login(state){
-        //     return state.login
-        // },
         isActive(state){
             return state.isActive
         },
@@ -155,9 +145,4 @@ var store = new Vuex.Store({
             return state.btnActive
         }, 
     },
-    actions: {
-        // checkLogin({commit}) {
-        //     commit('checkLogin')
-        // }
-    }
 });

@@ -2,6 +2,7 @@ var tableData = {
     namespaced: true,
     state: {
         mainOrder : {
+            title: 'Customer Orders',
             tHead : [{
                 id: 1, 
                 class: 'check', 
@@ -158,6 +159,7 @@ var tableData = {
             }]
         },
         viewOrder: {
+            title: 'Itmes',
             tHead : [{
                 id: 1, 
                 class: 'check', 
@@ -246,6 +248,7 @@ var tableData = {
             }]
         },
         mainCustom: {
+            title: 'Customer Orders',
             tHead : [{
                 id: 1, 
                 class: 'check', 
@@ -378,6 +381,7 @@ var tableData = {
             }]     
         },
         viewCustom: {
+            title: 'Janet’s Orders',
             tHead : [{
                 id: 1, 
                 class: 'check', 
@@ -452,36 +456,45 @@ var tableData = {
             }]
         },
         mainInven: {
+            title: 'Inventory Items',
             tHead : [{
                 id: 1, 
                 class: 'check', 
                 type : 'check', 
             },{
                 id: 2,
-                class: 'name',
-                name: 'Customer Name', 
+                class: 'image',
+                type : 'none',
             },{
                 id: 3,
-                class: 'email',
-                name: 'Email', 
+                class: 'name',
+                name: 'Product Name', 
             },{
                 id: 4,
-                class:'phone',
-                name: 'Phone', 
+                class:'category',
+                name: 'Category', 
             },{
                 id: 5,
-                class: 'order',
-                name: 'Orders', 
+                class: 'price',
+                name: 'Unit Price', 
             },{
                 id: 6,
-                class: 'total',
-                name: 'Order Total', 
+                class: 'stock',
+                name: 'In-Stock', 
             },{
                 id: 7,
-                class: 'date',
-                name: 'Customer Since', 
+                class: 'discount',
+                name: 'Discount',
             },{
                 id: 8,
+                class: 'total',
+                name: 'Total Value', 
+            },{
+                id: 9,
+                class: 'action',
+                name: 'Action', 
+            },{
+                id: 10,
                 class: 'state',
                 name: 'Status', 
             }],
@@ -489,98 +502,138 @@ var tableData = {
                 id: 1,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'iphone'},
+                    {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
+                    {txt : 'Gadgets'}, 
+                    {txt : `<span>₦</span>1,225,000.00`}, 
+                    {txt : 8},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Published', class: 'in-progress'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Publish',
+                selName : 'miInTable01'
             },{
                 id: 2,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'Rectangle3'},
+                    {txt : 'iPhone 12 Pro', router: true, path:'viewinventory'}, 
+                    {txt : 'Gadgets'}, 
+                    {txt : `<span>₦</span>725,000.00`}, 
+                    {txt : 12},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Published', class: 'in-progress'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Publish',
+                selName : 'miInTable02'
             },{
                 id: 3,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'Rectangle4'},
+                    {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
+                    {txt : 'Fashion'}, 
+                    {txt : `<span>₦</span>125,000.00`}, 
+                    {txt : 120},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Unpublished', class: 'pending'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Unpublished',
+                selName : 'miInTable03'
             },{
                 id: 4,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'Rectangle4'},
+                    {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
+                    {txt : 'Fashion'}, 
+                    {txt : `<span>₦</span>125,000.00`}, 
+                    {txt : 'Out of Stock'},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Unpublished', class: 'pending'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Unpublished',
+                selName : 'miInTable04'
             },{
                 id: 5,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'iphone'},
+                    {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
+                    {txt : 'Gadgets'}, 
+                    {txt : `<span>₦</span>1,225,000.00`}, 
+                    {txt : 8},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Published', class: 'in-progress'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Publish',
+                selName : 'miInTable05'
             },{
                 id: 6,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'Rectangle3'},
+                    {txt : 'iPhone 12 Pro', router: true, path:'viewinventory'}, 
+                    {txt : 'Gadgets'}, 
+                    {txt : `<span>₦</span>725,000.00`}, 
+                    {txt : 12},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Published', class: 'in-progress'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Publish',
+                selName : 'miInTable06'
             },{
                 id: 7,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'iphone'},
+                    {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
+                    {txt : 'Gadgets'}, 
+                    {txt : `<span>₦</span>1,225,000.00`}, 
+                    {txt : 8},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Published', class: 'in-progress'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Publish',
+                selName : 'miInTable07'
             },{
                 id: 8,
                 name : [
                     {check : true},
-                    {txt : 'Janet Adebayo', router: true, path:'viewinventory'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
-                    {txt : 10},
-                    {txt : `<span>₦</span>25,000.00`},
-                    {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'completed'}
+                    {img: true, src: 'Rectangle4'},
+                    {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
+                    {txt : 'Fashion'}, 
+                    {txt : `<span>₦</span>125,000.00`}, 
+                    {txt : 120},
+                    {txt : `<span>₦</span>0.00`},
+                    {txt : `<span>₦</span>50,000.00`},
+                    {select: true},
+                    {txt : 'Unpublished', class: 'pending'},
                 ],
+                option : ['Publish','Unpublish'],
+                selected : 'Unpublished',
+                selName : 'miInTable08'
             }]     
         },
     },

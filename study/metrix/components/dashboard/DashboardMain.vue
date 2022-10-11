@@ -94,8 +94,9 @@
                 :option="['This Day', 'This Week', 'This Month', 'This Year']"
                 :selected="'This Week'"
                 :name="'dashSelect04'"
-            ></select-box>
+                ></select-box>
             </div>
+            <div id="chart"></div>
         </article>
         <article class="summary folder">
             <div class="header">
@@ -299,6 +300,52 @@
 module.exports = {
     components : {
         'select-box' : SelectBox
+    },
+    mounted() {
+        const Chart = toastui.Chart;
+        const el = document.getElementById('chart');
+        const data = {
+                series: [
+                {
+                  name: 'Acquisition',
+                  data: 60,
+                },
+                {
+                  name: 'Purchase',
+                  data: 25,
+                },
+                {
+                  name: 'Retention',
+                  data: 15,
+                }
+            ]
+        };
+        const options = {
+            // 내보내기 옵션
+            exportMenu: {
+                visible: false
+            },
+            // 파이 모양
+            series: {
+                radiusRange: {
+                    inner: 69,
+                    outer: 86,
+                },
+            },
+            // 라벨 설정
+            legend: {
+                align: 'top',
+                showCheckbox: false,
+            },
+            chart: { 
+                width: '100%',
+                height: 280,
+                animation: {
+                    duration: 500
+                }
+            },
+        };
+        const chart = Chart.pieChart({ el, data, options });
     },
 }
 </script>

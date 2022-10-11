@@ -1138,6 +1138,9 @@ article .no-bg-sel .select-box ul .option:hover {
 .orders .view-section .view-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option, .inventory .view-section .view-header .btns .select-box ul .option {
   font-size: 14px;
 }
+.orders .view-section .view-header .btns .select-box ul .option:hover, .customers .view-section .view-header .btns .select-box ul .option:hover, .inventory .view-section .view-header .btns .select-box ul .option:hover {
+  color: #000;
+}
 .orders .view-section .view-header .btns .btn, .customers .view-section .view-header .btns .btn, .inventory .view-section .view-header .btns .btn {
   background-color: #cc5f5f;
   padding: 0 16px;
@@ -1228,11 +1231,102 @@ article .no-bg-sel .select-box ul .option:hover {
   grid-template-rows: 20% auto;
 }
 
-table {
+.table-area .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-area .title h5 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.table-area .title .table-btns {
+  display: flex;
+}
+.table-area .title .table-btns li span {
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #53545c;
+}
+.table-area .title .table-btns li .select-box {
+  background-image: url("../images/table/fi_chevron-down2.png");
+  background-position: center right 8px;
+  border-radius: 4px;
+  border: 1px solid #53545c;
+  background-color: #fff;
+  cursor: pointer;
+}
+.table-area .title .table-btns li .select-box .selected {
+  padding: 7px 32px 7px 8px;
+}
+.table-area .title .table-btns li .select-box .selected .value {
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #53545c;
+}
+.table-area .title .table-btns li .select-box ul .option {
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #abafb1;
+  height: auto;
+}
+.table-area .title .table-btns li .select-box ul .option:hover {
+  color: #000;
+}
+.table-area .title .table-btns .search-area {
+  border-radius: 4px;
+  border: solid 1px #cfd3d4;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000;
+}
+.table-area .title .table-btns .search-area input::placeholder {
+  color: #abafb1;
+}
+.table-area .title .table-btns .search-area button {
+  width: 36px;
+  height: 30px;
+  position: relative;
+}
+.table-area .title .table-btns .search-area button img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.table-area .title .table-btns .btn {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #53545c;
+  padding: 7px 8px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.table-area .title .table-btns .btn img {
+  margin-right: 8px;
+}
+.table-area table {
   width: 100%;
   margin-top: 20px;
 }
-table tr td input[type=checkbox], table tr th input[type=checkbox] {
+.table-area table tr td input[type=checkbox], .table-area table tr th input[type=checkbox] {
   width: 24px;
   height: 24px;
   border-radius: 8px;
@@ -1240,15 +1334,15 @@ table tr td input[type=checkbox], table tr th input[type=checkbox] {
   appearance: none;
   cursor: pointer;
 }
-table tr td input[type=checkbox]:checked, table tr th input[type=checkbox]:checked {
+.table-area table tr td input[type=checkbox]:checked, .table-area table tr th input[type=checkbox]:checked {
   background: #cfd3d4;
   border: none;
 }
-table thead {
+.table-area table thead {
   border-top: 1px solid #e1e2e9;
   border-bottom: 1px solid #e1e2e9;
 }
-table thead tr th {
+.table-area table thead tr th {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -1258,22 +1352,25 @@ table thead tr th {
   vertical-align: middle;
   text-align: left;
 }
-table thead tr th.check {
+.table-area table thead tr th.check {
   width: 24px;
   height: 24px;
   padding-right: 22px;
 }
-table thead tr th span {
+.table-area table thead tr th.image {
+  width: 58px;
+}
+.table-area table thead tr th span {
   margin-right: 5px;
 }
-table thead tr th img {
+.table-area table thead tr th img {
   vertical-align: middle;
   cursor: pointer;
 }
-table tbody {
+.table-area table tbody {
   border-bottom: 1px solid #e1e2e9;
 }
-table tbody tr td {
+.table-area table tbody tr td {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -1282,14 +1379,14 @@ table tbody tr td {
   vertical-align: middle;
   padding: 12px 0;
 }
-table tbody tr td b {
+.table-area table tbody tr td b {
   margin-right: 5px;
 }
-table tbody tr td img {
+.table-area table tbody tr td img {
   vertical-align: middle;
   cursor: pointer;
 }
-table tbody tr .pending b {
+.table-area table tbody tr .pending b {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -1299,7 +1396,7 @@ table tbody tr .pending b {
   border-radius: 8px;
   background-color: #fff2e2;
 }
-table tbody tr .completed b {
+.table-area table tbody tr .completed b {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -1309,7 +1406,7 @@ table tbody tr .completed b {
   border-radius: 8px;
   background-color: rgba(50, 147, 111, 0.16);
 }
-table tbody tr .in-progress b {
+.table-area table tbody tr .in-progress b {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -1319,29 +1416,82 @@ table tbody tr .in-progress b {
   border-radius: 8px;
   background-color: rgba(85, 112, 241, 0.16);
 }
-table tbody tr .select-box {
+.table-area table tbody tr .select-box {
   display: inline-block;
   background-image: url("../images/table/fi_chevron-down.png");
   background-position: center right 11px;
   background-color: rgba(94, 99, 102, 0.08);
 }
-table tbody tr .select-box .selected {
+.table-area table tbody tr .select-box .selected {
   padding: 4px 35px 4px 11px;
 }
-table tbody tr .select-box .selected .value {
+.table-area table tbody tr .select-box .selected .value {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
   color: #8b8d97;
 }
-table tbody tr .select-box ul .option {
+.table-area table tbody tr .select-box ul .option {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
   color: #8b8d97;
   padding: 5px;
+}
+.table-area .pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.table-area .pagination .paging {
+  display: flex;
+  align-items: center;
+}
+.table-area .pagination .paging .select-box {
+  background-image: url("../images/table/fi_chevron-down.png");
+  background-position: center right 11px;
+  background-color: rgba(94, 99, 102, 0.08);
+  margin-right: 10px;
+}
+.table-area .pagination .paging .select-box .selected {
+  padding: 4px 35px 4px 11px;
+}
+.table-area .pagination .paging .select-box .selected .value {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+}
+.table-area .pagination .paging .select-box ul .option {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+  padding: 5px;
+}
+.table-area .pagination .paging .select-box ul .option:hover {
+  color: #000;
+}
+.table-area .pagination .paging p {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #666;
+  margin-right: 20px;
+}
+.table-area .pagination .paging p.txt {
+  color: #a6a8b1;
+}
+.table-area .pagination .paging .btns {
+  width: 40px;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -1917,18 +2067,11 @@ header .location .breadcrumb ul li::before {
   grid-column: 1/4;
   grid-row: 2/3;
 }
-.orders .contents .table-area .title {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #45464e;
-}
 .orders .view-order .table-area .title h5 span {
   color: #5570f1;
 }
-.orders .view-order .table-area table thead tr .image {
-  width: 58px;
+.orders .view-order .table-area table tbody tr td {
+  padding: 6px 0;
 }
 
 .new-order {
@@ -2061,12 +2204,8 @@ header .location .breadcrumb ul li::before {
   grid-column: 1/3;
   grid-row: 2/3;
 }
-.inventory .contents .table-area .title {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #45464e;
+.inventory .contents .table-area table tbody tr td {
+  padding: 6px 0;
 }
 .inventory .folder {
   background-color: #5570f1;
@@ -2091,13 +2230,6 @@ header .location .breadcrumb ul li::before {
   padding: 20px;
   grid-column: 1/3;
   grid-row: 2/3;
-}
-.customers .contents .table-area .title {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #45464e;
 }
 .customers .view-custom .contents {
   grid-template-columns: 4fr 5fr 3fr;

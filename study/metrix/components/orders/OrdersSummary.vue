@@ -102,16 +102,9 @@
                     </li>
                 </ul>
             </article>
-            <article class="table-area">
-                <div class="title">
-                    <h5>Customer Orders</h5>
-                </div>
-                <div>
-                    <table-box
-                        :table="tableData"
-                    ></table-box>
-                </div>
-            </article>
+            <table-box
+                :table="tableData"
+            ></table-box>
         </div>
     </section>
 </template>

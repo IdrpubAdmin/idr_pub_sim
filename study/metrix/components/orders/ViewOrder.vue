@@ -87,14 +87,9 @@
                     </li>
                 </ul>
             </article>
-            <article class="table-area">
-                <div class="title">
-                    <h5>Itmes <span>{{viewOrder.tBody.length}}<span></h5>
-                </div>
-                <table-box
-                    :table="tableData"
-                ></table-box>
-            </article>
+            <table-box
+                :table="tableData"
+            ></table-box>
         </div>
     </section>
 </template>

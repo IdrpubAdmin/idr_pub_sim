@@ -273,6 +273,9 @@ article{
                         display: block;
                         .option{
                             font-size: 14px;
+                            &:hover{
+                                color: #000;
+                            }
                         }
                     }
                 }
@@ -362,94 +365,196 @@ article{
     }
 }
 
-table{
-    width: 100%;
-    margin-top: 20px;
-    tr{
-        td,th{
-            input[type="checkbox"] {
-                width: 24px;
-                height: 24px;
-                border-radius: 8px;
+.table-area {
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5{ 
+            @include fonts('Inter', 16, 500, 20, #45464e);
+        }
+        .table-btns{
+            display: flex;
+            li{
+                span{
+                    @include fonts('Inter', 11, 400, 16, #53545c);
+                }
+                .select-box {
+                    background-image: url('../images/table/fi_chevron-down2.png');
+                    background-position: center right 8px;
+                    border-radius: 4px;
+                    border: 1px solid #53545c;
+                    background-color: #fff;
+                    cursor: pointer;
+                    .selected{
+                        padding: 7px 32px 7px 8px;
+                        .value{
+                            @include fonts('Inter', 11, 400, 16, #53545c);
+                        }
+                    }
+                    ul{
+                        .option{
+                            @include fonts('Inter', 11, 400, 16, #abafb1);
+                            height: auto;
+                            &:hover{
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .search-area{
+                border-radius: 4px;
                 border: solid 1px #cfd3d4;
-                appearance: none;
+                margin-right: 8px;
+                display: flex;
+                align-items: center;
+                @include fonts('Inter', 12, 400, 16, #000);
+                input::placeholder{
+                    color: #abafb1;
+                }
+                button{
+                    width: 36px;
+                    height: 30px;
+                    position: relative;
+                    img{
+                        @include center-align
+                    }
+                }
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                border: 1px solid #53545c;
+                padding: 7px 8px;
+                margin-right: 12px;
                 cursor: pointer;
-              }
-            
-              input[type="checkbox"]:checked {
-                background: #cfd3d4;
-                border: none;
-              }
+                img{
+                    margin-right: 8px;
+                }
+            }
         }
     }
-    thead{
-        border-top: 1px solid #e1e2e9;
-        border-bottom: 1px solid #e1e2e9;
+    table{
+        width: 100%;
+        margin-top: 20px;
         tr{
-            th{
-                @include fonts('Inter', 14, 400, 0, #2c2d33);
-                padding: 14px 0;
-                vertical-align: middle;
-                text-align: left;
-                &.check{
+            td,th{
+                input[type="checkbox"] {
                     width: 24px;
                     height: 24px;
-                    padding-right: 22px;
-                }
-                span{
-                    margin-right: 5px;
-                }
-                img{
-                    vertical-align: middle;
+                    border-radius: 8px;
+                    border: solid 1px #cfd3d4;
+                    appearance: none;
                     cursor: pointer;
+                  }
+                
+                  input[type="checkbox"]:checked {
+                    background: #cfd3d4;
+                    border: none;
+                  }
+            }
+        }
+        thead{
+            border-top: 1px solid #e1e2e9;
+            border-bottom: 1px solid #e1e2e9;
+            tr{
+                th{
+                    @include fonts('Inter', 14, 400, 0, #2c2d33);
+                    padding: 14px 0;
+                    vertical-align: middle;
+                    text-align: left;
+                    &.check{
+                        width: 24px;
+                        height: 24px;
+                        padding-right: 22px;
+                    }
+                    &.image{
+                        width: 58px;
+                    }
+                    span{
+                        margin-right: 5px;
+                    }
+                    img{
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        tbody{
+            border-bottom: 1px solid #e1e2e9;
+            tr{
+                td{
+                    @include fonts('Inter', 14, 400, 17, #6e7079);
+                    vertical-align: middle;
+                    padding: 12px 0;
+                    b{
+                        margin-right: 5px;
+                    }
+                    img{
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+                }
+                .pending{
+                    b{
+                        @include fonts('Inter', 12, 400, 15, #1c1d22);
+                        padding: 4px 11px;
+                        border-radius: 8px;
+                        background-color: #fff2e2;
+                    }
+                }
+                .completed{
+                    b{
+                        @include fonts('Inter', 12, 400, 15, #519c66);
+                        padding: 4px 11px;
+                        border-radius: 8px;
+                        background-color: rgba(50, 147, 111, 0.16);
+                    }
+                }
+                .in-progress{
+                    b{
+                        @include fonts('Inter', 12, 400, 15, #5570f1);
+                        padding: 4px 11px;
+                        border-radius: 8px;
+                        background-color: rgba(85, 112, 241, 0.16);
+                    }
+                }
+                .select-box {
+                    display: inline-block;
+                    background-image: url('../images/table/fi_chevron-down.png');
+                    background-position: center right 11px;
+                    background-color: rgba(94, 99, 102, 0.08);
+                    .selected{
+                        padding: 4px 35px 4px 11px;
+                        .value{
+                            @include fonts('Inter', 12, 400, 15, #8b8d97);
+                        }
+                    }
+                    ul{
+                        .option{
+                            @include fonts('Inter', 12, 400, 15, #8b8d97);
+                            padding: 5px;
+                        }
+                    }
                 }
             }
         }
     }
-    tbody{
-        border-bottom: 1px solid #e1e2e9;
-        tr{
-            td{
-                @include fonts('Inter', 14, 400, 17, #6e7079);
-                vertical-align: middle;
-                padding: 12px 0;
-                b{
-                    margin-right: 5px;
-                }
-                img{
-                    vertical-align: middle;
-                    cursor: pointer;
-                }
-            }
-            .pending{
-                b{
-                    @include fonts('Inter', 12, 400, 15, #1c1d22);
-                    padding: 4px 11px;
-                    border-radius: 8px;
-                    background-color: #fff2e2;
-                }
-            }
-            .completed{
-                b{
-                    @include fonts('Inter', 12, 400, 15, #519c66);
-                    padding: 4px 11px;
-                    border-radius: 8px;
-                    background-color: rgba(50, 147, 111, 0.16);
-                }
-            }
-            .in-progress{
-                b{
-                    @include fonts('Inter', 12, 400, 15, #5570f1);
-                    padding: 4px 11px;
-                    border-radius: 8px;
-                    background-color: rgba(85, 112, 241, 0.16);
-                }
-            }
-            .select-box {
-                display: inline-block;
+    .pagination{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .paging{
+            display: flex;
+            align-items: center;
+            .select-box{
                 background-image: url('../images/table/fi_chevron-down.png');
                 background-position: center right 11px;
                 background-color: rgba(94, 99, 102, 0.08);
+                margin-right: 10px;
                 .selected{
                     padding: 4px 35px 4px 11px;
                     .value{
@@ -460,8 +565,24 @@ table{
                     .option{
                         @include fonts('Inter', 12, 400, 15, #8b8d97);
                         padding: 5px;
+                        &:hover{
+                            color: #000;
+                        }
                     }
                 }
+            }
+            p{
+                @include fonts('Inter', 14, 400, 17, #666);
+                margin-right: 20px;
+                &.txt{
+                    color: #a6a8b1;
+                }
+            }
+            .btns{
+                width: 40px;
+                height: 16px;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }
