@@ -23,7 +23,7 @@
                     :key="i" 
                     :class="name.class"
                 >
-                    <template v-if="name.cheack === true"><input type="checkbox"></template>
+                    <template v-if="name.check === true"><input type="checkbox"></template>
                     <template v-else-if="name.router === true"><router-link :to="{name:name.path}">{{name.txt}}</router-link></template>
                     <template v-else-if="name.select === true">
                         <select-box
