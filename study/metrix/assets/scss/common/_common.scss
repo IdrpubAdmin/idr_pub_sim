@@ -7,7 +7,7 @@ button{
     background: transparent;
 }
 body{
-    min-width: $mobile-width;
+    min-width: 360px;
 }
 
 .input-box{
@@ -362,6 +362,9 @@ article{
         display: grid;
         gap: 20px;
         grid-template-rows: 20% auto;
+        @include mdq-tablet{
+            display: block;
+        }
     }
 }
 
@@ -436,8 +439,14 @@ article{
             }
         }
     }
+    .table-wrap{
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
     table{
         width: 100%;
+        min-width: 1260px;
         margin-top: 20px;
         tr{
             td,th{

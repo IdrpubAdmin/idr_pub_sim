@@ -117,15 +117,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="image">
-                <img src="assets/images/settings/image1.png" alt="profile img">
-                <div class="btns">
-                    <button>
-                        <img src="" alt="">
-                    </button>
-                    <button>
-                        <img src="" alt="">
-                    </button>
+            <div class="user-image">
+                <div class="image-box">
+                    <img src="assets/images/settings/image1.png" alt="profile img">
+                    <div class="btns">
+                        <button>
+                            <img src="assets/images/settings/fi_upload-cloud.png" alt="cloud icon">
+                        </button>
+                        <button>
+                            <img src="assets/images/settings/Delete.png" alt="delete icon">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

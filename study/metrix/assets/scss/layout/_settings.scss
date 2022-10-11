@@ -2,12 +2,20 @@
     padding: 20px;
     section{
         height: calc(100vh - 127px);
+        min-height: calc(100vh - 127px);
         background-color: #fff;
         border-radius: 12px;
         padding: 16px 36px;
+        @include mdq-desktop {
+            height: auto;
+        }
+        @include mdq-mobile {
+            padding: 16px 20px;
+        }
         .nav{
             ul{
-                width: 400px;
+                max-width: 400px;
+                width: 100%;
                 display: flex;
                 flex-grow: 1;
                 li{
@@ -31,6 +39,7 @@
             .settings-header{
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 h5{
                     @include fonts('Poppins', 20, 500, 58, #45464e);
                 }
@@ -39,16 +48,32 @@
                     border-radius: 12px;
                     background-color: #5570f1;
                     text-align: center;
+                    @include mdq-mobile {
+                        width: 90px;
+                        height: 30px;
+                    }
                     button{
                         @include fonts('Inter', 20, 400, 58, #fff);
+                        @include mdq-mobile {
+                            @include fonts('Inter', 14, 400, 30, #fff);
+                        }
                     }
                 }
             }
             .contents{
                 margin-top: 30px;
                 display: flex;
+                @include mdq-tablet{
+                    flex-direction: column-reverse;
+                }
                 .profile{
-                    width: 375px;
+                    max-width: 375px;
+                    width: 100%;
+                    margin-right: 77px;
+                    @include mdq-tablet{
+                        margin-top: 30px;
+                        margin-right: 0;
+                    }
                     ul{
                         .input-box-area{
                             margin-top: 16px;
@@ -114,10 +139,26 @@
                         }
                     }
                 }
-                .image{
-                    text-align: right;
-                    img{
-                        border-radius: 12px;
+                .user-image{
+                    .image-box{
+                        width: 172px;
+                        height: 167px;
+                        position: relative;
+                        img{
+                            border-radius: 12px;
+                        }
+                        .btns{
+                            position: absolute;
+                            top: 14px;
+                            right: 14px;
+                            button{
+                                width: 32px;
+                                height: 32px;
+                                padding: 6px;
+                                border-radius: 8px;
+                                background-color: #fff2e2;
+                            }
+                        }
                     }
                 }
             }

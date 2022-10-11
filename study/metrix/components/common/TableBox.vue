@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </div>
-        <div>
+        <div class="table-wrap">
             <table>
                 <thead>
                     <tr>

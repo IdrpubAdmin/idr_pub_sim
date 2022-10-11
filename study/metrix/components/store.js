@@ -98,7 +98,14 @@ var store = new Vuex.Store({
     },
     mutations: {
         checkActive(state){
-            state.isActive = !state.isActive
+            function detectMobileDevice() {
+                const minWidth = 1000
+                return window.innerWidth >= minWidth
+            }
+            const isMobile = detectMobileDevice()
+            if(isMobile){
+                state.isActive = !state.isActive
+            }
         },
         toggleModal(state, payload){
             if(state.modalActive.includes(payload)){ 

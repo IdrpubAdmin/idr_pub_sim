@@ -2,14 +2,25 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    &.modal-active{
+        overflow: hidden;
+    }
     .nav-wrap{
         position: relative;
         width: $navigation-width;
+        min-height: 100vh;
         height: 100vh;
         transition-property: width;
         transition-duration: $transition;
+        z-index: 10;
+        @include mdq-desktop {
+            height: auto;
+        }
+        @include mdq-tablet{
+            display: none;
+        }
     }
-    .navactive{
+    .nav-active{
         width: $navigation-active;
         .navigation{
             padding: 14px 32px;
@@ -40,12 +51,22 @@
         width: calc(100% - $navigation-width);
         transition-property: width;
         transition-duration: $transition;
+        @include mdq-tablet{
+            width: 100%;
+        }
     } 
     .mainactive{
         width: calc(100% - $navigation-active);
+        @include mdq-tablet{
+            width: 100%;
+        }
     }  
     .container{
+        min-height: calc(100vh - 87px);
         height: calc(100vh - 87px);
         background-color: #f4f5fa;
+        @include mdq-desktop{
+            height: auto;
+        }
     }
 }

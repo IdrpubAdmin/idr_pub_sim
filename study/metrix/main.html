@@ -18,12 +18,12 @@
 </head>
 <body>
     <div id="app">
-        <div class="wrapper">   
+        <div class="wrapper" :class="{'modal-active' : $store.getters.modalActive.includes('newOrder')||$store.getters.modalActive.includes('newCustomer') }">   
             <template v-if="$route.path.includes('/login')||$route.path.includes('/signup')">
                 <auth-main></auth-main>
             </template>
             <template v-else>
-                <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{navactive: $store.getters.isActive}">
+                <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{'nav-active': $store.getters.isActive}">
                     <side-navigation></side-navigation>
                 </div>
                 <main :class="{mainactive: $store.getters.isActive}">
