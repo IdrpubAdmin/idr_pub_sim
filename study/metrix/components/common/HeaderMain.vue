@@ -5,7 +5,7 @@
                 <h3>{{$route.meta.title}}</h3>
             </div>
             <ul class="user">
-                <li>
+                <li class="sel-btn">
                     <select-box
                         :option="['Nanny’s Shop', 'Nanny’s Shop', 'Nanny’s Shop']"
                         :selected="'Nanny’s Shop'"
@@ -22,13 +22,18 @@
                         <img src="assets/images/header/profile1.png" alt="profile img">
                     </router-link>
                 </li>
+                <li class="nav-btn" @click="mobileActive">
+                    <button>
+                        <img src="assets/images/header/Hamburger.png" alt="hamburger icon">
+                    </button>                
+                </li>
             </ul>
         </div>
         <div class="location">
             <div class="home-icon">
                 <img src="assets/images/header/Home.png" alt="home icon">
             </div>
-            <div class="breadcrumb" v-for="(breadcrumb,i) in BreadCrumbData" :key="i" v-if="BreadCrumbData[i].name.includes($route.name)">
+            <div class="breadcrumb" v-for="(breadcrumb,i) in BreadCrumbData" :key="i" v-show="BreadCrumbData[i].name.includes($route.name)">
                 <ul>
                     <li v-for="data in breadcrumb.data" :key="data.id">
                         <router-link :to="{name: data.path}">
@@ -53,6 +58,14 @@ module.exports = {
     },
     components: {
         'select-box' : SelectBox
-    }
+    },
+    methods: {
+        mobileActive(){
+            this.$store.commit('mobileActive')
+        },
+    },
+    mounted() {
+        this.$store.commit('bodyFixed')
+    },
 }
 </script>

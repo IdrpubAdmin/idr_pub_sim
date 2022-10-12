@@ -8,16 +8,23 @@
     .nav-wrap{
         position: relative;
         width: $navigation-width;
-        min-height: 100vh;
         height: 100vh;
         transition-property: width;
         transition-duration: $transition;
         z-index: 10;
-        @include mdq-desktop {
-            height: auto;
-        }
         @include mdq-tablet{
             display: none;
+            position: fixed;
+            background-color: #fff;
+            &.mobile-active{
+                display: block;
+                .headphone-box{
+                    display: none;
+                }
+                .gift-box{
+                    display: none;
+                }
+            }
         }
     }
     .nav-active{

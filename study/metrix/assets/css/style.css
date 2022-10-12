@@ -785,6 +785,13 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+body {
+  min-width: 360px;
+}
+body.mobile-active {
+  overflow: hidden;
+}
+
 input {
   background: transparent;
   border: 0;
@@ -793,10 +800,6 @@ input {
 
 button {
   background: transparent;
-}
-
-body {
-  min-width: 360px;
 }
 
 .input-box {
@@ -976,10 +979,12 @@ article .no-bg-sel .select-box ul .option:hover {
 
 .modal-wrap {
   width: 100%;
+  min-width: 360px;
+  min-height: 100vh;
   height: 100vh;
   backdrop-filter: blur(8px);
   background-color: rgba(163, 163, 163, 0.2);
-  position: absolute;
+  position: fixed;
   display: block;
   z-index: 999;
 }
@@ -994,6 +999,8 @@ article .no-bg-sel .select-box ul .option:hover {
   padding: 28px 24px;
   background-color: #fff;
   border-radius: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .modal-wrap .modal-container .header {
   width: 100%;
@@ -1015,10 +1022,21 @@ article .no-bg-sel .select-box ul .option:hover {
   background-color: #fff2e2;
 }
 .modal-wrap .modal-container .modal-btns {
+  width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .modal-wrap .modal-container .modal-btns {
+    width: 380px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-wrap .modal-container .modal-btns {
+    width: 310px;
+  }
 }
 .modal-wrap .modal-container .modal-btns button {
   width: 180px;
@@ -1031,6 +1049,11 @@ article .no-bg-sel .select-box ul .option:hover {
   line-height: 30px;
   color: #5570f1;
 }
+@media (max-width: 480px) {
+  .modal-wrap .modal-container .modal-btns button {
+    width: 140px;
+  }
+}
 .modal-wrap .modal-container .modal-btns button.point {
   color: #fff;
   background-color: #5570f1;
@@ -1042,6 +1065,7 @@ article .no-bg-sel .select-box ul .option:hover {
 .orders .orders-header, .orders .customers-header, .orders .inventory-header, .customers .orders-header, .customers .customers-header, .customers .inventory-header, .inventory .orders-header, .inventory .customers-header, .inventory .inventory-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .orders .orders-header h3, .orders .customers-header h3, .orders .inventory-header h3, .customers .orders-header h3, .customers .customers-header h3, .customers .inventory-header h3, .inventory .orders-header h3, .inventory .customers-header h3, .inventory .inventory-header h3 {
   font-family: "Inter";
@@ -1055,11 +1079,21 @@ article .no-bg-sel .select-box ul .option:hover {
   padding: 6px 16px;
   border-radius: 12px;
 }
+@media (max-width: 480px) {
+  .orders .orders-header .btn, .orders .customers-header .btn, .orders .inventory-header .btn, .customers .orders-header .btn, .customers .customers-header .btn, .customers .inventory-header .btn, .inventory .orders-header .btn, .inventory .customers-header .btn, .inventory .inventory-header .btn {
+    padding: 6px;
+  }
+}
 .orders .orders-header .btn button, .orders .customers-header .btn button, .orders .inventory-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button, .customers .inventory-header .btn button, .inventory .orders-header .btn button, .inventory .customers-header .btn button, .inventory .inventory-header .btn button {
   display: flex;
 }
 .orders .orders-header .btn button img, .orders .customers-header .btn button img, .orders .inventory-header .btn button img, .customers .orders-header .btn button img, .customers .customers-header .btn button img, .customers .inventory-header .btn button img, .inventory .orders-header .btn button img, .inventory .customers-header .btn button img, .inventory .inventory-header .btn button img {
   margin-right: 12px;
+}
+@media (max-width: 480px) {
+  .orders .orders-header .btn button img, .orders .customers-header .btn button img, .orders .inventory-header .btn button img, .customers .orders-header .btn button img, .customers .customers-header .btn button img, .customers .inventory-header .btn button img, .inventory .orders-header .btn button img, .inventory .customers-header .btn button img, .inventory .inventory-header .btn button img {
+    display: none;
+  }
 }
 .orders .orders-header .btn button span, .orders .customers-header .btn button span, .orders .inventory-header .btn button span, .customers .orders-header .btn button span, .customers .customers-header .btn button span, .customers .inventory-header .btn button span, .inventory .orders-header .btn button span, .inventory .customers-header .btn button span, .inventory .inventory-header .btn button span {
   font-family: "Inter";
@@ -1068,11 +1102,23 @@ article .no-bg-sel .select-box ul .option:hover {
   line-height: 24px;
   color: #fff;
 }
+@media (max-width: 480px) {
+  .orders .orders-header .btn button span, .orders .customers-header .btn button span, .orders .inventory-header .btn button span, .customers .orders-header .btn button span, .customers .customers-header .btn button span, .customers .inventory-header .btn button span, .inventory .orders-header .btn button span, .inventory .customers-header .btn button span, .inventory .inventory-header .btn button span {
+    padding: 5px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .orders .orders-header .btn a, .orders .customers-header .btn a, .orders .inventory-header .btn a, .customers .orders-header .btn a, .customers .customers-header .btn a, .customers .inventory-header .btn a, .inventory .orders-header .btn a, .inventory .customers-header .btn a, .inventory .inventory-header .btn a {
   display: flex;
 }
 .orders .orders-header .btn a img, .orders .customers-header .btn a img, .orders .inventory-header .btn a img, .customers .orders-header .btn a img, .customers .customers-header .btn a img, .customers .inventory-header .btn a img, .inventory .orders-header .btn a img, .inventory .customers-header .btn a img, .inventory .inventory-header .btn a img {
   margin-right: 12px;
+}
+@media (max-width: 480px) {
+  .orders .orders-header .btn a img, .orders .customers-header .btn a img, .orders .inventory-header .btn a img, .customers .orders-header .btn a img, .customers .customers-header .btn a img, .customers .inventory-header .btn a img, .inventory .orders-header .btn a img, .inventory .customers-header .btn a img, .inventory .inventory-header .btn a img {
+    display: none;
+  }
 }
 .orders .orders-header .btn a span, .orders .customers-header .btn a span, .orders .inventory-header .btn a span, .customers .orders-header .btn a span, .customers .customers-header .btn a span, .customers .inventory-header .btn a span, .inventory .orders-header .btn a span, .inventory .customers-header .btn a span, .inventory .inventory-header .btn a span {
   font-family: "Inter";
@@ -1081,12 +1127,39 @@ article .no-bg-sel .select-box ul .option:hover {
   line-height: 24px;
   color: #fff;
 }
+@media (max-width: 480px) {
+  .orders .orders-header .btn a span, .orders .customers-header .btn a span, .orders .inventory-header .btn a span, .customers .orders-header .btn a span, .customers .customers-header .btn a span, .customers .inventory-header .btn a span, .inventory .orders-header .btn a span, .inventory .customers-header .btn a span, .inventory .inventory-header .btn a span {
+    padding: 5px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .orders .view-section .view-header, .customers .view-section .view-header, .inventory .view-section .view-header {
+    align-items: start;
+  }
+}
+@media (max-width: 480px) {
+  .orders .view-section .view-header, .customers .view-section .view-header, .inventory .view-section .view-header {
+    display: block;
+  }
+}
 .orders .view-section .view-header ul, .customers .view-section .view-header ul, .inventory .view-section .view-header ul {
   display: flex;
+}
+@media (max-width: 1024px) {
+  .orders .view-section .view-header ul, .customers .view-section .view-header ul, .inventory .view-section .view-header ul {
+    display: block;
+  }
 }
 .orders .view-section .view-header ul li, .customers .view-section .view-header ul li, .inventory .view-section .view-header ul li {
   display: flex;
   margin-right: 24px;
+}
+@media (max-width: 1024px) {
+  .orders .view-section .view-header ul li, .customers .view-section .view-header ul li, .inventory .view-section .view-header ul li {
+    margin-right: 8px;
+  }
 }
 .orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p, .inventory .view-section .view-header ul li p {
   font-family: "Inter";
@@ -1094,6 +1167,12 @@ article .no-bg-sel .select-box ul .option:hover {
   font-weight: 500;
   line-height: 36px;
   color: #45464e;
+}
+@media (max-width: 1024px) {
+  .orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p, .inventory .view-section .view-header ul li p {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .orders .view-section .view-header ul li p span, .customers .view-section .view-header ul li p span, .inventory .view-section .view-header ul li p span {
   color: #8b8d97;
@@ -1103,6 +1182,12 @@ article .no-bg-sel .select-box ul .option:hover {
   height: 36px;
   margin-left: 4px;
   position: relative;
+}
+@media (max-width: 1024px) {
+  .orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image, .inventory .view-section .view-header ul li .image {
+    width: 26px;
+    height: 26px;
+  }
 }
 .orders .view-section .view-header ul li .image img, .customers .view-section .view-header ul li .image img, .inventory .view-section .view-header ul li .image img {
   position: absolute;
@@ -1121,6 +1206,12 @@ article .no-bg-sel .select-box ul .option:hover {
   background-color: #1c1d22;
   border-radius: 12px;
   margin-right: 24px;
+}
+@media (max-width: 768px) {
+  .orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box, .inventory .view-section .view-header .btns .select-box {
+    margin-right: 0;
+    display: none;
+  }
 }
 .orders .view-section .view-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected, .inventory .view-section .view-header .btns .select-box .selected {
   padding: 8px 16px;
@@ -1157,10 +1248,16 @@ article .no-bg-sel .select-box ul .option:hover {
   display: inline-block;
 }
 .orders .view-section .contents .user-sum ul, .customers .view-section .contents .user-sum ul, .inventory .view-section .contents .user-sum ul {
+  width: 100%;
   margin-top: 30px;
 }
 .orders .view-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li {
   width: calc(50% - 16px);
+}
+@media (max-width: 768px) {
+  .orders .view-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li {
+    width: 50%;
+  }
 }
 .orders .view-section .contents .user-sum ul li .tit, .customers .view-section .contents .user-sum ul li .tit, .inventory .view-section .contents .user-sum ul li .tit {
   font-size: 12px;
@@ -1224,15 +1321,23 @@ article .no-bg-sel .select-box ul .option:hover {
   border-radius: 12px;
 }
 .orders .contents, .customers .contents, .inventory .contents {
+  min-height: calc(100vh - 183px);
   height: calc(100vh - 183px);
   margin-top: 20px;
   display: grid;
   gap: 20px;
   grid-template-rows: 20% auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .orders .contents, .customers .contents, .inventory .contents {
+    height: auto;
     display: block;
+  }
+  .orders .contents article, .customers .contents article, .inventory .contents article {
+    margin-top: 20px;
+  }
+  .orders .contents article:first-child, .customers .contents article:first-child, .inventory .contents article:first-child {
+    margin-top: 0;
   }
 }
 
@@ -1250,6 +1355,11 @@ article .no-bg-sel .select-box ul .option:hover {
 }
 .table-area .title .table-btns {
   display: flex;
+}
+@media (max-width: 768px) {
+  .table-area .title .table-btns {
+    display: none;
+  }
 }
 .table-area .title .table-btns li span {
   font-family: "Inter";
@@ -1456,6 +1566,14 @@ article .no-bg-sel .select-box ul .option:hover {
   justify-content: space-between;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+  .table-area .pagination {
+    justify-content: flex-end;
+  }
+  .table-area .pagination .paging:first-child {
+    display: none;
+  }
+}
 .table-area .pagination .paging {
   display: flex;
   align-items: center;
@@ -1505,6 +1623,35 @@ article .no-bg-sel .select-box ul .option:hover {
   justify-content: space-between;
 }
 
+.phone-box {
+  background-color: #fff;
+}
+.phone-box .select-box {
+  width: 142px;
+  margin-right: 6px;
+  background-image: url("../images/settings/Arrow-Down2.png");
+}
+.phone-box .select-box .selected .value {
+  display: flex;
+  align-items: center;
+}
+.phone-box .select-box .selected .value img {
+  margin-right: 8px;
+}
+.phone-box .select-box ul .option {
+  display: flex;
+  align-items: center;
+}
+.phone-box .select-box ul .option img {
+  margin-right: 8px;
+  height: 20px;
+}
+.phone-box input {
+  width: calc(100% - 148px);
+  background-color: rgba(239, 241, 249, 0.6);
+  border-radius: 8px;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -1516,19 +1663,24 @@ article .no-bg-sel .select-box ul .option:hover {
 .wrapper .nav-wrap {
   position: relative;
   width: 88px;
-  min-height: 100vh;
   height: 100vh;
   transition-property: width;
   transition-duration: 0.5s;
   z-index: 10;
 }
-@media (max-width: 1400px) {
-  .wrapper .nav-wrap {
-    height: auto;
-  }
-}
 @media (max-width: 768px) {
   .wrapper .nav-wrap {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+  }
+  .wrapper .nav-wrap.mobile-active {
+    display: block;
+  }
+  .wrapper .nav-wrap.mobile-active .headphone-box {
+    display: none;
+  }
+  .wrapper .nav-wrap.mobile-active .gift-box {
     display: none;
   }
 }
@@ -1570,7 +1722,7 @@ article .no-bg-sel .select-box ul .option:hover {
   height: calc(100vh - 87px);
   background-color: #f4f5fa;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
   .wrapper .container {
     height: auto;
   }
@@ -1707,6 +1859,12 @@ article .no-bg-sel .select-box ul .option:hover {
 .navigation menu .logout-box {
   position: absolute;
   top: 92%;
+}
+@media (max-width: 768px) {
+  .navigation menu .logout-box {
+    position: static;
+    margin-top: 50px;
+  }
 }
 .navigation menu .logout-box a {
   display: inline-block;
@@ -1925,6 +2083,34 @@ header .page-head .user li .select-box ul .option {
   justify-content: left;
   margin: 0;
 }
+@media (max-width: 480px) {
+  header .page-head .user .sel-btn {
+    display: none;
+  }
+}
+header .page-head .user .nav-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .page-head .user .nav-btn {
+    display: block;
+  }
+}
+header .page-head .user .nav-btn button {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+header .page-head .user .nav-btn button img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
 header .location {
   border-top: solid 1px #f1f3f9;
   padding: 4px 20px;
@@ -1964,6 +2150,17 @@ header .location .breadcrumb ul li::before {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 20% 20% 20% auto;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .container .dashboard {
+    display: block;
+  }
+  .container .dashboard article {
+    margin-top: 20px;
+  }
+  .container .dashboard article:first-child {
+    margin-top: 0;
+  }
 }
 .container .dashboard article {
   background-color: #fff;
@@ -2117,16 +2314,42 @@ header .location .breadcrumb ul li::before {
 }
 
 .new-order {
-  width: 850px;
+  max-width: 850px;
+  width: 100%;
   height: 740px;
+}
+.new-order.big-modal {
+  height: 891px;
+}
+@media (max-width: 768px) {
+  .new-order {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+  }
+  .new-order.big-modal {
+    height: calc(100% - 40px);
+  }
 }
 .new-order section {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .new-order section {
+    display: block;
+  }
+}
 .new-order section article {
   width: calc(50% - 25px);
+}
+@media (max-width: 768px) {
+  .new-order section article {
+    width: auto;
+  }
+  .new-order section article:last-child {
+    margin-top: 20px;
+  }
 }
 .new-order section article .modal-title {
   display: flex;
@@ -2173,6 +2396,20 @@ header .location .breadcrumb ul li::before {
 }
 .new-order section article .form {
   margin-top: 27px;
+}
+.new-order section article .form .input-box-area .input-box {
+  margin-top: 24px;
+}
+.new-order section article .form .input-box-area .input-box input {
+  padding-left: 16px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #53545c;
+}
+.new-order section article .form .input-box-area .input-box input::placeholder {
+  color: #abafb1;
 }
 .new-order section article .form .form-item {
   margin-top: 24px;
@@ -2306,7 +2543,7 @@ header .location .breadcrumb ul li::before {
   border-radius: 12px;
   padding: 16px 36px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
   .settings section {
     height: auto;
   }
@@ -2416,34 +2653,6 @@ header .location .breadcrumb ul li::before {
   font-weight: 400;
   line-height: 15px;
   color: #5e6366;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box {
-  background-color: #fff;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box .select-box {
-  width: 142px;
-  margin-right: 6px;
-  background-image: url("../images/settings/Arrow-Down2.png");
-}
-.settings section article .contents .profile ul .input-box-area .phone-box .select-box .selected .value {
-  display: flex;
-  align-items: center;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box .select-box .selected .value img {
-  margin-right: 8px;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box .select-box ul .option {
-  display: flex;
-  align-items: center;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box .select-box ul .option img {
-  margin-right: 8px;
-  height: 20px;
-}
-.settings section article .contents .profile ul .input-box-area .phone-box input {
-  width: calc(100% - 148px);
-  background-color: rgba(239, 241, 249, 0.6);
-  border-radius: 8px;
 }
 .settings section article .contents .profile ul .input-box-area .no-icon input {
   padding-left: 16px;

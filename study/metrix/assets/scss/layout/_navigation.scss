@@ -114,6 +114,10 @@
         .logout-box{ 
             position: absolute;
             top: 92%;
+            @include mdq-tablet {
+                position: static;
+                margin-top: 50px;
+            }
             a{
                 display: inline-block;
                 width: 56px;

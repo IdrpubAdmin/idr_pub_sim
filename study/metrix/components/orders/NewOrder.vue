@@ -1,6 +1,6 @@
 <template>
     <div class="modal-wrap">
-        <div class="modal-container new-order">
+        <div class="modal-container new-order" :class="{'big-modal':btnActive.includes('newOrderBtn01')}">
             <div class="header">
                 <h3>Create New Order</h3>
                 <div class="btn">
@@ -21,13 +21,58 @@
                         </div>
                     </div>
                     <ul class="form">
-                        <li class="form-item">
-                            <select-box
-                                :option="['Select Customer', 'Select Customer1', 'Select Customer2', 'Select Customer3']"
-                                :selected="'Select Customer'"
-                                :name="'newOrderSelect01'"
-                            ></select-box>
-                        </li>   
+                        <template v-if="btnActive.includes('newOrderBtn01')">
+                            <li class="input-box-area">
+                                <div class="input-box">
+                                    <input type="text" placeholder="Customer Name">
+                                </div>
+                            </li>                          
+                            <li class="input-box-area">
+                                <div class="input-box">
+                                    <input type="text" placeholder="Customer Email">
+                                </div>
+                            </li>
+                            <li class="input-box-area">
+                                <div class="input-box no-icon phone-box">
+                                    <div class="select-box">
+                                        <div class="selected" @click="toggleBtn('settingSelect01')">
+                                            <div class="value">
+                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                                +234
+                                            </div>
+                                        </div>
+                                        <ul v-show="btnActive.includes('settingSelect01')">
+                                            <li class="option">
+                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                                +234
+                                            </li>
+                                            <li class="option">
+                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                                +234
+                                            </li>
+                                            <li class="option">
+                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                                +234
+                                            </li>
+                                            <li class="option">
+                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                                +234
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" placeholder="08065650633">
+                                </div>
+                            </li>
+                        </template>
+                        <template v-else>
+                            <li class="form-item">
+                                <select-box
+                                    :option="['Select Customer', 'Select Customer1', 'Select Customer2', 'Select Customer3']"
+                                    :selected="'Select Customer'"
+                                    :name="'newOrderSelect01'"
+                                ></select-box>
+                            </li> 
+                        </template>
                         <li class="form-item double">
                             <select-box
                                 :option="['Payment Type', 'Payment Type1', 'Payment Type2', 'Payment Type3']"

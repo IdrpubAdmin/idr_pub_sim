@@ -1,6 +1,6 @@
 <template>
     <div class="modal-wrap">
-        <div class="modal-container new-customer">
+        <div class="modal-container new-customer" :class="{'big-modal':btnActive.includes('newCustomBtn01')}">
             <div class="header">
                 <h3>Add a New Customer</h3>
                 <div class="btn">

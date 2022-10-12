@@ -30,14 +30,34 @@
 }
 
 .new-order{
-    width: 850px;
+    max-width: 850px;
+    width: 100%;
     height: 740px;
+    &.big-modal{
+        height: 891px;
+    }
+    @include mdq-tablet{
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        &.big-modal{
+            height: calc(100% - 40px);
+        }
+    }
     section{
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
+        @include mdq-tablet{
+            display: block;
+        }
         article{
             width: calc(50% - 25px);
+            @include mdq-tablet{
+                width: auto;
+                &:last-child{
+                    margin-top: 20px;
+                }
+            }
             .modal-title{
                 display: flex;
                 justify-content: space-between;
@@ -75,6 +95,18 @@
             }
             .form{
                 margin-top: 27px;
+                .input-box-area{
+                    .input-box{
+                        margin-top: 24px;
+                        input{
+                            padding-left: 16px;
+                            @include fonts('Inter', 16, 400, 20, #53545c);
+                        }
+                        input::placeholder{
+                            color: #abafb1;
+                        }
+                    }
+                }
                 .form-item{
                     margin-top: 24px;
                     &:first-child{

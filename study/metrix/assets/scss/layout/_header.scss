@@ -36,6 +36,27 @@ header{
                     }
                 }
             }
+            @include mdq-mobile {
+                .sel-btn{
+                    display: none;
+                }
+            }
+            .nav-btn{
+                display: none;
+                @include mdq-tablet {
+                    display: block;
+                }
+                button{
+                    position: relative;
+                    width: 32px;
+                    height: 32px;
+                    img{
+                        @include center-align;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
         }
     }
     .location{

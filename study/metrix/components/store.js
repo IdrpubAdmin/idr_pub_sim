@@ -94,16 +94,17 @@ var store = new Vuex.Store({
     state: {
         isActive : false,
         modalActive : [],
-        btnActive : []
+        btnActive : [],
+        mobileActive : false
     },
     mutations: {
         checkActive(state){
-            function detectMobileDevice() {
-                const minWidth = 1000
+            function detectTabletDevice() {
+                const minWidth = 1024
                 return window.innerWidth >= minWidth
             }
-            const isMobile = detectMobileDevice()
-            if(isMobile){
+            const isTablet = detectTabletDevice()
+            if(isTablet){
                 state.isActive = !state.isActive
             }
         },
@@ -113,10 +114,12 @@ var store = new Vuex.Store({
                     if(state.modalActive[i] === payload) {
                         state.modalActive.splice(i, 1);
                         i--;
+                        document.body.classList.remove('mobile-active')
                     }
                 }
             }else{
                 state.modalActive.push(payload);
+                document.body.classList.add('mobile-active')
             }
         },
         toggleBtn(state, payload){
@@ -131,6 +134,17 @@ var store = new Vuex.Store({
                 state.btnActive.push(payload);
             }
         },
+        mobileActive(state){
+            state.mobileActive = !state.mobileActive
+            document.body.classList.toggle('mobile-active')
+        },
+        bodyFixed(){
+            const gnbBtn = document.querySelector('.nav-btn')
+            gnbBtn.addEventListener('click', function(){
+                document.body.classList.toggle('mobile-active')
+                }
+            )
+        }
     },
     getters: {
         NavigationData: function NavigationData(state) {
@@ -151,5 +165,8 @@ var store = new Vuex.Store({
         btnActive(state){
             return state.btnActive
         }, 
+        mobileActive(state){
+            return state.mobileActive
+        },
     },
 });

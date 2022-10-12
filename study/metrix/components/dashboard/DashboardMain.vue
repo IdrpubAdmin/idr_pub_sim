@@ -96,7 +96,7 @@
                 :name="'dashSelect04'"
                 ></select-box>
             </div>
-            <div id="chart"></div>
+            <!-- <div id="chart"></div> -->
         </article>
         <article class="summary folder">
             <div class="header">
@@ -292,7 +292,6 @@
                     ></select-box>
                 </div>
             </div>
-            <div id="bar-chart"></div>
         </article>
     </div>
 </template>
@@ -305,7 +304,6 @@ module.exports = {
     mounted() {
         const Chart = toastui.Chart;
         const el = document.getElementById('chart');
-        // const el2 = document.getElementById('bar-chart');
         const data = {
                 series: [
                 {
@@ -322,27 +320,6 @@ module.exports = {
                 }
             ]
         };
-        // const data2 = {
-        //   categories: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        //   series: [
-        //     {
-        //       name: 'Budget',
-        //       data: [5000, 3000, 5000, 7000, 6000, 4000, 1000]
-        //     },
-        //     {
-        //       name: 'Income',
-        //       data: [8000, 4000, 7000, 2000, 6000, 3000, 5000]
-        //     },
-        //     {
-        //       name: 'Expenses',
-        //       data: [4000, 4000, 6000, 3000, 4000, 5000, 7000]
-        //     },
-        //     {
-        //       name: 'Debt',
-        //       data: [3000, 4000, 3000, 1000, 2000, 4000, 3000]
-        //     }
-        //   ]
-        // };
         const options = {
             // 내보내기 옵션
             exportMenu: {
@@ -368,14 +345,7 @@ module.exports = {
                 }
             },
         };
-        // const options2 = {
-        //     chart: { 
-        //         width: '100%',
-        //         height: 280,
-        //     },
-        // }
-        const chart = Chart.pieChart({ el, data, options });
-        // const chart2 = Chart.columnChart({ el2, data2, options2 });
+        // const chart = Chart.pieChart({ el, data, options });
     },
 }
 </script>

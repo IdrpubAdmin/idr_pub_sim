@@ -7,6 +7,15 @@
 	    grid-template-columns: 1fr 1fr 1fr;
 	    grid-template-rows: 20% 20% 20% auto;
         gap: 20px;
+        @include mdq-tablet {
+            display: block;
+            article{
+                margin-top: 20px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
         article{
             background-color: #fff;
             border-radius: 12px;

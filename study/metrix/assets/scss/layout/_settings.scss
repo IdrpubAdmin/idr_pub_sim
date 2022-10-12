@@ -84,38 +84,6 @@
                                 text-indent: 5px;
                                 @include fonts('Inter', 12, 400, 15, #5e6366)
                             }
-                            .phone-box{
-                                background-color: #fff;
-                                .select-box{
-                                    width: 142px;
-                                    margin-right: 6px;
-                                    background-image: url('../images/settings/Arrow-Down2.png');
-                                    .selected{
-                                        .value{
-                                            display: flex;
-                                            align-items: center;
-                                            img{
-                                                margin-right: 8px;
-                                            }
-                                        }
-                                    }
-                                    ul{
-                                        .option{
-                                            display: flex;
-                                            align-items: center;
-                                            img{
-                                                margin-right: 8px;
-                                                height: 20px;
-                                            }
-                                        }
-                                    }
-                                }
-                                input{
-                                    width: calc(100% - 148px);
-                                    background-color: rgba(239, 241, 249, 0.6);
-                                    border-radius: 8px;
-                                }
-                            }
                             .no-icon{
                                 input{
                                     padding-left: 16px;

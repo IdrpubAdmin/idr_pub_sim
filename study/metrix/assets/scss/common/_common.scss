@@ -1,3 +1,9 @@
+body{
+    min-width: 360px;
+    &.mobile-active{
+        overflow: hidden;
+    }
+}
 input{
     background: transparent;
     border: 0;
@@ -5,9 +11,6 @@ input{
 }
 button{
     background: transparent;
-}
-body{
-    min-width: 360px;
 }
 
 .input-box{
@@ -152,10 +155,12 @@ article{
 
 .modal-wrap{
     width: 100%;
+    min-width: 360px;
+    min-height: 100vh;
     height: 100vh;
     backdrop-filter: blur(8px);
     background-color: rgba(163, 163, 163, 0.2);
-    position: absolute;
+    position: fixed;
     display: block;
     z-index: 999;
     .modal-container{
@@ -164,6 +169,8 @@ article{
         padding: 28px 24px;  
         background-color: #fff;
         border-radius: 12px;
+        overflow-y: auto;
+        overflow-x:hidden;
         .header{
             width: 100%;
             display: flex;
@@ -180,16 +187,26 @@ article{
             }
         }
         .modal-btns{
+            width: 400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
+            @include mdq-tablet{
+                width: 380px;
+            }
+            @include mdq-mobile{
+                width: 310px;
+            }
             button{
                 width: 180px;
                 height: 58px;
                 border-radius: 12px;
                 border: solid 2px #5570f1;
                 @include fonts('Inter', 20, 400, 30, #5570f1);
+                @include mdq-mobile{
+                    width: 140px;
+                }
                 &.point{
                     color: #fff;
                     background-color: #5570f1;
@@ -204,6 +221,7 @@ article{
     .orders-header,.customers-header,.inventory-header{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         h3{
             @include fonts('Inter', 16, 500, 36, #45464e);
         }
@@ -211,35 +229,70 @@ article{
             background-color: $b;
             padding: 6px 16px;
             border-radius: 12px;
+            @include mdq-mobile{
+                padding: 6px;
+            }
             button{
                 display: flex;
                 img{
                     margin-right: 12px;
+                    @include mdq-mobile{
+                        display: none
+                    }
                 }
                 span{
                     @include fonts('Inter', 14, 400, 24, #fff);
+                    @include mdq-mobile{
+                        padding: 5px 0;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
             }
             a{
                 display: flex;
                 img{
                     margin-right: 12px;
+                    @include mdq-mobile{
+                        display: none
+                    }
                 }
                 span{
                     @include fonts('Inter', 14, 400, 24, #fff);
+                    @include mdq-mobile{
+                        padding: 5px 0;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
             }
         }
     }
     .view-section{
         .view-header{
+            @include mdq-desktop{
+                align-items: start;
+            }
+            @include mdq-mobile{
+                display: block;
+            }
             ul{
                 display: flex;
+                @include mdq-desktop{
+                    display: block;
+                }
                 li{
                     display: flex;
                     margin-right: 24px;
+                    @include mdq-desktop{
+                        margin-right: 8px;
+                    }
                     p{
                         @include fonts('Inter', 16, 500, 36, #45464e);
+                        @include mdq-desktop{
+                            font-size: 14px;
+                            line-height: 26px;
+                        }
                         span{
                             color: #8b8d97;
                         }
@@ -249,6 +302,10 @@ article{
                         height: 36px;
                         margin-left: 4px;
                         position: relative;
+                        @include mdq-desktop{
+                            width: 26px;
+                            height: 26px
+                        }
                         img{
                             @include center-align;
                         }
@@ -263,6 +320,10 @@ article{
                     background-color: #1c1d22;
                     border-radius: 12px;
                     margin-right: 24px;
+                    @include mdq-tablet{
+                        margin-right: 0;
+                        display: none;
+                    }
                     .selected{
                         padding: 8px 16px;
                         .value{
@@ -295,9 +356,13 @@ article{
         .contents{
             .user-sum{
                 ul{
+                    width: 100%;
                     margin-top: 30px;
                     li{
                         width: calc(50% - 16px);
+                        @include mdq-tablet{
+                            width: 50%;
+                        }
                         .tit{
                             font-size: 12px;
                         }
@@ -357,13 +422,21 @@ article{
         border-radius: 12px;
     }
     .contents{
+        min-height: calc(100vh - 183px);
         height: calc(100vh - 183px);
         margin-top: 20px;
         display: grid;
         gap: 20px;
         grid-template-rows: 20% auto;
-        @include mdq-tablet{
+        @include mdq-desktop{
+            height: auto;
             display: block;
+            article{
+                margin-top: 20px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
         }
     }
 }
@@ -378,6 +451,9 @@ article{
         }
         .table-btns{
             display: flex;
+            @include mdq-tablet {
+                display: none;
+            }
             li{
                 span{
                     @include fonts('Inter', 11, 400, 16, #53545c);
@@ -556,6 +632,12 @@ article{
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+        @include mdq-tablet {
+            justify-content: flex-end;
+            .paging:first-child{ 
+                display: none;
+            }
+        }
         .paging{
             display: flex;
             align-items: center;
@@ -594,5 +676,38 @@ article{
                 justify-content: space-between;
             }
         }
+    }
+}
+
+.phone-box{
+    background-color: #fff;
+    .select-box{
+        width: 142px;
+        margin-right: 6px;
+        background-image: url('../images/settings/Arrow-Down2.png');
+        .selected{
+            .value{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 8px;
+                }
+            }
+        }
+        ul{
+            .option{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 8px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    input{
+        width: calc(100% - 148px);
+        background-color: rgba(239, 241, 249, 0.6);
+        border-radius: 8px;
     }
 }
