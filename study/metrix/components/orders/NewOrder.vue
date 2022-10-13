@@ -123,8 +123,80 @@
                         <div class="image">
                             <img src="assets/images/orders/Search.png" alt="search icon">
                         </div>
-                        <input type="text" placeholder="Search product name">
+                        <input type="search" placeholder="Search product name" v-model="itemSearch">
                     </div>
+                    <template v-if="itemSearch.length > 0">
+                        <div class="items search-item">
+                            <ul>
+                                <li v-for="(item, i) in productData" :key="item.id">
+                                    <div class="item">
+                                        <div class="img">
+                                            <img :src="'assets/images/orders/'+item.src+'.png'" :alt="item.src+' img' ">
+                                        </div>
+                                        <div class="texts">
+                                            <div class="text">
+                                                <p class="prod-name">{{item.name}}</p>
+                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</p>
+                                            </div>
+                                            <div class="item-btns">
+                                                <button class="add" @click="pushItem(i)">Add Item</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        <div>
+                    </template>
+                    <template v-if="newOrderItemList.length > 0">
+                        <div class="items">
+                            <ul>
+                                <li v-for="item in newOrderItemList" :key="item.id">
+                                    <div class="item">
+                                        <div class="img">
+                                            <img :src="'assets/images/orders/'+item.src+'.png'" :alt="item.src+' img' ">
+                                        </div>
+                                        <div class="texts">
+                                            <div class="text">
+                                                <p class="prod-name">{{item.name}}</p>
+                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</p>
+                                            </div>
+                                            <div class="item-btns">
+                                                <button class="remove" @click="deleItem(item.id)">Remove</button>
+                                                <div class="btns">
+                                                    <div class="btn">
+                                                        <button @click="minusBtn(item.id)"><img src="assets/images/orders/minus.png" alt="minus icon"></button>
+                                                    </div>
+                                                    <span>{{item.count}}</span>
+                                                    <div class="btn">
+                                                        <button @click="plusBtn(item.id)"><img src="assets/images/orders/plus.png" alt="plus icon"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <dl class="item-total">
+                                        <dt>Sub-total</dt>
+                                        <dd>₦<span>{{item.sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</dd>
+                                     </dl>   
+                                </li>
+                            </ul>
+                            <dl class="items-total">
+                                <dt>Total</dt>
+                                <dd>₦<span>{{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</dd>
+                            </dl>   
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="no-item">
+                            <div class="image">
+                                <img src="assets/images/orders/iconContainer.png" alt="main img">
+                            </div>
+                            <div class="texts">
+                                <h5>Add Products to Your Order</h5>
+                                <p>Search and add products to this order.</p>
+                            </div>
+                        </div>
+                    </template>
                 </article>
             </section>
             <div class="modal-btns">
@@ -139,7 +211,8 @@
 module.exports = {
     data() {
         return {
-            btnActive : this.$store.getters.btnActive
+            btnActive : this.$store.getters.btnActive,
+            itemSearch : '',
         }
     },
     methods: {
@@ -148,10 +221,37 @@ module.exports = {
         },
         toggleBtn(payload){
             this.$store.commit('toggleBtn', payload)
-        }
+        },
+        pushItem(payload){
+            this.$store.commit('productData/pushItem', payload)
+            this.itemSearch = ''
+        },
+        deleItem(payload){
+            this.$store.commit('productData/deleItem', payload)
+        },
+        plusBtn(payload){
+            this.$store.commit('productData/countPlus', payload)
+        },
+        minusBtn(payload){
+            this.$store.commit('productData/countMinus', payload)
+        },
+        calcItem(payload){
+            this.$store.commit('productData/calcItem', payload)
+        },
     },
     components: {
         'select-box' : SelectBox
-    }
+    },
+    computed: {
+        productData() {
+            return this.$store.getters["productData"].items
+        },
+        newOrderItemList() {
+            return this.$store.getters["productData/newOrderItemList"]
+        },
+        total() {
+            return this.$store.getters["productData/total"]
+        },
+    },
 }
 </script>

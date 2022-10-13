@@ -2342,6 +2342,7 @@ header .location .breadcrumb ul li::before {
 }
 .new-order section article {
   width: calc(50% - 25px);
+  position: relative;
 }
 @media (max-width: 768px) {
   .new-order section article {
@@ -2466,10 +2467,164 @@ header .location .breadcrumb ul li::before {
 .new-order section article .search {
   margin-top: 27px;
   background-color: #fff;
-  border: solid 1px #cfd3d4;
+  border: solid 1px #5e6366;
 }
 .new-order section article .search input::placeholder {
   color: #abafb1;
+}
+.new-order section article .items {
+  margin-top: 28px;
+}
+.new-order section article .items li {
+  border-bottom: 1px solid #f1f3f9;
+}
+.new-order section article .items li .item {
+  margin-top: 12px;
+  display: flex;
+}
+.new-order section article .items li .item .img {
+  margin-right: 14px;
+}
+.new-order section article .items li .item .texts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.new-order section article .items li .item .texts .text .prod-name {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #45464e;
+}
+.new-order section article .items li .item .texts .text .prod-price {
+  margin-top: 12px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #33343a;
+}
+.new-order section article .items li .item .texts .item-btns {
+  text-align: right;
+}
+.new-order section article .items li .item .texts .item-btns .remove {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #cc5f5f;
+}
+.new-order section article .items li .item .texts .item-btns .add {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #5570f1;
+  padding-bottom: 4px;
+}
+.new-order section article .items li .item .texts .item-btns .btns {
+  width: 114px;
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-order section article .items li .item .texts .item-btns .btns .btn {
+  width: 38px;
+  height: 23px;
+  border-radius: 8px;
+  background-color: rgba(94, 99, 102, 0.08);
+}
+.new-order section article .items li .item .texts .item-btns .btns .btn button {
+  width: 38px;
+  height: 23px;
+}
+.new-order section article .items li .item-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.new-order section article .items li .item-total dt {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #8b8d97;
+}
+.new-order section article .items li .item-total dd {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #33343a;
+}
+.new-order section article .items .items-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.new-order section article .items .items-total dt {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #8b8d97;
+}
+.new-order section article .items .items-total dd {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #33343a;
+}
+.new-order section article .search-item {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  padding: 12px 16px 20px;
+  margin-top: 0;
+  border-bottom: solid 1px #cfd3d4;
+  border-left: solid 1px #cfd3d4;
+  border-right: solid 1px #cfd3d4;
+  border-radius: 8px;
+}
+.new-order section article .search-item li {
+  padding: 8px 0 12px;
+}
+.new-order section article .search-item li .item {
+  margin-top: 0;
+}
+.new-order section article .search-item li .item .texts {
+  align-items: flex-end;
+}
+.new-order section article .no-item {
+  margin-top: 80px;
+}
+.new-order section article .no-item .image {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+.new-order section article .no-item .texts {
+  margin-top: 40px;
+  text-align: center;
+}
+.new-order section article .no-item .texts h5 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000;
+}
+.new-order section article .no-item .texts p {
+  margin-top: 12px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
 }
 .new-order .modal-btns {
   width: 50%;
