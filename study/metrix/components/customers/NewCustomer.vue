@@ -10,10 +10,87 @@
                 </div>
             </div>
             <section>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Temporibus veritatis unde ea, quaerat eligendi similique 
-                animi ipsam tempora voluptate distinctio exercitationem doloribus dolorem quos, 
-                facilis mollitia reprehenderit incidunt quod quisquam!
+                <article>
+                    <div class="modal-title">
+                        <h5>Customer Information</h5>
+                    </div>
+                    <ul class="form">
+                        <li class="input-box-area">
+                            <div class="input-box">
+                                <input type="text" placeholder="Customer Name">
+                            </div>
+                        </li>                          
+                        <li class="input-box-area">
+                            <div class="input-box">
+                                <input type="text" placeholder="Customer Email">
+                            </div>
+                        </li>
+                        <li class="input-box-area">
+                            <div class="input-box no-icon phone-box">
+                                <div class="select-box">
+                                    <div class="selected" @click="toggleBtn('settingSelect01')">
+                                        <div class="value">
+                                            <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                            +234
+                                        </div>
+                                    </div>
+                                    <ul v-show="btnActive.includes('settingSelect01')">
+                                        <li class="option">
+                                            <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                            +234
+                                        </li>
+                                        <li class="option">
+                                            <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                            +234
+                                        </li>
+                                        <li class="option">
+                                            <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                            +234
+                                        </li>
+                                        <li class="option">
+                                            <img src="assets/images/settings/ng1.png" alt="nigeria">
+                                            +234
+                                        </li>
+                                    </ul>
+                                </div>
+                                <input type="text" placeholder="08065650633">
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <div class="modal-title active-title">
+                        <h5>Add Address</h5>
+                        <div class="btn-area">
+                            <div class="btn" @click="toggleBtn('newCustomBtn01')" :class="{btnactive:btnActive.includes('newCustomBtn01')}">
+                                <button></button>
+                            </div>
+                        </div>
+                    </div>
+                    <template v-if="btnActive.includes('newCustomBtn01')">
+                        <ul class="form">
+                            <li class="input-box-area">
+                                <div class="input-box">
+                                    <input type="text" placeholder="Building No., Street Address">
+                                </div>
+                            </li>                          
+                            <li class="input-box-area">
+                                <div class="input-box">
+                                    <input type="text" placeholder="City">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="modal-title">
+                            <h5>Billing Address</h5>
+                            <div class="btn-area">
+                                <p>Same as Customer Address</p>
+                                <div class="btn" @click="toggleBtn('newOrderBtn02')" :class="{btnactive:btnActive.includes('newOrderBtn02')}">
+                                    <button></button>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </article>
             </section>
             <div class="modal-btns">
                 <button @click="toggleModal('newCustomer')">Cancel</button>

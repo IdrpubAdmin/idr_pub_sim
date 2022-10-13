@@ -1021,6 +1021,66 @@ article .no-bg-sel .select-box ul .option:hover {
   border-radius: 8px;
   background-color: #fff2e2;
 }
+.modal-wrap .modal-container section {
+  margin-top: 30px;
+}
+.modal-wrap .modal-container section article .modal-title {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-wrap .modal-container section article .modal-title h5 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #8b8d97;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area {
+  display: flex;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area p {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #83898c;
+  margin-right: 20px;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area .btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(85, 112, 241, 0.12);
+  padding: 2px;
+  cursor: pointer;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area .btn button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #bbc5cb;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area .btnactive {
+  text-align: right;
+  background-color: #5570f1;
+}
+.modal-wrap .modal-container section article .modal-title .btn-area .btnactive button {
+  background-color: #fff;
+}
+.modal-wrap .modal-container section article .input-box-area .input-box {
+  margin-top: 24px;
+}
+.modal-wrap .modal-container section article .input-box-area .input-box input {
+  padding-left: 16px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #53545c;
+}
+.modal-wrap .modal-container section article .input-box-area .input-box input::placeholder {
+  color: #abafb1;
+}
 .modal-wrap .modal-container .modal-btns {
   width: 400px;
   margin: 0 auto;
@@ -2333,7 +2393,6 @@ header .location .breadcrumb ul li::before {
 .new-order section {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 }
 @media (max-width: 768px) {
   .new-order section {
@@ -2352,65 +2411,8 @@ header .location .breadcrumb ul li::before {
     margin-top: 20px;
   }
 }
-.new-order section article .modal-title {
-  display: flex;
-  justify-content: space-between;
-}
-.new-order section article .modal-title h5 {
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #8b8d97;
-}
-.new-order section article .modal-title .btn-area {
-  display: flex;
-}
-.new-order section article .modal-title .btn-area p {
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #83898c;
-  margin-right: 20px;
-}
-.new-order section article .modal-title .btn-area .btn {
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: rgba(85, 112, 241, 0.12);
-  padding: 2px;
-  cursor: pointer;
-}
-.new-order section article .modal-title .btn-area .btn button {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #bbc5cb;
-}
-.new-order section article .modal-title .btn-area .btnactive {
-  text-align: right;
-  background-color: #5570f1;
-}
-.new-order section article .modal-title .btn-area .btnactive button {
-  background-color: #fff;
-}
 .new-order section article .form {
   margin-top: 27px;
-}
-.new-order section article .form .input-box-area .input-box {
-  margin-top: 24px;
-}
-.new-order section article .form .input-box-area .input-box input {
-  padding-left: 16px;
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #53545c;
-}
-.new-order section article .form .input-box-area .input-box input::placeholder {
-  color: #abafb1;
 }
 .new-order section article .form .form-item {
   margin-top: 24px;
@@ -2675,17 +2677,38 @@ header .location .breadcrumb ul li::before {
   grid-row: 3/4;
 }
 
-.new-customer {
-  width: 423px;
+.modal-wrap .new-customer {
+  max-width: 423px;
+  width: 100%;
   height: 513px;
 }
-.new-customer section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+.modal-wrap .new-customer.big-modal {
+  height: 785px;
 }
-.new-customer .modal-btns {
-  width: 100%;
+@media (max-width: 768px) {
+  .modal-wrap .new-customer {
+    width: calc(100% - 40px);
+  }
+}
+.modal-wrap .new-customer section article {
+  display: block;
+}
+.modal-wrap .new-customer section article .active-title {
+  justify-content: start;
+}
+.modal-wrap .new-customer section article .active-title h5 {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #83898c;
+  margin-right: 20px;
+}
+.modal-wrap .new-customer section article .modal-title {
+  margin-top: 24px;
+}
+.modal-wrap .new-customer .modal-btns {
+  max-width: 376px;
 }
 
 .settings {

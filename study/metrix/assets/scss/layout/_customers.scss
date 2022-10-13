@@ -19,16 +19,34 @@
         }
     }
 }
-
-.new-customer{
-    width: 423px;
-    height: 513px;
-    section{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-    }
-    .modal-btns{
+.modal-wrap {
+    .new-customer{
+        max-width: 423px;
         width: 100%;
+        height: 513px;
+        &.big-modal{
+            height: 785px;
+        }
+        @include mdq-tablet{
+            width: calc(100% - 40px);
+        }
+        section{
+            article{
+                display: block;
+                .active-title{
+                    justify-content: start;
+                    h5{
+                        @include fonts('Inter', 14, 400, 20, #83898c);
+                        margin-right: 20px;
+                    }
+                }  
+                .modal-title{
+                    margin-top: 24px;
+                }
+            }
+        }
+        .modal-btns{
+            max-width: 376px;
+        }
     }
 }

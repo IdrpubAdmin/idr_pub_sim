@@ -186,6 +186,58 @@ article{
                 background-color: #fff2e2;
             }
         }
+        section{
+            margin-top: 30px;
+            article{
+                .modal-title{
+                    display: flex;
+                    justify-content: space-between;
+                    h5{
+                        @include fonts('Inter', 16, 500, 20, #8b8d97);
+                    }
+                    .btn-area{
+                        display: flex;
+                        p{
+                            @include fonts('Inter', 14, 400, 20, #83898c);
+                            margin-right: 20px;
+                        }
+                        .btn{
+                            width: 40px;
+                            height: 20px;
+                            border-radius: 10px;
+                            background-color: rgba(85, 112, 241, 0.12);
+                            padding: 2px;
+                            cursor: pointer;
+                            button{
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background-color: #bbc5cb;
+                            }
+                        }     
+                        .btnactive{
+                            text-align: right;
+                            background-color: #5570f1;
+                            button{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                .input-box-area{
+                    .input-box{
+                        margin-top: 24px;
+                        input{
+                            padding-left: 16px;
+                            @include fonts('Inter', 16, 400, 20, #53545c);
+                        }
+                        input::placeholder{
+                            color: #abafb1;
+                        }
+                    }
+                }
+            }
+        }
         .modal-btns{
             width: 400px;
             margin: 0 auto;
