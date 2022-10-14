@@ -39,9 +39,17 @@
                                     <input type="text" placeholder="Cost Price">
                                 </div>
                             </li>
-                            <li class="input-box-area">
+                            <li class="input-box-area qty">
                                 <div class="input-box">
-                                    <input type="number" placeholder="Quantity in Stock">
+                                    <input type="number" placeholder="Quantity in Stock" v-model="qty">
+                                </div>
+                                <div class="btns">
+                                    <button class="up-btn" @click="++qty">
+                                        <img src="assets/images/inventory/up.png" alt="up icon">
+                                    </button>
+                                    <button class="down-btn" @click="--qty">
+                                        <img src="assets/images/inventory/down.png" alt="down icon">
+                                    </button>
                                 </div>
                             </li>
                             <li class="input-box-area">
@@ -195,7 +203,8 @@
 module.exports = {
     data() {
         return {
-            btnActive : this.$store.getters.btnActive
+            btnActive : this.$store.getters.btnActive,
+            qty : 0,
         }
     },
     methods: {

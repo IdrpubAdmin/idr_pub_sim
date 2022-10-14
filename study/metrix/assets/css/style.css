@@ -3004,6 +3004,7 @@ header .location .breadcrumb ul li::before {
 }
 .inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area {
   margin-top: 24px;
+  position: relative;
 }
 .inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area:first-child {
   margin-top: 0;
@@ -3026,6 +3027,24 @@ header .location .breadcrumb ul li::before {
 }
 .inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area textarea {
   height: 163px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .btns {
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  right: 4px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .btns button {
+  width: 40px;
+  height: 20px;
+  background-color: #dde2e5;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .btns .up-btn {
+  border-radius: 5px 5px 0 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .btns .down-btn {
+  margin-top: 3px;
+  border-radius: 0 0 5px 5px;
 }
 .inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .textarea p {
   font-size: 14px;

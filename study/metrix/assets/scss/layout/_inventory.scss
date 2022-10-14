@@ -100,6 +100,7 @@
                             margin-top: 24px;
                             .input-box-area{
                                 margin-top: 24px; 
+                                position: relative;
                                 &:first-child{
                                     margin-top: 0;
                                 }
@@ -117,6 +118,23 @@
                                 }
                                 textarea{
                                     height: 163px;
+                                }
+                                .btns{
+                                    width: 40px;
+                                    position: absolute;
+                                    top: 5px; right: 4px;
+                                    button{
+                                        width: 40px;
+                                        height: 20px;
+                                        background-color: #dde2e5;
+                                    }
+                                    .up-btn{
+                                        border-radius: 5px 5px 0 0;
+                                    }
+                                    .down-btn{
+                                        margin-top: 3px;
+                                        border-radius: 0 0 5px 5px;
+                                    }
                                 }
                             }
                             .textarea{

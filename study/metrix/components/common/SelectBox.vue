@@ -19,7 +19,7 @@ module.exports = {
     methods: {
         toggleBtn(payload){
             this.$store.commit('toggleBtn', payload)
-        }
+        },
     },
     props: {
         option : Array,
