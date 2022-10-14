@@ -8,6 +8,13 @@
         }
     }
     .view-custom{
+        .view-header{
+            .btns{
+                .select-box{
+                    width: 180px;
+                }
+            }
+        }
         .contents{
             grid-template-columns: 4fr 5fr 3fr;
             grid-template-rows: 20% 20% auto;
@@ -29,6 +36,10 @@
         }
         @include mdq-tablet{
             width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            &.big-modal{
+                height: calc(100% - 40px);
+            }
         }
         section{
             article{
@@ -42,6 +53,16 @@
                 }  
                 .modal-title{
                     margin-top: 24px;
+                }
+                .form{
+                    .double{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 24px;
+                        .select-box{
+                            width: calc(50% - 8px);
+                        }
+                    }
                 }
             }
         }

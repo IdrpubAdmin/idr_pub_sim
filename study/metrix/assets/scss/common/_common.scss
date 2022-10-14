@@ -64,6 +64,40 @@ button{
     }
 }
 
+textarea{
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(239, 241, 249, 0.6);
+    @include fonts('Inter', 16, 400, 18, #000);
+}
+textarea::placeholder{
+    color: #abafb1;
+}
+
+.toggle-btn{
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(85, 112, 241, 0.12);
+    padding: 2px;
+    cursor: pointer;
+    button{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #bbc5cb;
+    }
+}     
+.btnactive{
+    text-align: right;
+    background-color: #5570f1;
+    button{
+        background-color: #fff;
+    }
+}
+
 article{
     .no-bg-sel{
         .select-box{
@@ -131,7 +165,7 @@ article{
                 }
             }
             .value{
-                @include fonts ('Inter', 20, 500, 30, #45464e);
+                @include fonts ('Poppins', 20, 500, 30, #45464e);
                 margin-top: 10px;
                 display: flex;
                 align-items: center;
@@ -200,27 +234,6 @@ article{
                         p{
                             @include fonts('Inter', 14, 400, 20, #83898c);
                             margin-right: 20px;
-                        }
-                        .btn{
-                            width: 40px;
-                            height: 20px;
-                            border-radius: 10px;
-                            background-color: rgba(85, 112, 241, 0.12);
-                            padding: 2px;
-                            cursor: pointer;
-                            button{
-                                width: 16px;
-                                height: 16px;
-                                border-radius: 50%;
-                                background-color: #bbc5cb;
-                            }
-                        }     
-                        .btnactive{
-                            text-align: right;
-                            background-color: #5570f1;
-                            button{
-                                background-color: #fff;
-                            }
                         }
                     }
                 }
@@ -320,8 +333,10 @@ article{
             }
         }
     }
-    .view-section{
-        .view-header{
+    .view-section,
+    .new-section{
+        .view-header,
+        .new-header{
             @include mdq-desktop{
                 align-items: start;
             }
@@ -366,6 +381,9 @@ article{
             }
             .btns{
                 display: flex;
+                @include mdq-mobile{
+                    justify-content: flex-end;
+                }
                 .select-box {
                     width: 200px;
                     background-image: url('../images/orders/fi_chevron-down.png');
@@ -419,8 +437,7 @@ article{
                             font-size: 12px;
                         }
                         .value{
-                            font-size: 14px;
-                            line-height: 17px;
+                            @include fonts ('Inter', 14, 500, 17, #45464e);
                             margin-top: 8px;
                         }
                     }

@@ -37,4 +37,289 @@
             }
         }
     }
+    .new-inven{
+        .inventory-header{
+            @include mdq-tablet{
+                display: flex;
+            }
+            .btns{
+                .select-box{
+                    width: 170px;
+                }
+                .btn{
+                    width: 160px;
+                    text-align: center;
+                    background-color: #5570f1;
+                }
+            }
+        }
+        .contents{
+            grid-template-columns: 813fr 410fr;
+            grid-template-rows: auto;
+            .product-detail{
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                @include mdq-tablet{
+                    display: block;
+                }
+                .detail-list{
+                    width: calc(50% - 30px);
+                    @include mdq-tablet{
+                        margin-top: 24px;
+                        width: 100%;
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+                    .form-wrap{
+                        margin-top: 24px;
+                        &:first-child{
+                            margin-top: 0;
+                            .form{
+                                margin-top: 0;
+                            }
+                        }
+                        .title{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            h5{
+                                @include fonts('inter', 16, 500, 20, #8b8d97);
+                            }
+                            .btn-area{
+                                display: flex;
+                                justify-content: space-between;
+                                p{
+                                    @include fonts('inter', 14, 400, 20, #2b2f32);
+                                    margin-right: 20px;
+                                }
+                            }
+                        }
+                        .form{
+                            margin-top: 24px;
+                            .input-box-area{
+                                margin-top: 24px; 
+                                &:first-child{
+                                    margin-top: 0;
+                                }
+                                p{
+                                    @include fonts('inter', 12, 400, 15, #5e6366);
+                                }
+                                .input-box{
+                                    padding-left: 16px;
+                                    input{
+                                        width: 100%;
+                                    }
+                                    input::placeholder{
+                                        color: #abafb1;
+                                    }
+                                }
+                                textarea{
+                                    height: 163px;
+                                }
+                            }
+                            .textarea{
+                                p{
+                                    font-size: 14px;
+                                }
+                                textarea{
+                                    margin-top: 8px;
+                                }
+                                span{
+                                    margin-top: 4px;
+                                    @include fonts('inter', 14, 400, 17, #abafb1);
+                                }
+                            }
+                            .icon-in{
+                                .input-box{
+                                    padding-left: 0;
+                                }
+                            }
+                            .space{
+                                margin-top: 8px;
+                            }
+                            .double{
+                                display: flex;
+                                justify-content: space-between;
+                                .input-box{
+                                    width: calc(50% - 6px);
+                                    margin-top: 0;
+                                }
+                                .select-box{
+                                    width: calc(50% - 6px);
+                                    height: 52px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .product-image{
+                padding: 20px;   
+                .btns{
+                    width: 69px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: space-between;
+                    top: 17px;
+                    right: 19px;
+                    button{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 8px;
+                        background-color: #fff2e2;
+                    }
+                }     
+                .main-img{
+                    width: 100%;
+                    border-radius: 12px;
+                    border: solid 1px #e1e2e9;
+                    background-color: #fff; 
+                    position: relative;
+                    height: 302px;
+                    .image{
+                        width: 306px;
+                        height: 100%;
+                        margin: 0 auto;
+                        @include mdq-mobile{
+                            width: 100%;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                .addition-img{
+                    .title{
+                        margin-top: 12px;
+                        h5{
+                            @include fonts('inter', 16, 500, 20, #45464e);
+                        }
+                    }
+                    .upload-img{
+                        display: flex;
+                        justify-content: space-between;
+                        @include mdq-mobile{
+                            display: block;
+                        }
+                        .upload-box{
+                            margin-top: 12px;
+                            border-radius: 12px;
+                            border: solid 1px #e1e2e9;
+                            background-color: #fff;
+                            position: relative;
+                            width: calc(50% - 14px);
+                            height: 167px;
+                            @include mdq-mobile{
+                                width: 100%;
+                            }
+                            .image{
+                                width: 172px;
+                                height: 100%;
+                                margin: 0 auto;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .btns{
+                                top: 13px;
+                                right: 14px;
+                            }
+                        }
+                        .no-img{
+                            background-color: #f4f5fa;
+                            .image{
+                                width: 56px;
+                                height: 56px;
+                                margin: 0 auto;
+                                margin-top: 41px;
+                            }   
+                            .text{
+                                margin-top: 12px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    margin-right: 10px;
+                                }
+                                p{
+                                    @include fonts('inter', 14, 500, 17, #5570f1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .view-inven{
+        .view-header{
+            .btns{
+                .select-box{
+                    width: 160px;
+                }
+                .btn{
+                    width: 160px;
+                    text-align: center;
+                }
+            }
+        }
+        .contents{
+            grid-template-rows: 20% 20% auto;
+            .flex-area{
+                grid-column: 1/3;
+                grid-row: 1/2;
+                display: flex;
+                justify-content: space-between;
+                .product-img{
+                    width: calc(15% - 10px);
+                    min-width: 154px;
+                    .image{
+                        width: 124px;
+                        height: 124px;
+                        position: relative;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            @include center-align;
+                        }
+                    }
+                }
+                .profile{
+                    width: calc(33% - 20px);
+                    ul{
+                        margin-top: 60px;
+                    }
+                }
+                article:nth-child(3){
+                    width: calc(26% - 10px);
+                }
+                article:nth-child(4){
+                    width: calc(26% - 20px);
+                }
+                @include mdq-desktop{
+                    display: block;
+                    .product-img{
+                        display: none;
+                    }
+                    .profile,
+                    article:nth-child(3),
+                    article:nth-child(4){
+                        width: 100%;
+                    }
+                }
+            }
+            .table-area {
+                padding: 20px;
+                grid-column: 1/3;
+                grid-row: 3/4;
+            }
+        }
+    }
 }

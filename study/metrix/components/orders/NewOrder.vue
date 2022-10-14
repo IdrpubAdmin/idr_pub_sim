@@ -15,7 +15,7 @@
                         <h5>Order Details</h5>
                         <div class="btn-area">
                             <p>New Customer</p>
-                            <div class="btn" @click="toggleBtn('newOrderBtn01')" :class="{btnactive:btnActive.includes('newOrderBtn01')}">
+                            <div class="toggle-btn" @click="toggleBtn('newOrderBtn01')" :class="{btnactive:btnActive.includes('newOrderBtn01')}">
                                 <button></button>
                             </div>
                         </div>

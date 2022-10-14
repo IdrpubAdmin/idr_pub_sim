@@ -10,7 +10,7 @@ metrix
    ├  assets : 정적 파일 소스
    │  ├  css  : css폴더
    │  ├  images : images폴더
-   │  ├  js : js폴더 (동작관련)
+   │  ├  js : js폴더 (데이터, 동작관련)
    │  ├  plugin : plugin폴더
    │  ├  scss  : scss폴더
    │  └  webfonts : font폴더
@@ -27,20 +27,35 @@ metrix
 components
    ├  common : 공통 컴포넌트
    │  ├  AuthMain  : login,sidn up 페이지 메인
-   │  ├  HeaderMain  : header 컴포넌트
-   │  ├  LogIn  : login 컴포넌트
-   │  ├  SideNavigation  : Navigation 컴포넌트
-   │  └  SignUp  : sidn up 컴포넌트
+   │  ├  HeaderMain  : header
+   │  ├  LogIn  : login 페이지
+   │  ├  SelectBox : Select 컴포넌트
+   │  ├  SideNavigation  : Navigation
+   │  ├  SignUp  : sidn up 페이지
+   │  └  TableBox : Table 컴포넌트
    ├  customers  : customers 페이지 컴포넌트
-   │  └  CustomersMain  : lcustomers 페이지 메인
-   ├  dashboard  : dashboard 페이지 컴포넌트
+   │  ├  CustomersMain  : customers 페이지 메인
+   │  ├  CustomersSummary : customers 페이지
+   │  ├  NewCustomer : customers > new 모달 페이지
+   │  └  ViewCustomer : customers > biew 페이지
+   ├  dashboard  : home 페이지 컴포넌트
    │  └  DashboardMain  : dashboard 페이지 메인
    ├  inventory  : inventory 페이지 컴포넌트
-   │  └  InventoryMain  : inventory 페이지 메인
+   │  ├  InventoryMain  : inventory 페이지 메인
+   │  ├  InventorySummary  : inventory 페이지
+   │  ├  NewInventory  : inventory > new 페이지
+   │  └  ViewInventory  : inventory > view 페이지
    ├  orders  : orders 페이지 컴포넌트
-   │  └  OrdersMain  : orders 페이지 메인
+   │  ├  NewOrder  : orders > New 페이지
+   │  ├  OrdersMain  : orders 페이지 메인
+   │  ├  OrdersSummary  : orders 페이지
+   │  └  ViewOrder  : orders > View 페이지
    └  settings  : settings 페이지 컴포넌트
-      └  SettingsMain  : settings 페이지 메인
+      ├  SettingsAccount  : settings 페이지
+      ├  SettingsBusiness  : settings > business 페이지(빈페이지)
+      ├  SettingsMain  : settings 페이지 메인
+      └  SettingsSecurity  : settings > security 페이지(빈페이지)
+
 ```
 
 
@@ -51,14 +66,17 @@ components
 	'common/normalize_v3.0.3.scss',
 	'common/normalize_v8.0.1.scss',
 	'common/reset.scss',
-	'common/common.scss',
 	'utils/mixin.scss',
 	'utils/variables.scss',
+	'common/common.scss',
+	'layout/container.scss',
 	'layout/navigation.scss',
 	'layout/auth.scss',
 	'layout/header.scss',
-	'layout/container.scss',
 	'layout/dashboard.scss',
+	'layout/orders.scss',
+	'layout/inventory.scss',
+	'layout/customers.scss',
 	'layout/settings.scss'
   ```
 

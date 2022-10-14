@@ -73,7 +73,7 @@
             <article class="summary">
                 <div class="header no-bg-sel">
                     <div class="icon-box point">
-                        <img src="assets/images/dashboard/Graph.png" alt="graph icon">
+                        <img src="assets/images/inventory/fi_pie-chart.png" alt="chart icon">
                     </div>
                     <select-box
                         :option="['This Day', 'This Week', 'This Month', 'This Year', 'All-time']"

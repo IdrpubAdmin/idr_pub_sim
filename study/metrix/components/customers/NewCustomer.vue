@@ -62,7 +62,7 @@
                     <div class="modal-title active-title">
                         <h5>Add Address</h5>
                         <div class="btn-area">
-                            <div class="btn" @click="toggleBtn('newCustomBtn01')" :class="{btnactive:btnActive.includes('newCustomBtn01')}">
+                            <div class="toggle-btn" @click="toggleBtn('newCustomBtn01')" :class="{btnactive:btnActive.includes('newCustomBtn01')}">
                                 <button></button>
                             </div>
                         </div>
@@ -79,12 +79,24 @@
                                     <input type="text" placeholder="City">
                                 </div>
                             </li>
+                            <li class="input-box-area double">
+                                <select-box
+                                    :option="['Nigeria', 'Nigeria', 'Nigeria']"
+                                    :selected="'Nigeria'"
+                                    :name="'settingSelect02'"
+                                ></select-box>
+                                <select-box
+                                    :option="['Lagos', 'Lagos', 'Lagos']"
+                                    :selected="'Lagos'"
+                                    :name="'settingSelect03'"
+                                ></select-box>
+                            </li>
                         </ul>
                         <div class="modal-title">
                             <h5>Billing Address</h5>
                             <div class="btn-area">
                                 <p>Same as Customer Address</p>
-                                <div class="btn" @click="toggleBtn('newOrderBtn02')" :class="{btnactive:btnActive.includes('newOrderBtn02')}">
+                                <div class="toggle-btn" @click="toggleBtn('newOrderBtn02')" :class="{btnactive:btnActive.includes('newOrderBtn02')}">
                                     <button></button>
                                 </div>
                             </div>

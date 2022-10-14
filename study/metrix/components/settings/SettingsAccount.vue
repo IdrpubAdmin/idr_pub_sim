@@ -88,31 +88,19 @@
                     <li class="input-box-area double">
                         <div class="select-box-area">
                             <p>Country</p>
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('settingSelect02')">
-                                    <div class="value">Nigeria</div>
-                                </div>
-                                <ul v-show="btnActive.includes('settingSelect02')">
-                                    <li class="option">Nigeria</li>
-                                    <li class="option">Nigeria</li>
-                                    <li class="option">Nigeria</li>
-                                    <li class="option">Nigeria</li>
-                                </ul>
-                            </div>
+                            <select-box
+                                :option="['Nigeria', 'Nigeria', 'Nigeria']"
+                                :selected="'Nigeria'"
+                                :name="'settingSelect02'"
+                            ></select-box>
                         </div>
                         <div class="select-box-area">
                             <p>State</p>
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('settingSelect03')">
-                                    <div class="value">Lagos</div>
-                                </div>
-                                <ul v-show="btnActive.includes('settingSelect03')">
-                                    <li class="option">Lagos</li>
-                                    <li class="option">Lagos</li>
-                                    <li class="option">Lagos</li>
-                                    <li class="option">Lagos</li>
-                                </ul>
-                            </div>
+                            <select-box
+                                :option="['Lagos', 'Lagos', 'Lagos']"
+                                :selected="'Lagos'"
+                                :name="'settingSelect03'"
+                            ></select-box>
                         </div>
                     </li>
                 </ul>
@@ -146,5 +134,8 @@ module.exports = {
             this.$store.commit('toggleBtn', payload)
         }
     },
+    components: {
+        'select-box' : SelectBox
+    }
 }
 </script>

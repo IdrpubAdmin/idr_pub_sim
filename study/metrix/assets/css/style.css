@@ -870,6 +870,46 @@ button {
   color: #000;
 }
 
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 8px;
+  background-color: rgba(239, 241, 249, 0.6);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+}
+
+textarea::placeholder {
+  color: #abafb1;
+}
+
+.toggle-btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(85, 112, 241, 0.12);
+  padding: 2px;
+  cursor: pointer;
+}
+.toggle-btn button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #bbc5cb;
+}
+
+.btnactive {
+  text-align: right;
+  background-color: #5570f1;
+}
+.btnactive button {
+  background-color: #fff;
+}
+
 article .no-bg-sel .select-box {
   background-color: #fff;
   background-image: url("../images/settings/fi_chevron-down.png");
@@ -951,7 +991,7 @@ article .no-bg-sel .select-box ul .option:hover {
   color: #cc5f5f;
 }
 .summary ul li .value {
-  font-family: "Inter";
+  font-family: "Poppins";
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -1045,27 +1085,6 @@ article .no-bg-sel .select-box ul .option:hover {
   line-height: 20px;
   color: #83898c;
   margin-right: 20px;
-}
-.modal-wrap .modal-container section article .modal-title .btn-area .btn {
-  width: 40px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: rgba(85, 112, 241, 0.12);
-  padding: 2px;
-  cursor: pointer;
-}
-.modal-wrap .modal-container section article .modal-title .btn-area .btn button {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #bbc5cb;
-}
-.modal-wrap .modal-container section article .modal-title .btn-area .btnactive {
-  text-align: right;
-  background-color: #5570f1;
-}
-.modal-wrap .modal-container section article .modal-title .btn-area .btnactive button {
-  background-color: #fff;
 }
 .modal-wrap .modal-container section article .input-box-area .input-box {
   margin-top: 24px;
@@ -1195,33 +1214,96 @@ article .no-bg-sel .select-box ul .option:hover {
   }
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header, .customers .view-section .view-header, .inventory .view-section .view-header {
+  .orders .view-section .view-header,
+.orders .view-section .new-header,
+.orders .new-section .view-header,
+.orders .new-section .new-header, .customers .view-section .view-header,
+.customers .view-section .new-header,
+.customers .new-section .view-header,
+.customers .new-section .new-header, .inventory .view-section .view-header,
+.inventory .view-section .new-header,
+.inventory .new-section .view-header,
+.inventory .new-section .new-header {
     align-items: start;
   }
 }
 @media (max-width: 480px) {
-  .orders .view-section .view-header, .customers .view-section .view-header, .inventory .view-section .view-header {
+  .orders .view-section .view-header,
+.orders .view-section .new-header,
+.orders .new-section .view-header,
+.orders .new-section .new-header, .customers .view-section .view-header,
+.customers .view-section .new-header,
+.customers .new-section .view-header,
+.customers .new-section .new-header, .inventory .view-section .view-header,
+.inventory .view-section .new-header,
+.inventory .new-section .view-header,
+.inventory .new-section .new-header {
     display: block;
   }
 }
-.orders .view-section .view-header ul, .customers .view-section .view-header ul, .inventory .view-section .view-header ul {
+.orders .view-section .view-header ul,
+.orders .view-section .new-header ul,
+.orders .new-section .view-header ul,
+.orders .new-section .new-header ul, .customers .view-section .view-header ul,
+.customers .view-section .new-header ul,
+.customers .new-section .view-header ul,
+.customers .new-section .new-header ul, .inventory .view-section .view-header ul,
+.inventory .view-section .new-header ul,
+.inventory .new-section .view-header ul,
+.inventory .new-section .new-header ul {
   display: flex;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul, .customers .view-section .view-header ul, .inventory .view-section .view-header ul {
+  .orders .view-section .view-header ul,
+.orders .view-section .new-header ul,
+.orders .new-section .view-header ul,
+.orders .new-section .new-header ul, .customers .view-section .view-header ul,
+.customers .view-section .new-header ul,
+.customers .new-section .view-header ul,
+.customers .new-section .new-header ul, .inventory .view-section .view-header ul,
+.inventory .view-section .new-header ul,
+.inventory .new-section .view-header ul,
+.inventory .new-section .new-header ul {
     display: block;
   }
 }
-.orders .view-section .view-header ul li, .customers .view-section .view-header ul li, .inventory .view-section .view-header ul li {
+.orders .view-section .view-header ul li,
+.orders .view-section .new-header ul li,
+.orders .new-section .view-header ul li,
+.orders .new-section .new-header ul li, .customers .view-section .view-header ul li,
+.customers .view-section .new-header ul li,
+.customers .new-section .view-header ul li,
+.customers .new-section .new-header ul li, .inventory .view-section .view-header ul li,
+.inventory .view-section .new-header ul li,
+.inventory .new-section .view-header ul li,
+.inventory .new-section .new-header ul li {
   display: flex;
   margin-right: 24px;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul li, .customers .view-section .view-header ul li, .inventory .view-section .view-header ul li {
+  .orders .view-section .view-header ul li,
+.orders .view-section .new-header ul li,
+.orders .new-section .view-header ul li,
+.orders .new-section .new-header ul li, .customers .view-section .view-header ul li,
+.customers .view-section .new-header ul li,
+.customers .new-section .view-header ul li,
+.customers .new-section .new-header ul li, .inventory .view-section .view-header ul li,
+.inventory .view-section .new-header ul li,
+.inventory .new-section .view-header ul li,
+.inventory .new-section .new-header ul li {
     margin-right: 8px;
   }
 }
-.orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p, .inventory .view-section .view-header ul li p {
+.orders .view-section .view-header ul li p,
+.orders .view-section .new-header ul li p,
+.orders .new-section .view-header ul li p,
+.orders .new-section .new-header ul li p, .customers .view-section .view-header ul li p,
+.customers .view-section .new-header ul li p,
+.customers .new-section .view-header ul li p,
+.customers .new-section .new-header ul li p, .inventory .view-section .view-header ul li p,
+.inventory .view-section .new-header ul li p,
+.inventory .new-section .view-header ul li p,
+.inventory .new-section .new-header ul li p {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
@@ -1229,27 +1311,72 @@ article .no-bg-sel .select-box ul .option:hover {
   color: #45464e;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul li p, .customers .view-section .view-header ul li p, .inventory .view-section .view-header ul li p {
+  .orders .view-section .view-header ul li p,
+.orders .view-section .new-header ul li p,
+.orders .new-section .view-header ul li p,
+.orders .new-section .new-header ul li p, .customers .view-section .view-header ul li p,
+.customers .view-section .new-header ul li p,
+.customers .new-section .view-header ul li p,
+.customers .new-section .new-header ul li p, .inventory .view-section .view-header ul li p,
+.inventory .view-section .new-header ul li p,
+.inventory .new-section .view-header ul li p,
+.inventory .new-section .new-header ul li p {
     font-size: 14px;
     line-height: 26px;
   }
 }
-.orders .view-section .view-header ul li p span, .customers .view-section .view-header ul li p span, .inventory .view-section .view-header ul li p span {
+.orders .view-section .view-header ul li p span,
+.orders .view-section .new-header ul li p span,
+.orders .new-section .view-header ul li p span,
+.orders .new-section .new-header ul li p span, .customers .view-section .view-header ul li p span,
+.customers .view-section .new-header ul li p span,
+.customers .new-section .view-header ul li p span,
+.customers .new-section .new-header ul li p span, .inventory .view-section .view-header ul li p span,
+.inventory .view-section .new-header ul li p span,
+.inventory .new-section .view-header ul li p span,
+.inventory .new-section .new-header ul li p span {
   color: #8b8d97;
 }
-.orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image, .inventory .view-section .view-header ul li .image {
+.orders .view-section .view-header ul li .image,
+.orders .view-section .new-header ul li .image,
+.orders .new-section .view-header ul li .image,
+.orders .new-section .new-header ul li .image, .customers .view-section .view-header ul li .image,
+.customers .view-section .new-header ul li .image,
+.customers .new-section .view-header ul li .image,
+.customers .new-section .new-header ul li .image, .inventory .view-section .view-header ul li .image,
+.inventory .view-section .new-header ul li .image,
+.inventory .new-section .view-header ul li .image,
+.inventory .new-section .new-header ul li .image {
   width: 36px;
   height: 36px;
   margin-left: 4px;
   position: relative;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul li .image, .customers .view-section .view-header ul li .image, .inventory .view-section .view-header ul li .image {
+  .orders .view-section .view-header ul li .image,
+.orders .view-section .new-header ul li .image,
+.orders .new-section .view-header ul li .image,
+.orders .new-section .new-header ul li .image, .customers .view-section .view-header ul li .image,
+.customers .view-section .new-header ul li .image,
+.customers .new-section .view-header ul li .image,
+.customers .new-section .new-header ul li .image, .inventory .view-section .view-header ul li .image,
+.inventory .view-section .new-header ul li .image,
+.inventory .new-section .view-header ul li .image,
+.inventory .new-section .new-header ul li .image {
     width: 26px;
     height: 26px;
   }
 }
-.orders .view-section .view-header ul li .image img, .customers .view-section .view-header ul li .image img, .inventory .view-section .view-header ul li .image img {
+.orders .view-section .view-header ul li .image img,
+.orders .view-section .new-header ul li .image img,
+.orders .new-section .view-header ul li .image img,
+.orders .new-section .new-header ul li .image img, .customers .view-section .view-header ul li .image img,
+.customers .view-section .new-header ul li .image img,
+.customers .new-section .view-header ul li .image img,
+.customers .new-section .new-header ul li .image img, .inventory .view-section .view-header ul li .image img,
+.inventory .view-section .new-header ul li .image img,
+.inventory .new-section .view-header ul li .image img,
+.inventory .new-section .new-header ul li .image img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1257,10 +1384,42 @@ article .no-bg-sel .select-box ul .option:hover {
   right: 0;
   margin: auto;
 }
-.orders .view-section .view-header .btns, .customers .view-section .view-header .btns, .inventory .view-section .view-header .btns {
+.orders .view-section .view-header .btns,
+.orders .view-section .new-header .btns,
+.orders .new-section .view-header .btns,
+.orders .new-section .new-header .btns, .customers .view-section .view-header .btns,
+.customers .view-section .new-header .btns,
+.customers .new-section .view-header .btns,
+.customers .new-section .new-header .btns, .inventory .view-section .view-header .btns,
+.inventory .view-section .new-header .btns,
+.inventory .new-section .view-header .btns,
+.inventory .new-section .new-header .btns {
   display: flex;
 }
-.orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box, .inventory .view-section .view-header .btns .select-box {
+@media (max-width: 480px) {
+  .orders .view-section .view-header .btns,
+.orders .view-section .new-header .btns,
+.orders .new-section .view-header .btns,
+.orders .new-section .new-header .btns, .customers .view-section .view-header .btns,
+.customers .view-section .new-header .btns,
+.customers .new-section .view-header .btns,
+.customers .new-section .new-header .btns, .inventory .view-section .view-header .btns,
+.inventory .view-section .new-header .btns,
+.inventory .new-section .view-header .btns,
+.inventory .new-section .new-header .btns {
+    justify-content: flex-end;
+  }
+}
+.orders .view-section .view-header .btns .select-box,
+.orders .view-section .new-header .btns .select-box,
+.orders .new-section .view-header .btns .select-box,
+.orders .new-section .new-header .btns .select-box, .customers .view-section .view-header .btns .select-box,
+.customers .view-section .new-header .btns .select-box,
+.customers .new-section .view-header .btns .select-box,
+.customers .new-section .new-header .btns .select-box, .inventory .view-section .view-header .btns .select-box,
+.inventory .view-section .new-header .btns .select-box,
+.inventory .new-section .view-header .btns .select-box,
+.inventory .new-section .new-header .btns .select-box {
   width: 200px;
   background-image: url("../images/orders/fi_chevron-down.png");
   background-color: #1c1d22;
@@ -1268,36 +1427,108 @@ article .no-bg-sel .select-box ul .option:hover {
   margin-right: 24px;
 }
 @media (max-width: 768px) {
-  .orders .view-section .view-header .btns .select-box, .customers .view-section .view-header .btns .select-box, .inventory .view-section .view-header .btns .select-box {
+  .orders .view-section .view-header .btns .select-box,
+.orders .view-section .new-header .btns .select-box,
+.orders .new-section .view-header .btns .select-box,
+.orders .new-section .new-header .btns .select-box, .customers .view-section .view-header .btns .select-box,
+.customers .view-section .new-header .btns .select-box,
+.customers .new-section .view-header .btns .select-box,
+.customers .new-section .new-header .btns .select-box, .inventory .view-section .view-header .btns .select-box,
+.inventory .view-section .new-header .btns .select-box,
+.inventory .new-section .view-header .btns .select-box,
+.inventory .new-section .new-header .btns .select-box {
     margin-right: 0;
     display: none;
   }
 }
-.orders .view-section .view-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected, .inventory .view-section .view-header .btns .select-box .selected {
+.orders .view-section .view-header .btns .select-box .selected,
+.orders .view-section .new-header .btns .select-box .selected,
+.orders .new-section .view-header .btns .select-box .selected,
+.orders .new-section .new-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected,
+.customers .view-section .new-header .btns .select-box .selected,
+.customers .new-section .view-header .btns .select-box .selected,
+.customers .new-section .new-header .btns .select-box .selected, .inventory .view-section .view-header .btns .select-box .selected,
+.inventory .view-section .new-header .btns .select-box .selected,
+.inventory .new-section .view-header .btns .select-box .selected,
+.inventory .new-section .new-header .btns .select-box .selected {
   padding: 8px 16px;
 }
-.orders .view-section .view-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value, .inventory .view-section .view-header .btns .select-box .selected .value {
+.orders .view-section .view-header .btns .select-box .selected .value,
+.orders .view-section .new-header .btns .select-box .selected .value,
+.orders .new-section .view-header .btns .select-box .selected .value,
+.orders .new-section .new-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value,
+.customers .view-section .new-header .btns .select-box .selected .value,
+.customers .new-section .view-header .btns .select-box .selected .value,
+.customers .new-section .new-header .btns .select-box .selected .value, .inventory .view-section .view-header .btns .select-box .selected .value,
+.inventory .view-section .new-header .btns .select-box .selected .value,
+.inventory .new-section .view-header .btns .select-box .selected .value,
+.inventory .new-section .new-header .btns .select-box .selected .value {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #fff;
 }
-.orders .view-section .view-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul, .inventory .view-section .view-header .btns .select-box ul {
+.orders .view-section .view-header .btns .select-box ul,
+.orders .view-section .new-header .btns .select-box ul,
+.orders .new-section .view-header .btns .select-box ul,
+.orders .new-section .new-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul,
+.customers .view-section .new-header .btns .select-box ul,
+.customers .new-section .view-header .btns .select-box ul,
+.customers .new-section .new-header .btns .select-box ul, .inventory .view-section .view-header .btns .select-box ul,
+.inventory .view-section .new-header .btns .select-box ul,
+.inventory .new-section .view-header .btns .select-box ul,
+.inventory .new-section .new-header .btns .select-box ul {
   display: block;
 }
-.orders .view-section .view-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option, .inventory .view-section .view-header .btns .select-box ul .option {
+.orders .view-section .view-header .btns .select-box ul .option,
+.orders .view-section .new-header .btns .select-box ul .option,
+.orders .new-section .view-header .btns .select-box ul .option,
+.orders .new-section .new-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option,
+.customers .view-section .new-header .btns .select-box ul .option,
+.customers .new-section .view-header .btns .select-box ul .option,
+.customers .new-section .new-header .btns .select-box ul .option, .inventory .view-section .view-header .btns .select-box ul .option,
+.inventory .view-section .new-header .btns .select-box ul .option,
+.inventory .new-section .view-header .btns .select-box ul .option,
+.inventory .new-section .new-header .btns .select-box ul .option {
   font-size: 14px;
 }
-.orders .view-section .view-header .btns .select-box ul .option:hover, .customers .view-section .view-header .btns .select-box ul .option:hover, .inventory .view-section .view-header .btns .select-box ul .option:hover {
+.orders .view-section .view-header .btns .select-box ul .option:hover,
+.orders .view-section .new-header .btns .select-box ul .option:hover,
+.orders .new-section .view-header .btns .select-box ul .option:hover,
+.orders .new-section .new-header .btns .select-box ul .option:hover, .customers .view-section .view-header .btns .select-box ul .option:hover,
+.customers .view-section .new-header .btns .select-box ul .option:hover,
+.customers .new-section .view-header .btns .select-box ul .option:hover,
+.customers .new-section .new-header .btns .select-box ul .option:hover, .inventory .view-section .view-header .btns .select-box ul .option:hover,
+.inventory .view-section .new-header .btns .select-box ul .option:hover,
+.inventory .new-section .view-header .btns .select-box ul .option:hover,
+.inventory .new-section .new-header .btns .select-box ul .option:hover {
   color: #000;
 }
-.orders .view-section .view-header .btns .btn, .customers .view-section .view-header .btns .btn, .inventory .view-section .view-header .btns .btn {
+.orders .view-section .view-header .btns .btn,
+.orders .view-section .new-header .btns .btn,
+.orders .new-section .view-header .btns .btn,
+.orders .new-section .new-header .btns .btn, .customers .view-section .view-header .btns .btn,
+.customers .view-section .new-header .btns .btn,
+.customers .new-section .view-header .btns .btn,
+.customers .new-section .new-header .btns .btn, .inventory .view-section .view-header .btns .btn,
+.inventory .view-section .new-header .btns .btn,
+.inventory .new-section .view-header .btns .btn,
+.inventory .new-section .new-header .btns .btn {
   background-color: #cc5f5f;
   padding: 0 16px;
   border-radius: 12px;
 }
-.orders .view-section .view-header .btns .btn a, .customers .view-section .view-header .btns .btn a, .inventory .view-section .view-header .btns .btn a {
+.orders .view-section .view-header .btns .btn a,
+.orders .view-section .new-header .btns .btn a,
+.orders .new-section .view-header .btns .btn a,
+.orders .new-section .new-header .btns .btn a, .customers .view-section .view-header .btns .btn a,
+.customers .view-section .new-header .btns .btn a,
+.customers .new-section .view-header .btns .btn a,
+.customers .new-section .new-header .btns .btn a, .inventory .view-section .view-header .btns .btn a,
+.inventory .view-section .new-header .btns .btn a,
+.inventory .new-section .view-header .btns .btn a,
+.inventory .new-section .new-header .btns .btn a {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -1307,69 +1538,120 @@ article .no-bg-sel .select-box ul .option:hover {
   height: 100%;
   display: inline-block;
 }
-.orders .view-section .contents .user-sum ul, .customers .view-section .contents .user-sum ul, .inventory .view-section .contents .user-sum ul {
+.orders .view-section .contents .user-sum ul,
+.orders .new-section .contents .user-sum ul, .customers .view-section .contents .user-sum ul,
+.customers .new-section .contents .user-sum ul, .inventory .view-section .contents .user-sum ul,
+.inventory .new-section .contents .user-sum ul {
   width: 100%;
   margin-top: 30px;
 }
-.orders .view-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li {
+.orders .view-section .contents .user-sum ul li,
+.orders .new-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li,
+.customers .new-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li,
+.inventory .new-section .contents .user-sum ul li {
   width: calc(50% - 16px);
 }
 @media (max-width: 768px) {
-  .orders .view-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li {
+  .orders .view-section .contents .user-sum ul li,
+.orders .new-section .contents .user-sum ul li, .customers .view-section .contents .user-sum ul li,
+.customers .new-section .contents .user-sum ul li, .inventory .view-section .contents .user-sum ul li,
+.inventory .new-section .contents .user-sum ul li {
     width: 50%;
   }
 }
-.orders .view-section .contents .user-sum ul li .tit, .customers .view-section .contents .user-sum ul li .tit, .inventory .view-section .contents .user-sum ul li .tit {
+.orders .view-section .contents .user-sum ul li .tit,
+.orders .new-section .contents .user-sum ul li .tit, .customers .view-section .contents .user-sum ul li .tit,
+.customers .new-section .contents .user-sum ul li .tit, .inventory .view-section .contents .user-sum ul li .tit,
+.inventory .new-section .contents .user-sum ul li .tit {
   font-size: 12px;
 }
-.orders .view-section .contents .user-sum ul li .value, .customers .view-section .contents .user-sum ul li .value, .inventory .view-section .contents .user-sum ul li .value {
+.orders .view-section .contents .user-sum ul li .value,
+.orders .new-section .contents .user-sum ul li .value, .customers .view-section .contents .user-sum ul li .value,
+.customers .new-section .contents .user-sum ul li .value, .inventory .view-section .contents .user-sum ul li .value,
+.inventory .new-section .contents .user-sum ul li .value {
+  font-family: "Inter";
   font-size: 14px;
+  font-weight: 500;
   line-height: 17px;
+  color: #45464e;
   margin-top: 8px;
 }
-.orders .view-section .contents .profile .header, .customers .view-section .contents .profile .header, .inventory .view-section .contents .profile .header {
+.orders .view-section .contents .profile .header,
+.orders .new-section .contents .profile .header, .customers .view-section .contents .profile .header,
+.customers .new-section .contents .profile .header, .inventory .view-section .contents .profile .header,
+.inventory .new-section .contents .profile .header {
   align-items: start;
 }
-.orders .view-section .contents .profile .header .user, .customers .view-section .contents .profile .header .user, .inventory .view-section .contents .profile .header .user {
+.orders .view-section .contents .profile .header .user,
+.orders .new-section .contents .profile .header .user, .customers .view-section .contents .profile .header .user,
+.customers .new-section .contents .profile .header .user, .inventory .view-section .contents .profile .header .user,
+.inventory .new-section .contents .profile .header .user {
   display: flex;
   align-items: center;
 }
-.orders .view-section .contents .profile .header .user .icon-box, .customers .view-section .contents .profile .header .user .icon-box, .inventory .view-section .contents .profile .header .user .icon-box {
+.orders .view-section .contents .profile .header .user .icon-box,
+.orders .new-section .contents .profile .header .user .icon-box, .customers .view-section .contents .profile .header .user .icon-box,
+.customers .new-section .contents .profile .header .user .icon-box, .inventory .view-section .contents .profile .header .user .icon-box,
+.inventory .new-section .contents .profile .header .user .icon-box {
   width: 45px;
   height: 45px;
   margin-right: 24px;
 }
-.orders .view-section .contents .profile .header .user .value .name, .customers .view-section .contents .profile .header .user .value .name, .inventory .view-section .contents .profile .header .user .value .name {
+.orders .view-section .contents .profile .header .user .value .name,
+.orders .new-section .contents .profile .header .user .value .name, .customers .view-section .contents .profile .header .user .value .name,
+.customers .new-section .contents .profile .header .user .value .name, .inventory .view-section .contents .profile .header .user .value .name,
+.inventory .new-section .contents .profile .header .user .value .name {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: #8b8d97;
 }
-.orders .view-section .contents .profile .header .user .value .since, .customers .view-section .contents .profile .header .user .value .since, .inventory .view-section .contents .profile .header .user .value .since {
+.orders .view-section .contents .profile .header .user .value .since,
+.orders .new-section .contents .profile .header .user .value .since, .customers .view-section .contents .profile .header .user .value .since,
+.customers .new-section .contents .profile .header .user .value .since, .inventory .view-section .contents .profile .header .user .value .since,
+.inventory .new-section .contents .profile .header .user .value .since {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
   color: #8b8d97;
 }
-.orders .view-section .contents .profile .header .user .value .since span, .customers .view-section .contents .profile .header .user .value .since span, .inventory .view-section .contents .profile .header .user .value .since span {
+.orders .view-section .contents .profile .header .user .value .since span,
+.orders .new-section .contents .profile .header .user .value .since span, .customers .view-section .contents .profile .header .user .value .since span,
+.customers .new-section .contents .profile .header .user .value .since span, .inventory .view-section .contents .profile .header .user .value .since span,
+.inventory .new-section .contents .profile .header .user .value .since span {
   color: #2c2d33;
 }
-.orders .view-section .contents .profile .header .state, .customers .view-section .contents .profile .header .state, .inventory .view-section .contents .profile .header .state {
+.orders .view-section .contents .profile .header .state,
+.orders .new-section .contents .profile .header .state, .customers .view-section .contents .profile .header .state,
+.customers .new-section .contents .profile .header .state, .inventory .view-section .contents .profile .header .state,
+.inventory .new-section .contents .profile .header .state {
   padding: 4px 11px;
   border-radius: 8px;
 }
-.orders .view-section .contents .profile .header .state.pending, .customers .view-section .contents .profile .header .state.pending, .inventory .view-section .contents .profile .header .state.pending {
+.orders .view-section .contents .profile .header .state.pending,
+.orders .new-section .contents .profile .header .state.pending, .customers .view-section .contents .profile .header .state.pending,
+.customers .new-section .contents .profile .header .state.pending, .inventory .view-section .contents .profile .header .state.pending,
+.inventory .new-section .contents .profile .header .state.pending {
   background-color: #fff2e2;
 }
-.orders .view-section .contents .profile .header .state.completed, .customers .view-section .contents .profile .header .state.completed, .inventory .view-section .contents .profile .header .state.completed {
+.orders .view-section .contents .profile .header .state.completed,
+.orders .new-section .contents .profile .header .state.completed, .customers .view-section .contents .profile .header .state.completed,
+.customers .new-section .contents .profile .header .state.completed, .inventory .view-section .contents .profile .header .state.completed,
+.inventory .new-section .contents .profile .header .state.completed {
   background-color: rgba(50, 147, 111, 0.16);
 }
-.orders .view-section .contents .profile .header .state.completed span, .customers .view-section .contents .profile .header .state.completed span, .inventory .view-section .contents .profile .header .state.completed span {
+.orders .view-section .contents .profile .header .state.completed span,
+.orders .new-section .contents .profile .header .state.completed span, .customers .view-section .contents .profile .header .state.completed span,
+.customers .new-section .contents .profile .header .state.completed span, .inventory .view-section .contents .profile .header .state.completed span,
+.inventory .new-section .contents .profile .header .state.completed span {
   color: #519c66;
 }
-.orders .view-section .contents .profile .header .state span, .customers .view-section .contents .profile .header .state span, .inventory .view-section .contents .profile .header .state span {
+.orders .view-section .contents .profile .header .state span,
+.orders .new-section .contents .profile .header .state span, .customers .view-section .contents .profile .header .state span,
+.customers .new-section .contents .profile .header .state span, .inventory .view-section .contents .profile .header .state span,
+.inventory .new-section .contents .profile .header .state span {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -2428,20 +2710,7 @@ header .location .breadcrumb ul li::before {
   color: #53545c;
 }
 .new-order section article .form .form-item textarea {
-  width: 100%;
   height: 124px;
-  padding: 16px;
-  border: 0;
-  border-radius: 8px;
-  background-color: rgba(239, 241, 249, 0.6);
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #000;
-}
-.new-order section article .form .form-item textarea::placeholder {
-  color: #abafb1;
 }
 .new-order section article .form .state-sel .selected {
   margin-top: 8px;
@@ -2658,6 +2927,315 @@ header .location .breadcrumb ul li::before {
 .inventory .folder ul li .value dd {
   color: #dbdeee;
 }
+@media (max-width: 768px) {
+  .inventory .new-inven .inventory-header {
+    display: flex;
+  }
+}
+.inventory .new-inven .inventory-header .btns .select-box {
+  width: 170px;
+}
+.inventory .new-inven .inventory-header .btns .btn {
+  width: 160px;
+  text-align: center;
+  background-color: #5570f1;
+}
+.inventory .new-inven .contents {
+  grid-template-columns: 813fr 410fr;
+  grid-template-rows: auto;
+}
+.inventory .new-inven .contents .product-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .inventory .new-inven .contents .product-detail {
+    display: block;
+  }
+}
+.inventory .new-inven .contents .product-detail .detail-list {
+  width: calc(50% - 30px);
+}
+@media (max-width: 768px) {
+  .inventory .new-inven .contents .product-detail .detail-list {
+    margin-top: 24px;
+    width: 100%;
+  }
+  .inventory .new-inven .contents .product-detail .detail-list:first-child {
+    margin-top: 0;
+  }
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap {
+  margin-top: 24px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap:first-child {
+  margin-top: 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap:first-child .form {
+  margin-top: 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .title h5 {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #8b8d97;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .title .btn-area {
+  display: flex;
+  justify-content: space-between;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .title .btn-area p {
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2b2f32;
+  margin-right: 20px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form {
+  margin-top: 24px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area {
+  margin-top: 24px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area:first-child {
+  margin-top: 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area p {
+  font-family: "inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #5e6366;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .input-box {
+  padding-left: 16px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .input-box input {
+  width: 100%;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area .input-box input::placeholder {
+  color: #abafb1;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .input-box-area textarea {
+  height: 163px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .textarea p {
+  font-size: 14px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .textarea textarea {
+  margin-top: 8px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .textarea span {
+  margin-top: 4px;
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #abafb1;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .icon-in .input-box {
+  padding-left: 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .space {
+  margin-top: 8px;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .double {
+  display: flex;
+  justify-content: space-between;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .double .input-box {
+  width: calc(50% - 6px);
+  margin-top: 0;
+}
+.inventory .new-inven .contents .product-detail .detail-list .form-wrap .form .double .select-box {
+  width: calc(50% - 6px);
+  height: 52px;
+}
+.inventory .new-inven .contents .product-image {
+  padding: 20px;
+}
+.inventory .new-inven .contents .product-image .btns {
+  width: 69px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 17px;
+  right: 19px;
+}
+.inventory .new-inven .contents .product-image .btns button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #fff2e2;
+}
+.inventory .new-inven .contents .product-image .main-img {
+  width: 100%;
+  border-radius: 12px;
+  border: solid 1px #e1e2e9;
+  background-color: #fff;
+  position: relative;
+  height: 302px;
+}
+.inventory .new-inven .contents .product-image .main-img .image {
+  width: 306px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .inventory .new-inven .contents .product-image .main-img .image {
+    width: 100%;
+  }
+}
+.inventory .new-inven .contents .product-image .main-img .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.inventory .new-inven .contents .product-image .addition-img .title {
+  margin-top: 12px;
+}
+.inventory .new-inven .contents .product-image .addition-img .title h5 {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #45464e;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .inventory .new-inven .contents .product-image .addition-img .upload-img {
+    display: block;
+  }
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .upload-box {
+  margin-top: 12px;
+  border-radius: 12px;
+  border: solid 1px #e1e2e9;
+  background-color: #fff;
+  position: relative;
+  width: calc(50% - 14px);
+  height: 167px;
+}
+@media (max-width: 480px) {
+  .inventory .new-inven .contents .product-image .addition-img .upload-img .upload-box {
+    width: 100%;
+  }
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .upload-box .image {
+  width: 172px;
+  height: 100%;
+  margin: 0 auto;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .upload-box .image img {
+  width: 100%;
+  height: 100%;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .upload-box .btns {
+  top: 13px;
+  right: 14px;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img {
+  background-color: #f4f5fa;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .image {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  margin-top: 41px;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text img {
+  margin-right: 10px;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text p {
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #5570f1;
+}
+.inventory .view-inven .view-header .btns .select-box {
+  width: 160px;
+}
+.inventory .view-inven .view-header .btns .btn {
+  width: 160px;
+  text-align: center;
+}
+.inventory .view-inven .contents {
+  grid-template-rows: 20% 20% auto;
+}
+.inventory .view-inven .contents .flex-area {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+}
+.inventory .view-inven .contents .flex-area .product-img {
+  width: calc(15% - 10px);
+  min-width: 154px;
+}
+.inventory .view-inven .contents .flex-area .product-img .image {
+  width: 124px;
+  height: 124px;
+  position: relative;
+  margin: 0 auto;
+}
+.inventory .view-inven .contents .flex-area .product-img .image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.inventory .view-inven .contents .flex-area .profile {
+  width: calc(33% - 20px);
+}
+.inventory .view-inven .contents .flex-area .profile ul {
+  margin-top: 60px;
+}
+.inventory .view-inven .contents .flex-area article:nth-child(3) {
+  width: calc(26% - 10px);
+}
+.inventory .view-inven .contents .flex-area article:nth-child(4) {
+  width: calc(26% - 20px);
+}
+@media (max-width: 1024px) {
+  .inventory .view-inven .contents .flex-area {
+    display: block;
+  }
+  .inventory .view-inven .contents .flex-area .product-img {
+    display: none;
+  }
+  .inventory .view-inven .contents .flex-area .profile,
+.inventory .view-inven .contents .flex-area article:nth-child(3),
+.inventory .view-inven .contents .flex-area article:nth-child(4) {
+    width: 100%;
+  }
+}
+.inventory .view-inven .contents .table-area {
+  padding: 20px;
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
 
 .customers .contents {
   grid-template-columns: 1fr 1fr;
@@ -2666,6 +3244,9 @@ header .location .breadcrumb ul li::before {
   padding: 20px;
   grid-column: 1/3;
   grid-row: 2/3;
+}
+.customers .view-custom .view-header .btns .select-box {
+  width: 180px;
 }
 .customers .view-custom .contents {
   grid-template-columns: 4fr 5fr 3fr;
@@ -2688,6 +3269,10 @@ header .location .breadcrumb ul li::before {
 @media (max-width: 768px) {
   .modal-wrap .new-customer {
     width: calc(100% - 40px);
+    height: calc(100% - 40px);
+  }
+  .modal-wrap .new-customer.big-modal {
+    height: calc(100% - 40px);
   }
 }
 .modal-wrap .new-customer section article {
@@ -2706,6 +3291,14 @@ header .location .breadcrumb ul li::before {
 }
 .modal-wrap .new-customer section article .modal-title {
   margin-top: 24px;
+}
+.modal-wrap .new-customer section article .form .double {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.modal-wrap .new-customer section article .form .double .select-box {
+  width: calc(50% - 8px);
 }
 .modal-wrap .new-customer .modal-btns {
   max-width: 376px;
