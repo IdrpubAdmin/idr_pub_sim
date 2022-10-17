@@ -37,6 +37,16 @@
                         li{
                             a{
                                 width: 233px;
+                                .alarm{
+                                    top: 10px;
+                                    &.order{
+                                        left: 110px;
+                                    }
+                                    &.conversation{
+                                        left: 160px;
+                                    }
+
+                                }
                             }
                         }
                     }
@@ -62,7 +72,7 @@
             width: 100%;
         }
     } 
-    .mainactive{
+    .main-active{
         width: calc(100% - $navigation-active);
         @include mdq-tablet{
             width: 100%;

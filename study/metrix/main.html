@@ -28,7 +28,7 @@
                 <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{'nav-active': $store.getters.isActive, 'mobile-active': $store.state.mobileActive}">
                     <side-navigation></side-navigation>
                 </div>
-                <main :class="{mainactive: $store.getters.isActive}">
+                <main :class="{'main-active': $store.getters.isActive}">
                     <div class="header-wrap">
                         <header-component></header-component>
                     </div>

@@ -14,6 +14,7 @@
                             <img class="before category-img" :src="'assets/images/navigation/'+category.icon+'.png'" :alt="category.title+' icon'">
                             <img class="after category-img" :src="'assets/images/navigation/hover/'+category.icon+'.png'" :alt="category.title+' icon'">
                             <span class="hidden-title" v-show="$store.getters.isActive">{{category.title}}</span>
+                            <div class="alarm" :class="category.push.class" v-if="category.push"><span>{{category.push.alarm}}</span></div>
                         </router-link>
                     </li>
                 </ul>

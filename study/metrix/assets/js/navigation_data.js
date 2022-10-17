@@ -3,10 +3,10 @@ var NavigationData = {
     state: {
         categoryData : [
             { id: 1, title: 'Dashboard', icon: 'Category', path: '/'},
-            { id: 2, title: 'Orders', icon: 'Bag', path: '/orders' },
+            { id: 2, title: 'Orders', icon: 'Bag', path: '/orders', push: {alarm : 3, class: 'order'} },
             { id: 3, title: 'Customers', icon: 'User', path: '/customers' },
             { id: 4, title: 'Inventory', icon: 'Folder', path: '/inventory' },
-            { id: 5, title: 'Conversations', icon: 'Chat', path: '/conversations' },
+            { id: 5, title: 'Conversations', icon: 'Chat', path: '/conversations', push: {alarm : 16, class: 'conversation'} },
             { id: 6, title: 'Settings', icon: 'Setting', path: '/settings' },
         ]
     }

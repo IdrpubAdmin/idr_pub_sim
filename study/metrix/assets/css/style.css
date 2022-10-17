@@ -1703,6 +1703,13 @@ article .no-bg-sel .select-box ul .option:hover {
     display: none;
   }
 }
+.table-area .title .table-btns li {
+  position: relative;
+}
+.table-area .title .table-btns li button {
+  width: 100%;
+  height: 100%;
+}
 .table-area .title .table-btns li span {
   font-family: "Inter";
   font-size: 11px;
@@ -1768,16 +1775,51 @@ article .no-bg-sel .select-box ul .option:hover {
   margin: auto;
 }
 .table-area .title .table-btns .btn {
+  margin-right: 12px;
+  border: 1px solid #53545c;
+  border-radius: 4px;
+}
+.table-area .title .table-btns .btn button {
   display: flex;
   align-items: center;
-  border-radius: 4px;
-  border: 1px solid #53545c;
   padding: 7px 8px;
-  margin-right: 12px;
-  cursor: pointer;
 }
-.table-area .title .table-btns .btn img {
+.table-area .title .table-btns .btn button img {
   margin-right: 8px;
+}
+.table-area .title .table-btns .btn .popup-wrap {
+  position: absolute;
+  z-index: 1;
+  top: -3px;
+  left: -3px;
+}
+.table-area .title .table-btns .btn .popup-wrap .popup-filter {
+  width: 317px;
+  height: 478px;
+  padding: 24px 21px;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px 0 rgba(61, 70, 112, 0.08);
+  background-color: #fff;
+}
+.table-area .title .table-btns .btn .popup-wrap .popup-filter .popup-header h3 {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1c1d22;
+}
+.table-area .title .table-btns .btn .popup-wrap .popup-filter section .popup-close {
+  margin-top: 16px;
+  border-radius: 12px;
+  background-color: #5570f1;
+}
+.table-area .title .table-btns .btn .popup-wrap .popup-filter section .popup-close button {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+  display: block;
 }
 .table-area .table-wrap {
   width: 100%;
@@ -2035,6 +2077,15 @@ article .no-bg-sel .select-box ul .option:hover {
 .wrapper .nav-active .navigation menu nav ul li a {
   width: 233px;
 }
+.wrapper .nav-active .navigation menu nav ul li a .alarm {
+  top: 10px;
+}
+.wrapper .nav-active .navigation menu nav ul li a .alarm.order {
+  left: 110px;
+}
+.wrapper .nav-active .navigation menu nav ul li a .alarm.conversation {
+  left: 160px;
+}
 .wrapper .nav-active .navigation menu .btns ul li {
   width: 233px;
 }
@@ -2051,11 +2102,11 @@ article .no-bg-sel .select-box ul .option:hover {
     width: 100%;
   }
 }
-.wrapper .mainactive {
+.wrapper .main-active {
   width: calc(100% - 296px);
 }
 @media (max-width: 768px) {
-  .wrapper .mainactive {
+  .wrapper .main-active {
     width: 100%;
   }
 }
@@ -2134,6 +2185,27 @@ article .no-bg-sel .select-box ul .option:hover {
 .navigation menu nav ul li a .after {
   display: none;
 }
+.navigation menu nav ul li a .alarm {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffcc91;
+  position: absolute;
+  top: 0;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left top;
+  transition-duration: 0.5s;
+}
+.navigation menu nav ul li a .alarm span {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #1c1d22;
+}
 .navigation menu nav ul li .router-link-active {
   background-color: #5570f1;
 }
@@ -2145,6 +2217,9 @@ article .no-bg-sel .select-box ul .option:hover {
 }
 .navigation menu nav ul li .router-link-active span {
   color: #fff;
+}
+.navigation menu nav ul li .router-link-active .alarm {
+  display: none;
 }
 .navigation menu .btns {
   position: absolute;

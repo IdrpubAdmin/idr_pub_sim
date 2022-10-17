@@ -10,16 +10,23 @@
                     <input type="search" placeholder="Search">
                 </li>
                 <li class="filter-btn btn">
-                    <img src="assets/images/table/fi_filter.png" alt="filter icon">
-                    <span>Filter</span>
+                    <button @click.stop="toggleBtn('filterPop')">
+                        <img src="assets/images/table/fi_filter.png" alt="filter icon">
+                        <span>Filter</span>
+                    </button>
+                    <filter-popup></filter-popup>
                 </li>
                 <li class="date-btn btn">
-                    <img src="assets/images/table/Calendar.png" alt="calendar icon">
-                    <span>Filter</span>
+                    <button>
+                        <img src="assets/images/table/Calendar.png" alt="calendar icon">
+                        <span>Filter</span>
+                    </button>
                 </li>
                 <li class="share-btn btn">
-                    <img src="assets/images/table/Send.png" alt="send icon">
-                    <span>Share</span>
+                    <button>
+                        <img src="assets/images/table/Send.png" alt="send icon">
+                        <span>Share</span>
+                    </button>
                 </li>
                 <li class="action-btn">
                     <select-box
@@ -105,11 +112,17 @@
 
 <script>
 module.exports = {
+    methods: {
+        toggleBtn(payload){
+            this.$store.commit('toggleBtn', payload)
+        },
+    },
     components: {
         'select-box' : SelectBox,
+        'filter-popup' : FilterPopup,
     },
     props: {
         table : Object
-    }
+    },
 }
 </script>

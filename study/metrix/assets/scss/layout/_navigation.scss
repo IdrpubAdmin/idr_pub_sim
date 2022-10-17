@@ -49,6 +49,22 @@
                         .after{
                             display: none;
                         }
+                        .alarm{
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            background-color: #ffcc91;
+                            position: absolute;
+                            top: 0; left: 32px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: left top;
+                            transition-duration: $transition;
+                            span{
+                                @include fonts('Inter', 12, 400, 15, #1c1d22)
+                            }
+                        }
                     }
                     .router-link-active{
                         background-color: #5570f1;
@@ -60,6 +76,9 @@
                         }
                         span{
                             color: #fff;
+                        }
+                        .alarm{
+                            display: none;
                         }
                     }
                 }

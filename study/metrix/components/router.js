@@ -1,12 +1,12 @@
 var DashboardMain = httpVueLoader('components/dashboard/DashboardMain.vue');
 
 var OrdersMain = httpVueLoader('components/orders/OrdersMain.vue');
-var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue')
-var ViewOrder = httpVueLoader('components/orders/ViewOrder.vue')
+var OrdersSummary = httpVueLoader('components/orders/OrdersSummary.vue');
+var ViewOrder = httpVueLoader('components/orders/ViewOrder.vue');
 
 var CustomersMain = httpVueLoader('components/customers/CustomersMain.vue');
-var CustomersSummary = httpVueLoader('components/customers/CustomersSummary.vue')
-var ViewCustomer = httpVueLoader('components/customers/ViewCustomer.vue')
+var CustomersSummary = httpVueLoader('components/customers/CustomersSummary.vue');
+var ViewCustomer = httpVueLoader('components/customers/ViewCustomer.vue');
 
 var InventoryMain = httpVueLoader('components/inventory/InventoryMain.vue');
 var InventorySummary = httpVueLoader('components/inventory/InventorySummary.vue');
@@ -23,8 +23,9 @@ var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue')
 var LogIn = httpVueLoader('components/common/LogIn.vue');
 var SignUp = httpVueLoader('components/common/SignUp.vue');
 
-var SelectBox = httpVueLoader('components/common/SelectBox.vue')
-var TableBox = httpVueLoader('components/common/TableBox.vue')
+var SelectBox = httpVueLoader('components/common/SelectBox.vue');
+var TableBox = httpVueLoader('components/common/TableBox.vue');
+var FilterPopup = httpVueLoader('components/common/FilterPopup.vue');
 
 var router = new VueRouter({
 	routes: [
