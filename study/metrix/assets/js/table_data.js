@@ -46,7 +46,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Completed`, class: 'completed'}
+                    {txt : `Completed`, class: 'tb-state tb-st1'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Completed',
@@ -61,7 +61,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `In-Progress`, class: 'in-progress'}
+                    {txt : `In-Progress`, class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'In-Progress',
@@ -76,7 +76,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'pending'}
+                    {txt : `Pending`, class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -136,7 +136,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : 'Pending', class: 'pending'}
+                    {txt : 'Pending', class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -208,7 +208,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'pending'}
+                    {txt : `Pending`, class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -224,7 +224,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'pending'}
+                    {txt : `Pending`, class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -240,7 +240,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'pending'}
+                    {txt : `Pending`, class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -448,7 +448,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
-                    {txt : 'Pending', class: 'pending'}
+                    {txt : 'Pending', class: 'tb-state tb-st3'}
                 ],
                 option : ['Pending','Completed','In-Progress'],
                 selected : 'Pending',
@@ -544,7 +544,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'pending'},
+                    {txt : 'Unpublished', class: 'tb-state tb-st3'},
                 ],
                 option : ['Publish','Unpublish'],
                 selected : 'Unpublished',
@@ -561,7 +561,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'pending'},
+                    {txt : 'Unpublished', class: 'tb-state tb-st3'},
                 ],
                 option : ['Publish','Unpublish'],
                 selected : 'Unpublished',
@@ -629,7 +629,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'pending'},
+                    {txt : 'Unpublished', class: 'tb-state tb-st3'},
                 ],
                 option : ['Publish','Unpublish'],
                 selected : 'Unpublished',

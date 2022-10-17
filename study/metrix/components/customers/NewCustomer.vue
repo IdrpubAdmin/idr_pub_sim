@@ -62,7 +62,7 @@
                     <div class="modal-title active-title">
                         <h5>Add Address</h5>
                         <div class="btn-area">
-                            <div class="toggle-btn" @click="toggleBtn('newCustomBtn01')" :class="{btnactive:btnActive.includes('newCustomBtn01')}">
+                            <div class="toggle-btn" @click="toggleBtn('newCustomBtn01')" :class="{'btn-active':btnActive.includes('newCustomBtn01')}">
                                 <button></button>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                             <h5>Billing Address</h5>
                             <div class="btn-area">
                                 <p>Same as Customer Address</p>
-                                <div class="toggle-btn" @click="toggleBtn('newOrderBtn02')" :class="{btnactive:btnActive.includes('newOrderBtn02')}">
+                                <div class="toggle-btn" @click="toggleBtn('newOrderBtn02')" :class="{'btn-active':btnActive.includes('newOrderBtn02')}">
                                     <button></button>
                                 </div>
                             </div>

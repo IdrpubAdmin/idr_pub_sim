@@ -15,7 +15,7 @@
                         <h5>Order Details</h5>
                         <div class="btn-area">
                             <p>New Customer</p>
-                            <div class="toggle-btn" @click="toggleBtn('newOrderBtn01')" :class="{btnactive:btnActive.includes('newOrderBtn01')}">
+                            <div class="toggle-btn" @click="toggleBtn('newOrderBtn01')" :class="{'btn-active':btnActive.includes('newOrderBtn01')}">
                                 <button></button>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                                         <div class="texts">
                                             <div class="text">
                                                 <p class="prod-name">{{item.name}}</p>
-                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</p>
+                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span></p>
                                             </div>
                                             <div class="item-btns">
                                                 <button class="add" @click="pushItem(i)">Add Item</button>
@@ -158,7 +158,7 @@
                                         <div class="texts">
                                             <div class="text">
                                                 <p class="prod-name">{{item.name}}</p>
-                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</p>
+                                                <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span></p>
                                             </div>
                                             <div class="item-btns">
                                                 <button class="remove" @click="deleItem(item.id)">Remove</button>
@@ -176,13 +176,13 @@
                                     </div>
                                     <dl class="item-total">
                                         <dt>Sub-total</dt>
-                                        <dd>₦<span>{{item.sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</dd>
+                                        <dd>₦<span>{{item.sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span></dd>
                                      </dl>   
                                 </li>
                             </ul>
                             <dl class="items-total">
                                 <dt>Total</dt>
-                                <dd>₦<span>{{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}</span>.00</dd>
+                                <dd>₦<span>{{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span></dd>
                             </dl>   
                         </div>
                     </template>

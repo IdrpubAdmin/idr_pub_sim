@@ -902,11 +902,11 @@ textarea::placeholder {
   background-color: #bbc5cb;
 }
 
-.btnactive {
+.btn-active {
   text-align: right;
   background-color: #5570f1;
 }
-.btnactive button {
+.btn-active button {
   background-color: #fff;
 }
 
@@ -1102,10 +1102,9 @@ article .no-bg-sel .select-box ul .option:hover {
 }
 .modal-wrap .modal-container .modal-btns {
   width: 400px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
 }
 @media (max-width: 768px) {
   .modal-wrap .modal-container .modal-btns {
@@ -1683,6 +1682,35 @@ article .no-bg-sel .select-box ul .option:hover {
   }
 }
 
+.phone-box {
+  background-color: #fff;
+}
+.phone-box .select-box {
+  width: 142px;
+  margin-right: 6px;
+  background-image: url("../images/settings/Arrow-Down2.png");
+}
+.phone-box .select-box .selected .value {
+  display: flex;
+  align-items: center;
+}
+.phone-box .select-box .selected .value img {
+  margin-right: 8px;
+}
+.phone-box .select-box ul .option {
+  display: flex;
+  align-items: center;
+}
+.phone-box .select-box ul .option img {
+  margin-right: 8px;
+  height: 20px;
+}
+.phone-box input {
+  width: calc(100% - 148px);
+  background-color: rgba(239, 241, 249, 0.6);
+  border-radius: 8px;
+}
+
 .table-area .title {
   display: flex;
   justify-content: space-between;
@@ -1876,22 +1904,22 @@ article .no-bg-sel .select-box ul .option:hover {
   border-bottom: 1px solid #e1e2e9;
 }
 .table-area table tbody tr td {
+  vertical-align: middle;
+  padding: 12px 0;
+}
+.table-area table tbody tr td b {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: #6e7079;
-  vertical-align: middle;
-  padding: 12px 0;
-}
-.table-area table tbody tr td b {
   margin-right: 5px;
 }
 .table-area table tbody tr td img {
   vertical-align: middle;
   cursor: pointer;
 }
-.table-area table tbody tr .pending b {
+.table-area table tbody tr td .tb-state {
   font-family: "Inter";
   font-size: 12px;
   font-weight: 400;
@@ -1899,26 +1927,16 @@ article .no-bg-sel .select-box ul .option:hover {
   color: #1c1d22;
   padding: 4px 11px;
   border-radius: 8px;
+}
+.table-area table tbody tr td .tb-st1 {
   background-color: #fff2e2;
 }
-.table-area table tbody tr .completed b {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
+.table-area table tbody tr td .tb-st2 {
   color: #519c66;
-  padding: 4px 11px;
-  border-radius: 8px;
   background-color: rgba(50, 147, 111, 0.16);
 }
-.table-area table tbody tr .in-progress b {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
+.table-area table tbody tr td .tb-st3 {
   color: #5570f1;
-  padding: 4px 11px;
-  border-radius: 8px;
   background-color: rgba(85, 112, 241, 0.16);
 }
 .table-area table tbody tr .select-box {
@@ -2005,35 +2023,6 @@ article .no-bg-sel .select-box ul .option:hover {
   height: 16px;
   display: flex;
   justify-content: space-between;
-}
-
-.phone-box {
-  background-color: #fff;
-}
-.phone-box .select-box {
-  width: 142px;
-  margin-right: 6px;
-  background-image: url("../images/settings/Arrow-Down2.png");
-}
-.phone-box .select-box .selected .value {
-  display: flex;
-  align-items: center;
-}
-.phone-box .select-box .selected .value img {
-  margin-right: 8px;
-}
-.phone-box .select-box ul .option {
-  display: flex;
-  align-items: center;
-}
-.phone-box .select-box ul .option img {
-  margin-right: 8px;
-  height: 20px;
-}
-.phone-box input {
-  width: calc(100% - 148px);
-  background-color: rgba(239, 241, 249, 0.6);
-  border-radius: 8px;
 }
 
 .wrapper {
@@ -2437,8 +2426,7 @@ article .no-bg-sel .select-box ul .option:hover {
   text-align: center;
   width: 180px;
   height: 58px;
-  margin: 0 auto;
-  margin-top: 48px;
+  margin: 48px auto 0;
 }
 .auth-wrap .auth-container .auth-cnt section .login-btn a {
   font-family: "Inter";
@@ -3245,8 +3233,7 @@ header .location .breadcrumb ul li::before {
 .inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .image {
   width: 56px;
   height: 56px;
-  margin: 0 auto;
-  margin-top: 41px;
+  margin: 41px auto 0;
 }
 .inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text {
   margin-top: 12px;

@@ -66,7 +66,7 @@
                             <h5>Order Details</h5>
                             <div class="btn-area">
                                 <p>Add Discount</p>
-                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn01')" :class="{btnactive:btnActive.includes('newInvenBtn01')}">
+                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn01')" :class="{'btn-active':btnActive.includes('newInvenBtn01')}">
                                     <button></button>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                             <h5>Expiry Date</h5>
                             <div class="btn-area">
                                 <p>Add Expiry Date</p>
-                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn02')" :class="{btnactive:btnActive.includes('newInvenBtn02')}">
+                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn02')" :class="{'btn-active':btnActive.includes('newInvenBtn02')}">
                                     <button></button>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@
                             <h5>Return Policy</h5>
                             <div class="btn-area">
                                 <p>Add Discount</p>
-                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn03')" :class="{btnactive:btnActive.includes('newInvenBtn03')}">
+                                <div class="toggle-btn" @click="toggleBtn('newInvenBtn03')" :class="{'btn-active':btnActive.includes('newInvenBtn03')}">
                                     <button></button>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ module.exports = {
     data() {
         return {
             btnActive : this.$store.getters.btnActive,
-            qty : 0,
+            qty : null,
         }
     },
     methods: {

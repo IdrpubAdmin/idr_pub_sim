@@ -60,7 +60,6 @@
                     >
                         <td v-for="(name,i) in tBody.name"
                             :key="i" 
-                            :class="name.class"
                         >
                             <template v-if="name.check === true"><input type="checkbox"></template>
                             <template v-else-if="name.router === true"><router-link :to="{name:name.path}">{{name.txt}}</router-link></template>
@@ -72,7 +71,7 @@
                                 ></select-box>
                             </template>
                             <template v-else>
-                                <b v-html="name.txt" v-if="name.txt"></b>
+                                <b v-html="name.txt" v-if="name.txt" :class="name.class"></b>
                                 <img v-if="name.img === true" :src="'assets/images/table/'+ name.src +'.png'" :alt="name.src+' img'">
                             </template> 
                         </td>

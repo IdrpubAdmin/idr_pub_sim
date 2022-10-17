@@ -99,8 +99,7 @@
                     text-align: center;
                     width: 180px;
                     height: 58px;
-                    margin: 0 auto;
-                    margin-top: 48px;
+                    margin: 48px auto 0;
                     a{
                         @include fonts('Inter', 20, 400, 58, #fff);
                         display: inline-block;

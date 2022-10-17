@@ -69,15 +69,15 @@ components
 	'utils/mixin.scss',
 	'utils/variables.scss',
 	'common/common.scss',
-	'layout/container.scss',
-	'layout/navigation.scss',
-	'layout/auth.scss',
-	'layout/header.scss',
-	'layout/dashboard.scss',
-	'layout/orders.scss',
-	'layout/inventory.scss',
-	'layout/customers.scss',
-	'layout/settings.scss'
+	'pages/container.scss',
+	'pages/navigation.scss',
+	'pages/auth.scss',
+	'pages/header.scss',
+	'pages/dashboard.scss',
+	'pages/orders.scss',
+	'pages/inventory.scss',
+	'pages/customers.scss',
+	'pages/settings.scss'
   ```
 
   
