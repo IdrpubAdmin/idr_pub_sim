@@ -56,7 +56,7 @@ module.exports = {
     },
     computed: {
         categoryData() {
-            return this.$store.getters["NavigationData"].categoryData
+            return this.$store.getters["navigationData"].categoryData
         },
     },
 }

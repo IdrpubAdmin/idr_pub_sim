@@ -1,4 +1,4 @@
-var NavigationData = {
+var navigationData = {
     namespaced: true,
     state: {
         categoryData : [
@@ -12,7 +12,7 @@ var NavigationData = {
     }
 }
 
-var BreadCrumbData = {
+var breadCrumbData = {
     namespaced: true,
     state: {
         BreadCrumb : [

@@ -6,9 +6,7 @@
                     <img src="assets/images/dashboard/Graph.png" alt="graph icon">
                 </div>
                 <select-box
-                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                    :selected="'This Week'"
-                    :name="'dashSelect01'"
+                    :select-data = selectData.dashSelect01
                 ></select-box>
             </div>
             <ul>
@@ -33,9 +31,7 @@
                     <img src="assets/images/dashboard/User.png" alt="user icon">
                 </div>
                 <select-box
-                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                    :selected="'This Week'"
-                    :name="'dashSelect02'"
+                    :select-data = selectData.dashSelect02
                 ></select-box>
             </div>
             <ul>
@@ -61,9 +57,7 @@
                     <img src="assets/images/dashboard/Bag.png" alt="bag">
                 </div>
                 <select-box
-                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                    :selected="'This Week'"
-                    :name="'dashSelect03'"
+                    :select-data = selectData.dashSelect03
                 ></select-box>
             </div>
             <ul>
@@ -91,9 +85,7 @@
             <div class="title no-bg-sel">
                 <h5>Marketting</h5>
                 <select-box
-                :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                :selected="'This Week'"
-                :name="'dashSelect04'"
+                    :select-data = selectData.dashSelect04
                 ></select-box>
             </div>
             <!-- <div id="chart"></div> -->
@@ -126,9 +118,7 @@
                     <img src="assets/images/dashboard/fi_shopping-cart.png" alt="cart icon">
                 </div>
                 <select-box
-                    :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                    :selected="'This Week'"
-                    :name="'dashSelect05'"
+                    :select-data = selectData.dashSelect05
                 ></select-box>
             </div>
             <ul>
@@ -279,16 +269,12 @@
                 <div class="tit-sel">
                     <h5>Summary</h5>
                     <select-box
-                        :option="['Sales', 'Sales', 'Sales', 'Sales']"
-                        :selected="'Sales'"
-                        :name="'dashSelect06'"
+                        :select-data = selectData.dashSelect06
                     ></select-box>
                 </div>
                 <div class="no-bg-sel">
                     <select-box
-                        :option="['Last 7 Days', 'Last 7 Days', 'Last 7 Days']"
-                        :selected="'Last 7 Days'"
-                        :name="'dashSelect07'"
+                        :select-data = selectData.dashSelect07
                     ></select-box>
                 </div>
             </div>
@@ -303,6 +289,11 @@
 module.exports = {
     components : {
         'select-box' : SelectBox
+    },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        }
     },
     mounted() {
         const Chart = toastui.Chart;

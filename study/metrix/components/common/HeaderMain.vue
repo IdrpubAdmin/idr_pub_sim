@@ -7,9 +7,7 @@
             <ul class="user">
                 <li class="sel-btn">
                     <select-box
-                        :option="['Nanny’s Shop', 'Nanny’s Shop', 'Nanny’s Shop']"
-                        :selected="'Nanny’s Shop'"
-                        :name="'headerSelect01'"
+                        :select-data = selectData.headerSelect01
                     ></select-box>
                 </li>
                 <li class="alarm-icon">
@@ -33,7 +31,7 @@
             <div class="home-icon">
                 <img src="assets/images/header/Home.png" alt="home icon">
             </div>
-            <div class="breadcrumb" v-for="(breadcrumb,i) in BreadCrumbData" :key="i" v-show="BreadCrumbData[i].name.includes($route.name)">
+            <div class="breadcrumb" v-for="(breadcrumb,i) in breadCrumbData" :key="i" v-show="breadCrumbData[i].name.includes($route.name)">
                 <ul>
                     <li v-for="data in breadcrumb.data" :key="data.id">
                         <router-link :to="{name: data.path}">
@@ -50,10 +48,13 @@
 module.exports = {
     computed: {
         categoryData() {
-            return this.$store.getters["NavigationData"].categoryData
+            return this.$store.getters["navigationData"].categoryData
         },
-        BreadCrumbData() {
-            return this.$store.getters["BreadCrumbData"].BreadCrumb
+        breadCrumbData() {
+            return this.$store.getters["breadCrumbData"].BreadCrumb
+        },
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
         }
     },
     components: {

@@ -1,10 +1,11 @@
 var store = new Vuex.Store({
     namespaced: true,
     modules: {
-        NavigationData : NavigationData,
-        BreadCrumbData : BreadCrumbData,
+        navigationData : navigationData,
+        breadCrumbData : breadCrumbData,
         tableData : tableData,
-        productData : productData
+        productData : productData,
+        selectData : selectData,
     },
     state: {
         isActive : false,
@@ -62,17 +63,20 @@ var store = new Vuex.Store({
         }
     },
     getters: {
-        NavigationData: function NavigationData(state) {
-            return state.NavigationData;
+        navigationData: function navigationData(state) {
+            return state.navigationData;
         },
-        BreadCrumbData : function BreadCrumbData(state) {
-            return state.BreadCrumbData;
+        breadCrumbData : function breadCrumbData(state) {
+            return state.breadCrumbData;
         },
         tableData: function tableData(state) {
             return state.tableData;
         },
         productData: function productData(state) {
             return state.productData;
+        },
+        selectData : function selectData(state) {
+            return state.selectData;
         },
         isActive(state){
             return state.isActive
