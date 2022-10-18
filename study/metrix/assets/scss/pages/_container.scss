@@ -79,7 +79,7 @@
         }
     }  
     .container{
-        min-height: calc(100vh - 87px);
+        min-height: 800px;
         height: calc(100vh - 87px);
         background-color: #f4f5fa;
         @include mdq-desktop{

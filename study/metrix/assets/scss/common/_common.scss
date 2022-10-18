@@ -131,6 +131,7 @@ article{
 
 .summary{
     padding: 15px;
+    min-height: 135px;
     .header{
         display: flex;
         justify-content: space-between;
@@ -490,7 +491,7 @@ article{
         border-radius: 12px;
     }
     .contents{
-        min-height: calc(100vh - 183px);
+        min-height: 700px;
         height: calc(100vh - 183px);
         margin-top: 20px;
         display: grid;

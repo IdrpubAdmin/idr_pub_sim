@@ -947,6 +947,7 @@ article .no-bg-sel .select-box ul .option:hover {
 
 .summary {
   padding: 15px;
+  min-height: 135px;
 }
 .summary .header {
   display: flex;
@@ -1662,7 +1663,7 @@ article .no-bg-sel .select-box ul .option:hover {
   border-radius: 12px;
 }
 .orders .contents, .customers .contents, .inventory .contents {
-  min-height: calc(100vh - 183px);
+  min-height: 700px;
   height: calc(100vh - 183px);
   margin-top: 20px;
   display: grid;
@@ -2100,7 +2101,7 @@ article .no-bg-sel .select-box ul .option:hover {
   }
 }
 .wrapper .container {
-  min-height: calc(100vh - 87px);
+  min-height: 800px;
   height: calc(100vh - 87px);
   background-color: #f4f5fa;
 }
@@ -2545,9 +2546,6 @@ header .location .breadcrumb ul li::before {
   margin-right: 10px;
 }
 
-.container {
-  height: calc(100vh - 87px);
-}
 .container .dashboard {
   height: 100%;
   padding: 20px;
@@ -3390,7 +3388,7 @@ header .location .breadcrumb ul li::before {
 }
 .settings section {
   height: calc(100vh - 127px);
-  min-height: calc(100vh - 127px);
+  min-height: 800px;
   background-color: #fff;
   border-radius: 12px;
   padding: 16px 36px;
