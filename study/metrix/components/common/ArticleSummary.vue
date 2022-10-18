@@ -1,0 +1,33 @@
+<template>
+    <article class="summary" :class="articleData.type">
+        <div class="header">
+            <i class="icon-box" :class="articleData.icon"></i>
+            <select-box 
+                v-if="selectData"
+                class="no-bg-sel"
+                :select-data = selectData
+            ></select-box>
+        </div>
+        <ul>
+            <li v-for="summary in articleData.summaryData" :key="summary.id">
+                <p class="tit" :class="summary.type">{{summary.title}}</p>
+                <dl class="value">
+                    <dt v-html="summary.value"></dt>
+                    <dd v-if="summary.percent" :class="summary.percent.includes('+') ? 'plus' : 'minus'"><span>{{summary.percent}}</span>%</dd>
+                </dl>
+            </li>
+        </ul>
+    </article>
+</template>
+
+<script>
+module.exports = {
+    props: {
+        selectData : Object,
+        articleData : Object
+    },
+    components : {
+        'select-box' : SelectBox,
+    },
+}
+</script>

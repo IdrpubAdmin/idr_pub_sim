@@ -48,9 +48,15 @@ var tableData = {
                     {select : true},
                     {txt : `Completed`, class: 'tb-state tb-st2'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Completed',
-                selName : 'miOrTable01'
+                tableSelcet : {
+                    btnName : 'miOrTable01',
+                    selected : {code: '302', name: 'Completed'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 2,
                 name : [ 
@@ -63,9 +69,15 @@ var tableData = {
                     {select : true},
                     {txt : `In-Progress`, class: 'tb-state tb-st3'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'In-Progress',
-                selName : 'miOrTable02'
+                tableSelcet : {
+                    btnName : 'miOrTable02',
+                    selected : {code: '303', name: 'In-Progress'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 3,
                 name : [ 
@@ -78,9 +90,15 @@ var tableData = {
                     {select : true},
                     {txt : `Pending`, class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'miOrTable03'
+                tableSelcet : {
+                    btnName : 'miOrTable03',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 4,
                 name : [ 
@@ -93,9 +111,15 @@ var tableData = {
                     {select : true},
                     {txt : `Completed`, class: 'tb-state tb-st2'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Completed',
-                selName : 'miOrTable04'
+                tableSelcet : {
+                    btnName : 'miOrTable04',
+                    selected : {code: '302', name: 'Completed'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 5,
                 name : [
@@ -108,9 +132,15 @@ var tableData = {
                     {select : true},
                     {txt : `Completed`, class: 'tb-state tb-st2'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Completed',
-                selName : 'miOrTable05'
+                tableSelcet : {
+                    btnName : 'miOrTable05',
+                    selected : {code: '302', name: 'Completed'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 6,
                 name : [ 
@@ -123,9 +153,15 @@ var tableData = {
                     {select : true},
                     {txt : `In-Progress`, class: 'tb-state tb-st3'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'In-Progress',
-                selName : 'miOrTable06'
+                tableSelcet : {
+                    btnName : 'miOrTable06',
+                    selected : {code: '303', name: 'In-Progress'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 7,
                 name : [ 
@@ -138,9 +174,15 @@ var tableData = {
                     {select : true},
                     {txt : 'Pending', class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'miOrTable07'
+                tableSelcet : {
+                    btnName : 'miOrTable07',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 8,
                 name : [ 
@@ -153,9 +195,15 @@ var tableData = {
                     {select : true},
                     {txt : `Completed`, class: 'tb-state tb-st2'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Completed',
-                selName : 'miOrTable08'
+                tableSelcet : {
+                    btnName : 'miOrTable08',
+                    selected : {code: '302', name: 'Completed'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             }]
         },
         viewOrder: {
@@ -210,9 +258,15 @@ var tableData = {
                     {select : true},
                     {txt : `Pending`, class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'viOrTable01'
+                tableSelcet : {
+                    btnName : 'viOrTable01',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 2,
                 name : [ 
@@ -226,9 +280,15 @@ var tableData = {
                     {select : true},
                     {txt : `Pending`, class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'viOrTable02'
+                tableSelcet : {
+                    btnName : 'viOrTable02',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 3,
                 name : [ 
@@ -242,9 +302,15 @@ var tableData = {
                     {select : true},
                     {txt : `Pending`, class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'viOrTable03'
+                tableSelcet : {
+                    btnName : 'viOrTable03',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             }]
         },
         mainCustom: {
@@ -422,9 +488,15 @@ var tableData = {
                     {select : true},
                     {txt : 'Completed', class: 'tb-state tb-st2'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Completed',
-                selName : 'viCuTable01'
+                tableSelcet : {
+                    btnName : 'viCuTable01',
+                    selected : {code: '302', name: 'Completed'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 2,
                 name : [
@@ -436,9 +508,15 @@ var tableData = {
                     {select : true},
                     {txt : 'In-Progress', class: 'tb-state tb-st3'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'In-Progress',
-                selName : 'viCuTable02'
+                tableSelcet : {
+                    btnName : 'viCuTable02',
+                    selected : {code: '303', name: 'In-Progress'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             },{
                 id: 3,
                 name : [
@@ -450,9 +528,15 @@ var tableData = {
                     {select : true},
                     {txt : 'Pending', class: 'tb-state tb-st1'}
                 ],
-                option : ['Pending','Completed','In-Progress'],
-                selected : 'Pending',
-                selName : 'viCuTable03'
+                tableSelcet : {
+                    btnName : 'viCuTable03',
+                    selected : {code: '301', name: 'Pending'},
+                    option : [
+                        {code: '301', name: 'Pending'},
+                        {code: '302', name: 'Completed'},
+                        {code: '303', name: 'In-Progress'},
+                    ],   
+                },
             }]
         },
         mainInven: {
@@ -512,9 +596,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Published', class: 'tb-state tb-st3'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Publish',
-                selName : 'miInTable01'
+                tableSelcet : {
+                    btnName : 'miInTable01',
+                    selected : {code: '304', name: 'Publish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 2,
                 name : [
@@ -529,9 +618,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Published', class: 'tb-state tb-st3'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Publish',
-                selName : 'miInTable02'
+                tableSelcet : {
+                    btnName : 'miInTable02',
+                    selected : {code: '304', name: 'Publish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 3,
                 name : [
@@ -546,9 +640,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Unpublished', class: 'tb-state tb-st1'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Unpublished',
-                selName : 'miInTable03'
+                tableSelcet : {
+                    btnName : 'miInTable03',
+                    selected : {code: '305', name: 'Unpublish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 4,
                 name : [
@@ -563,9 +662,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Unpublished', class: 'tb-state tb-st1'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Unpublished',
-                selName : 'miInTable04'
+                tableSelcet : {
+                    btnName : 'miInTable04',
+                    selected : {code: '305', name: 'Unpublish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 5,
                 name : [
@@ -580,9 +684,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Published', class: 'tb-state tb-st3'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Publish',
-                selName : 'miInTable05'
+                tableSelcet : {
+                    btnName : 'miInTable05',
+                    selected : {code: '304', name: 'Publish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 6,
                 name : [
@@ -597,9 +706,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Published', class: 'tb-state tb-st3'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Publish',
-                selName : 'miInTable06'
+                tableSelcet : {
+                    btnName : 'miInTable06',
+                    selected : {code: '304', name: 'Publish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 7,
                 name : [
@@ -614,9 +728,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Published', class: 'tb-state tb-st3'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Publish',
-                selName : 'miInTable07'
+                tableSelcet : {
+                    btnName : 'miInTable07',
+                    selected : {code: '304', name: 'Publish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             },{
                 id: 8,
                 name : [
@@ -631,9 +750,14 @@ var tableData = {
                     {select: true},
                     {txt : 'Unpublished', class: 'tb-state tb-st1'},
                 ],
-                option : ['Publish','Unpublish'],
-                selected : 'Unpublished',
-                selName : 'miInTable08'
+                tableSelcet : {
+                    btnName : 'miInTable08',
+                    selected : {code: '305', name: 'Unpublish'},
+                    option : [
+                        {code: '304', name: 'Publish'},
+                        {code: '305', name: 'Unpublish'},
+                    ],   
+                },
             }]     
         },
         viewInven: {

@@ -30,9 +30,7 @@
                 </li>
                 <li class="action-btn">
                     <select-box
-                        :option="['Bulk Action','Bulk Action']"
-                        :selected="'Bulk Action'"
-                        :name="'tableSelect01'"
+                        :select-data = selectData.tableSelect01
                     ></select-box>
                 </li>
             </ul>
@@ -56,7 +54,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="tBody in table.tBody"
-                        :key="tBody.id + tBody.name"
+                        :key="tBody.id"
                     >
                         <td v-for="(name,i) in tBody.name"
                             :key="i" 
@@ -65,9 +63,7 @@
                             <template v-else-if="name.router === true"><router-link :to="{name:name.path}">{{name.txt}}</router-link></template>
                             <template v-else-if="name.select === true">
                                 <select-box
-                                    :option="tBody.option"
-                                    :selected="tBody.selected"
-                                    :name="tBody.selName"
+                                    :select-data = tBody.tableSelcet
                                 ></select-box>
                             </template>
                             <template v-else>
@@ -81,18 +77,14 @@
             <div class="pagination" v-if="table.tBody.length >= 8">
                 <div class="paging">
                     <select-box
-                        :option="[10, 15, 20]"
-                        :selected="'10'"
-                        :name="'pageSelet01'"
+                        :select-data = selectData.pageSelect01
                     ></select-box>
                     <p class="txt">Items per page</p>
                     <p><span>1-10</span> of <span>200</span> items</p>
                 </div>
                 <div class="paging">
                     <select-box
-                        :option="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
-                        :selected="'1'"
-                        :name="'pageSelet02'"
+                        :select-data = selectData.pageSelect02
                     ></select-box>
                     <p>of <span>44</span> pages</p>
                     <div class="btns">
@@ -115,6 +107,11 @@ module.exports = {
         toggleBtn(payload){
             this.$store.commit('toggleBtn', payload)
         },
+    },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        }
     },
     components: {
         'select-box' : SelectBox,

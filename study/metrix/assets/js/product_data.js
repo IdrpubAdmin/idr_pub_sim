@@ -2,7 +2,6 @@ var productData = {
     namespaced: true,
     state: {
         newOrderItemList: [],
-        newOrderItemId: [],
         total : 0,
         items: [{
             id: 1,
@@ -49,9 +48,10 @@ var productData = {
             }
         },
         pushItem(state, payload){
-            if(state.newOrderItemId.includes(payload + 1) === false){
-                state.newOrderItemId.push(state.items[payload].id);
-                state.newOrderItemList.push(state.items[payload]);
+            console.log(state.newOrderItemList.includes(payload))
+
+            if(state.newOrderItemList.includes(payload) === false){
+                state.newOrderItemList.push(payload);
                 store.commit('productData/totalItems')
             }
         },
@@ -59,12 +59,6 @@ var productData = {
             for(let i = 0; i < state.newOrderItemList.length; i++) {
                 if(state.newOrderItemList[i].id === payload) {
                     state.newOrderItemList.splice(i, 1);
-                    i--;
-                }
-            }
-            for(let i = 0; i < state.newOrderItemId.length; i++) {
-                if(state.newOrderItemId.includes(payload)) {
-                    state.newOrderItemId.splice(i, 1);
                     i--;
                 }
             }

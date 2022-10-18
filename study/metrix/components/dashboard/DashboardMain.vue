@@ -1,142 +1,34 @@
 <template>
     <div class="dashboard">
-        <article class="summary">
-            <div class="header no-bg-sel">
-                <div class="icon-box point">
-                    <img src="assets/images/dashboard/Graph.png" alt="graph icon">
-                </div>
-                <select-box
-                    :select-data = selectData.dashSelect01
-                ></select-box>
-            </div>
-            <ul>
-                <li>
-                    <p class="tit">Sales</p>
-                    <dl class="value">
-                        <dt>₦<span>4,000,000.00</span></dt>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Volume</p>
-                    <dl class="value">
-                        <dt><span>450</span></dt>
-                        <dd class="plus">+<span>20.00</span>%</dd>
-                    </dl>
-                </li>
-            </ul>
-        </article>
-        <article class="summary">
-            <div class="header no-bg-sel">
-                <div class="icon-box">
-                    <img src="assets/images/dashboard/User.png" alt="user icon">
-                </div>
-                <select-box
-                    :select-data = selectData.dashSelect02
-                ></select-box>
-            </div>
-            <ul>
-                <li>
-                    <p class="tit">Customers</p>
-                    <dl class="value">
-                        <dt><span>1,250</span></dt>
-                        <dd class="plus">+<span>15.80</span>%</dd>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Active</p>
-                    <dl class="value">
-                        <dt><span>1,180</span></dt>
-                        <dd class="minus">-<span>4.90</span>%</dd>
-                    </dl>
-                </li>
-            </ul>
-        </article>
-        <article class="summary">
-            <div class="header no-bg-sel">
-                <div class="icon-box">
-                    <img src="assets/images/dashboard/Bag.png" alt="bag">
-                </div>
-                <select-box
-                    :select-data = selectData.dashSelect03
-                ></select-box>
-            </div>
-            <ul>
-                <li>
-                    <p class="tit">All Orders</p>
-                    <dl class="value">
-                        <dt><span>450</span></dt>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Pending</p>
-                    <dl class="value">
-                        <dt><span>5</span></dt>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Completed</p>
-                    <dl class="value">
-                        <dt><span>445</span></dt>
-                    </dl>
-                </li>
-            </ul>
-        </article>
+        <article-summary
+            :article-data = articleData.dashBoard01
+            :select-data = selectData.dashSelect01
+        ></article-summary>
+        <article-summary
+            :article-data = articleData.dashBoard02
+            :select-data = selectData.dashSelect02
+        ></article-summary>
+        <article-summary
+            :article-data = articleData.dashBoard03
+            :select-data = selectData.dashSelect03
+        ></article-summary>
         <article class="circle-chart">
-            <div class="title no-bg-sel">
+            <div class="title">
                 <h5>Marketting</h5>
                 <select-box
+                    class="no-bg-sel"
                     :select-data = selectData.dashSelect04
                 ></select-box>
             </div>
             <!-- <div id="chart"></div> -->
         </article>
-        <article class="summary folder">
-            <div class="header">
-                <div class="icon-box">
-                    <img src="assets/images/dashboard/Folder.png" alt="folder icon">
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <p class="tit">All Products</p>
-                    <dl class="value">
-                        <dt><span>45</span></dt>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Active</p>
-                    <dl class="value">
-                        <dt><span>32</span></dt>
-                        <dd class="plus">+<span>24</span>%</dd>
-                    </dl>
-                </li>
-            </ul>
-        </article>
-        <article class="summary cart">
-            <div class="header no-bg-sel">
-                <div class="icon-box">
-                    <img src="assets/images/dashboard/fi_shopping-cart.png" alt="cart icon">
-                </div>
-                <select-box
-                    :select-data = selectData.dashSelect05
-                ></select-box>
-            </div>
-            <ul>
-                <li>
-                    <p class="tit point">Abandoned Cart</p>
-                    <dl class="value">
-                        <dt><span>20</span>%</dt>
-                        <dd class="plus">+<span>0.00</span>%</dd>
-                    </dl>
-                </li>
-                <li>
-                    <p class="tit">Customers</p>
-                    <dl class="value">
-                        <dt><span>30</span></dt>
-                    </dl>
-                </li>
-            </ul>
-        </article>
+        <article-summary
+            :article-data = articleData.dashBoard04
+        ></article-summary>
+        <article-summary
+            :article-data = articleData.dashBoard05
+            :select-data = selectData.dashSelect05
+        ></article-summary>
         <article class="products">
             <div class="title">
                 <h5>Recent Orders</h5>
@@ -272,14 +164,13 @@
                         :select-data = selectData.dashSelect06
                     ></select-box>
                 </div>
-                <div class="no-bg-sel">
-                    <select-box
-                        :select-data = selectData.dashSelect07
-                    ></select-box>
-                </div>
+                <select-box
+                    class="no-bg-sel"
+                    :select-data = selectData.dashSelect07
+                ></select-box>
             </div>
             <div>
-                
+
             </div>
         </article>
     </div>
@@ -288,9 +179,13 @@
 <script>
 module.exports = {
     components : {
-        'select-box' : SelectBox
+        'article-summary' : ArticleSummary,
+        'select-box' : SelectBox,
     },
     computed: {
+        articleData() {
+            return this.$store.getters["articleData"]
+        },
         selectData() {
             return this.$store.getters["selectData"].selectBox
         }

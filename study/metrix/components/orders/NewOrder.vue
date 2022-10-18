@@ -128,7 +128,7 @@
                     <template v-if="itemSearch.length > 0">
                         <div class="items search-item">
                             <ul>
-                                <li v-for="(item, i) in productData" :key="item.id">
+                                <li v-for="item in productData" :key="item.id">
                                     <div class="item">
                                         <div class="img">
                                             <img :src="'assets/images/orders/'+item.src+'.png'" :alt="item.src+' img' ">
@@ -139,7 +139,7 @@
                                                 <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span></p>
                                             </div>
                                             <div class="item-btns">
-                                                <button class="add" @click="pushItem(i)">Add Item</button>
+                                                <button class="add" @click="pushItem(item)">Add Item</button>
                                             </div>
                                         </div>
                                     </div>

@@ -17,9 +17,7 @@
             </ul>
             <div class="btns">
                 <select-box
-                    :option="['Mark as Complete','Mark as Complete','Mark as Complete']"
-                    :selected="'Mark as Complete'"
-                    :name="'viewOrderSelect01'"
+                    :select-data = selectData.orderSelect04
                 ></select-box>
                 <div class="btn">
                     <router-link :to="{name:'ordersmain'}">Cancel Order</router-link>
@@ -101,14 +99,18 @@ module.exports = {
             tableData : this.$store.getters["tableData/viewOrder"]
         }
     },
-    computed: {
-        viewOrder() {
-            return this.$store.getters["tableData/viewOrder"]
-        },
-    },
     components: {
+        'article-summary' : ArticleSummary,
         'select-box' : SelectBox,
         'table-box' : TableBox
+    },
+    computed: {
+        articleData() {
+            return this.$store.getters["articleData"]
+        },
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        },
     },
 }
 </script> 

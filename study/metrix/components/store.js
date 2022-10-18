@@ -6,6 +6,7 @@ var store = new Vuex.Store({
         tableData : tableData,
         productData : productData,
         selectData : selectData,
+        articleData : articleData
     },
     state: {
         isActive : false,
@@ -63,6 +64,9 @@ var store = new Vuex.Store({
         }
     },
     getters: {
+        articleData: function articleData(state) {
+            return state.articleData;
+        },
         navigationData: function navigationData(state) {
             return state.navigationData;
         },

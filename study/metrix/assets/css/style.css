@@ -910,114 +910,6 @@ textarea::placeholder {
   background-color: #fff;
 }
 
-article .no-bg-sel .select-box {
-  background-color: #fff;
-  background-image: url("../images/settings/fi_chevron-down.png");
-  background-size: 16px;
-  background-position: center right 0px;
-  height: 16px;
-}
-article .no-bg-sel .select-box .selected {
-  padding: 0;
-  padding-left: 6px;
-  padding-right: 23px;
-}
-article .no-bg-sel .select-box .selected .value {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #bec0ca;
-}
-article .no-bg-sel .select-box ul {
-  display: block;
-  margin-top: 0;
-}
-article .no-bg-sel .select-box ul .option {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #bec0ca;
-  padding: 5px;
-}
-article .no-bg-sel .select-box ul .option:hover {
-  color: #000;
-}
-
-.summary {
-  padding: 15px;
-  min-height: 135px;
-}
-.summary .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.summary .header .icon-box {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background-color: rgba(255, 204, 145, 0.16);
-  position: relative;
-}
-.summary .header .icon-box.point {
-  background-color: rgba(85, 112, 241, 0.12);
-}
-.summary .header .icon-box img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.summary ul {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
-  flex-grow: 1;
-}
-.summary ul li {
-  width: 100%;
-}
-.summary ul li .tit {
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  color: #8b8d97;
-}
-.summary ul li .tit.point {
-  color: #cc5f5f;
-}
-.summary ul li .value {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #45464e;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
-.summary ul li .value dt {
-  margin-right: 7px;
-}
-.summary ul li .value dd {
-  font-family: "Inter";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
-  color: #fff;
-}
-.summary ul li .value dd.plus {
-  color: #519c66;
-}
-.summary ul li .value dd.minus {
-  color: #cc5f5f;
-}
-
 .modal-wrap {
   width: 100%;
   min-width: 360px;
@@ -1712,6 +1604,138 @@ article .no-bg-sel .select-box ul .option:hover {
   border-radius: 8px;
 }
 
+article {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.summary {
+  padding: 15px;
+  min-height: 135px;
+}
+.summary .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary .header .icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(255, 204, 145, 0.16);
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.summary .header .icon-box.point {
+  background-color: rgba(85, 112, 241, 0.12);
+}
+.summary .header .icon-box.graph {
+  background-image: url("../images/dashboard/Graph.png");
+}
+.summary .header .icon-box.user {
+  background-image: url("../images/dashboard/User.png");
+}
+.summary .header .icon-box.bag {
+  background-image: url("../images/dashboard/Bag.png");
+}
+.summary .header .icon-box.folder {
+  background-image: url("../images/dashboard/Folder.png");
+}
+.summary .header .icon-box.cart {
+  background-image: url("../images/dashboard/fi_shopping-cart.png");
+}
+.summary ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  flex-grow: 1;
+}
+.summary ul li {
+  width: 100%;
+}
+.summary ul li .tit {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #8b8d97;
+}
+.summary ul li .tit.tit-ty02 {
+  color: #cc5f5f;
+}
+.summary ul li .value {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #45464e;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.summary ul li .value dt {
+  margin-right: 7px;
+}
+.summary ul li .value dd {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #fff;
+}
+.summary ul li .value dd.plus {
+  color: #519c66;
+}
+.summary ul li .value dd.minus {
+  color: #cc5f5f;
+}
+
+.sum-ty02 {
+  background-color: #5570f1;
+}
+.sum-ty02 .header .icon-box {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.sum-ty02 ul li .tit {
+  color: #fff;
+}
+.sum-ty02 ul li .value {
+  color: #fff;
+}
+.sum-ty02 ul li .value dd {
+  color: #dbdeee;
+}
+.sum-ty02 ul li .value dd.plus {
+  color: #dbdeee;
+}
+.sum-ty02 ul li .value dd.minus {
+  color: #dbdeee;
+}
+
+.sum-mini {
+  background-color: #5570f1;
+}
+.sum-mini .header .icon-box {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.sum-mini ul li .tit {
+  color: #fff;
+}
+.sum-mini ul li .value {
+  color: #fff;
+}
+.sum-mini ul li .value dd {
+  color: #dbdeee;
+}
+.sum-mini ul li .value dd.plus {
+  color: #dbdeee;
+}
+.sum-mini ul li .value dd.minus {
+  color: #dbdeee;
+}
+
 .table-area .title {
   display: flex;
   justify-content: space-between;
@@ -2024,6 +2048,41 @@ article .no-bg-sel .select-box ul .option:hover {
   height: 16px;
   display: flex;
   justify-content: space-between;
+}
+
+.no-bg-sel {
+  background-color: transparent;
+  background-image: url("../images/settings/fi_chevron-down.png");
+  background-size: 16px;
+  background-position: center right 0px;
+  height: 16px;
+}
+.no-bg-sel .selected {
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 23px;
+}
+.no-bg-sel .selected .value {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #bec0ca;
+}
+.no-bg-sel ul {
+  display: block;
+  margin-top: 0;
+}
+.no-bg-sel ul .option {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #bec0ca;
+  padding: 5px;
+}
+.no-bg-sel ul .option:hover {
+  color: #000;
 }
 
 .wrapper {
@@ -2565,10 +2624,6 @@ header .location .breadcrumb ul li::before {
     margin-top: 0;
   }
 }
-.container .dashboard article {
-  background-color: #fff;
-  border-radius: 12px;
-}
 .container .dashboard article .title {
   font-family: "Inter";
   font-size: 16px;
@@ -2590,21 +2645,6 @@ header .location .breadcrumb ul li::before {
 .container .dashboard article:nth-child(8) {
   grid-column: 1/3;
   grid-row: 4/5;
-}
-.container .dashboard .folder {
-  background-color: #5570f1;
-}
-.container .dashboard .folder .header .icon-box {
-  background-color: rgba(255, 255, 255, 0.16);
-}
-.container .dashboard .folder ul li .tit {
-  color: #fff;
-}
-.container .dashboard .folder ul li .value {
-  color: #fff;
-}
-.container .dashboard .folder ul li .value dd {
-  color: #dbdeee;
 }
 .container .dashboard .circle-chart {
   padding: 20px;
@@ -2972,21 +3012,6 @@ header .location .breadcrumb ul li::before {
 }
 .inventory .contents .table-area table tbody tr td {
   padding: 6px 0;
-}
-.inventory .folder {
-  background-color: #5570f1;
-}
-.inventory .folder .header .icon-box {
-  background-color: rgba(255, 255, 255, 0.16);
-}
-.inventory .folder ul li .tit {
-  color: #fff;
-}
-.inventory .folder ul li .value {
-  color: #fff;
-}
-.inventory .folder ul li .value dd {
-  color: #dbdeee;
 }
 @media (max-width: 768px) {
   .inventory .new-inven .inventory-header {

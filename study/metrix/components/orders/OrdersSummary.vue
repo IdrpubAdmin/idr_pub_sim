@@ -10,100 +10,20 @@
             </div>   
         </div>
         <div class="contents">
-            <article class="summary">
-                <div class="header no-bg-sel">
-                    <div class="icon-box">
-                        <img src="assets/images/dashboard/Bag.png" alt="bag icon">
-                    </div>
-                    <select-box
-                        :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                        :selected="'This Week'"
-                        :name="'orderSelect01'"
-                    ></select-box>
-                </div>
-                <ul>
-                    <li>
-                        <p class="tit">All Orders</p>
-                        <dl class="value">
-                            <dt><span>450</span></dt>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Pending</p>
-                        <dl class="value">
-                            <dt><span>5</span></dt>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Completed</p>
-                        <dl class="value">
-                            <dt><span>320</span></dt>
-                        </dl>
-                    </li>
-                </ul>
-            </article>
-            <article class="summary">
-                <div class="header no-bg-sel">
-                    <div class="icon-box">
-                        <img src="assets/images/dashboard/Bag.png" alt="bag icon">
-                    </div>
-                    <select-box
-                        :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                        :selected="'This Week'"
-                        :name="'orderSelect02'"
-                    ></select-box>
-                </div>
-                <ul>
-                    <li>
-                        <p class="tit">Canceled</p>
-                    <dl class="value">
-                        <dt><span>30</span></dt>
-                        <dd class="minus">-<span>20.00</span>%</dd>
-                    </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Returned</p>
-                        <dl class="value">
-                            <dt><span>20</span></dt>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Damaged</p>
-                        <dl class="value">
-                            <dt><span>5</span></dt>
-                        </dl>
-                    </li>
-                </ul>
-            </article>
-            <article class="summary">
-                <div class="header no-bg-sel">
-                    <div class="icon-box">
-                        <img src="assets/images/dashboard/fi_shopping-cart.png" alt="cart icon">
-                    </div>
-                    <select-box
-                        :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                        :selected="'This Week'"
-                        :name="'orderSelect03'"
-                    ></select-box>
-                </div>
-                <ul>
-                    <li>
-                        <p class="tit point">Abandoned Cart</p>
-                        <dl class="value">
-                            <dt><span>20</span>%</dt>
-                            <dd class="plus">+<span>10.00</span>%</dd>
-                        </dl>                        
-                    </li>
-                    <li>
-                        <p class="tit">Customers</p>
-                        <dl class="value">
-                            <dt><span>30</span></dt>
-                        </dl>
-                    </li>
-                </ul>
-            </article>
+            <article-summary
+                :article-data = articleData.orderMain01
+                :select-data = selectData.orderSelect01
+            ></article-summary>
+            <article-summary
+                :article-data = articleData.orderMain02
+                :select-data = selectData.orderSelect02
+            ></article-summary>
+            <article-summary
+                :article-data = articleData.orderMain03
+                :select-data = selectData.orderSelect03
+            ></article-summary>
             <table-box
-                :table="tableData"
+                :table = tableData
             ></table-box>
         </div>
     </section>
@@ -117,8 +37,17 @@ module.exports = {
         }
     },
     components : {
+        'article-summary' : ArticleSummary,
         'select-box' : SelectBox,
         'table-box' : TableBox
+    },
+    computed: {
+        articleData() {
+            return this.$store.getters["articleData"]
+        },
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        }
     },
     methods: {
         toggleModal(payload){
