@@ -4,24 +4,29 @@
             <h3>Welcome back!</h3>
             <p>Login to your account</p>
         </div>
-        <form class="login-form">
-            <div class="id-box input-box">
-                <div class="image">
-                    <img src="assets/images/auth/Message.png" alt="Message icon">
-                </div>
+        <ul class="form">
+            <li class="input-box">
+                <i class="icon-box mail-icon"></i>
                 <input type="text" placeholder="Email Address">
-            </div>
-            <div class="password-box input-box">
-                <div class="image">
-                    <img src="assets/images/auth/Lock.png" alt="Lock icon">
-                </div>
+            </li>
+            <li class="password-box input-box">
+                <i class="icon-box lock-icon"></i>
                 <input type="password" placeholder="Password">
-                <button>
-                    <img src="assets/images/auth/fi_eye-off.png" alt="eye icon">
-                </button>
-            </div>
-        </form>
+                <button class="eye-off-icon"></button>
+            </li>
+        </ul>
         <p class="lock-link">Recover Password</p>
-        <p class="join-us-link"><router-link to="/signup">Don’t have an account? <span class="b">Sign Up</span></router-link></p>          
+        <p class="link-btn">
+            <router-link to="/signup">Don’t have an account? <span>Sign Up</span></router-link>
+        </p>          
     </div>
 </template>
+
+<script>
+module.exports = {
+    // 로그인 페이지 이동시 nav active되는거 해제
+    mounted() {
+        this.$store.commit('checkActive');
+    },
+}
+</script>

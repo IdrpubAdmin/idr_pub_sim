@@ -3,10 +3,7 @@
         <div class="customers-header">
             <h3>Customers Summary</h3>
             <div class="btn">
-                <button @click="toggleModal('newCustomer')">
-                    <img src="assets/images/orders/fi_plus.png" alt="plus icon">
-                    <span>Add a New Customer</span>
-                </button>
+                <button class="plus2-icon" @click="toggleModal('newCustomer')">Add a New Customer</button>
             </div>   
         </div>
         <div class="contents">

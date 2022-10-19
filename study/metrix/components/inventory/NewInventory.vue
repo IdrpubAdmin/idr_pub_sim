@@ -18,7 +18,7 @@
                         <ul class="form">
                             <li class="input-box-area">
                                 <p>Product Name</p>
-                                <div class="input-box">
+                                <div class="input-box input-ty03">
                                     <input type="text" value="Polo Tshirt">
                                 </div>
                             </li>
@@ -39,13 +39,9 @@
                                 <div class="input-box">
                                     <input type="number" placeholder="Quantity in Stock" v-model="qty">
                                 </div>
-                                <div class="btns">
-                                    <button class="up-btn" @click="++qty">
-                                        <img src="assets/images/inventory/up.png" alt="up icon">
-                                    </button>
-                                    <button class="down-btn" @click="--qty">
-                                        <img src="assets/images/inventory/down.png" alt="down icon">
-                                    </button>
+                                <div class="input-btn-area">
+                                    <button class="up-icon" @click="++qty"></button>
+                                    <button class="down-icon" @click="--qty"></button>
                                 </div>
                             </li>
                             <li class="input-box-area">
@@ -89,9 +85,7 @@
                         <ul class="form">
                             <li class="input-box-area icon-in">
                                 <div class="input-box">
-                                    <div class="image">
-                                        <img src="assets/images/inventory/Calendar.png" alt="calendar icon">
-                                    </div>
+                                    <i class="icon-box calendar-icon"></i>
                                     <input type="text" placeholder="12/12/2020">
                                 </div>
                             </li>
@@ -124,17 +118,13 @@
                         <ul class="form">
                             <li class="input-box-area icon-in">
                                 <p>Date Addred</p>
-                                <div class="double space">
+                                <div class="double input-ty03">
                                     <div class="input-box">
-                                        <div class="image">
-                                            <img src="assets/images/inventory/Calendar.png" alt="calendar icon">
-                                        </div>
+                                        <i class="icon-box calendar-icon"></i>
                                         <input type="text" placeholder="12/12/2020">
                                     </div>
                                     <div class="input-box">
-                                        <div class="image">
-                                            <img src="assets/images/inventory/fi_clock.png" alt="clock icon">
-                                        </div>
+                                        <i class="icon-box clock-icon"></i>
                                         <input type="text" placeholder="12:00 PM">
                                     </div> 
                                 </div>
@@ -149,12 +139,8 @@
                         <img src="assets/images/inventory/Shirt.png" alt="product img">
                     </div>
                     <div class="btns">
-                        <button>
-                            <img src="assets/images/settings/fi_upload-cloud.png" alt="cloud icon">
-                        </button>
-                        <button>
-                            <img src="assets/images/settings/Delete.png" alt="delete icon">
-                        </button>
+                        <button class="cloud-icon"></button>
+                        <button class="delete-icon"></button>
                     </div>
                 </div>
                 <div class="addition-img">
@@ -167,18 +153,12 @@
                                 <img src="assets/images/inventory/Shirt.png" alt="product img">
                             </div> 
                             <div class="btns">
-                                <button>
-                                    <img src="assets/images/settings/fi_upload-cloud.png" alt="cloud icon">
-                                </button>
-                                <button>
-                                    <img src="assets/images/settings/Delete.png" alt="delete icon">
-                                </button>
+                                <button class="cloud-icon"></button>
+                                <button class="delete-icon"></button>
                             </div>
                         </li>
                         <li class="upload-box no-img">
-                            <div class="image">
-                                <img src="assets/images/inventory/Image.png" alt="image icon">
-                            </div> 
+                            <div class="image"></div> 
                             <div class="text">
                                 <img src="assets/images/inventory/fi_upload-cloud.png" alt="cloud icon">
                                 <p>Upload Image</p>

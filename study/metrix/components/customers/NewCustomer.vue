@@ -4,9 +4,7 @@
             <div class="header">
                 <h3>Add a New Customer</h3>
                 <div class="btn">
-                    <button @click="toggleModal('newCustomer')">
-                        <img src="assets/images/orders/fi_x.png" alt="">
-                    </button>
+                    <button class="x-icon" @click="toggleModal('newCustomer')"></button>
                 </div>
             </div>
             <section>
@@ -15,17 +13,17 @@
                         <h5>Customer Information</h5>
                     </div>
                     <ul class="form">
-                        <li class="input-box-area">
+                        <li class="input-box-area input-ty02">
                             <div class="input-box">
                                 <input type="text" placeholder="Customer Name">
                             </div>
                         </li>                          
-                        <li class="input-box-area">
+                        <li class="input-box-area input-ty02">
                             <div class="input-box">
                                 <input type="text" placeholder="Customer Email">
                             </div>
                         </li>
-                        <li class="input-box-area">
+                        <li class="input-box-area input-ty02">
                             <div class="input-box no-icon phone-box">
                                 <div class="select-box">
                                     <div class="selected" @click="toggleBtn('settingSelect01')">
@@ -69,12 +67,12 @@
                     </div>
                     <template v-if="btnActive.includes('newCustomBtn01')">
                         <ul class="form">
-                            <li class="input-box-area">
+                            <li class="input-box-area input-ty02">
                                 <div class="input-box">
                                     <input type="text" placeholder="Building No., Street Address">
                                 </div>
                             </li>                          
-                            <li class="input-box-area">
+                            <li class="input-box-area input-ty02">
                                 <div class="input-box">
                                     <input type="text" placeholder="City">
                                 </div>

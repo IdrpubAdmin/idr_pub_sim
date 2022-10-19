@@ -2,7 +2,7 @@ var articleData = {
     namespaced: true,
     state: {
         dashBoard01 : {
-            icon : 'graph',
+            icon : 'graph-icon point',
             summaryData : [{
                 id: 1,
                 title: 'Sales',
@@ -15,7 +15,7 @@ var articleData = {
             }]
         },
         dashBoard02 : {
-            icon : 'user',
+            icon : 'user-icon',
             summaryData : [{
                 id: 1,
                 title: 'Customers',
@@ -29,7 +29,7 @@ var articleData = {
             }]
         },
         dashBoard03 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Orders',
@@ -46,7 +46,7 @@ var articleData = {
         },
         dashBoard04 : {
             type: 'sum-ty02',
-            icon : 'folder',
+            icon : 'folder-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Products',
@@ -59,7 +59,7 @@ var articleData = {
             }]
         },
         dashBoard05 : {
-            icon : 'cart',
+            icon : 'cart-icon',
             summaryData : [{
                 id: 1,
                 title: 'Abandoned Cart',
@@ -73,7 +73,7 @@ var articleData = {
             }]
         },
         orderMain01 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Orders',
@@ -89,7 +89,7 @@ var articleData = {
             }]
         },
         orderMain02 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'Canceled',
@@ -106,7 +106,7 @@ var articleData = {
             }]
         },
         orderMain03 : {
-            icon : 'cart',
+            icon : 'cart-icon',
             summaryData : [{
                 id: 1,
                 title: 'Abandoned Cart',
@@ -120,7 +120,7 @@ var articleData = {
         },
         orderView01 : {
             type: 'sum-ty03 sum-ty04',
-            icon : 'profile',
+            icon : 'profile-icon',
             userData : {
                 name : 'Janet Adebayo',
                 txt : 'Customer since',
@@ -140,7 +140,7 @@ var articleData = {
         },
         orderView02 : {
             type: 'sum-ty04',
-            icon : 'location',
+            icon : 'location-icon',
             summaryData : [{
                 id: 1,
                 title: 'Home Address',
@@ -153,7 +153,7 @@ var articleData = {
         },
         orderView03 : {
             type: 'sum-ty04',
-            icon : 'card',
+            icon : 'card-icon',
             summaryData : [{
                 id: 1,
                 title: 'Payment Method',
@@ -165,7 +165,7 @@ var articleData = {
             }]
         },
         customMain01 : {
-            icon : 'user',
+            icon : 'user-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Customers',
@@ -184,7 +184,7 @@ var articleData = {
             }]
         },
         customMain02 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'New Customers',
@@ -202,7 +202,7 @@ var articleData = {
         },
         customView01 : {
             type: 'sum-ty03 sum-ty04',
-            icon : 'profile',
+            icon : 'profile-icon',
             userData : {
                 name : 'Janet Adebayo',
                 txt : 'Customer since',
@@ -222,7 +222,7 @@ var articleData = {
         },
         customView02 : {
             type: 'sum-ty04',
-            icon : 'location',
+            icon : 'location-icon',
             summaryData : [{
                 id: 1,
                 title: 'Home Address',
@@ -234,7 +234,7 @@ var articleData = {
             }]
         },
         customView03 : {
-            icon : 'chart',
+            icon : 'chart-icon point',
             summaryData : [{
                 id: 1,
                 title: 'Total Orders',
@@ -242,7 +242,7 @@ var articleData = {
             }]
         },
         customView04 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Orders',
@@ -258,7 +258,7 @@ var articleData = {
             }]
         },
         customView05 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'Canceled',
@@ -274,7 +274,7 @@ var articleData = {
             }]
         },    
         customView06 : {
-            icon : 'cart',
+            icon : 'cart-icon',
             summaryData : [{
                 id: 1,
                 title: 'Abandoned Cart',
@@ -284,7 +284,7 @@ var articleData = {
         },
         invenMain01 : {
             type: 'sum-ty02',
-            icon : 'folder',
+            icon : 'folder-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Products',
@@ -297,7 +297,7 @@ var articleData = {
             }]
         },
         invenMain02 : {
-            icon : 'user',
+            icon : 'user-icon',
             summaryData : [{
                 id: 1,
                 title: 'Low Stock Alert',
@@ -331,7 +331,7 @@ var articleData = {
             }]
         },
         invenView02 : {
-            icon : 'chart',
+            icon : 'chart-icon point',
             summaryData : [{
                 id: 1,
                 title: 'Total Orders',
@@ -339,7 +339,7 @@ var articleData = {
             }]
         },
         invenView03 : {
-            icon : 'eye',
+            icon : 'eye-icon',
             summaryData : [{
                 id: 1,
                 title: 'Views',
@@ -351,7 +351,7 @@ var articleData = {
             }]
         },
         invenView04 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'All Orders',
@@ -367,7 +367,7 @@ var articleData = {
             }]
         },
         invenView05 : {
-            icon : 'bag',
+            icon : 'bag-icon',
             summaryData : [{
                 id: 1,
                 title: 'Canceled',

@@ -60,7 +60,7 @@
             }
             .form{
                 margin-top: 27px;
-                .form-item{
+                .input-box-area{
                     margin-top: 24px;
                     &:first-child{
                         margin-top: 0;
@@ -98,8 +98,12 @@
                 margin-top: 27px;
                 background-color: #fff;
                 border: solid 1px #5e6366;
-                input::placeholder{
-                    color: #abafb1;
+                i{
+                    width: 52px;
+                    background-size: 20px;
+                }
+                input{
+                    width: calc(100% - 52px);
                 }
             }
             .items{
@@ -125,10 +129,12 @@
                                     @include fonts('Inter', 14, 500, 20, #33343a);
                                 }
                             }
-                            .item-btns{
+                            .item-btn-area{
                                 text-align: right;
                                 .remove{
                                     @include fonts('Inter', 12, 500, 15, #cc5f5f);
+                                    width: auto;
+                                    height: auto;
                                 }
                                 .add{
                                     @include fonts('Inter', 12, 500, 15, #5570f1);
@@ -205,6 +211,7 @@
                     width: 140px;
                     height: 140px;
                     margin: 0 auto;
+                    background-image: url('../images/orders/iconContainer.png');
                 }
                 .texts{
                     margin-top: 40px;

@@ -9,61 +9,35 @@ input{
     border: 0;
     padding: 0;
 }
-button{
-    background: transparent;
-}
-
 .input-box{
     display: flex;
     height: 52px;
     border-radius: 8px;
     background-color: rgba(239, 241, 249, 0.6);
-    margin-top: 8px;
-    .image{
+    .icon-box{
         width: 56px;
         height: 52px;
         position: relative;
-        img{
-            @include center-align;
-        }
+        background-size: 24px;
     }
     input{
+        width: calc(100% - 56px);
         padding: 9px 16px 9px 0;
         @include fonts('Inter', 16, 400, 20, #5e6366);
-        width: calc(100% - 56px);
+    }
+    input::placeholder{
+        color: #abafb1;
     }
 }
-
-.select-box {
-    position: relative;
-    background-image: url('../images/settings/fi_chevron-down.png');
-    background-repeat: no-repeat;
-    background-position: center right 16px;
-    border-radius: 8px;
-    background-color: rgba(239, 241, 249, 0.6);
-    cursor: pointer;
-    .selected{
-        padding: 16px;
-        .value{
-            @include fonts('Inter', 16, 400, 20, #abafb1);
-        }
-    }
-    ul{
+.input-ty02{
+    input{
         width: 100%;
-        position: absolute;
-        background-color: #fff;
-        z-index: 10;
-        border: 1px solid #000;
-        .option{
-            @include fonts('Inter', 16, 400, 20, #abafb1);
-            padding: 10px;
-            &:hover{
-                color: #000;
-            }
-        }
+        padding: 9px 16px;
     }
 }
-
+.input-ty03{
+    margin-top: 8px;
+}
 textarea{
     width: 100%;
     padding: 16px;
@@ -150,13 +124,8 @@ textarea::placeholder{
                 }
                 .input-box-area{
                     .input-box{
-                        margin-top: 24px;
                         input{
-                            padding-left: 16px;
                             @include fonts('Inter', 16, 400, 20, #53545c);
-                        }
-                        input::placeholder{
-                            color: #abafb1;
                         }
                     }
                 }
@@ -202,43 +171,32 @@ textarea::placeholder{
         }
         .btn{
             background-color: $b;
-            padding: 6px 16px;
             border-radius: 12px;
             @include mdq-mobile{
                 padding: 6px;
             }
             button{
-                display: flex;
-                img{
-                    margin-right: 12px;
-                    @include mdq-mobile{
-                        display: none
-                    }
-                }
-                span{
-                    @include fonts('Inter', 14, 400, 24, #fff);
-                    @include mdq-mobile{
-                        padding: 5px 0;
-                        font-size: 12px;
-                        line-height: 14px;
-                    }
+                padding: 6px 16px 6px 47px;
+                background-position: center left 16px;
+                @include fonts('Inter', 14, 400, 24, #fff);
+                @include mdq-mobile{
+                    padding: 5px 0;
+                    font-size: 12px;
+                    line-height: 14px;
+                    background-image: none;
                 }
             }
             a{
-                display: flex;
-                img{
-                    margin-right: 12px;
-                    @include mdq-mobile{
-                        display: none
-                    }
-                }
-                span{
-                    @include fonts('Inter', 14, 400, 24, #fff);
-                    @include mdq-mobile{
-                        padding: 5px 0;
-                        font-size: 12px;
-                        line-height: 14px;
-                    }
+                display: inline-block;
+                padding: 6px 16px 6px 47px;
+                background-position: center left 16px;
+                background-repeat: no-repeat;
+                @include fonts('Inter', 14, 400, 24, #fff);
+                @include mdq-mobile{
+                    padding: 5px 0;
+                    font-size: 12px;
+                    line-height: 14px;
+                    background-image: none;
                 }
             }
         }

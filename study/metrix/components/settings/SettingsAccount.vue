@@ -3,9 +3,7 @@
         <div class="settings-header">
             <h5>Account Settings</h5>
             <div class="btn">
-                <button>
-                    Update
-                </button>
+                <button>Update</button>
             </div>           
         </div>
         <div class="contents">
@@ -13,34 +11,28 @@
                 <ul>
                     <li class="input-box-area">
                         <p>First Name</p>
-                        <div class="input-box">
-                            <div class="image">
-                                <img src="assets/images/settings/Profile.png" alt="profile icon">
-                            </div>
+                        <div class="input-box input-ty03">
+                            <i class="icon-box name-icon"></i>
                             <input type="text" value="Usman">
                         </div>
                     </li>
                     <li class="input-box-area">
                         <p>Last Name</p>
-                        <div class="input-box">
-                            <div class="image">
-                                <img src="assets/images/settings/Profile.png" alt="profile icon">
-                            </div>
+                        <div class="input-box input-ty03">
+                            <i class="icon-box name-icon"></i>
                             <input type="text" value="Ndako">
                         </div>
                     </li>
                     <li class="input-box-area">
                         <p>Email</p>
-                        <div class="input-box">
-                            <div class="image">
-                                <img src="assets/images/settings/Message.png" alt="message icon">
-                            </div>
+                        <div class="input-box input-ty03">
+                            <i class="icon-box mail-icon"></i>
                             <input type="text" value="usmanndako@gmail.com">
                         </div>
                     </li>
                     <li class="input-box-area">
                         <p>Phone Number</p>
-                        <div class="input-box no-icon phone-box">
+                        <div class="input-box input-ty02 input-ty03 phone-box">
                             <div class="select-box">
                                 <div class="selected" @click="toggleBtn('settingSelect01')">
                                     <div class="value">
@@ -72,16 +64,14 @@
                     </li>
                     <li class="input-box-area">
                         <p>Address</p>
-                        <div class="input-box">
-                            <div class="image">
-                                <img src="assets/images/settings/Location.png" alt="location icon">
-                            </div>
+                        <div class="input-box input-ty03">
+                            <i class="icon-box location2-icon"></i>
                             <input type="text" value="No. 93 Skyfield Apartments">
                         </div>
                     </li>
                     <li class="input-box-area">
                         <p>City</p>
-                        <div class="input-box no-icon">
+                        <div class="input-box input-ty02 input-ty03">
                             <input type="text" value="Yaba">
                         </div>
                     </li>
@@ -104,13 +94,9 @@
             <div class="user-image">
                 <div class="image-box">
                     <img src="assets/images/settings/image1.png" alt="profile img">
-                    <div class="btns">
-                        <button>
-                            <img src="assets/images/settings/fi_upload-cloud.png" alt="cloud icon">
-                        </button>
-                        <button>
-                            <img src="assets/images/settings/Delete.png" alt="delete icon">
-                        </button>
+                    <div class="img-btn-area">
+                        <button class="cloud-icon"></button>
+                        <button class="delete-icon"></button>
                     </div>
                 </div>
             </div>

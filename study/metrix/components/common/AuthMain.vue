@@ -18,7 +18,7 @@
                         </router-link>
                     </h1>
                     <router-view></router-view>
-                    <div class="login-btn">
+                    <div class="btn-area">
                         <router-link to="/">Login</router-link>
                     </div>
                 </section>
@@ -26,12 +26,3 @@
         </div>
     </div>
 </template>
-
-<script>
-module.exports = {
-    // 로그인 페이지 이동시 nav active되는거 해제
-    mounted() {
-        this.$store.commit('checkActive');
-    },
-}
-</script>

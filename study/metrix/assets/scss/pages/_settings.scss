@@ -83,12 +83,7 @@
                             p{
                                 text-indent: 5px;
                                 @include fonts('Inter', 12, 400, 15, #5e6366)
-                            }
-                            .no-icon{
-                                input{
-                                    padding-left: 16px;
-                                }
-                            }                        
+                            }                      
                         }
                         .double{
                             display: flex;
@@ -115,7 +110,7 @@
                         img{
                             border-radius: 12px;
                         }
-                        .btns{
+                        .img-btn-area{
                             position: absolute;
                             top: 14px;
                             right: 14px;

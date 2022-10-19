@@ -3,10 +3,7 @@
         <div class="inventory-header">
             <h3>Inventory Summary</h3>
             <div class="btn">
-                <router-link :to="{name:'newinventory'}">
-                    <img src="assets/images/orders/fi_plus.png" alt="plus icon">
-                    <span>Add a New Product</span>
-                </router-link>
+                <router-link class="plus2-icon" :to="{name:'newinventory'}">Add a New Product</router-link>
             </div>   
         </div>
         <div class="contents">

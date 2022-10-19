@@ -1,32 +1,28 @@
 <template>
     <div class="signup-box">
         <div class="greetings">
-            <h3>Get Started with <span class="b">Metrix</span></h3>
+            <h3>Get Started with <span>Metrix</span></h3>
             <p>Create your free account</p>
         </div>
-        <form class="signup-form">
-            <div class="name-box input-box">
-                <div class="image">
-                    <img src="assets/images/auth/Profile.png" alt="Profile icon">
-                </div>
+        <ul class="form">
+            <li class="input-box">
+                <i class="icon-box name-icon"></i>
                 <input type="text" placeholder="Your Full Name">
-            </div>
-            <div class="email-box input-box">
-                <div class="image">
-                    <img src="assets/images/auth/Message.png" alt="Message icon">
-                </div>
+            </li>
+            <li class="email-box input-box">
+                <i class="icon-box mail-icon"></i>
                 <input type="text" placeholder="Your Email Address">
-            </div>
-            <div class="password-box input-box">
-                <div class="image">
-                    <img src="assets/images/auth/Lock.png" alt="Lock icon">
-                </div>
+            </li>
+            <li class="password-box input-box">
+                <i class="icon-box lock-icon"></i>
                 <input type="password" placeholder="Create a Strong Password">
-                <button class="hidden-btn">
-                    <img src="assets/images/auth/fi_eye-off.png" alt="eye icon">
-                </button>
-            </div>
-        </form>
-        <p class="join-us-link"><router-link to="/login">Already have an account? <span class="point">Login</span></router-link></p>
+                <button class="eye-off-icon"></button>
+            </li>
+        </ul>
+        <p class="link-btn">
+            <router-link to="/login">
+                Already have an account? <span>Login</span>
+            </router-link>
+        </p>
     </div>
 </template>

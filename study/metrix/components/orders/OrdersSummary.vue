@@ -3,10 +3,7 @@
         <div class="orders-header">
             <h3>Orders Summary</h3>
             <div class="btn">
-                <button @click="toggleModal('newOrder')">
-                    <img src="assets/images/orders/fi_plus.png" alt="plus icon">
-                    <span>Create a New Order</span>
-                </button>
+                <button class="plus2-icon" @click="toggleModal('newOrder')">Create a New Order</button>
             </div>   
         </div>
         <div class="contents">

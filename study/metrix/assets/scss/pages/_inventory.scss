@@ -91,14 +91,11 @@
                                     input{
                                         width: 100%;
                                     }
-                                    input::placeholder{
-                                        color: #abafb1;
-                                    }
                                 }
                                 textarea{
                                     height: 163px;
                                 }
-                                .btns{
+                                .input-btn-area{
                                     width: 40px;
                                     position: absolute;
                                     top: 5px; right: 4px;
@@ -107,10 +104,10 @@
                                         height: 20px;
                                         background-color: #dde2e5;
                                     }
-                                    .up-btn{
+                                    .up-icon{
                                         border-radius: 5px 5px 0 0;
                                     }
-                                    .down-btn{
+                                    .down-icon{
                                         margin-top: 3px;
                                         border-radius: 0 0 5px 5px;
                                     }
@@ -132,9 +129,6 @@
                                 .input-box{
                                     padding-left: 0;
                                 }
-                            }
-                            .space{
-                                margin-top: 8px;
                             }
                             .double{
                                 display: flex;
@@ -233,6 +227,9 @@
                                 width: 56px;
                                 height: 56px;
                                 margin: 41px auto 0;
+                                background-image: url('../images/inventory/Image.png');
+                                background-size: cover;
+                                background-position: center;
                             }   
                             .text{
                                 margin-top: 12px;

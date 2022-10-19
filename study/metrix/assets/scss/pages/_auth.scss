@@ -42,44 +42,29 @@
                     text-align: center;
                     h3{
                         @include fonts('Poppins', 20, 500, 30, #000);
+                        span{
+                            color: $b;
+                        }
                     }
                     p{
                         margin-top: 8px;
                         @include fonts('Inter', 14, 400, 17, #8b8d97);
                     }
                 }
-                form{
-                    width: 100%;
+                .form{
                     margin-top: 60px;
-                    .input-box{
-                        display: flex;
-                        border-radius: 8px;
-                        background-color: rgba(239, 241, 249, 0.6);
-                        .image{
-                            width: 56px;
-                            height: 56px;
-                            position: relative;
-                            img{
-                                @include center-align;
-                            }
-                        }
-                        input{
-                            width: calc(100% - 56px);
-                            height: 56px;
-                        }
-                    }
                     .password-box{
                         margin-top: 30px;
                         input{
-                            width: calc(100% - 102px);
-                        }
-                        .hidden-btn{
-                            width: 46px;
-                            height: 56px;
+                            width: calc(100% - 104px);
                         }
                     }
                     .email-box{
                         margin-top: 30px;
+                    }
+                    .eye-off-icon{
+                        width: 48px;
+                        background-size: 16px;
                     }
                 }
                 .lock-link{
@@ -87,7 +72,7 @@
                     margin-top: 8px;
                     text-align: right;
                 }
-                .join-us-link{
+                .link-btn{
                     margin-top: 48px;
                     text-align: center; 
                     @include fonts('Inter', 14, 400, 17, #8b8d97);
@@ -95,7 +80,7 @@
                         color: $b;
                     }
                 }
-                .login-btn{
+                .btn-area{
                     text-align: center;
                     width: 180px;
                     height: 58px;
