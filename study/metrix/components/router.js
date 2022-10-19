@@ -23,10 +23,10 @@ var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue')
 var LogIn = httpVueLoader('components/common/LogIn.vue');
 var SignUp = httpVueLoader('components/common/SignUp.vue');
 
+var FilterPopup = httpVueLoader('components/common/FilterPopup.vue');
 var ArticleSummary = httpVueLoader('components/common/ArticleSummary.vue');
 var SelectBox = httpVueLoader('components/common/SelectBox.vue');
 var TableBox = httpVueLoader('components/common/TableBox.vue');
-var FilterPopup = httpVueLoader('components/common/FilterPopup.vue');
 
 var router = new VueRouter({
 	routes: [

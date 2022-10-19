@@ -1,0 +1,16 @@
+.state-btn {
+    @include fonts('Inter', 12, 400, 15, #1c1d22);
+    padding: 4px 11px;
+    border-radius: 8px;
+}
+.state-ty01{
+    background-color: #fff2e2;
+}
+.state-ty02{
+    color: #519c66;
+    background-color: rgba(50, 147, 111, 0.16);
+}
+.state-ty03{
+    color: #5570f1;
+    background-color: rgba(85, 112, 241, 0.16);
+}

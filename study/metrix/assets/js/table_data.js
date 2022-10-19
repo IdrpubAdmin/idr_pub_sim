@@ -46,7 +46,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Completed`, class: 'tb-state tb-st2'}
+                    {txt : `Completed`, class: 'state-btn state-ty02'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable01',
@@ -67,7 +67,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `In-Progress`, class: 'tb-state tb-st3'}
+                    {txt : `In-Progress`, class: 'state-btn state-ty03'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable02',
@@ -88,7 +88,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'tb-state tb-st1'}
+                    {txt : `Pending`, class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable03',
@@ -109,7 +109,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Completed`, class: 'tb-state tb-st2'}
+                    {txt : `Completed`, class: 'state-btn state-ty02'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable04',
@@ -130,7 +130,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Completed`, class: 'tb-state tb-st2'}
+                    {txt : `Completed`, class: 'state-btn state-ty02'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable05',
@@ -151,7 +151,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `In-Progress`, class: 'tb-state tb-st3'}
+                    {txt : `In-Progress`, class: 'state-btn state-ty03'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable06',
@@ -172,7 +172,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : 'Pending', class: 'tb-state tb-st1'}
+                    {txt : 'Pending', class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable07',
@@ -193,7 +193,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
-                    {txt : `Completed`, class: 'tb-state tb-st2'}
+                    {txt : `Completed`, class: 'state-btn state-ty02'}
                 ],
                 tableSelcet : {
                     btnName : 'miOrTable08',
@@ -256,7 +256,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'tb-state tb-st1'}
+                    {txt : `Pending`, class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'viOrTable01',
@@ -278,7 +278,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'tb-state tb-st1'}
+                    {txt : `Pending`, class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'viOrTable02',
@@ -300,7 +300,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select : true},
-                    {txt : `Pending`, class: 'tb-state tb-st1'}
+                    {txt : `Pending`, class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'viOrTable03',
@@ -358,7 +358,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 2,
@@ -370,7 +370,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 3,
@@ -382,7 +382,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 4,
@@ -394,7 +394,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 5,
@@ -406,7 +406,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 6,
@@ -418,7 +418,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 7,
@@ -430,7 +430,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             },{
                 id: 8,
@@ -442,7 +442,7 @@ var tableData = {
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
-                    {txt : 'Active', class: 'tb-state tb-st2'}
+                    {txt : 'Active', class: 'state-btn state-ty02'}
                 ],
             }]     
         },
@@ -486,7 +486,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
-                    {txt : 'Completed', class: 'tb-state tb-st2'}
+                    {txt : 'Completed', class: 'state-btn state-ty02'}
                 ],
                 tableSelcet : {
                     btnName : 'viCuTable01',
@@ -506,7 +506,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
-                    {txt : 'In-Progress', class: 'tb-state tb-st3'}
+                    {txt : 'In-Progress', class: 'state-btn state-ty03'}
                 ],
                 tableSelcet : {
                     btnName : 'viCuTable02',
@@ -526,7 +526,7 @@ var tableData = {
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
-                    {txt : 'Pending', class: 'tb-state tb-st1'}
+                    {txt : 'Pending', class: 'state-btn state-ty01'}
                 ],
                 tableSelcet : {
                     btnName : 'viCuTable03',
@@ -594,7 +594,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Published', class: 'tb-state tb-st3'},
+                    {txt : 'Published', class: 'state-btn state-ty03'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable01',
@@ -616,7 +616,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Published', class: 'tb-state tb-st3'},
+                    {txt : 'Published', class: 'state-btn state-ty03'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable02',
@@ -638,7 +638,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'tb-state tb-st1'},
+                    {txt : 'Unpublished', class: 'state-btn state-ty01'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable03',
@@ -660,7 +660,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'tb-state tb-st1'},
+                    {txt : 'Unpublished', class: 'state-btn state-ty01'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable04',
@@ -682,7 +682,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Published', class: 'tb-state tb-st3'},
+                    {txt : 'Published', class: 'state-btn state-ty03'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable05',
@@ -704,7 +704,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Published', class: 'tb-state tb-st3'},
+                    {txt : 'Published', class: 'state-btn state-ty03'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable06',
@@ -726,7 +726,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Published', class: 'tb-state tb-st3'},
+                    {txt : 'Published', class: 'state-btn state-ty03'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable07',
@@ -748,7 +748,7 @@ var tableData = {
                     {txt : `₦<span>0.00</span>`},
                     {txt : `₦<span>50,000.00</span>`},
                     {select: true},
-                    {txt : 'Unpublished', class: 'tb-state tb-st1'},
+                    {txt : 'Unpublished', class: 'state-btn state-ty01'},
                 ],
                 tableSelcet : {
                     btnName : 'miInTable08',
@@ -805,7 +805,7 @@ var tableData = {
                     {txt : 2}, 
                     {txt : `₦<span>0.00</span>`}, 
                     {txt : `₦<span>50,000.00</span>`}, 
-                    {txt : 'Completed', class: 'tb-state tb-st2'}
+                    {txt : 'Completed', class: 'state-btn state-ty02'}
                 ]
             },]
         },

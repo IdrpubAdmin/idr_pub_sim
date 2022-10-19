@@ -1,12 +1,21 @@
 <template>
     <article class="summary" :class="articleData.type">
         <div class="header">
-            <i class="icon-box" :class="articleData.icon"></i>
+            <i class="icon-box" v-if="articleData.icon" :class="articleData.icon"></i>
             <select-box 
                 v-if="selectData"
                 class="no-bg-sel"
                 :select-data = selectData
             ></select-box>
+            <template v-if="articleData.userData">
+                <dl class="sum-user">
+                    <dt><span>{{articleData.userData.name}}</span></dt>
+                    <dd>{{articleData.userData.txt}} <span>{{articleData.userData.value}}</span></dd>
+                </dl>  
+                <div class="state-btn" :class="articleData.userData.type">
+                    <span>{{articleData.userData.state}}</span>
+                </div>
+            </template>
         </div>
         <ul>
             <li v-for="summary in articleData.summaryData" :key="summary.id">

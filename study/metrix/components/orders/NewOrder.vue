@@ -67,22 +67,16 @@
                         <template v-else>
                             <li class="form-item">
                                 <select-box
-                                    :option="['Select Customer', 'Select Customer1', 'Select Customer2', 'Select Customer3']"
-                                    :selected="'Select Customer'"
-                                    :name="'newOrderSelect01'"
+                                    :select-data = selectData.orderSelect05
                                 ></select-box>
                             </li> 
                         </template>
                         <li class="form-item double">
                             <select-box
-                                :option="['Payment Type', 'Payment Type1', 'Payment Type2', 'Payment Type3']"
-                                :selected="'Payment Type'"
-                                :name="'newOrderSelect02'"
+                                :select-data = selectData.orderSelect06
                             ></select-box>
                             <select-box
-                                :option="['Order Type', 'Order Type1', 'Order Type2', 'Order Type3']"
-                                :selected="'Order Type'"
-                                :name="'newOrderSelect03'"
+                                :select-data = selectData.orderSelect07
                             ></select-box>
                         </li>
                         <li class="form-item">
@@ -105,9 +99,7 @@
                         <li class="form-item state-sel">
                             <p>Order Status</p>
                             <select-box
-                                :option="['Pending', 'Completed', 'In-Progress']"
-                                :selected="'Pending'"
-                                :name="'newOrderSelect04'"
+                                :select-data = selectData.orderSelect08
                             ></select-box>
                         </li>
                         <li class="form-item">
@@ -251,6 +243,9 @@ module.exports = {
         },
         total() {
             return this.$store.getters["productData/total"]
+        },
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
         },
     },
 }

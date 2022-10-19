@@ -18,11 +18,9 @@ article{
             background-position: center;
             background-repeat: no-repeat;
             position: relative;   
-            &.point{
-                background-color: rgba(85, 112, 241, 0.12);
-            }
             &.graph{
                 background-image: url('../images/dashboard/Graph.png');
+                background-color: rgba(85, 112, 241, 0.12);
             }
             &.user{
                 background-image: url('../images/dashboard/User.png');
@@ -35,6 +33,22 @@ article{
             }
             &.cart{
                 background-image: url('../images/dashboard/fi_shopping-cart.png');
+            }
+            &.profile{
+                background-image: url('../images/orders/Profile.png');
+            }
+            &.location{
+                background-image: url('../images/orders/Location.png');
+            }
+            &.card{
+                background-image: url('../images/orders/fi_credit-card.png');
+            }
+            &.chart{
+                background-image: url('../images/inventory/fi_pie-chart.png');
+                background-color: rgba(85, 112, 241, 0.12);
+            }
+            &.eye{
+                background-image: url('../images/inventory/fi_eye.png');
             }
         }
     }
@@ -53,7 +67,7 @@ article{
             }
             .value{
                 @include fonts ('Poppins', 20, 500, 30, #45464e);
-                margin-top: 10px;
+                margin-top: 8px;
                 display: flex;
                 align-items: center;
                 dt{
@@ -73,34 +87,47 @@ article{
         }
     }
 }
-.sum-ty02{
-    background-color: $b;
+.sum-ty03{
     .header{
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
         .icon-box{
-            background-color: rgba(255, 255, 255, 0.16);
+            width: 45px;
+            height: 45px;
+            background-size: 28px;
+            margin-right: 24px;
         }
+        .sum-user{
+            @include fonts('Inter', 14, 400, 17, #8b8d97);
+            dd{
+                font-size: 12px;
+                line-height: 15px;
+                margin-top: 4px;
+                span{
+                    color: #2c2d33;
+                }
+            }
+        }  
+        .state-btn{
+            position: absolute;
+            top: 0; right: 0;
+        }      
     }
+}
+.sum-ty04{
     ul{
         li{
             .tit{
-                color: #fff;
+                font-size: 12px;
             }
             .value{
-                color: #fff;
-                dd{
-                    color: #dbdeee;
-                    &.plus{
-                        color: #dbdeee;
-                    }
-                    &.minus{
-                        color: #dbdeee;
-                    }
-                }
+                @include fonts ('Inter', 14, 500, 17, #45464e);
             }
         }
     }
 }
-.sum-mini{
+.sum-ty02{
     background-color: $b;
     .header{
         .icon-box{

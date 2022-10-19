@@ -81,14 +81,10 @@
                             </li>
                             <li class="input-box-area double">
                                 <select-box
-                                    :option="['Nigeria', 'Nigeria', 'Nigeria']"
-                                    :selected="'Nigeria'"
-                                    :name="'settingSelect02'"
+                                    :select-data = selectData.customSelect07
                                 ></select-box>
                                 <select-box
-                                    :option="['Lagos', 'Lagos', 'Lagos']"
-                                    :selected="'Lagos'"
-                                    :name="'settingSelect03'"
+                                    :select-data = selectData.customSelect08
                                 ></select-box>
                             </li>
                         </ul>
@@ -129,6 +125,11 @@ module.exports = {
     },
     components: {
         'select-box' : SelectBox
+    },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        },
     }
 }
 </script>

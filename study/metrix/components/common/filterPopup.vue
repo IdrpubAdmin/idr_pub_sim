@@ -16,17 +16,13 @@
                     <li class="input-box-area">
                         <p>Status</p>
                         <select-box
-                            :option="['All', 'All', 'All']"
-                            :selected="'All'"
-                            :name="'filPopSelect01'"
+                            :select-data = selectData.filPopSelect01
                         ></select-box>
                     </li>                          
                     <li class="input-box-area">
                         <p>Customer</p>
                         <select-box
-                            :option="['All', 'All', 'All']"
-                            :selected="'All'"
-                            :name="'filPopSelect01'"
+                            :select-data = selectData.filPopSelect02
                         ></select-box>
                     </li>
                     <li class="input-box-area">
@@ -69,6 +65,11 @@ module.exports = {
     },
     components: {
         'select-box' : SelectBox
-    }
+    },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        }
+    },
 }
 </script>

@@ -10,74 +10,14 @@
             </div>   
         </div>
         <div class="contents">
-            <article class="summary">
-                <div class="header no-bg-sel">
-                    <div class="icon-box">
-                        <img src="assets/images/customers/2User.png" alt="user icon">
-                    </div>
-                    <select-box
-                        :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                        :selected="'This Week'"
-                        :name="'customSelect01'"
-                    ></select-box>
-                </div>
-                <ul>
-                    <li>
-                        <p class="tit">All Customers</p>
-                        <dl class="value">
-                            <dt><span>1,180</span></dt>
-                            <dd class="plus">+<span>85.00</span>%</dd>
-                        </dl>                        
-                    </li>
-                    <li>
-                        <p class="tit">Active</p>
-                        <dl class="value">
-                            <dt><span>30</span></dt>
-                            <dd class="plus">+<span>15.80</span>%</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">In-Active</p>
-                        <dl class="value">
-                            <dt><span>70</span></dt>
-                            <dd class="minus">-<span>10.00</span>%</dd>
-                        </dl>
-                    </li>
-                </ul>
-            </article>
-            <article class="summary">
-                <div class="header no-bg-sel">
-                    <div class="icon-box">
-                        <img src="assets/images/dashboard/Bag.png" alt="bag icon">
-                    </div>
-                    <select-box
-                        :option="['This Day', 'This Week', 'This Month', 'This Year']"
-                        :selected="'This Week'"
-                        :name="'customSelect02'"
-                    ></select-box>
-                </div>
-                <ul>
-                    <li>
-                        <p class="tit">New Customers</p>
-                        <dl class="value">
-                            <dt><span>30</span></dt>
-                            <dd class="minus">-<span>20.00</span>%</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Purchasing</p>
-                        <dl class="value">
-                            <dt><span>657</span></dt>
-                        </dl>
-                    </li>
-                    <li>
-                        <p class="tit">Abandoned Carts</p>
-                        <dl class="value">
-                            <dt><span>5</span></dt>
-                        </dl>
-                    </li>
-                </ul>
-            </article>
+            <article-summary
+                :article-data = articleData.customMain01
+                :select-data = selectData.customSelect01
+            ></article-summary>
+            <article-summary
+                :article-data = articleData.customMain02
+                :select-data = selectData.customSelect02
+            ></article-summary>
             <table-box
                 :table="tableData"
             ></table-box>
@@ -93,8 +33,17 @@ module.exports = {
         }
     },
     components : {
+        'article-summary' : ArticleSummary,
         'select-box' : SelectBox,
         'table-box' : TableBox
+    },
+    computed: {
+        articleData() {
+            return this.$store.getters["articleData"]
+        },
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        }
     },
     methods: {
         toggleModal(payload){

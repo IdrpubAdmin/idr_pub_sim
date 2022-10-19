@@ -4,9 +4,7 @@
             <h3>New Inventory Item</h3>
             <div class="btns">
                 <select-box
-                    :option="['Save as Draft','Save as Draft','Save as Draft']"
-                    :selected="'Save as Draft'"
-                    :name="'newInvenSelect01'"
+                    :select-data = selectData.invenSelect07
                 ></select-box>
                 <div class="btn">
                     <router-link :to="{name:'inventorymain'}">Save & Publish</router-link>
@@ -26,9 +24,7 @@
                             </li>
                             <li class="input-box-area">
                                 <select-box
-                                    :option="['Select Product Category','Select Product Category','Select Product Category']"
-                                    :selected="'Select Product Category'"
-                                    :name="'newInvenSelect02'"
+                                    :select-data = selectData.invenSelect08
                                 ></select-box>
                             </li>
                             <li class="input-box-area double">
@@ -54,9 +50,7 @@
                             </li>
                             <li class="input-box-area">
                                 <select-box
-                                    :option="['Order Type','Order Type','Order Type']"
-                                    :selected="'Order Type'"
-                                    :name="'newInvenSelect03'"
+                                    :select-data = selectData.invenSelect09
                                 ></select-box>
                             </li>
                         </ul>
@@ -74,9 +68,7 @@
                         <ul class="form">
                             <li class="input-box-area double">
                                 <select-box
-                                    :option="['Type','Type','Type']"
-                                    :selected="'Type'"
-                                    :name="'newInvenSelect04'"
+                                    :select-data = selectData.invenSelect10
                                 ></select-box>
                                 <div class="input-box">
                                     <input type="text" placeholder="Value">
@@ -215,5 +207,10 @@ module.exports = {
     components : {
         'select-box' : SelectBox,
     },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        },
+    }
 }
 </script>

@@ -89,17 +89,13 @@
                         <div class="select-box-area">
                             <p>Country</p>
                             <select-box
-                                :option="['Nigeria', 'Nigeria', 'Nigeria']"
-                                :selected="'Nigeria'"
-                                :name="'settingSelect02'"
+                                :select-data = selectData.settingSelect02
                             ></select-box>
                         </div>
                         <div class="select-box-area">
                             <p>State</p>
                             <select-box
-                                :option="['Lagos', 'Lagos', 'Lagos']"
-                                :selected="'Lagos'"
-                                :name="'settingSelect03'"
+                                :select-data = selectData.settingSelect03
                             ></select-box>
                         </div>
                     </li>
@@ -136,6 +132,11 @@ module.exports = {
     },
     components: {
         'select-box' : SelectBox
+    },
+    computed: {
+        selectData() {
+            return this.$store.getters["selectData"].selectBox
+        },
     }
 }
 </script>
