@@ -123,6 +123,6 @@ module.exports = {
         selectData() {
             return this.$store.getters["selectData"].selectBox
         },
-    }
+    },
 }
 </script>

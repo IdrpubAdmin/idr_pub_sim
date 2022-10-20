@@ -4,7 +4,7 @@
             <div class="value">{{selectData.selected.name}}</div>
         </div>
         <ul v-show="btnActive.includes(selectData.btnName)">
-            <li v-for="(option, i) in selectData.option" :key="option.code" class="option" @click="selectOption(selectData.option[i].code)">{{option.name}}</li>
+            <li v-for="(option, i) in selectData.option" :key="option.code" class="option" :value="option.code" @click="selectOption(selectData.option[i].code)">{{option.name}}</li>
         </ul>
     </div>
 </template>
@@ -21,8 +21,9 @@ module.exports = {
             this.$store.commit('toggleBtn', payload)
         },
         selectOption(code){
-            selectData.selected.name = code
-            console.log(code);
+            // this.selectData.selected.name = code
+            console.log(this.selectData.option.length);
+
         },
     },
     props: {
