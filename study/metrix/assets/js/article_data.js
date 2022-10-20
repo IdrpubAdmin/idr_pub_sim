@@ -112,6 +112,7 @@ var articleData = {
                 title: 'Abandoned Cart',
                 value: `<span>20</span>%`,
                 percent: '+10.00',
+                type: 'tit-ty02'
             },{
                 id: 2,
                 title: 'Customers',

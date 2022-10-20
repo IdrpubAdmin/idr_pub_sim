@@ -169,16 +169,17 @@
                     :select-data = selectData.dashSelect07
                 ></select-box>
             </div>
-            <div>
-
-            </div>
+            <bar-chart
+                :chart-data = chartData.barChartData
+            ></bar-chart>                                               
         </article>
     </div>
 </template>
 
 <script>
-module.exports = {
+module.exports = {    
     components : {
+        'bar-chart' : BarChart,
         'article-summary' : ArticleSummary,
         'select-box' : SelectBox,
     },
@@ -188,7 +189,10 @@ module.exports = {
         },
         selectData() {
             return this.$store.getters["selectData"].selectBox
-        }
+        },
+        chartData() {
+            return this.$store.getters["chartData"]
+        },
     },
     mounted() {
         const Chart = toastui.Chart;

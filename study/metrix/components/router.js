@@ -23,7 +23,9 @@ var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue')
 var LogIn = httpVueLoader('components/common/LogIn.vue');
 var SignUp = httpVueLoader('components/common/SignUp.vue');
 
+var BarChart = httpVueLoader('components/common/BarChart.vue');
 var FilterPopup = httpVueLoader('components/common/FilterPopup.vue');
+var DatePopup = httpVueLoader('components/common/DatePopup.vue');
 var ArticleSummary = httpVueLoader('components/common/ArticleSummary.vue');
 var SelectBox = httpVueLoader('components/common/SelectBox.vue');
 var TableBox = httpVueLoader('components/common/TableBox.vue');

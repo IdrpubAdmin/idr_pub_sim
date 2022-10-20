@@ -1,12 +1,13 @@
 var store = new Vuex.Store({
     namespaced: true,
     modules: {
+        articleData : articleData,
+        chartData : chartData,
         navigationData : navigationData,
         breadCrumbData : breadCrumbData,
         tableData : tableData,
         productData : productData,
         selectData : selectData,
-        articleData : articleData
     },
     state: {
         isActive : false,
@@ -66,6 +67,9 @@ var store = new Vuex.Store({
     getters: {
         articleData: function articleData(state) {
             return state.articleData;
+        },
+        chartData: function chartData(state) {
+            return state.chartData;
         },
         navigationData: function navigationData(state) {
             return state.navigationData;

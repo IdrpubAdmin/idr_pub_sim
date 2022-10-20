@@ -3,7 +3,7 @@
         <div class="customers-header">
             <h3>Customers Summary</h3>
             <div class="btn">
-                <button class="plus2-icon" @click="toggleModal('newCustomer')">Add a New Customer</button>
+                <button class="plus2-icon link-btn" @click="toggleModal('newCustomer')">Add a New Customer</button>
             </div>   
         </div>
         <div class="contents">

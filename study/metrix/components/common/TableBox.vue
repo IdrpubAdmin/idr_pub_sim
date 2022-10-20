@@ -8,14 +8,15 @@
                     <input type="search" placeholder="Search">
                 </li>
                 <li class="filter-btn btn">
-                    <button class="filter-icon" @click.stop="toggleBtn('filterPop')">Filter</button>
+                    <button class="filter-icon btn-ty02" @click="toggleBtn('filterPop')">Filter</button>
                     <filter-popup></filter-popup>
                 </li>
                 <li class="date-btn btn">
-                    <button class="calendar2-icon">Filter</button>
+                    <button class="calendar2-icon btn-ty02" @click="toggleBtn('datePop')">Filter</button>
+                    <date-popup></date-popup>
                 </li>
                 <li class="share-btn btn">
-                    <button class="sand-icon">Share</button>
+                    <button class="sand-icon btn-ty02">Share</button>
                 </li>
                 <li class="action-btn">
                     <select-box
@@ -32,7 +33,9 @@
                             :key="tHead.id + tHead.class" 
                             :class="tHead.class" 
                         >
-                        <template v-if="tHead.type === 'check'"><input type="checkbox"></template>
+                        <template v-if="tHead.type === 'check'">
+                            <input type="checkbox" v-model="allSelected">
+                        </template>
                         <template v-else-if="tHead.type === 'none'"></template>
                         <template v-else>
                             <span>{{tHead.name}}</span>
@@ -48,8 +51,12 @@
                         <td v-for="(name,i) in tBody.name"
                             :key="i" 
                         >
-                            <template v-if="name.check === true"><input type="checkbox"></template>
-                            <template v-else-if="name.router === true"><router-link :to="{name:name.path}">{{name.txt}}</router-link></template>
+                            <template v-if="name.check === true">
+                                <input type="checkbox" v-model="selectList" :value="name.txt">
+                            </template>
+                            <template v-else-if="name.router === true">
+                                <router-link :to="{name:name.path}">{{name.txt}}</router-link>
+                            </template>
                             <template v-else-if="name.select === true">
                                 <select-box
                                     :select-data = tBody.tableSelcet
@@ -91,20 +98,40 @@
 </template>
 
 <script>
-module.exports = {
+module.exports = {     
+    data() {
+        return {
+            selectList: [],
+            checkList : [],
+        }
+    },
     methods: {
         toggleBtn(payload){
             this.$store.commit('toggleBtn', payload)
         },
     },
+    mounted() {
+        for(let i=0; i<this.table.tBody.length; i++){
+            this.checkList.push(this.table.tBody[i].name[0].txt)
+        }
+    },
     computed: {
         selectData() {
             return this.$store.getters["selectData"].selectBox
-        }
+        },
+        allSelected: {
+            get: function() {
+                return this.checkList.length === this.selectList.length;
+            },
+            set: function(e) {
+                this.selectList = e ? this.checkList : [];
+            },
+        },
     },
     components: {
         'select-box' : SelectBox,
         'filter-popup' : FilterPopup,
+        'date-popup' : DatePopup
     },
     props: {
         table : Object

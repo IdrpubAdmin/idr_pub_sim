@@ -1009,24 +1009,7 @@ textarea::placeholder {
     padding: 6px;
   }
 }
-.orders .orders-header .btn button, .orders .customers-header .btn button, .orders .inventory-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button, .customers .inventory-header .btn button, .inventory .orders-header .btn button, .inventory .customers-header .btn button, .inventory .inventory-header .btn button {
-  padding: 6px 16px 6px 47px;
-  background-position: center left 16px;
-  font-family: "Inter";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #fff;
-}
-@media (max-width: 480px) {
-  .orders .orders-header .btn button, .orders .customers-header .btn button, .orders .inventory-header .btn button, .customers .orders-header .btn button, .customers .customers-header .btn button, .customers .inventory-header .btn button, .inventory .orders-header .btn button, .inventory .customers-header .btn button, .inventory .inventory-header .btn button {
-    padding: 5px 0;
-    font-size: 12px;
-    line-height: 14px;
-    background-image: none;
-  }
-}
-.orders .orders-header .btn a, .orders .customers-header .btn a, .orders .inventory-header .btn a, .customers .orders-header .btn a, .customers .customers-header .btn a, .customers .inventory-header .btn a, .inventory .orders-header .btn a, .inventory .customers-header .btn a, .inventory .inventory-header .btn a {
+.orders .orders-header .btn .link-btn, .orders .customers-header .btn .link-btn, .orders .inventory-header .btn .link-btn, .customers .orders-header .btn .link-btn, .customers .customers-header .btn .link-btn, .customers .inventory-header .btn .link-btn, .inventory .orders-header .btn .link-btn, .inventory .customers-header .btn .link-btn, .inventory .inventory-header .btn .link-btn {
   display: inline-block;
   padding: 6px 16px 6px 47px;
   background-position: center left 16px;
@@ -1038,7 +1021,7 @@ textarea::placeholder {
   color: #fff;
 }
 @media (max-width: 480px) {
-  .orders .orders-header .btn a, .orders .customers-header .btn a, .orders .inventory-header .btn a, .customers .orders-header .btn a, .customers .customers-header .btn a, .customers .inventory-header .btn a, .inventory .orders-header .btn a, .inventory .customers-header .btn a, .inventory .inventory-header .btn a {
+  .orders .orders-header .btn .link-btn, .orders .customers-header .btn .link-btn, .orders .inventory-header .btn .link-btn, .customers .orders-header .btn .link-btn, .customers .customers-header .btn .link-btn, .customers .inventory-header .btn .link-btn, .inventory .orders-header .btn .link-btn, .inventory .customers-header .btn .link-btn, .inventory .inventory-header .btn .link-btn {
     padding: 5px 0;
     font-size: 12px;
     line-height: 14px;
@@ -1548,6 +1531,67 @@ button {
   background-image: url("../images/orders/fi_x.png");
 }
 
+.bar_chart_box {
+  margin-top: 36px;
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #a6a8b1;
+  position: relative;
+  margin-bottom: 32px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  height: 60%;
+  min-height: 140px;
+}
+.bar_chart_box .axis_y {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 100%;
+}
+.bar_chart_box .axis_x {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  min-height: 140px;
+}
+.bar_chart_box .axis_x .item {
+  flex: 1;
+  position: relative;
+}
+.bar_chart_box .axis_x .item .text_box {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+.bar_chart_box .axis_x .item .text_box .day {
+  color: #bec0ca;
+}
+.bar_chart_box .axis_x .graph {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 0 auto;
+  width: 13px;
+  height: 100%;
+  background: #eef0fa;
+  border-radius: 50px;
+}
+.bar_chart_box .axis_x .graph .time {
+  border-radius: 50px;
+  background-color: #5570f1;
+}
+
 article {
   background-color: #fff;
   border-radius: 12px;
@@ -1772,48 +1816,123 @@ article {
 }
 .table-area .title .table-btns .btn {
   margin-right: 12px;
-  border: 1px solid #53545c;
-  border-radius: 4px;
-}
-.table-area .title .table-btns .btn button {
-  font-family: "Inter";
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 16px;
-  color: #53545c;
-  background-size: 16px;
-  background-position: center left 8px;
-  display: flex;
-  align-items: center;
-  padding: 7px 8px 7px 32px;
 }
 .table-area .title .table-btns .btn .popup-wrap {
   position: absolute;
   z-index: 1;
-  top: -3px;
-  left: -3px;
-}
-.table-area .title .table-btns .btn .popup-wrap .popup-filter {
-  width: 317px;
-  height: 478px;
+  background-color: #fff;
   padding: 24px 21px;
   border-radius: 12px;
   box-shadow: 0 4px 32px 0 rgba(61, 70, 112, 0.08);
-  background-color: #fff;
 }
-.table-area .title .table-btns .btn .popup-wrap .popup-filter .popup-header h3 {
+.table-area .title .table-btns .btn .popup-wrap.popup-date {
+  width: 402px;
+  height: 289px;
+  top: -3px;
+  left: -170px;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date.big-popup {
+  height: 736px;
+  top: -90px;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .double .checkbox-area {
+  width: 50%;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-filter {
+  width: 317px;
+  height: 478px;
+  top: -3px;
+  left: -3px;
+}
+.table-area .title .table-btns .btn .popup-wrap .popup-header h3 {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #1c1d22;
 }
-.table-area .title .table-btns .btn .popup-wrap .popup-filter section .popup-close {
+.table-area .title .table-btns .btn .popup-wrap section {
+  margin-top: 20px;
+}
+.table-area .title .table-btns .btn .popup-wrap section .checkbox-area {
+  display: flex;
+  align-items: center;
+}
+.table-area .title .table-btns .btn .popup-wrap section .checkbox-area input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: solid 1px #cfd3d4;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.table-area .title .table-btns .btn .popup-wrap section .checkbox-area input[type=checkbox]:checked {
+  background: #cfd3d4;
+  border: none;
+}
+.table-area .title .table-btns .btn .popup-wrap section hr {
+  background-color: #f1f3f9;
+  margin-top: 15px;
+}
+.table-area .title .table-btns .btn .popup-wrap section ul .input-box-area {
+  margin-top: 16px;
+}
+.table-area .title .table-btns .btn .popup-wrap section ul .input-box-area .select-box {
+  border: solid 1px #e1e2e9;
+  height: 38px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.table-area .title .table-btns .btn .popup-wrap section ul .input-box-area .select-box .value {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1c1d22;
+}
+.table-area .title .table-btns .btn .popup-wrap section p {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #53545c;
+}
+.table-area .title .table-btns .btn .popup-wrap section .double {
+  margin-top: 8px;
+}
+.table-area .title .table-btns .btn .popup-wrap section .double .double-item {
+  width: calc(50% - 6px);
+}
+.table-area .title .table-btns .btn .popup-wrap section .double p {
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #1c1d22;
+}
+.table-area .title .table-btns .btn .popup-wrap section .double .input-box {
+  margin-top: 4px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: solid 1px #e1e2e9;
+  height: 38px;
+  padding-left: 12px;
+}
+.table-area .title .table-btns .btn .popup-wrap section .double .input-box input {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #1c1d22;
+}
+.table-area .title .table-btns .btn .popup-wrap section .popup-close {
   margin-top: 16px;
   border-radius: 12px;
+  height: 36px;
   background-color: #5570f1;
 }
-.table-area .title .table-btns .btn .popup-wrap .popup-filter section .popup-close button {
+.table-area .title .table-btns .btn .popup-wrap section .popup-close button {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -2099,6 +2218,26 @@ button {
 
 .btn-ty01 button {
   background-color: #5570f1;
+}
+
+.btn-ty02 {
+  border: 1px solid #53545c;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #53545c;
+  background-size: 16px;
+  background-position: center left 8px;
+  display: flex;
+  align-items: center;
+  padding: 7px 8px 7px 32px;
+}
+
+.double {
+  display: flex;
+  justify-content: space-between;
 }
 
 .wrapper {

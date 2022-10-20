@@ -175,18 +175,7 @@ textarea::placeholder{
             @include mdq-mobile{
                 padding: 6px;
             }
-            button{
-                padding: 6px 16px 6px 47px;
-                background-position: center left 16px;
-                @include fonts('Inter', 14, 400, 24, #fff);
-                @include mdq-mobile{
-                    padding: 5px 0;
-                    font-size: 12px;
-                    line-height: 14px;
-                    background-image: none;
-                }
-            }
-            a{
+            .link-btn{
                 display: inline-block;
                 padding: 6px 16px 6px 47px;
                 background-position: center left 16px;

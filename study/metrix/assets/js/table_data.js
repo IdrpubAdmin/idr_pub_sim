@@ -39,7 +39,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk01-001'},
                     {txt : 'Janet Adebayo', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
@@ -60,7 +60,7 @@ var tableData = {
             },{
                 id: 2,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-002'},
                     {txt : 'Samuel Johnson', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
@@ -81,7 +81,7 @@ var tableData = {
             },{
                 id: 3,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-003'},
                     {txt : 'Francis Doe', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
@@ -102,7 +102,7 @@ var tableData = {
             },{
                 id: 4,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-004'},
                     {txt : 'Christian Dior', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
@@ -123,7 +123,7 @@ var tableData = {
             },{
                 id: 5,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk01-005'},
                     {txt : 'Janet Adebayo', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
@@ -144,7 +144,7 @@ var tableData = {
             },{
                 id: 6,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-006'},
                     {txt : 'Samuel Johnson', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
@@ -165,7 +165,7 @@ var tableData = {
             },{
                 id: 7,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-007'},
                     {txt : 'Francis Doe', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
@@ -186,7 +186,7 @@ var tableData = {
             },{
                 id: 8,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk01-008'},
                     {txt : 'Christian Dior', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
@@ -204,7 +204,7 @@ var tableData = {
                         {code: '303', name: 'In-Progress'},
                     ],   
                 },
-            }]
+            }],
         },
         viewOrder: {
             title: 'Itmes',
@@ -248,7 +248,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk02-001'},
                     {img: true, src: 'iphone', class: 'image'},
                     {txt : 'iPhone 13 Pro'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
@@ -270,7 +270,7 @@ var tableData = {
             },{
                 id: 2,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk02-002'},
                     {img: true, src: 'iphone', class: 'image'},
                     {txt : 'iPhone 13 Pro'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
@@ -292,7 +292,7 @@ var tableData = {
             },{
                 id: 3,
                 name : [ 
-                    {check : true},
+                    {check : true, txt:'chk02-003'},
                     {img: true, src: 'iphone', class: 'image'},
                     {txt : 'iPhone 13 Pro'}, 
                     {txt : `₦<span>25,000.00</span>`}, 
@@ -351,7 +351,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-001'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -363,7 +363,7 @@ var tableData = {
             },{
                 id: 2,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-002'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -375,7 +375,7 @@ var tableData = {
             },{
                 id: 3,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-003'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -387,7 +387,7 @@ var tableData = {
             },{
                 id: 4,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-004'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -399,7 +399,7 @@ var tableData = {
             },{
                 id: 5,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-005'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -411,7 +411,7 @@ var tableData = {
             },{
                 id: 6,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-006'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -423,7 +423,7 @@ var tableData = {
             },{
                 id: 7,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-007'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -435,7 +435,7 @@ var tableData = {
             },{
                 id: 8,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk03-008'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
                     {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
                     {txt : '+2348065650633', img: true, src: 'copy'}, 
@@ -480,7 +480,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk04-001'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
@@ -500,7 +500,7 @@ var tableData = {
             },{
                 id: 2,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk04-002'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
@@ -520,7 +520,7 @@ var tableData = {
             },{
                 id: 3,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk04-003'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
                     {txt : '9348fjr73', img: true, src: 'copy'}, 
@@ -585,7 +585,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-001'},
                     {img: true, src: 'iphone'},
                     {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
                     {txt : 'Gadgets'}, 
@@ -607,7 +607,7 @@ var tableData = {
             },{
                 id: 2,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-002'},
                     {img: true, src: 'Rectangle3'},
                     {txt : 'iPhone 12 Pro', router: true, path:'viewinventory'}, 
                     {txt : 'Gadgets'}, 
@@ -629,7 +629,7 @@ var tableData = {
             },{
                 id: 3,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-003'},
                     {img: true, src: 'Rectangle4'},
                     {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
                     {txt : 'Fashion'}, 
@@ -651,7 +651,7 @@ var tableData = {
             },{
                 id: 4,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-004'},
                     {img: true, src: 'Rectangle4'},
                     {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
                     {txt : 'Fashion'}, 
@@ -673,7 +673,7 @@ var tableData = {
             },{
                 id: 5,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-005'},
                     {img: true, src: 'iphone'},
                     {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
                     {txt : 'Gadgets'}, 
@@ -695,7 +695,7 @@ var tableData = {
             },{
                 id: 6,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-006'},
                     {img: true, src: 'Rectangle3'},
                     {txt : 'iPhone 12 Pro', router: true, path:'viewinventory'}, 
                     {txt : 'Gadgets'}, 
@@ -717,7 +717,7 @@ var tableData = {
             },{
                 id: 7,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-007'},
                     {img: true, src: 'iphone'},
                     {txt : 'iPhone 13 Pro', router: true, path:'viewinventory'}, 
                     {txt : 'Gadgets'}, 
@@ -739,7 +739,7 @@ var tableData = {
             },{
                 id: 8,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk05-008'},
                     {img: true, src: 'Rectangle4'},
                     {txt : 'Polo T-Shirt', router: true, path:'viewinventory'}, 
                     {txt : 'Fashion'}, 
@@ -798,7 +798,7 @@ var tableData = {
             tBody : [{
                 id: 1,
                 name : [
-                    {check : true},
+                    {check : true, txt:'chk06-001'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
                     {txt : `₦<span>25,000.00</span>`}, 

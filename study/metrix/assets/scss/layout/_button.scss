@@ -26,3 +26,18 @@ button{
         background-color: $b;
     }
 }
+.btn-ty02{
+    border: 1px solid #53545c;
+    border-radius: 4px;
+    @include fonts('Inter', 11, 400, 16, #53545c);
+    background-size: 16px;
+    background-position: center left 8px;
+    display: flex;
+    align-items: center;
+    padding: 7px 8px 7px 32px;
+}
+
+.double{
+    display: flex;
+    justify-content: space-between;
+}

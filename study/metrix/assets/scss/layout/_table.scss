@@ -59,41 +59,107 @@
             }
             .btn{
                 margin-right: 12px;
-                border: 1px solid #53545c;
-                border-radius: 4px;
-                button{
-                    @include fonts('Inter', 11, 400, 16, #53545c);
-                    background-size: 16px;
-                    background-position: center left 8px;
-                    display: flex;
-                    align-items: center;
-                    padding: 7px 8px 7px 32px;
-                }
                 .popup-wrap{
                     position: absolute;
                     z-index: 1;
-                    top: -3px; left: -3px;
-                    .popup-filter{
-                        width: 317px;
-                        height: 478px;
-                        padding: 24px 21px;
-                        border-radius: 12px;
-                        box-shadow: 0 4px 32px 0 rgba(61, 70, 112, 0.08);
-                        background-color: #fff;
-                        .popup-header{
-                            h3{
-                                @include fonts('Inter', 16, 500, 24, #1c1d22);
-                            }
+                    background-color: #fff;
+                    padding: 24px 21px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 32px 0 rgba(61, 70, 112, 0.08);
+                    &.popup-date{
+                        width: 402px;
+                        height: 289px;
+                        top: -3px; left: -170px;
+                        &.big-popup{
+                            height: 736px;
+                            top: -90px;
                         }
                         section{
-                            .popup-close{
-                                margin-top: 16px;
-                                border-radius: 12px;
-                                background-color: #5570f1;
-                                button{
-                                    @include fonts('Inter', 14, 400, 22, #fff);
-                                    display: block;
+                            .double{
+                                .checkbox-area{
+                                    width: 50%;
                                 }
+                            }
+                        }
+                    }
+                    &.popup-filter{
+                        width: 317px;
+                        height: 478px;
+                        top: -3px; left: -3px;
+                    }
+                    .popup-header{
+                        h3{
+                            @include fonts('Inter', 16, 500, 24, #1c1d22);
+                        }
+                    }
+                    section{
+                        margin-top: 20px;
+                        .checkbox-area{
+                            display: flex;
+                            align-items: center;
+                            input[type="checkbox"] {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 8px;
+                                border: solid 1px #cfd3d4;
+                                appearance: none;
+                                cursor: pointer;
+                                margin-right: 20px;
+                            }
+                            input[type="checkbox"]:checked {
+                                background: #cfd3d4;
+                                border: none;
+                            }
+                        }
+                        hr{
+                            background-color: #f1f3f9;
+                            margin-top: 15px;
+                        }
+                        ul{
+                            .input-box-area{
+                                margin-top: 16px;
+                                .select-box{
+                                    border: solid 1px #e1e2e9;
+                                    height: 38px;
+                                    border-radius: 8px;
+                                    margin-top: 8px;
+                                    .value{
+                                        @include fonts('Inter', 14, 400, 24, #1c1d22);
+                                    }
+                                }
+                            }
+                        }
+                        p{
+                            @include fonts('Inter', 12, 400, 15, #53545c);
+                        }
+                        .double{
+                            margin-top: 8px;
+                            .double-item{
+                                width: calc(50% - 6px);
+                            }
+                            p{
+                                @include fonts('Inter', 10, 600, 15, #1c1d22);
+                            }
+                            .input-box{
+                                margin-top: 4px;
+                                background-color: #fff;
+                                border-radius: 8px;
+                                border: solid 1px #e1e2e9;
+                                height: 38px;
+                                padding-left: 12px;
+                                input{
+                                    @include fonts('Inter', 14, 500, 17, #1c1d22);
+                                }
+                            }
+                        }
+                        .popup-close{
+                            margin-top: 16px;
+                            border-radius: 12px;
+                            height: 36px;
+                            background-color: #5570f1;
+                            button{
+                                @include fonts('Inter', 14, 400, 22, #fff);
+                                display: block;
                             }
                         }
                     }
@@ -119,12 +185,11 @@
                     border: solid 1px #cfd3d4;
                     appearance: none;
                     cursor: pointer;
-                  }
-                
-                  input[type="checkbox"]:checked {
+                }
+                input[type="checkbox"]:checked {
                     background: #cfd3d4;
                     border: none;
-                  }
+                }
             }
         }
         thead{
