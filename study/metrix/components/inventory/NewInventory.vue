@@ -138,7 +138,7 @@
                     <div class="image">
                         <img src="assets/images/inventory/Shirt.png" alt="product img">
                     </div>
-                    <div class="btns">
+                    <div class="img-btn-area">
                         <button class="cloud-icon"></button>
                         <button class="delete-icon"></button>
                     </div>
@@ -152,7 +152,7 @@
                             <div class="image">
                                 <img src="assets/images/inventory/Shirt.png" alt="product img">
                             </div> 
-                            <div class="btns">
+                            <div class="img-btn-area">
                                 <button class="cloud-icon"></button>
                                 <button class="delete-icon"></button>
                             </div>
@@ -160,7 +160,7 @@
                         <li class="upload-box no-img">
                             <div class="image"></div> 
                             <div class="text">
-                                <img src="assets/images/inventory/fi_upload-cloud.png" alt="cloud icon">
+                                <i class="cloud2-icon"></i>
                                 <p>Upload Image</p>
                             </div>
                         </li>

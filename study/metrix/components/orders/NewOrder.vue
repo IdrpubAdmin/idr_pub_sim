@@ -107,7 +107,7 @@
                     </div>
                     <div class="input-box search">
                         <i class="icon-box search-icon"></i>
-                        <input type="search" placeholder="Search product name" v-model="itemSearch">
+                        <input type="search" placeholder="Search product name" :value="itemSearch" @input="changeKeyword">
                     </div>
                     <template v-if="itemSearch.length > 0">
                         <div class="items search-item">
@@ -220,6 +220,9 @@ module.exports = {
         calcItem(payload){
             this.$store.commit('productData/calcItem', payload)
         },
+        changeKeyword(e){
+            this.itemSearch = e.target.value
+        }
     },
     components: {
         'select-box' : SelectBox

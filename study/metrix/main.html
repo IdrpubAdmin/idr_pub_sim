@@ -25,15 +25,15 @@
 </head>
 <body>
     <div id="app">
-        <div class="wrapper" :class="{'modal-active' : $store.getters.modalActive.includes('newOrder')||$store.getters.modalActive.includes('newCustomer')}">   
+        <div class="wrapper">   
             <template v-if="$route.path.includes('/login')||$route.path.includes('/signup')">
                 <auth-main></auth-main>
             </template>
             <template v-else>
-                <div class="nav-wrap" @mouseover="$store.commit('checkActive')" @mouseout="$store.commit('checkActive')" :class="{'nav-active': $store.getters.isActive, 'mobile-active': $store.state.mobileActive}">
+                <div class="nav-wrap" @mouseover="checkActive" @mouseout="checkActive" :class="{'nav-active': isActive, 'mobile-active': mobileActive}">
                     <side-navigation></side-navigation>
                 </div>
-                <main :class="{'main-active': $store.getters.isActive}">
+                <main :class="{'main-active': isActive}">
                     <div class="header-wrap">
                         <header-component></header-component>
                     </div>
@@ -42,8 +42,8 @@
                     </div>
                 </main>
             </template>
-            <new-order v-if="$store.getters.modalActive.includes('newOrder')"></new-order>
-            <new-customer v-if="$store.getters.modalActive.includes('newCustomer')"></new-order>
+            <new-order v-if="modalActive.includes('newOrder')"></new-order>
+            <new-customer v-if="modalActive.includes('newCustomer')"></new-order>
         </div>
     </div>
     <script>
@@ -59,6 +59,22 @@
                 'new-order' : httpVueLoader('components/orders/NewOrder.vue'),
                 'new-customer' : httpVueLoader('components/customers/NewCustomer.vue'),
             },
+            methods: {
+                checkActive() {
+                    this.$store.commit('checkActive')
+                },
+            },
+            computed: {
+                isActive() {
+                    return this.$store.getters["isActive"]
+                },
+                mobileActive() {
+                    return this.$store.getters["mobileActive"]
+                },
+                modalActive() {
+                    return this.$store.getters["modalActive"]
+                },
+            }
         })
     </script>
 </body>

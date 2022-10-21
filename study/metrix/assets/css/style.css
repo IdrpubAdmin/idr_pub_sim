@@ -1479,6 +1479,10 @@ button {
   background-image: url("../images/settings/fi_upload-cloud.png");
 }
 
+.cloud2-icon {
+  background-image: url("../images/inventory/fi_upload-cloud.png");
+}
+
 .delete-icon {
   background-image: url("../images/settings/Delete.png");
 }
@@ -2245,9 +2249,6 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
-.wrapper.modal-active {
-  overflow: hidden;
-}
 .wrapper .nav-wrap {
   position: relative;
   width: 88px;
@@ -2667,6 +2668,7 @@ header .page-head .user .btn-area.notice-btn-area .notice-btn {
 }
 header .page-head .user .btn-area.gnb-btn-area {
   display: none;
+  margin-left: 12px;
 }
 @media (max-width: 768px) {
   header .page-head .user .btn-area.gnb-btn-area {
@@ -3280,7 +3282,7 @@ header .location .breadcrumb ul li::before {
 .inventory .new-inven .contents .product-image {
   padding: 20px;
 }
-.inventory .new-inven .contents .product-image .btns {
+.inventory .new-inven .contents .product-image .img-btn-area {
   width: 69px;
   position: absolute;
   display: flex;
@@ -3288,7 +3290,7 @@ header .location .breadcrumb ul li::before {
   top: 17px;
   right: 19px;
 }
-.inventory .new-inven .contents .product-image .btns button {
+.inventory .new-inven .contents .product-image .img-btn-area button {
   width: 32px;
   height: 32px;
   border-radius: 8px;
@@ -3380,7 +3382,9 @@ header .location .breadcrumb ul li::before {
   align-items: center;
   justify-content: center;
 }
-.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text img {
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text i {
+  width: 16px;
+  height: 16px;
   margin-right: 10px;
 }
 .inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text p {

@@ -60,8 +60,5 @@ module.exports = {
             this.$store.commit('mobileActive')
         },
     },
-    mounted() {
-        this.$store.commit('bodyFixed')
-    },
 }
 </script>

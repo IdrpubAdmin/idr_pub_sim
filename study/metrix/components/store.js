@@ -56,13 +56,6 @@ var store = new Vuex.Store({
             state.mobileActive = !state.mobileActive
             document.body.classList.toggle('mobile-active')
         },
-        bodyFixed(){
-            const gnbBtn = document.querySelector('.gnb-btn-area')
-            gnbBtn.addEventListener('click', function(){
-                document.body.classList.toggle('mobile-active')
-                }
-            )
-        }
     },
     getters: {
         articleData: function articleData(state) {

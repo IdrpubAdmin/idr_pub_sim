@@ -25,6 +25,7 @@ header{
                 }
                 &.gnb-btn-area{
                     display: none;
+                    margin-left: 12px;
                     @include mdq-tablet {
                         display: block;
                     }

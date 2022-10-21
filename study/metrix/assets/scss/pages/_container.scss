@@ -2,9 +2,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    &.modal-active{
-        overflow: hidden;
-    }
     .nav-wrap{
         position: relative;
         width: $navigation-width;
