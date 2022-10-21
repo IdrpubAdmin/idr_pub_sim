@@ -3376,6 +3376,9 @@ header .location .breadcrumb ul li::before {
   background-size: cover;
   background-position: center;
 }
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .image img {
+  display: none;
+}
 .inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .text {
   margin-top: 12px;
   display: flex;
@@ -3393,6 +3396,9 @@ header .location .breadcrumb ul li::before {
   font-weight: 500;
   line-height: 17px;
   color: #5570f1;
+}
+.inventory .new-inven .contents .product-image .addition-img .upload-img .no-img .img-btn-area {
+  display: none;
 }
 .inventory .view-inven .view-header .btns .select-box {
   width: 160px;

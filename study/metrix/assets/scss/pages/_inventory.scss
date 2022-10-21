@@ -230,6 +230,9 @@
                                 background-image: url('../images/inventory/Image.png');
                                 background-size: cover;
                                 background-position: center;
+                                img{
+                                    display: none;
+                                }
                             }   
                             .text{
                                 margin-top: 12px;
@@ -244,6 +247,9 @@
                                 p{
                                     @include fonts('inter', 14, 500, 17, #5570f1);
                                 }
+                            }
+                            .img-btn-area{
+                                display: none;
                             }
                         }
                     }

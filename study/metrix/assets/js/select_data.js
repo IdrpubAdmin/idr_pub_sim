@@ -140,6 +140,13 @@ var selectData = {
                     {code: '303', name: 'In-Progress'},
                 ],   
             },
+            orderSelect09 : {
+                btnName : 'orderSelect09',
+                selected : { code: '234', name: '+234', img: 'nigeria'},
+                option : [
+                    { code: '234', name: '+234', img: 'nigeria'},
+                ], 
+            },
             customSelect01 : {
                 btnName : 'customSelect01',
                 selected : { code: '002', name: 'This Week' },
@@ -212,6 +219,13 @@ var selectData = {
                 selected : { code: '741', name: 'Lagos' },
                 option : [
                     {code: '741', name: 'Lagos'},
+                ], 
+            },
+            customSelect09 : {
+                btnName : 'customSelect09',
+                selected : { code: '234', name: '+234', img: 'nigeria'},
+                option : [
+                    { code: '234', name: '+234', img: 'nigeria'},
                 ], 
             },
             invenSelect01 : {
@@ -315,6 +329,13 @@ var selectData = {
                 selected : { code: '741', name: 'Lagos' },
                 option : [
                     {code: '741', name: 'Lagos'},
+                ], 
+            },
+            settingSelect04 : {
+                btnName : 'settingSelect04',
+                selected : { code: '234', name: '+234', img: 'nigeria'},
+                option : [
+                    { code: '234', name: '+234', img: 'nigeria'},
                 ], 
             },
             tableSelect01 : {

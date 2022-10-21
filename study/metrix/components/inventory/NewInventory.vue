@@ -37,11 +37,11 @@
                             </li>
                             <li class="input-box-area qty">
                                 <div class="input-box">
-                                    <input type="number" placeholder="Quantity in Stock" v-model="qty">
+                                    <input type="number" min="0" placeholder="Quantity in Stock" v-model="qty">
                                 </div>
                                 <div class="input-btn-area">
                                     <button class="up-icon" @click="++qty"></button>
-                                    <button class="down-icon" @click="--qty"></button>
+                                    <button class="down-icon" @click="miunsQty"></button>
                                 </div>
                             </li>
                             <li class="input-box-area">
@@ -175,6 +175,7 @@
 module.exports = {
     data() {
         return {
+            productImage : ['Shirt','Shirt',''],
             btnActive : this.$store.getters.btnActive,
             qty : null,
         }
@@ -182,7 +183,14 @@ module.exports = {
     methods: {
         toggleBtn(payload){
             this.$store.commit('toggleBtn', payload)
-        }
+        },
+        miunsQty(){
+            if(this.qty > 1){
+                --this.qty
+            } else{
+                this.qty = null
+            }
+        },
     },
     components : {
         'select-box' : SelectBox,

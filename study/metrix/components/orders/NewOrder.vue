@@ -32,32 +32,9 @@
                             </li>
                             <li class="input-box-area">
                                 <div class="input-box input-ty02 phone-box">
-                                    <div class="select-box">
-                                        <div class="selected" @click="toggleBtn('settingSelect01')">
-                                            <div class="value">
-                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                                +234
-                                            </div>
-                                        </div>
-                                        <ul v-show="btnActive.includes('settingSelect01')">
-                                            <li class="option">
-                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                                +234
-                                            </li>
-                                            <li class="option">
-                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                                +234
-                                            </li>
-                                            <li class="option">
-                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                                +234
-                                            </li>
-                                            <li class="option">
-                                                <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                                +234
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <select-box
+                                        :select-data = selectData.orderSelect09
+                                    ></select-box>
                                     <input type="text" placeholder="08065650633">
                                 </div>
                             </li>

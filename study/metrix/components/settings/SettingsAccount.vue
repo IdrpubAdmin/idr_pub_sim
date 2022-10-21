@@ -33,32 +33,9 @@
                     <li class="input-box-area">
                         <p>Phone Number</p>
                         <div class="input-box input-ty02 input-ty03 phone-box">
-                            <div class="select-box">
-                                <div class="selected" @click="toggleBtn('settingSelect01')">
-                                    <div class="value">
-                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                        +234
-                                    </div>
-                                </div>
-                                <ul v-show="btnActive.includes('settingSelect01')">
-                                    <li class="option">
-                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                        +234
-                                    </li>
-                                    <li class="option">
-                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                        +234
-                                    </li>
-                                    <li class="option">
-                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                        +234
-                                    </li>
-                                    <li class="option">
-                                        <img src="assets/images/settings/ng1.png" alt="nigeria">
-                                        +234
-                                    </li>
-                                </ul>
-                            </div>
+                            <select-box
+                                :select-data = selectData.settingSelect04
+                            ></select-box>
                             <input type="text" value="08065650633">
                         </div>
                     </li>
