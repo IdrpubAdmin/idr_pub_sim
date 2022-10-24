@@ -15,8 +15,8 @@
             </li>
             <li class="password-box input-box">
                 <i class="icon-box lock-icon"></i>
-                <input type="password" placeholder="Create a Strong Password">
-                <button class="eye-off-icon"></button>
+                <input :type="visible === false ? 'password' : 'text'" placeholder="Create a Strong Password">
+                <button class="eye-off-icon" @click="PasswordType"></button>
             </li>
         </ul>
         <p class="link-btn">
@@ -26,3 +26,18 @@
         </p>
     </div>
 </template>
+
+<script>
+module.exports = {
+    data() {
+        return {
+            visible : false
+        }
+    },
+    methods: {
+        PasswordType(){
+            this.visible = !this.visible
+        }
+    },
+}
+</script>

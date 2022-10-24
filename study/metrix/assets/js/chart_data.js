@@ -4,15 +4,18 @@ var chartData = {
         pieChartData : {
             item : [{
                 id : 1,
-                color : '#5570f1',
+                txt : 'Acquisition',
+                color : '5570f1',
                 data : 55,
             },{
                 id : 2,
-                color : '#ffcc91',
+                txt : 'Retention',
+                color : 'ffcc91',
                 data : 30,
             },{
                 id : 3,
-                color : '#97a5eb',
+                txt : 'Purchase',
+                color : '97a5eb',
                 data : 15,
             }]
         },

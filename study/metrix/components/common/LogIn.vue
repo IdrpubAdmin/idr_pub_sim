@@ -11,8 +11,8 @@
             </li>
             <li class="password-box input-box">
                 <i class="icon-box lock-icon"></i>
-                <input type="password" placeholder="Password">
-                <button class="eye-off-icon"></button>
+                <input :type="visible === false ? 'password' : 'text'" placeholder="Password">
+                <button class="eye-off-icon" @click="PasswordType"></button>
             </li>
         </ul>
         <p class="lock-link">Recover Password</p>
@@ -24,9 +24,19 @@
 
 <script>
 module.exports = {
-    // 로그인 페이지 이동시 nav active되는거 해제
+    data() {
+        return {
+            visible : false
+        }
+    },
+    // 로그인 페이지 이동시 nav active되는거 해제(임시)
     mounted() {
-        this.$store.commit('checkActive');
+        this.$store.commit('isActiveDefault');
+    },
+    methods: {
+        PasswordType(){
+            this.visible = !this.visible
+        }
     },
 }
 </script>

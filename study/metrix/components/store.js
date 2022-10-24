@@ -26,6 +26,9 @@ var store = new Vuex.Store({
                 state.isActive = !state.isActive
             }
         },
+        isActiveDefault(state){
+            state.isActive = false
+        },
         toggleModal(state, payload){
             if(state.modalActive.includes(payload)){ 
                 for(let i = 0; i < state.modalActive.length; i++) {

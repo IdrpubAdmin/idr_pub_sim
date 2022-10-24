@@ -218,6 +218,7 @@ module.exports = {
             ]
         };
         const options = {
+            maintainAspectRatio: false,
             // 내보내기 옵션
             exportMenu: {
                 visible: false
@@ -238,7 +239,7 @@ module.exports = {
                 width: '100%',
                 height: 280,
                 animation: {
-                    duration: 500
+                    duration: 600
                 }
             },
         };
