@@ -1093,6 +1093,7 @@ textarea::placeholder {
 .inventory .new-section .view-header ul li,
 .inventory .new-section .new-header ul li {
   display: flex;
+  align-items: center;
   margin-right: 24px;
 }
 @media (max-width: 1024px) {
@@ -1152,52 +1153,21 @@ textarea::placeholder {
 .inventory .new-section .new-header ul li p span {
   color: #8b8d97;
 }
-.orders .view-section .view-header ul li .image,
-.orders .view-section .new-header ul li .image,
-.orders .new-section .view-header ul li .image,
-.orders .new-section .new-header ul li .image, .customers .view-section .view-header ul li .image,
-.customers .view-section .new-header ul li .image,
-.customers .new-section .view-header ul li .image,
-.customers .new-section .new-header ul li .image, .inventory .view-section .view-header ul li .image,
-.inventory .view-section .new-header ul li .image,
-.inventory .new-section .view-header ul li .image,
-.inventory .new-section .new-header ul li .image {
-  width: 36px;
-  height: 36px;
-  margin-left: 4px;
+.orders .view-section .view-header ul li i,
+.orders .view-section .new-header ul li i,
+.orders .new-section .view-header ul li i,
+.orders .new-section .new-header ul li i, .customers .view-section .view-header ul li i,
+.customers .view-section .new-header ul li i,
+.customers .new-section .view-header ul li i,
+.customers .new-section .new-header ul li i, .inventory .view-section .view-header ul li i,
+.inventory .view-section .new-header ul li i,
+.inventory .new-section .view-header ul li i,
+.inventory .new-section .new-header ul li i {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
   position: relative;
-}
-@media (max-width: 1024px) {
-  .orders .view-section .view-header ul li .image,
-.orders .view-section .new-header ul li .image,
-.orders .new-section .view-header ul li .image,
-.orders .new-section .new-header ul li .image, .customers .view-section .view-header ul li .image,
-.customers .view-section .new-header ul li .image,
-.customers .new-section .view-header ul li .image,
-.customers .new-section .new-header ul li .image, .inventory .view-section .view-header ul li .image,
-.inventory .view-section .new-header ul li .image,
-.inventory .new-section .view-header ul li .image,
-.inventory .new-section .new-header ul li .image {
-    width: 26px;
-    height: 26px;
-  }
-}
-.orders .view-section .view-header ul li .image img,
-.orders .view-section .new-header ul li .image img,
-.orders .new-section .view-header ul li .image img,
-.orders .new-section .new-header ul li .image img, .customers .view-section .view-header ul li .image img,
-.customers .view-section .new-header ul li .image img,
-.customers .new-section .view-header ul li .image img,
-.customers .new-section .new-header ul li .image img, .inventory .view-section .view-header ul li .image img,
-.inventory .view-section .new-header ul li .image img,
-.inventory .new-section .view-header ul li .image img,
-.inventory .new-section .new-header ul li .image img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
 .orders .view-section .view-header .btns,
 .orders .view-section .new-header .btns,
@@ -1535,6 +1505,26 @@ button {
   background-image: url("../images/orders/fi_x.png");
 }
 
+.copy-icon {
+  background-image: url("../images/table/copy.png");
+}
+
+.copy2-icon {
+  background-image: url("../images/orders/u_copy-alt.png");
+}
+
+.left-icon {
+  background-image: url("../images/table/Arrow-Left.png");
+}
+
+.right-icon {
+  background-image: url("../images/table/Arrow-Right.png");
+}
+
+.sort-icon {
+  background-image: url("../images/table/sort.png");
+}
+
 .bar_chart_box {
   margin-top: 36px;
   font-family: "Inter";
@@ -1592,6 +1582,7 @@ button {
   border-radius: 50px;
 }
 .bar_chart_box .axis_x .graph .time {
+  transition: height 0.8s;
   border-radius: 50px;
   background-color: #5570f1;
 }
@@ -1991,8 +1982,11 @@ article {
 .table-area table thead tr th span {
   margin-right: 5px;
 }
-.table-area table thead tr th img {
+.table-area table thead tr th i {
+  display: inline-block;
   vertical-align: middle;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 .table-area table tbody {
@@ -2005,8 +1999,11 @@ article {
 .table-area table tbody tr td b {
   margin-right: 5px;
 }
-.table-area table tbody tr td img {
+.table-area table tbody tr td i {
+  display: inline-block;
   vertical-align: middle;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 .table-area table tbody tr .select-box {

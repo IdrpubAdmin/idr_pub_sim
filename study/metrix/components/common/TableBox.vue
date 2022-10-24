@@ -39,7 +39,7 @@
                         <template v-else-if="tHead.type === 'none'"></template>
                         <template v-else>
                             <span>{{tHead.name}}</span>
-                            <img src="assets/images/table/sort.png" alt="sort icon">
+                            <i class="sort-icon"></i>
                         </template>
                         </th>
                     </tr>
@@ -65,6 +65,7 @@
                             <template v-else>
                                 <b v-html="name.txt" v-if="name.txt" :class="name.class"></b>
                                 <img v-if="name.img === true" :src="'assets/images/table/'+ name.src +'.png'" :alt="name.src+' img'">
+                                <i v-if="name.icon === true" class="copy-icon">
                             </template> 
                         </td>
                     </tr>
@@ -84,12 +85,8 @@
                     ></select-box>
                     <p>of <span>44</span> pages</p>
                     <div class="btns">
-                        <button>
-                            <img src="assets/images/table/Arrow-Left.png" alt="left icon">
-                        </button>
-                        <button>
-                            <img src="assets/images/table/Arrow-Right.png" alt="right icon">
-                        </button>
+                        <button class="left-icon"></button>
+                        <button class="right-icon"></button>
                     </div>
                 </div>
             </div>

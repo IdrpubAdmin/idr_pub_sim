@@ -43,7 +43,7 @@ var tableData = {
                     {txt : 'Janet Adebayo', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `Completed`, class: 'state-btn state-ty02'}
@@ -64,7 +64,7 @@ var tableData = {
                     {txt : 'Samuel Johnson', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `In-Progress`, class: 'state-btn state-ty03'}
@@ -85,7 +85,7 @@ var tableData = {
                     {txt : 'Francis Doe', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `Pending`, class: 'state-btn state-ty01'}
@@ -106,7 +106,7 @@ var tableData = {
                     {txt : 'Christian Dior', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `Completed`, class: 'state-btn state-ty02'}
@@ -127,7 +127,7 @@ var tableData = {
                     {txt : 'Janet Adebayo', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `Completed`, class: 'state-btn state-ty02'}
@@ -148,7 +148,7 @@ var tableData = {
                     {txt : 'Samuel Johnson', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `In-Progress`, class: 'state-btn state-ty03'}
@@ -169,7 +169,7 @@ var tableData = {
                     {txt : 'Francis Doe', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : 'Pending', class: 'state-btn state-ty01'}
@@ -190,7 +190,7 @@ var tableData = {
                     {txt : 'Christian Dior', router: true, path:'vieworder'}, 
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'},
+                    {txt : '9348fjr73', icon: true},
                     {txt : `₦<span>25,000.00</span>`},
                     {select : true},
                     {txt : `Completed`, class: 'state-btn state-ty02'}
@@ -353,8 +353,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-001'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -365,8 +365,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-002'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -377,8 +377,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-003'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -389,8 +389,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-004'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -401,8 +401,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-005'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -413,8 +413,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-006'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -425,8 +425,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-007'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -437,8 +437,8 @@ var tableData = {
                 name : [
                     {check : true, txt:'chk03-008'},
                     {txt : 'Janet Adebayo', router: true, path:'viewcustomer'}, 
-                    {txt : 'janet.a@mail.com', img: true, src: 'copy'}, 
-                    {txt : '+2348065650633', img: true, src: 'copy'}, 
+                    {txt : 'janet.a@mail.com', icon: true}, 
+                    {txt : '+2348065650633', icon: true}, 
                     {txt : 10},
                     {txt : `₦<span>25,000.00</span>`},
                     {txt : '12 Aug 2022 - 12:25 am'},
@@ -483,7 +483,7 @@ var tableData = {
                     {check : true, txt:'chk04-001'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'}, 
+                    {txt : '9348fjr73', icon: true}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
                     {txt : 'Completed', class: 'state-btn state-ty02'}
@@ -503,7 +503,7 @@ var tableData = {
                     {check : true, txt:'chk04-002'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Home Delivery'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'}, 
+                    {txt : '9348fjr73', icon: true}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
                     {txt : 'In-Progress', class: 'state-btn state-ty03'}
@@ -523,7 +523,7 @@ var tableData = {
                     {check : true, txt:'chk04-003'},
                     {txt : '12 Aug 2022 - 12:25 am'}, 
                     {txt : 'Pick Up'}, 
-                    {txt : '9348fjr73', img: true, src: 'copy'}, 
+                    {txt : '9348fjr73', icon: true}, 
                     {txt : `₦<span>25,000.00</span>`}, 
                     {select : true},
                     {txt : 'Pending', class: 'state-btn state-ty01'}

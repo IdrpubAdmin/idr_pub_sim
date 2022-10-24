@@ -23,6 +23,7 @@ var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue')
 var LogIn = httpVueLoader('components/common/LogIn.vue');
 var SignUp = httpVueLoader('components/common/SignUp.vue');
 
+var PieChart = httpVueLoader('components/common/PieChart.vue');
 var BarChart = httpVueLoader('components/common/BarChart.vue');
 var FilterPopup = httpVueLoader('components/common/FilterPopup.vue');
 var DatePopup = httpVueLoader('components/common/DatePopup.vue');

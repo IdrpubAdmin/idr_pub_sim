@@ -207,6 +207,7 @@ textarea::placeholder{
                 }
                 li{
                     display: flex;
+                    align-items: center;
                     margin-right: 24px;
                     @include mdq-desktop{
                         margin-right: 8px;
@@ -221,18 +222,12 @@ textarea::placeholder{
                             color: #8b8d97;
                         }
                     }
-                    .image{
-                        width: 36px;
-                        height: 36px;
-                        margin-left: 4px;
+                    i{
+                        vertical-align: middle;
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 12px;
                         position: relative;
-                        @include mdq-desktop{
-                            width: 26px;
-                            height: 26px
-                        }
-                        img{
-                            @include center-align;
-                        }
                     }
                 }
             }

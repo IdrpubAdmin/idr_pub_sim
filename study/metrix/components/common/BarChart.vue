@@ -11,7 +11,7 @@
                     <span class="day">{{xData.day}}</span>
                 </div>
                 <div class="graph">
-                    <span class="time" :style="'height:'+ xData.data +'%;'"></span>
+                    <span class="time" style="height:0%"></span>
                 </div>
             </li>
         </ul>
@@ -23,5 +23,13 @@ module.exports = {
     props: {
         chartData: Object
     },
+    mounted() {
+        for(let i=0; i<this.chartData.axisX.length; i++){
+            const graph = document.querySelectorAll('.graph .time')
+            setTimeout(()=>{
+                graph[i].style.height = this.chartData.axisX[i].data + '%'
+            },0)
+        }
+    }
 }
 </script>

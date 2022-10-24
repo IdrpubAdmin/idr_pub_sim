@@ -48,6 +48,7 @@
             background: #eef0fa;
             border-radius: 50px;
             .time{
+                transition: height 0.8s;
                 border-radius: 50px;
                 background-color: $b;
             }

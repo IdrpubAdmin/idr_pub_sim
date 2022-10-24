@@ -10,9 +10,7 @@
                 </li>
                 <li>
                     <p>Tracking ID <span>9348fjr73</span></p>       
-                    <div class="image">  
-                        <img src="assets/images/orders/u_copy-alt.png" alt="copy icon">    
-                    </div> 
+                    <i class="copy2-icon"></i> 
                 </li>
             </ul>
             <div class="btns">

@@ -212,8 +212,11 @@
                     span{
                         margin-right: 5px;
                     }
-                    img{
+                    i{
+                        display: inline-block;
                         vertical-align: middle;
+                        width: 16px;
+                        height: 16px;
                         cursor: pointer;
                     }
                 }
@@ -228,8 +231,11 @@
                     b{
                         margin-right: 5px;
                     }
-                    img{
+                    i{
+                        display: inline-block;
                         vertical-align: middle;
+                        width: 16px;
+                        height: 16px;
                         cursor: pointer;
                     }
                 }

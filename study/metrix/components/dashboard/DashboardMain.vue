@@ -21,6 +21,9 @@
                 ></select-box>
             </div>
             <!-- <div id="chart"></div> -->
+            <pie-chart
+                :chart-data = chartData.pieChartData
+            ></pie-chart>
         </article>
         <article-summary
             :article-data = articleData.dashBoard04
@@ -179,6 +182,7 @@
 <script>
 module.exports = {    
     components : {
+        'pie-chart' : PieChart,
         'bar-chart' : BarChart,
         'article-summary' : ArticleSummary,
         'select-box' : SelectBox,

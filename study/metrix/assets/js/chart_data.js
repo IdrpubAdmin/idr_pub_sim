@@ -1,6 +1,21 @@
 var chartData = {
     namespaced: true,
     state: {
+        pieChartData : {
+            item : [{
+                id : 1,
+                color : '#5570f1',
+                data : 55,
+            },{
+                id : 2,
+                color : '#ffcc91',
+                data : 30,
+            },{
+                id : 3,
+                color : '#97a5eb',
+                data : 15,
+            }]
+        },
         barChartData : {
             axisY : [20, 40, 60, 80, 100],
             axisX : [{

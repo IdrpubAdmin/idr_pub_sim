@@ -10,9 +10,7 @@
                 </li>
                 <li>
                     <p>Product URL <span>1nancystores.com/polot-shirt</span></p>       
-                    <div class="image">  
-                        <img src="assets/images/orders/u_copy-alt.png" alt="copy icon">    
-                    </div> 
+                    <i class="copy2-icon"></i> 
                 </li>
             </ul>
             <div class="btns">
