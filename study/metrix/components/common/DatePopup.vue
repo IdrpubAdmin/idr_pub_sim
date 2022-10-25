@@ -35,12 +35,16 @@
                 </div>
             </div>
             <hr>
-            <div class="checkbox-area">
+            <div class="checkbox-area check-btn">
                 <input type="checkbox" id="check07" v-model="datePicker">
                 <label for="check07">Date Range</label>
             </div>
             <template v-if="datePicker">
-                <input type="date">
+                <div class="btn-area">
+                    <button :class="{'btn-on':btnOn === false}" @click="btnOn = false">From</button>
+                    <button :class="{'btn-on':btnOn === true}" @click="btnOn = true">To</button>
+                </div>
+                <date-picker></date-picker>
             </template>
             <div class="popup-close">
                 <button @click="toggleBtn('datePop')">Filter</button>
@@ -54,6 +58,7 @@ module.exports = {
     data() {
         return {
             btnActive : this.$store.getters.btnActive,
+            btnOn : false,
             datePicker : false
         }
     },
@@ -63,7 +68,8 @@ module.exports = {
         },
     },
     components: {
-        'select-box' : SelectBox
+        'select-box' : SelectBox,
+        'date-picker' : DatePicker
     },
     computed: {
         selectData() {

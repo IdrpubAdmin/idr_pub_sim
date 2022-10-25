@@ -160,9 +160,9 @@ textarea::placeholder{
     } 
 }
 
-.orders,.customers,.inventory{
+.content-wrap{
     padding: 20px;
-    .orders-header,.customers-header,.inventory-header{
+    .main-header{
         display: flex;
         justify-content: space-between;
         align-items: center;

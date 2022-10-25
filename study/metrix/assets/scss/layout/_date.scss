@@ -1,0 +1,36 @@
+.date-area{
+    margin-top: 16px;
+    width: 360px;
+    height: 389px;
+    background-color: #f4f5fa;
+    .date-header{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        h5{    
+            text-align: center;
+            width: 80%;
+        }
+    }
+    ul{
+        padding: 0 12px;
+        li{
+            display: flex;
+            height: 48px;
+            text-align: center;
+            b{
+                width: 48px;
+            }
+        }
+    }
+    .week{
+        b{
+            @include fonts ('Inter', 12, 400, 48, #8b8d97);
+        }
+    }
+    .day{
+        b{
+            @include fonts ('Inter', 16, 400, 48, #33343a);
+        }
+    }
+}

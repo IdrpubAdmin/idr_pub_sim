@@ -1,6 +1,6 @@
 <template>
     <section class="main-order">
-        <div class="orders-header">
+        <div class="main-header">
             <h3>Orders Summary</h3>
             <div class="btn">
                 <button class="plus2-icon link-btn" @click="toggleModal('newOrder')">Create a New Order</button>

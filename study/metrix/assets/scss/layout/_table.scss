@@ -75,9 +75,39 @@
                             top: -90px;
                         }
                         section{
+                            .checkbox-area{
+                                label{
+                                    cursor: pointer;
+                                }
+                            }
                             .double{
+                                margin-top: 12px;
                                 .checkbox-area{
                                     width: 50%;
+                                    &:first-child{
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                            hr{
+                                margin-top: 11px;
+                            }
+                            .check-btn{
+                                margin-top: 12px;
+                            }
+                            .btn-area{
+                                margin-top: 16px;
+                                display: flex;
+                                border-radius: 8px;
+                                background-color: rgba(85, 112, 241, 0.17);
+                                button{
+                                    padding: 4.5px;
+                                    border-radius: 8px;
+                                    @include fonts('inter',14,500,21,$b);
+                                }
+                                .btn-on{
+                                    background-color: $b;
+                                    color: #fff;
                                 }
                             }
                         }

@@ -1,6 +1,6 @@
 <template>
     <section class="main-customers">
-        <div class="customers-header">
+        <div class="main-header">
             <h3>Customers Summary</h3>
             <div class="btn">
                 <button class="plus2-icon link-btn" @click="toggleModal('newCustomer')">Add a New Customer</button>

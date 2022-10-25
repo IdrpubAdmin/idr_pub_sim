@@ -985,31 +985,31 @@ textarea::placeholder {
   background-color: #5570f1;
 }
 
-.orders, .customers, .inventory {
+.content-wrap {
   padding: 20px;
 }
-.orders .orders-header, .orders .customers-header, .orders .inventory-header, .customers .orders-header, .customers .customers-header, .customers .inventory-header, .inventory .orders-header, .inventory .customers-header, .inventory .inventory-header {
+.content-wrap .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.orders .orders-header h3, .orders .customers-header h3, .orders .inventory-header h3, .customers .orders-header h3, .customers .customers-header h3, .customers .inventory-header h3, .inventory .orders-header h3, .inventory .customers-header h3, .inventory .inventory-header h3 {
+.content-wrap .main-header h3 {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
   line-height: 36px;
   color: #45464e;
 }
-.orders .orders-header .btn, .orders .customers-header .btn, .orders .inventory-header .btn, .customers .orders-header .btn, .customers .customers-header .btn, .customers .inventory-header .btn, .inventory .orders-header .btn, .inventory .customers-header .btn, .inventory .inventory-header .btn {
+.content-wrap .main-header .btn {
   background-color: #5570f1;
   border-radius: 12px;
 }
 @media (max-width: 480px) {
-  .orders .orders-header .btn, .orders .customers-header .btn, .orders .inventory-header .btn, .customers .orders-header .btn, .customers .customers-header .btn, .customers .inventory-header .btn, .inventory .orders-header .btn, .inventory .customers-header .btn, .inventory .inventory-header .btn {
+  .content-wrap .main-header .btn {
     padding: 6px;
   }
 }
-.orders .orders-header .btn .link-btn, .orders .customers-header .btn .link-btn, .orders .inventory-header .btn .link-btn, .customers .orders-header .btn .link-btn, .customers .customers-header .btn .link-btn, .customers .inventory-header .btn .link-btn, .inventory .orders-header .btn .link-btn, .inventory .customers-header .btn .link-btn, .inventory .inventory-header .btn .link-btn {
+.content-wrap .main-header .btn .link-btn {
   display: inline-block;
   padding: 6px 16px 6px 47px;
   background-position: center left 16px;
@@ -1021,7 +1021,7 @@ textarea::placeholder {
   color: #fff;
 }
 @media (max-width: 480px) {
-  .orders .orders-header .btn .link-btn, .orders .customers-header .btn .link-btn, .orders .inventory-header .btn .link-btn, .customers .orders-header .btn .link-btn, .customers .customers-header .btn .link-btn, .customers .inventory-header .btn .link-btn, .inventory .orders-header .btn .link-btn, .inventory .customers-header .btn .link-btn, .inventory .inventory-header .btn .link-btn {
+  .content-wrap .main-header .btn .link-btn {
     padding: 5px 0;
     font-size: 12px;
     line-height: 14px;
@@ -1029,97 +1029,55 @@ textarea::placeholder {
   }
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header,
-.orders .view-section .new-header,
-.orders .new-section .view-header,
-.orders .new-section .new-header, .customers .view-section .view-header,
-.customers .view-section .new-header,
-.customers .new-section .view-header,
-.customers .new-section .new-header, .inventory .view-section .view-header,
-.inventory .view-section .new-header,
-.inventory .new-section .view-header,
-.inventory .new-section .new-header {
+  .content-wrap .view-section .view-header,
+.content-wrap .view-section .new-header,
+.content-wrap .new-section .view-header,
+.content-wrap .new-section .new-header {
     align-items: start;
   }
 }
 @media (max-width: 480px) {
-  .orders .view-section .view-header,
-.orders .view-section .new-header,
-.orders .new-section .view-header,
-.orders .new-section .new-header, .customers .view-section .view-header,
-.customers .view-section .new-header,
-.customers .new-section .view-header,
-.customers .new-section .new-header, .inventory .view-section .view-header,
-.inventory .view-section .new-header,
-.inventory .new-section .view-header,
-.inventory .new-section .new-header {
+  .content-wrap .view-section .view-header,
+.content-wrap .view-section .new-header,
+.content-wrap .new-section .view-header,
+.content-wrap .new-section .new-header {
     display: block;
   }
 }
-.orders .view-section .view-header ul,
-.orders .view-section .new-header ul,
-.orders .new-section .view-header ul,
-.orders .new-section .new-header ul, .customers .view-section .view-header ul,
-.customers .view-section .new-header ul,
-.customers .new-section .view-header ul,
-.customers .new-section .new-header ul, .inventory .view-section .view-header ul,
-.inventory .view-section .new-header ul,
-.inventory .new-section .view-header ul,
-.inventory .new-section .new-header ul {
+.content-wrap .view-section .view-header ul,
+.content-wrap .view-section .new-header ul,
+.content-wrap .new-section .view-header ul,
+.content-wrap .new-section .new-header ul {
   display: flex;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul,
-.orders .view-section .new-header ul,
-.orders .new-section .view-header ul,
-.orders .new-section .new-header ul, .customers .view-section .view-header ul,
-.customers .view-section .new-header ul,
-.customers .new-section .view-header ul,
-.customers .new-section .new-header ul, .inventory .view-section .view-header ul,
-.inventory .view-section .new-header ul,
-.inventory .new-section .view-header ul,
-.inventory .new-section .new-header ul {
+  .content-wrap .view-section .view-header ul,
+.content-wrap .view-section .new-header ul,
+.content-wrap .new-section .view-header ul,
+.content-wrap .new-section .new-header ul {
     display: block;
   }
 }
-.orders .view-section .view-header ul li,
-.orders .view-section .new-header ul li,
-.orders .new-section .view-header ul li,
-.orders .new-section .new-header ul li, .customers .view-section .view-header ul li,
-.customers .view-section .new-header ul li,
-.customers .new-section .view-header ul li,
-.customers .new-section .new-header ul li, .inventory .view-section .view-header ul li,
-.inventory .view-section .new-header ul li,
-.inventory .new-section .view-header ul li,
-.inventory .new-section .new-header ul li {
+.content-wrap .view-section .view-header ul li,
+.content-wrap .view-section .new-header ul li,
+.content-wrap .new-section .view-header ul li,
+.content-wrap .new-section .new-header ul li {
   display: flex;
   align-items: center;
   margin-right: 24px;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul li,
-.orders .view-section .new-header ul li,
-.orders .new-section .view-header ul li,
-.orders .new-section .new-header ul li, .customers .view-section .view-header ul li,
-.customers .view-section .new-header ul li,
-.customers .new-section .view-header ul li,
-.customers .new-section .new-header ul li, .inventory .view-section .view-header ul li,
-.inventory .view-section .new-header ul li,
-.inventory .new-section .view-header ul li,
-.inventory .new-section .new-header ul li {
+  .content-wrap .view-section .view-header ul li,
+.content-wrap .view-section .new-header ul li,
+.content-wrap .new-section .view-header ul li,
+.content-wrap .new-section .new-header ul li {
     margin-right: 8px;
   }
 }
-.orders .view-section .view-header ul li p,
-.orders .view-section .new-header ul li p,
-.orders .new-section .view-header ul li p,
-.orders .new-section .new-header ul li p, .customers .view-section .view-header ul li p,
-.customers .view-section .new-header ul li p,
-.customers .new-section .view-header ul li p,
-.customers .new-section .new-header ul li p, .inventory .view-section .view-header ul li p,
-.inventory .view-section .new-header ul li p,
-.inventory .new-section .view-header ul li p,
-.inventory .new-section .new-header ul li p {
+.content-wrap .view-section .view-header ul li p,
+.content-wrap .view-section .new-header ul li p,
+.content-wrap .new-section .view-header ul li p,
+.content-wrap .new-section .new-header ul li p {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
@@ -1127,84 +1085,48 @@ textarea::placeholder {
   color: #45464e;
 }
 @media (max-width: 1024px) {
-  .orders .view-section .view-header ul li p,
-.orders .view-section .new-header ul li p,
-.orders .new-section .view-header ul li p,
-.orders .new-section .new-header ul li p, .customers .view-section .view-header ul li p,
-.customers .view-section .new-header ul li p,
-.customers .new-section .view-header ul li p,
-.customers .new-section .new-header ul li p, .inventory .view-section .view-header ul li p,
-.inventory .view-section .new-header ul li p,
-.inventory .new-section .view-header ul li p,
-.inventory .new-section .new-header ul li p {
+  .content-wrap .view-section .view-header ul li p,
+.content-wrap .view-section .new-header ul li p,
+.content-wrap .new-section .view-header ul li p,
+.content-wrap .new-section .new-header ul li p {
     font-size: 14px;
     line-height: 26px;
   }
 }
-.orders .view-section .view-header ul li p span,
-.orders .view-section .new-header ul li p span,
-.orders .new-section .view-header ul li p span,
-.orders .new-section .new-header ul li p span, .customers .view-section .view-header ul li p span,
-.customers .view-section .new-header ul li p span,
-.customers .new-section .view-header ul li p span,
-.customers .new-section .new-header ul li p span, .inventory .view-section .view-header ul li p span,
-.inventory .view-section .new-header ul li p span,
-.inventory .new-section .view-header ul li p span,
-.inventory .new-section .new-header ul li p span {
+.content-wrap .view-section .view-header ul li p span,
+.content-wrap .view-section .new-header ul li p span,
+.content-wrap .new-section .view-header ul li p span,
+.content-wrap .new-section .new-header ul li p span {
   color: #8b8d97;
 }
-.orders .view-section .view-header ul li i,
-.orders .view-section .new-header ul li i,
-.orders .new-section .view-header ul li i,
-.orders .new-section .new-header ul li i, .customers .view-section .view-header ul li i,
-.customers .view-section .new-header ul li i,
-.customers .new-section .view-header ul li i,
-.customers .new-section .new-header ul li i, .inventory .view-section .view-header ul li i,
-.inventory .view-section .new-header ul li i,
-.inventory .new-section .view-header ul li i,
-.inventory .new-section .new-header ul li i {
+.content-wrap .view-section .view-header ul li i,
+.content-wrap .view-section .new-header ul li i,
+.content-wrap .new-section .view-header ul li i,
+.content-wrap .new-section .new-header ul li i {
   vertical-align: middle;
   width: 20px;
   height: 20px;
   margin-left: 12px;
   position: relative;
 }
-.orders .view-section .view-header .btns,
-.orders .view-section .new-header .btns,
-.orders .new-section .view-header .btns,
-.orders .new-section .new-header .btns, .customers .view-section .view-header .btns,
-.customers .view-section .new-header .btns,
-.customers .new-section .view-header .btns,
-.customers .new-section .new-header .btns, .inventory .view-section .view-header .btns,
-.inventory .view-section .new-header .btns,
-.inventory .new-section .view-header .btns,
-.inventory .new-section .new-header .btns {
+.content-wrap .view-section .view-header .btns,
+.content-wrap .view-section .new-header .btns,
+.content-wrap .new-section .view-header .btns,
+.content-wrap .new-section .new-header .btns {
   display: flex;
 }
 @media (max-width: 480px) {
-  .orders .view-section .view-header .btns,
-.orders .view-section .new-header .btns,
-.orders .new-section .view-header .btns,
-.orders .new-section .new-header .btns, .customers .view-section .view-header .btns,
-.customers .view-section .new-header .btns,
-.customers .new-section .view-header .btns,
-.customers .new-section .new-header .btns, .inventory .view-section .view-header .btns,
-.inventory .view-section .new-header .btns,
-.inventory .new-section .view-header .btns,
-.inventory .new-section .new-header .btns {
+  .content-wrap .view-section .view-header .btns,
+.content-wrap .view-section .new-header .btns,
+.content-wrap .new-section .view-header .btns,
+.content-wrap .new-section .new-header .btns {
     justify-content: flex-end;
   }
 }
-.orders .view-section .view-header .btns .select-box,
-.orders .view-section .new-header .btns .select-box,
-.orders .new-section .view-header .btns .select-box,
-.orders .new-section .new-header .btns .select-box, .customers .view-section .view-header .btns .select-box,
-.customers .view-section .new-header .btns .select-box,
-.customers .new-section .view-header .btns .select-box,
-.customers .new-section .new-header .btns .select-box, .inventory .view-section .view-header .btns .select-box,
-.inventory .view-section .new-header .btns .select-box,
-.inventory .new-section .view-header .btns .select-box,
-.inventory .new-section .new-header .btns .select-box {
+.content-wrap .view-section .view-header .btns .select-box,
+.content-wrap .view-section .new-header .btns .select-box,
+.content-wrap .new-section .view-header .btns .select-box,
+.content-wrap .new-section .new-header .btns .select-box {
   width: 200px;
   background-image: url("../images/orders/fi_chevron-down.png");
   background-color: #1c1d22;
@@ -1212,108 +1134,60 @@ textarea::placeholder {
   margin-right: 24px;
 }
 @media (max-width: 768px) {
-  .orders .view-section .view-header .btns .select-box,
-.orders .view-section .new-header .btns .select-box,
-.orders .new-section .view-header .btns .select-box,
-.orders .new-section .new-header .btns .select-box, .customers .view-section .view-header .btns .select-box,
-.customers .view-section .new-header .btns .select-box,
-.customers .new-section .view-header .btns .select-box,
-.customers .new-section .new-header .btns .select-box, .inventory .view-section .view-header .btns .select-box,
-.inventory .view-section .new-header .btns .select-box,
-.inventory .new-section .view-header .btns .select-box,
-.inventory .new-section .new-header .btns .select-box {
+  .content-wrap .view-section .view-header .btns .select-box,
+.content-wrap .view-section .new-header .btns .select-box,
+.content-wrap .new-section .view-header .btns .select-box,
+.content-wrap .new-section .new-header .btns .select-box {
     margin-right: 0;
     display: none;
   }
 }
-.orders .view-section .view-header .btns .select-box .selected,
-.orders .view-section .new-header .btns .select-box .selected,
-.orders .new-section .view-header .btns .select-box .selected,
-.orders .new-section .new-header .btns .select-box .selected, .customers .view-section .view-header .btns .select-box .selected,
-.customers .view-section .new-header .btns .select-box .selected,
-.customers .new-section .view-header .btns .select-box .selected,
-.customers .new-section .new-header .btns .select-box .selected, .inventory .view-section .view-header .btns .select-box .selected,
-.inventory .view-section .new-header .btns .select-box .selected,
-.inventory .new-section .view-header .btns .select-box .selected,
-.inventory .new-section .new-header .btns .select-box .selected {
+.content-wrap .view-section .view-header .btns .select-box .selected,
+.content-wrap .view-section .new-header .btns .select-box .selected,
+.content-wrap .new-section .view-header .btns .select-box .selected,
+.content-wrap .new-section .new-header .btns .select-box .selected {
   padding: 8px 16px;
 }
-.orders .view-section .view-header .btns .select-box .selected .value,
-.orders .view-section .new-header .btns .select-box .selected .value,
-.orders .new-section .view-header .btns .select-box .selected .value,
-.orders .new-section .new-header .btns .select-box .selected .value, .customers .view-section .view-header .btns .select-box .selected .value,
-.customers .view-section .new-header .btns .select-box .selected .value,
-.customers .new-section .view-header .btns .select-box .selected .value,
-.customers .new-section .new-header .btns .select-box .selected .value, .inventory .view-section .view-header .btns .select-box .selected .value,
-.inventory .view-section .new-header .btns .select-box .selected .value,
-.inventory .new-section .view-header .btns .select-box .selected .value,
-.inventory .new-section .new-header .btns .select-box .selected .value {
+.content-wrap .view-section .view-header .btns .select-box .selected .value,
+.content-wrap .view-section .new-header .btns .select-box .selected .value,
+.content-wrap .new-section .view-header .btns .select-box .selected .value,
+.content-wrap .new-section .new-header .btns .select-box .selected .value {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #fff;
 }
-.orders .view-section .view-header .btns .select-box ul,
-.orders .view-section .new-header .btns .select-box ul,
-.orders .new-section .view-header .btns .select-box ul,
-.orders .new-section .new-header .btns .select-box ul, .customers .view-section .view-header .btns .select-box ul,
-.customers .view-section .new-header .btns .select-box ul,
-.customers .new-section .view-header .btns .select-box ul,
-.customers .new-section .new-header .btns .select-box ul, .inventory .view-section .view-header .btns .select-box ul,
-.inventory .view-section .new-header .btns .select-box ul,
-.inventory .new-section .view-header .btns .select-box ul,
-.inventory .new-section .new-header .btns .select-box ul {
+.content-wrap .view-section .view-header .btns .select-box ul,
+.content-wrap .view-section .new-header .btns .select-box ul,
+.content-wrap .new-section .view-header .btns .select-box ul,
+.content-wrap .new-section .new-header .btns .select-box ul {
   display: block;
 }
-.orders .view-section .view-header .btns .select-box ul .option,
-.orders .view-section .new-header .btns .select-box ul .option,
-.orders .new-section .view-header .btns .select-box ul .option,
-.orders .new-section .new-header .btns .select-box ul .option, .customers .view-section .view-header .btns .select-box ul .option,
-.customers .view-section .new-header .btns .select-box ul .option,
-.customers .new-section .view-header .btns .select-box ul .option,
-.customers .new-section .new-header .btns .select-box ul .option, .inventory .view-section .view-header .btns .select-box ul .option,
-.inventory .view-section .new-header .btns .select-box ul .option,
-.inventory .new-section .view-header .btns .select-box ul .option,
-.inventory .new-section .new-header .btns .select-box ul .option {
+.content-wrap .view-section .view-header .btns .select-box ul .option,
+.content-wrap .view-section .new-header .btns .select-box ul .option,
+.content-wrap .new-section .view-header .btns .select-box ul .option,
+.content-wrap .new-section .new-header .btns .select-box ul .option {
   font-size: 14px;
 }
-.orders .view-section .view-header .btns .select-box ul .option:hover,
-.orders .view-section .new-header .btns .select-box ul .option:hover,
-.orders .new-section .view-header .btns .select-box ul .option:hover,
-.orders .new-section .new-header .btns .select-box ul .option:hover, .customers .view-section .view-header .btns .select-box ul .option:hover,
-.customers .view-section .new-header .btns .select-box ul .option:hover,
-.customers .new-section .view-header .btns .select-box ul .option:hover,
-.customers .new-section .new-header .btns .select-box ul .option:hover, .inventory .view-section .view-header .btns .select-box ul .option:hover,
-.inventory .view-section .new-header .btns .select-box ul .option:hover,
-.inventory .new-section .view-header .btns .select-box ul .option:hover,
-.inventory .new-section .new-header .btns .select-box ul .option:hover {
+.content-wrap .view-section .view-header .btns .select-box ul .option:hover,
+.content-wrap .view-section .new-header .btns .select-box ul .option:hover,
+.content-wrap .new-section .view-header .btns .select-box ul .option:hover,
+.content-wrap .new-section .new-header .btns .select-box ul .option:hover {
   color: #000;
 }
-.orders .view-section .view-header .btns .btn,
-.orders .view-section .new-header .btns .btn,
-.orders .new-section .view-header .btns .btn,
-.orders .new-section .new-header .btns .btn, .customers .view-section .view-header .btns .btn,
-.customers .view-section .new-header .btns .btn,
-.customers .new-section .view-header .btns .btn,
-.customers .new-section .new-header .btns .btn, .inventory .view-section .view-header .btns .btn,
-.inventory .view-section .new-header .btns .btn,
-.inventory .new-section .view-header .btns .btn,
-.inventory .new-section .new-header .btns .btn {
+.content-wrap .view-section .view-header .btns .btn,
+.content-wrap .view-section .new-header .btns .btn,
+.content-wrap .new-section .view-header .btns .btn,
+.content-wrap .new-section .new-header .btns .btn {
   background-color: #cc5f5f;
   padding: 0 16px;
   border-radius: 12px;
 }
-.orders .view-section .view-header .btns .btn a,
-.orders .view-section .new-header .btns .btn a,
-.orders .new-section .view-header .btns .btn a,
-.orders .new-section .new-header .btns .btn a, .customers .view-section .view-header .btns .btn a,
-.customers .view-section .new-header .btns .btn a,
-.customers .new-section .view-header .btns .btn a,
-.customers .new-section .new-header .btns .btn a, .inventory .view-section .view-header .btns .btn a,
-.inventory .view-section .new-header .btns .btn a,
-.inventory .new-section .view-header .btns .btn a,
-.inventory .new-section .new-header .btns .btn a {
+.content-wrap .view-section .view-header .btns .btn a,
+.content-wrap .view-section .new-header .btns .btn a,
+.content-wrap .new-section .view-header .btns .btn a,
+.content-wrap .new-section .new-header .btns .btn a {
   font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
@@ -1323,7 +1197,7 @@ textarea::placeholder {
   height: 100%;
   display: inline-block;
 }
-.orders .contents, .customers .contents, .inventory .contents {
+.content-wrap .contents {
   min-height: 700px;
   height: calc(100vh - 183px);
   margin-top: 20px;
@@ -1332,14 +1206,14 @@ textarea::placeholder {
   grid-template-rows: 20% auto;
 }
 @media (max-width: 1024px) {
-  .orders .contents, .customers .contents, .inventory .contents {
+  .content-wrap .contents {
     height: auto;
     display: block;
   }
-  .orders .contents article, .customers .contents article, .inventory .contents article {
+  .content-wrap .contents article {
     margin-top: 20px;
   }
-  .orders .contents article:first-child, .customers .contents article:first-child, .inventory .contents article:first-child {
+  .content-wrap .contents article:first-child {
     margin-top: 0;
   }
 }
@@ -1787,6 +1661,47 @@ article {
   color: #dbdeee;
 }
 
+.date-area {
+  margin-top: 16px;
+  width: 360px;
+  height: 389px;
+  background-color: #f4f5fa;
+}
+.date-area .date-header {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.date-area .date-header h5 {
+  text-align: center;
+  width: 80%;
+}
+.date-area ul {
+  padding: 0 12px;
+}
+.date-area ul li {
+  display: flex;
+  height: 48px;
+  text-align: center;
+}
+.date-area ul li b {
+  width: 48px;
+}
+.date-area .week b {
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #8b8d97;
+}
+.date-area .day b {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #33343a;
+}
+
 .table-area {
   font-family: "Inter";
   font-size: 14px;
@@ -1895,8 +1810,42 @@ article {
   height: 736px;
   top: -90px;
 }
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .checkbox-area label {
+  cursor: pointer;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .double {
+  margin-top: 12px;
+}
 .table-area .title .table-btns .btn .popup-wrap.popup-date section .double .checkbox-area {
   width: 50%;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .double .checkbox-area:first-child {
+  margin-top: 0;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section hr {
+  margin-top: 11px;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .check-btn {
+  margin-top: 12px;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .btn-area {
+  margin-top: 16px;
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba(85, 112, 241, 0.17);
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .btn-area button {
+  padding: 4.5px;
+  border-radius: 8px;
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #5570f1;
+}
+.table-area .title .table-btns .btn .popup-wrap.popup-date section .btn-area .btn-on {
+  background-color: #5570f1;
+  color: #fff;
 }
 .table-area .title .table-btns .btn .popup-wrap.popup-filter {
   width: 317px;
@@ -2304,6 +2253,20 @@ button {
 .double {
   display: flex;
   justify-content: space-between;
+}
+
+.img-btn-area {
+  position: absolute;
+  width: 69px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.img-btn-area button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #fff2e2;
 }
 
 .wrapper {
@@ -3345,18 +3308,8 @@ header .location .breadcrumb ul li::before {
   padding: 20px;
 }
 .inventory .new-inven .contents .product-image .img-btn-area {
-  width: 69px;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
   top: 17px;
   right: 19px;
-}
-.inventory .new-inven .contents .product-image .img-btn-area button {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background-color: #fff2e2;
 }
 .inventory .new-inven .contents .product-image .main-img {
   width: 100%;
@@ -3737,14 +3690,6 @@ header .location .breadcrumb ul li::before {
   border-radius: 12px;
 }
 .settings section article .contents .user-image .image-box .img-btn-area {
-  position: absolute;
   top: 14px;
   right: 14px;
-}
-.settings section article .contents .user-image .image-box .img-btn-area button {
-  width: 32px;
-  height: 32px;
-  padding: 6px;
-  border-radius: 8px;
-  background-color: #fff2e2;
 }/*# sourceMappingURL=style.css.map */

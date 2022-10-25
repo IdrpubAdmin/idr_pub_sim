@@ -30,6 +30,7 @@ var DatePopup = httpVueLoader('components/common/DatePopup.vue');
 var ArticleSummary = httpVueLoader('components/common/ArticleSummary.vue');
 var SelectBox = httpVueLoader('components/common/SelectBox.vue');
 var TableBox = httpVueLoader('components/common/TableBox.vue');
+var DatePicker = httpVueLoader('components/common/DatePicker.vue');
 
 var router = new VueRouter({
 	routes: [

@@ -1,6 +1,6 @@
 <template>
     <section class="main-inventory">
-        <div class="inventory-header">
+        <div class="main-header inventory-header">
             <h3>Inventory Summary</h3>
             <div class="btn">
                 <router-link class="plus2-icon link-btn" :to="{name:'newinventory'}">Add a New Product</router-link>

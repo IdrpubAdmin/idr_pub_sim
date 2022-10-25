@@ -11,7 +11,7 @@
                 :key="item.id" 
                 :class="item.data" 
                 :v-if="chartData.item.length > 0"
-                :style="'background : conic-gradient(transparent 0% '+ result2[i] + '%, #' + item.color + ' ' + result2[i] + '% ' + result[i] +'%)'"
+                :style="'background : conic-gradient(transparent 0% ' + result2[i] + '%, #' + item.color + ' ' + result2[i] + '% ' + result[i] +'%)'"
             >
             </div>
             <span class="center">

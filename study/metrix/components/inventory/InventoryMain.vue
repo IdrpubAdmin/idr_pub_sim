@@ -1,5 +1,5 @@
 <template>
-    <div class="inventory">
+    <div class="content-wrap inventory">
         <router-view></router-view>
     </div>
 </template>
