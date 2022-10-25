@@ -16,7 +16,7 @@ var chartData = {
                 id : 3,
                 txt : 'Purchase',
                 color : '97a5eb',
-                data : 15,
+                data : 15
             }]
         },
         barChartData : {

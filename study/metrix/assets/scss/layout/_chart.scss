@@ -55,3 +55,54 @@
         }
     }
 }
+
+.pie-chart-box{
+    @include fonts('Inter', 11, 400, 13, #a6a8b1);
+    margin-top: 12px;
+    .chart-list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        span{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+    }
+    .pie-chart{
+        position: relative;
+        width: 205px;
+        height: 205px;
+        border-radius: 50%;
+        background : #eef0fa;
+        margin: 24px auto 0;
+        .item {
+            position: absolute;
+            width: 172px;
+            height: 172px;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .center{
+            @include center-align;
+            width: 138px; 
+            height: 138px;
+            background :#eef0fa;
+            border-radius: 50%;
+            .center2{
+                @include center-align;
+                width: 104px; 
+                height: 104px;
+                background :#fff;
+                border-radius: 50%;
+            }
+        }
+    }
+}

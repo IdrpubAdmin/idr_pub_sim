@@ -6,7 +6,7 @@
 	    grid-template-columns: 1fr 1fr 1fr;
 	    grid-template-rows: 20% 20% 20% auto;
         gap: 20px;
-        @include mdq-tablet {
+        @include mdq-desktop {
             display: block;
             article{
                 margin-top: 20px;

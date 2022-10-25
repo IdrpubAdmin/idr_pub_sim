@@ -1587,6 +1587,71 @@ button {
   background-color: #5570f1;
 }
 
+.pie-chart-box {
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #a6a8b1;
+  margin-top: 12px;
+}
+.pie-chart-box .chart-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.pie-chart-box .chart-list span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.pie-chart-box .pie-chart {
+  position: relative;
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  background: #eef0fa;
+  margin: 24px auto 0;
+}
+.pie-chart-box .pie-chart .item {
+  position: absolute;
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.pie-chart-box .pie-chart .center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 138px;
+  height: 138px;
+  background: #eef0fa;
+  border-radius: 50%;
+}
+.pie-chart-box .pie-chart .center .center2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 104px;
+  height: 104px;
+  background: #fff;
+  border-radius: 50%;
+}
+
 article {
   background-color: #fff;
   border-radius: 12px;
@@ -2724,7 +2789,7 @@ header .location .breadcrumb ul li::before {
   grid-template-rows: 20% 20% 20% auto;
   gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container .dashboard {
     display: block;
   }
