@@ -54,7 +54,7 @@
                         .selected{
                             padding: 5px 50px 5px 11px;
                             .value{
-                                @include fonts('Inter', 14, 400, 20, #5570f1);
+                                @include fonts('Inter', 14, 400, 20, $b);
                             }
                         }
                         ul{
@@ -96,20 +96,12 @@
                             }
                             .prod-date{
                                 @include fonts('Inter', 12, 400, 20, #a6a8b1);
+                                text-align: right;
                             }
-                            .prod-state{
-                                @include fonts('Inter', 12, 400, 20, #cc5f5f);
+                            .state-btn{
                                 margin-top: 5px;
-                                padding: 0 15px;
-                                border-radius: 8px;
+                                padding: 2.5px 15px;
                             }   
-                            .pending{
-                                background-color: rgba(245, 126, 119, 0.12);
-                            }
-                            .completed{
-                                color: #519c66;
-                                background-color: rgba(50, 147, 111, 0.12);
-                            }
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="content-wrap orders">
+    <div class="section-wrap orders">
         <router-view></router-view>
     </div>
 </template>

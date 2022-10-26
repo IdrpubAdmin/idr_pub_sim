@@ -14,12 +14,16 @@ button{
     background-color: #fff2e2;
 }
 .state-ty02{
-    color: #519c66;
+    color: $g;
     background-color: rgba(50, 147, 111, 0.16);
 }
 .state-ty03{
-    color: #5570f1;
+    color: $b;
     background-color: rgba(85, 112, 241, 0.16);
+}
+.state-ty04{
+    color: $r;
+    background-color: rgba(245, 126, 119, 0.12);
 }
 .btn-ty01{
     button{
@@ -36,12 +40,10 @@ button{
     align-items: center;
     padding: 7px 8px 7px 32px;
 }
-
 .double{
     display: flex;
     justify-content: space-between;
 }
-
 .img-btn-area{
     position: absolute;
     width: 69px;
@@ -53,5 +55,26 @@ button{
         height: 32px;
         border-radius: 8px;
         background-color: #fff2e2;
+    }
+}
+.toggle-btn{
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(85, 112, 241, 0.12);
+    padding: 2px;
+    cursor: pointer;
+    button{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #bbc5cb;
+    }
+}     
+.btn-active{
+    text-align: right;
+    background-color: $b;
+    button{
+        background-color: $w;
     }
 }

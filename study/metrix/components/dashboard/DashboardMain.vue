@@ -36,123 +36,18 @@
                 <h5>Recent Orders</h5>
             </div>
             <ul>
-                <li>
+                <li v-for="item in recentOrder" :key="item.id">
                     <div class="img">
-                        <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
+                        <img :src="'assets/images/dashboard/'+ item.src +'.png'" alt="product img">
                     </div>
                     <div class="texts">
                         <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
+                            <p class="prod-name">{{item.name}}</p>
+                            <p class="prod-price">₦<span>{{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}}.00</span> x <span>{{item.count}}</span></p>
                         </div>
                         <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state pending">Pending</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state completed">Completed</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state pending">Pending</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state completed">Completed</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state completed">Completed</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle3.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state completed">Completed</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state pending">Pending</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="assets/images/dashboard/Rectangle4.png" alt="phone img">
-                    </div>
-                    <div class="texts">
-                        <div class="text">
-                            <p class="prod-name">iPhone 13</p>
-                            <p class="prod-price">₦730,000.00 x 1</p>
-                        </div>
-                        <div class="text">
-                            <p class="prod-date">12 Sept 2022</p>
-                            <p class="prod-state pending">Pending</p>
+                            <p class="prod-date">{{item.date}}</p>
+                            <p class="state-btn" :class="item.class">{{item.state}}</p>
                         </div>
                     </div>
                 </li>
@@ -195,6 +90,9 @@ module.exports = {
         },
         chartData() {
             return this.$store.getters["chartData"]
+        },
+        recentOrder() {
+            return this.$store.getters["productData"].recentOrder
         },
     },
 }

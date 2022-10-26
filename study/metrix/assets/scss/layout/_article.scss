@@ -1,5 +1,5 @@
 article{
-    background-color: #fff;
+    background-color: $w;
     border-radius: 12px;
 }
 .summary{
@@ -42,9 +42,9 @@ article{
                     margin-right: 7px;
                 }
                 dd{
-                    @include fonts ('Inter', 12, 400, 15, #fff);
+                    @include fonts ('Inter', 12, 400, 15, $w);
                     &.plus{
-                        color: #519c66;
+                        color: $g;
                     }
                     &.minus{
                         color: $r;
@@ -105,10 +105,10 @@ article{
     ul{
         li{
             .tit{
-                color: #fff;
+                color: $w;
             }
             .value{
-                color: #fff;
+                color: $w;
                 dd{
                     color: #dbdeee;
                     &.plus{

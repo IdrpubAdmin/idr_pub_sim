@@ -38,7 +38,80 @@ var productData = {
             count : 1,    
             sum : 900000,
             src : 'iphone12'
-        }]
+        }],
+        recentOrder: [{
+            id: 1,
+            name : 'iPhone 13',
+            src : 'Rectangle4',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Pending',
+            class : 'state-ty04'
+        },{
+            id: 2,
+            name : 'iPhone 13',
+            src : 'Rectangle3',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Completed',
+            class : 'state-ty02'
+        },{
+            id: 3,
+            name : 'iPhone 13',
+            src : 'Rectangle4',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Pending',
+            class : 'state-ty04'
+        },{
+            id: 4,
+            name : 'iPhone 13',
+            src : 'Rectangle3',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Completed',
+            class : 'state-ty02'
+        },{
+            id: 5,
+            name : 'iPhone 13',
+            src : 'Rectangle3',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Completed',
+            class : 'state-ty02'
+        },{
+            id: 6,
+            name : 'iPhone 13',
+            src : 'Rectangle3',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Completed',
+            class : 'state-ty02'
+        },{
+            id: 7,
+            name : 'iPhone 13',
+            src : 'Rectangle4',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Pending',
+            class : 'state-ty04'
+        },{
+            id: 8,
+            name : 'iPhone 13',
+            src : 'Rectangle4',
+            price : 730000,
+            count : 1,
+            date : '12 Sept 2022',
+            state : 'Pending',
+            class : 'state-ty04'
+        },]
     },
     mutations: {
         totalItems(state){

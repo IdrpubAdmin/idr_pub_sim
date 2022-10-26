@@ -20,8 +20,8 @@ var SettingsAccount = httpVueLoader('components/settings/SettingsAccount.vue');
 var SettingsBusiness = httpVueLoader('components/settings/SettingsBusiness.vue');
 var SettingsSecurity = httpVueLoader('components/settings/SettingsSecurity.vue');
 
-var LogIn = httpVueLoader('components/common/LogIn.vue');
-var SignUp = httpVueLoader('components/common/SignUp.vue');
+var LogIn = httpVueLoader('components/auth/LogIn.vue');
+var SignUp = httpVueLoader('components/auth/SignUp.vue');
 
 var PieChart = httpVueLoader('components/common/PieChart.vue');
 var BarChart = httpVueLoader('components/common/BarChart.vue');

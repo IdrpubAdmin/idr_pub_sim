@@ -1,3 +1,178 @@
+body{
+    min-width: 360px;
+    &.mobile-active{
+        overflow: hidden;
+    }
+}
+input{
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+.input-box{
+    display: flex;
+    height: 52px;
+    border-radius: 8px;
+    background-color: rgba(239, 241, 249, 0.6);
+    .icon-box{
+        width: 56px;
+        height: 52px;
+        position: relative;
+        background-size: 24px;
+    }
+    input{
+        width: calc(100% - 56px);
+        padding: 9px 16px 9px 0;
+        @include fonts('Inter', 16, 400, 20, #5e6366);
+    }
+    input::placeholder{
+        color: #abafb1;
+    }
+}
+.input-ty02{
+    input{
+        width: 100%;
+        padding: 9px 16px;
+    }
+}
+.input-ty03{
+    margin-top: 8px;
+}
+textarea{
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(239, 241, 249, 0.6);
+    @include fonts('Inter', 16, 400, 18, #000);
+}
+textarea::placeholder{
+    color: #abafb1;
+}
+.phone-box{
+    background-color: $w;
+    .select-box{
+        width: 142px;
+        margin-right: 6px;
+        background-image: url('../images/settings/Arrow-Down2.png');
+        .selected{
+            .value{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 8px;
+                }
+            }
+        }
+        ul{
+            .option{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 8px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    input{
+        width: calc(100% - 148px);
+        background-color: rgba(239, 241, 249, 0.6);
+        border-radius: 8px;
+    }
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .nav-wrap{
+        position: relative;
+        width: $navigation-width;
+        height: 100vh;
+        transition-property: width;
+        transition-duration: $transition;
+        z-index: 10;
+    }
+    .nav-active{
+        width: $navigation-active;
+        .navigation{
+            padding: 14px 32px;
+            menu{
+                nav{
+                    ul{
+                        li{
+                            a{
+                                width: 233px;
+                                .alarm{
+                                    top: 10px;
+                                    &.order{
+                                        left: 110px;
+                                    }
+                                    &.conversation{
+                                        left: 160px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .btns{
+                    ul{
+                        li{
+                            width: 233px;                 
+                        }
+                        .gift-box{
+                            height: 82px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    main{
+        width: calc(100% - $navigation-width);
+        transition-property: width;
+        transition-duration: $transition;
+    } 
+    .main-active{
+        width: calc(100% - $navigation-active);
+    }  
+    .container{
+        min-height: 800px;
+        height: calc(100vh - 87px);
+        background-color: #f4f5fa;
+        @include mdq-desktop{
+            height: auto;
+        }
+    }
+}
+
+@include mdq-tablet{
+    .wrapper{
+        .nav-wrap{
+            display: none;
+            position: fixed;
+            background-color: $w;
+            &.mobile-active{
+                display: block;
+                .headphone-box{
+                    display: none;
+                }
+                .gift-box{
+                    display: none;
+                }
+            }
+        }
+        main{
+            width: 100%;
+        } 
+        .main-active{
+            width: 100%;
+        }  
+    }
+}
+
 i{
     background-repeat: no-repeat;
     background-size: cover;

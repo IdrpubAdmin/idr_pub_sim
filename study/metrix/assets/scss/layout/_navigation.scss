@@ -67,7 +67,7 @@
                         }
                     }
                     .router-link-active{
-                        background-color: #5570f1;
+                        background-color: $b;
                         .before{
                             display: none;
                         }
@@ -75,7 +75,7 @@
                             display: block;
                         }
                         span{
-                            color: #fff;
+                            color: $w;
                         }
                         .alarm{
                             display: none;
@@ -143,7 +143,7 @@
                 height: 56px;
                 position: relative;
                 .hidden-title{
-                    @include fonts ('Inter', 14, 400, 11, #cc5f5f);
+                    @include fonts ('Inter', 14, 400, 11, $r);
                 }
             }
         }

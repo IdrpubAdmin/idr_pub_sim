@@ -1,0 +1,94 @@
+.modal-wrap{
+    width: 100%;
+    min-width: 360px;
+    min-height: 100vh;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(163, 163, 163, 0.2);
+    position: fixed;
+    display: block;
+    z-index: 999;
+    .modal-container{
+        @include center-align;
+        z-index: 1000;
+        padding: 28px 24px;  
+        background-color: #fff;
+        border-radius: 12px;
+        overflow-y: auto;
+        overflow-x:hidden;
+        .header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            h3{
+                @include fonts('Poppins', 20, 500, 32, #000);
+            }
+            .btn{
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+                border-radius: 8px;
+                background-color: #fff2e2;
+            }
+        }
+        section{
+            margin-top: 30px;
+            article{
+                .modal-title{
+                    display: flex;
+                    justify-content: space-between;
+                    h5{
+                        @include fonts('Inter', 16, 500, 20, #8b8d97);
+                    }
+                    .btn-area{
+                        display: flex;
+                        p{
+                            @include fonts('Inter', 14, 400, 20, #83898c);
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                .input-box-area{
+                    .input-box{
+                        input{
+                            @include fonts('Inter', 16, 400, 20, #53545c);
+                        }
+                    }
+                }
+            }
+        }
+        .modal-btns{
+            width: 400px;
+            margin: 40px auto 0;
+            display: flex;
+            justify-content: space-between;
+            @include mdq-tablet{
+                width: 380px;
+            }
+            button{
+                width: 180px;
+                height: 58px;
+                border-radius: 12px;
+                border: solid 2px $b;
+                @include fonts('Inter', 20, 400, 30, $b);
+                &.point{
+                    color: #fff;
+                    background-color: $b;
+                }
+            }
+        }
+    } 
+}
+
+@include mdq-mobile{
+    .modal-wrap{
+        .modal-container{
+            .modal-btns{
+                width: 310px;
+                button{
+                    width: 140px;
+                }
+            }
+        } 
+    }
+}

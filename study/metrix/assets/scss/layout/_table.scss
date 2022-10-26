@@ -9,9 +9,6 @@
         }
         .table-btns{
             display: flex;
-            @include mdq-tablet {
-                display: none;
-            }
             li{
                 position: relative;
                 .select-box {
@@ -19,7 +16,7 @@
                     background-position: center right 8px;
                     border-radius: 4px;
                     border: 1px solid #53545c;
-                    background-color: #fff;
+                    background-color: $w;
                     cursor: pointer;
                     .selected{
                         padding: 7px 32px 7px 8px;
@@ -62,7 +59,7 @@
                 .popup-wrap{
                     position: absolute;
                     z-index: 1;
-                    background-color: #fff;
+                    background-color: $w;
                     padding: 24px 21px;
                     border-radius: 12px;
                     box-shadow: 0 4px 32px 0 rgba(61, 70, 112, 0.08);
@@ -107,7 +104,7 @@
                                 }
                                 .btn-on{
                                     background-color: $b;
-                                    color: #fff;
+                                    color: $w;
                                 }
                             }
                         }
@@ -172,7 +169,7 @@
                             }
                             .input-box{
                                 margin-top: 4px;
-                                background-color: #fff;
+                                background-color: $w;
                                 border-radius: 8px;
                                 border: solid 1px #e1e2e9;
                                 height: 38px;
@@ -186,9 +183,9 @@
                             margin-top: 16px;
                             border-radius: 12px;
                             height: 36px;
-                            background-color: #5570f1;
+                            background-color: $b;
                             button{
-                                @include fonts('Inter', 14, 400, 22, #fff);
+                                @include fonts('Inter', 14, 400, 22, $w);
                                 display: block;
                             }
                         }
@@ -294,12 +291,6 @@
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
-        @include mdq-tablet {
-            justify-content: flex-end;
-            .paging:first-child{ 
-                display: none;
-            }
-        }
         .paging{
             display: flex;
             align-items: center;
@@ -336,6 +327,22 @@
                 height: 16px;
                 display: flex;
                 justify-content: space-between;
+            }
+        }
+    }
+}
+
+@include mdq-tablet {
+    .table-area {
+        .title{
+            .table-btns{
+                display: none;
+            }
+        }
+        .pagination{
+            justify-content: flex-end;
+            .paging:first-child{ 
+                display: none;
             }
         }
     }

@@ -3,27 +3,17 @@
     width: 100%;
     .header-wrap{
         padding: 14px 82px;
-        @include mdq-tablet{
-            display: none;
-        }
     }
     .auth-container{
         height: calc(100vh - 82px);
         background-color: #f4f5fa;
-        @include mdq-tablet{
-            height: 100vh;
-        }
         .auth-cnt{
             width: 443px;
             height: 627px;
             border-radius: 12px;
             @include center-align;
             padding: 44px 34px;
-            background-color: #fff;
-            @include mdq-tablet{
-                max-width: 443px;
-                width: 90%;
-            }
+            background-color: $w;
             &.height-plus{
                 height: 680px;
             }
@@ -86,14 +76,29 @@
                     height: 58px;
                     margin: 48px auto 0;
                     a{
-                        @include fonts('Inter', 20, 400, 58, #fff);
+                        @include fonts('Inter', 20, 400, 58, $w);
                         display: inline-block;
                         width: 100%;
                         height: 100%;
                         border-radius: 12px;
-                        background-color: #5570f1;
+                        background-color: $b;
                     }
                 }
+            }
+        }
+    }
+}
+
+@include mdq-tablet{
+    .auth-wrap{
+        .header-wrap{
+            display: none;
+        }
+        .auth-container{
+            height: 100vh;
+            .auth-cnt{
+                max-width: 443px;
+                width: 90%;
             }
         }
     }

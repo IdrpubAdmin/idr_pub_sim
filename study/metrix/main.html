@@ -9,19 +9,15 @@
     <script src="assets/plugin/vuex/vuex.js"></script>
     <script src="assets/plugin/vue-router/vue-router.js"></script>
     <script src="assets/plugin/httpVueLoader/httpVueLoader.js"></script>
-
     <script src="assets/js/article_data.js"></script>
     <script src="assets/js/chart_data.js"></script>
     <script src="assets/js/table_data.js"></script>
     <script src="assets/js/navigation_data.js"></script>
     <script src="assets/js/product_data.js"></script>
     <script src="assets/js/select_data.js"></script>
-
     <script src="components/store.js"></script>
-    <!-- <script src="assets/plugin/toast-ui/toast.js"></script> -->
     <script src="components/router.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/plugin/toast-ui/toast.css" /> -->
 </head>
 <body>
     <div id="app">
@@ -53,7 +49,7 @@
             store,
             router,
             components: {
-                'auth-main': httpVueLoader('components/common/AuthMain.vue'),
+                'auth-main': httpVueLoader('components/auth/AuthMain.vue'),
                 'side-navigation': httpVueLoader('components/common/SideNavigation.vue'),
                 'header-component': httpVueLoader('components/common/HeaderMain.vue'),
                 'new-order' : httpVueLoader('components/orders/NewOrder.vue'),

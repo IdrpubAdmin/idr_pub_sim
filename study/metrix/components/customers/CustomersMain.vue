@@ -1,5 +1,5 @@
 <template>
-    <div class="content-wrap customers">
+    <div class="section-wrap customers">
         <router-view></router-view>
     </div>
 </template>

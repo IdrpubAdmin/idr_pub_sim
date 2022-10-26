@@ -12,7 +12,7 @@
             .title{
                 h5{
                     span{
-                        color: #5570f1;
+                        color: $b;
                     }
                 }
             }
@@ -28,7 +28,6 @@
         }
     }
 }
-
 .new-order{
     max-width: 850px;
     width: 100%;
@@ -36,28 +35,12 @@
     &.big-modal{
         height: 891px;
     }
-    @include mdq-tablet{
-        width: calc(100% - 40px);
-        height: calc(100% - 40px);
-        &.big-modal{
-            height: calc(100% - 40px);
-        }
-    }
     section{
         display: flex;
         justify-content: space-between;
-        @include mdq-tablet{
-            display: block;
-        }
         article{
             width: calc(50% - 25px);
             position: relative;
-            @include mdq-tablet{
-                width: auto;
-                &:last-child{
-                    margin-top: 20px;
-                }
-            }
             .form{
                 margin-top: 27px;
                 .input-box-area{
@@ -96,7 +79,7 @@
             }
             .search{
                 margin-top: 27px;
-                background-color: #fff;
+                background-color: $w;
                 border: solid 1px #5e6366;
                 i{
                     width: 52px;
@@ -132,12 +115,12 @@
                             .item-btn-area{
                                 text-align: right;
                                 .remove{
-                                    @include fonts('Inter', 12, 500, 15, #cc5f5f);
+                                    @include fonts('Inter', 12, 500, 15, $r);
                                     width: auto;
                                     height: auto;
                                 }
                                 .add{
-                                    @include fonts('Inter', 12, 500, 15, #5570f1);
+                                    @include fonts('Inter', 12, 500, 15, $b);
                                     padding-bottom: 4px;
                                 }
                                 .btns{
@@ -188,7 +171,7 @@
                 width: 100%;
                 position: absolute;
                 z-index: 1;
-                background-color: #fff;
+                background-color: $w;
                 padding: 12px 16px 20px;
                 margin-top: 0;
                 border-bottom: solid 1px #cfd3d4;
@@ -229,5 +212,24 @@
     }
     .modal-btns{
         width: 50%;
+    }
+}
+
+@include mdq-tablet{
+    .new-order{
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        &.big-modal{
+            height: calc(100% - 40px);
+        }
+        section{
+            display: block;
+            article{
+                width: auto;
+                &:last-child{
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }

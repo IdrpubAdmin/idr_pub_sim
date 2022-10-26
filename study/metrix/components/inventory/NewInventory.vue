@@ -1,6 +1,6 @@
 <template>
-    <section class="new-section new-inven">
-        <div class="new-header inventory-header">
+    <section class="view-section new-inven">
+        <div class="view-header inventory-header">
             <h3>New Inventory Item</h3>
             <div class="btns">
                 <select-box
