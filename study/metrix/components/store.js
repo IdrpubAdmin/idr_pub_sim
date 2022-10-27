@@ -18,7 +18,7 @@ var store = new Vuex.Store({
     mutations: {
         checkActive(state){
             function detectTabletDevice() {
-                const minWidth = 1024
+                const minWidth = 1439
                 return window.innerWidth >= minWidth
             }
             const isTablet = detectTabletDevice()
