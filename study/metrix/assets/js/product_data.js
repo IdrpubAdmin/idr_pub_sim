@@ -121,8 +121,6 @@ var productData = {
             }
         },
         pushItem(state, payload){
-            console.log(state.newOrderItemList.includes(payload))
-
             if(state.newOrderItemList.includes(payload) === false){
                 state.newOrderItemList.push(payload);
                 store.commit('productData/totalItems')
@@ -131,6 +129,7 @@ var productData = {
         deleItem(state, payload){
             for(let i = 0; i < state.newOrderItemList.length; i++) {
                 if(state.newOrderItemList[i].id === payload) {
+                    state.newOrderItemList[i].count = 1
                     state.newOrderItemList.splice(i, 1);
                     i--;
                 }

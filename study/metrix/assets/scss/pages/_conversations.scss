@@ -1,0 +1,290 @@
+.conversations{
+    .main-conversation{
+        .main-header{
+            .btn{
+                .link-btn{
+                    padding: 6px 33px;
+                }
+                @include mdq-mobile {
+                    .link-btn{
+                        padding: 5px 0px;
+                    }
+                }
+            }
+        }
+        .contents{
+            grid-template-columns: 410fr 882fr;
+            grid-template-rows: auto;
+            .contact{
+                .article-title{
+                    margin: 22px 24px;
+                    .title{
+                        display: flex;
+                        justify-content: space-between;
+                        h5{
+                            @include fonts('Poppins', 20, 500, 30, #2c2d33);
+                        }
+                        p{
+                            @include fonts('Poppins', 20, 500, 30, #a6a8b1);
+                        }
+                    }
+                    .search{
+                        margin-top: 15px;
+                        background-color: #fff;
+                        border: solid 1px #cfd3d4;
+                        height: 45px;
+                        i{
+                            height: 43px;
+                        }
+                    }
+                }
+            }
+            .message-summary{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: solid 1px #f1f3f9;
+                padding: 12px 24px;
+                cursor: pointer;
+                position: relative;
+                &.message-on{
+                    background-color: #f7f7fc;
+                    &::after{
+                        content: '';
+                        width: 3px;
+                        height: 76px;
+                        background-color: $b;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+                .img{
+                    width: 48px;
+                    height: 48px;
+                    position: relative;
+                    .state{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 12px;
+                        height: 12px;
+                        padding: 2px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        span{
+                            position: absolute;
+                            top: 2px;
+                            right: 2px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            &.on-line{
+                                background-color: #5570f1;
+                            }
+                            &.off-line{
+                                background-color: #c4cae8;
+                            }
+                        }
+                    }
+                }
+                .texts{
+                    width: calc(100% - 65px);
+                    .text{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 10px;
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                        .user-name{
+                            @include fonts('Inter', 16, 500, 24, #45464e);
+                        }
+                        .user-state{
+                            .state-btn{
+                                padding: 2px 7px;
+                            }
+                            .alarm{
+                                margin-left: 12px;
+                                display: inline-block;
+                                width: 24px; 
+                                height: 24px;
+                                background-color: #ffcc91;
+                                border-radius: 50%;
+                                text-align: center;
+                                @include fonts('Inter', 14, 400, 24, #1c1d22);
+                            }
+                        }
+                        .user-message{
+                            width: calc(100% - 60px);
+                            @include fonts('Inter', 14, 400, 17, #8b8d97);
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .user-time{
+                            width: 60px;
+                            text-align: right;
+                            @include fonts('Inter', 12, 400, 15, #8b8d97);
+                        }
+                    }
+                }
+            }
+            .message{
+                position: relative;
+                .message-summary{
+                    cursor: default;
+                    padding: 16px 22px;
+                    .img{
+                        width: 60px;
+                        height: 60px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .texts{
+                        width: calc(100% - 74px);
+                        .text{
+                            margin-top: 16px;
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                            .user-state{
+                                .link-btn{
+                                    margin-left: 12px;
+                                    cursor: pointer;
+                                    @include fonts('Inter', 14, 400, 17, $b);
+                                }
+                            }
+                            .user-time{
+                                width: auto;
+                                text-align: left;
+                                display: flex;
+                                align-items: center;
+                                font-size: 14px;
+                                &.on-line{
+                                    .state-icon{
+                                        background-color: #5570f1;
+                                    }
+                                    .state{
+                                        color: #b6bfe8;
+                                    }
+                                }
+                                &.off-line{
+                                    .state-icon{
+                                        background-color: #c4cae8;
+                                    }
+                                    .state{
+                                        color: #e8b6ba;
+                                    }
+                                }
+                                .state-icon{
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%;
+                                    margin-right: 4px;
+                                }
+                                .state{
+                                    margin-right: 8px;
+                                }
+                            }
+                            .user-order{
+                                display: flex;
+                                align-items: center;
+                                @include fonts('Inter', 14, 400, 17, #a6a8b1);
+                                i{
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .chating{
+                    padding: 20px 22px;
+                    .chat-board{
+                        li{
+                            margin-top: 20px;
+                            p{
+                                display: flex;
+                                font-family: 'Inter';
+                                font-size: 16px;
+                                line-height: 24px;
+                                .txt{
+                                    padding: 16px;
+                                    max-width: calc(50% - 10px);
+                                }
+                            }
+                            .time{
+                                margin-top: 8px;
+                                line-height: 20px;
+                                color: #8b8d97;
+                                i{
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    background-size: 12px;
+                                    background-color: #ffead1;
+                                    margin-left: 8px;
+                                }
+                            }
+                        }
+                        .ty1{
+                            p{
+                                justify-content: flex-end;
+                                .txt{
+                                    background: #ffead1;
+                                    border-radius: 16px 16px 0 16px;
+                                    color: #1c1d22;
+                                }
+                            }
+                        }
+                        .ty2{
+                            .txt{
+                                background-color: $b;
+                                border-radius: 16px 16px 16px 0;
+                                color: #fff;
+                            }
+                        }  
+                    }
+                }
+                .start-wrap{
+                    width: 282px;
+                    height: 307px;
+                    @include center-align;
+                    text-align: center;
+                    .img{
+                        background-image: url('../images/conversations/iconContainer.png');
+                        width: 140px;
+                        height: 140px;
+                        margin: 0 auto;
+                    }
+                    .texts{
+                        margin-top: 40px;
+                        h5{
+                            @include fonts('Poppins', 20, 500, 30, #000);
+                        }
+                        p{
+                            margin-top: 12px;
+                            @include fonts('Inter', 14, 400, 17, #8b8d97);
+                        }
+                    }
+                    .btn-area{
+                        margin-top: 24px;
+                        button{
+                            width: 180px;
+                            padding: 10px 14px 10px 48px;
+                            border-radius: 12px;
+                            @include fonts('Inter', 16, 400, 24, #fff);
+                            background-color: $b;
+                            background-position: center left 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

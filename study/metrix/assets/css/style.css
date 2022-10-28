@@ -1108,6 +1108,14 @@ button {
   background-image: url("../images/table/sort.png");
 }
 
+.chat-icon {
+  background-image: url("../images/conversations/Chat.png");
+}
+
+.check-icon {
+  background-image: url("../images/conversations/fi_check.png");
+}
+
 .bar_chart_box {
   margin-top: 36px;
   font-family: "Inter";
@@ -3080,7 +3088,7 @@ header .location .breadcrumb ul li::before {
   background-color: #5570f1;
 }
 .inventory .new-inven .contents {
-  grid-template-columns: 813fr 410fr;
+  grid-template-columns: 882fr 410fr;
   grid-template-rows: auto;
 }
 .inventory .new-inven .contents .product-detail {
@@ -3454,6 +3462,322 @@ header .location .breadcrumb ul li::before {
 }
 .modal-wrap .new-customer .modal-btns {
   max-width: 376px;
+}
+
+.conversations .main-conversation .main-header .btn .link-btn {
+  padding: 6px 33px;
+}
+@media (max-width: 480px) {
+  .conversations .main-conversation .main-header .btn .link-btn {
+    padding: 5px 0px;
+  }
+}
+.conversations .main-conversation .contents {
+  grid-template-columns: 410fr 882fr;
+  grid-template-rows: auto;
+}
+.conversations .main-conversation .contents .contact .article-title {
+  margin: 22px 24px;
+}
+.conversations .main-conversation .contents .contact .article-title .title {
+  display: flex;
+  justify-content: space-between;
+}
+.conversations .main-conversation .contents .contact .article-title .title h5 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #2c2d33;
+}
+.conversations .main-conversation .contents .contact .article-title .title p {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #a6a8b1;
+}
+.conversations .main-conversation .contents .contact .article-title .search {
+  margin-top: 15px;
+  background-color: #fff;
+  border: solid 1px #cfd3d4;
+  height: 45px;
+}
+.conversations .main-conversation .contents .contact .article-title .search i {
+  height: 43px;
+}
+.conversations .main-conversation .contents .message-summary {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #f1f3f9;
+  padding: 12px 24px;
+  cursor: pointer;
+  position: relative;
+}
+.conversations .main-conversation .contents .message-summary.message-on {
+  background-color: #f7f7fc;
+}
+.conversations .main-conversation .contents .message-summary.message-on::after {
+  content: "";
+  width: 3px;
+  height: 76px;
+  background-color: #5570f1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.conversations .main-conversation .contents .message-summary .img {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+.conversations .main-conversation .contents .message-summary .img .state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.conversations .main-conversation .contents .message-summary .img .state span {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.conversations .main-conversation .contents .message-summary .img .state span.on-line {
+  background-color: #5570f1;
+}
+.conversations .main-conversation .contents .message-summary .img .state span.off-line {
+  background-color: #c4cae8;
+}
+.conversations .main-conversation .contents .message-summary .texts {
+  width: calc(100% - 65px);
+}
+.conversations .main-conversation .contents .message-summary .texts .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.conversations .main-conversation .contents .message-summary .texts .text:first-child {
+  margin-top: 0;
+}
+.conversations .main-conversation .contents .message-summary .texts .text .user-name {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #45464e;
+}
+.conversations .main-conversation .contents .message-summary .texts .text .user-state .state-btn {
+  padding: 2px 7px;
+}
+.conversations .main-conversation .contents .message-summary .texts .text .user-state .alarm {
+  margin-left: 12px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffcc91;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1c1d22;
+}
+.conversations .main-conversation .contents .message-summary .texts .text .user-message {
+  width: calc(100% - 60px);
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.conversations .main-conversation .contents .message-summary .texts .text .user-time {
+  width: 60px;
+  text-align: right;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #8b8d97;
+}
+.conversations .main-conversation .contents .message {
+  position: relative;
+}
+.conversations .main-conversation .contents .message .message-summary {
+  cursor: default;
+  padding: 16px 22px;
+}
+.conversations .main-conversation .contents .message .message-summary .img {
+  width: 60px;
+  height: 60px;
+}
+.conversations .main-conversation .contents .message .message-summary .img img {
+  width: 100%;
+}
+.conversations .main-conversation .contents .message .message-summary .texts {
+  width: calc(100% - 74px);
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text {
+  margin-top: 16px;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text:first-child {
+  margin-top: 0;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-state .link-btn {
+  margin-left: 12px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #5570f1;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time {
+  width: auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time.on-line .state-icon {
+  background-color: #5570f1;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time.on-line .state {
+  color: #b6bfe8;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time.off-line .state-icon {
+  background-color: #c4cae8;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time.off-line .state {
+  color: #e8b6ba;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time .state-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-time .state {
+  margin-right: 8px;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-order {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a6a8b1;
+}
+.conversations .main-conversation .contents .message .message-summary .texts .text .user-order i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.conversations .main-conversation .contents .message .chating {
+  padding: 20px 22px;
+}
+.conversations .main-conversation .contents .message .chating .chat-board li {
+  margin-top: 20px;
+}
+.conversations .main-conversation .contents .message .chating .chat-board li p {
+  display: flex;
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+}
+.conversations .main-conversation .contents .message .chating .chat-board li p .txt {
+  padding: 16px;
+  max-width: calc(50% - 10px);
+}
+.conversations .main-conversation .contents .message .chating .chat-board li .time {
+  margin-top: 8px;
+  line-height: 20px;
+  color: #8b8d97;
+}
+.conversations .main-conversation .contents .message .chating .chat-board li .time i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 12px;
+  background-color: #ffead1;
+  margin-left: 8px;
+}
+.conversations .main-conversation .contents .message .chating .chat-board .ty1 p {
+  justify-content: flex-end;
+}
+.conversations .main-conversation .contents .message .chating .chat-board .ty1 p .txt {
+  background: #ffead1;
+  border-radius: 16px 16px 0 16px;
+  color: #1c1d22;
+}
+.conversations .main-conversation .contents .message .chating .chat-board .ty2 .txt {
+  background-color: #5570f1;
+  border-radius: 16px 16px 16px 0;
+  color: #fff;
+}
+.conversations .main-conversation .contents .message .start-wrap {
+  width: 282px;
+  height: 307px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.conversations .main-conversation .contents .message .start-wrap .img {
+  background-image: url("../images/conversations/iconContainer.png");
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+.conversations .main-conversation .contents .message .start-wrap .texts {
+  margin-top: 40px;
+}
+.conversations .main-conversation .contents .message .start-wrap .texts h5 {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000;
+}
+.conversations .main-conversation .contents .message .start-wrap .texts p {
+  margin-top: 12px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #8b8d97;
+}
+.conversations .main-conversation .contents .message .start-wrap .btn-area {
+  margin-top: 24px;
+}
+.conversations .main-conversation .contents .message .start-wrap .btn-area button {
+  width: 180px;
+  padding: 10px 14px 10px 48px;
+  border-radius: 12px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  background-color: #5570f1;
+  background-position: center left 14px;
 }
 
 .settings {

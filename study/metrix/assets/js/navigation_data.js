@@ -63,6 +63,12 @@ var breadCrumbData = {
                     ],
                 },
                 {
+                    name: 'conversations',
+                    data: [
+                        {id: 1, title: 'Conversations', path: 'conversations'}, 
+                    ]
+                },
+                {
                     name: 'account',
                     data: [
                         {id: 1, title: 'Settings', path: 'account'}, 

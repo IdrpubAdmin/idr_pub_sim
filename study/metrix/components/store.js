@@ -8,6 +8,7 @@ var store = new Vuex.Store({
         tableData : tableData,
         productData : productData,
         selectData : selectData,
+        userData : userData,
     },
     state: {
         isActive : false,
@@ -81,6 +82,9 @@ var store = new Vuex.Store({
         },
         selectData : function selectData(state) {
             return state.selectData;
+        },
+        userData : function userData(state) {
+            return state.userData;
         },
         isActive(state){
             return state.isActive
