@@ -18,9 +18,9 @@ var userData = {
             alarm : true,
             chat : [
                 {id: 1, date : '10 August 2022', time : '12:55 am', my : false, txt : 'Hello, I want to make enquiries about your product'},
-                {id: 2, date : '11 August 2022', time : '12:57 am', my : true, txt : ' Hello Janet, thank you for reaching out'},
-                {id: 3, date : '12 August 2022', time : '12:57 am', my : true, txt : 'What do you need to know?'},
-                {id: 4, time : '12:55 am', my : false, txt : 'I want to know if the price is negotiable, i need about 2 Units'},
+                {id: 2, date : '10 August 2022', time : '12:57 am', my : true, txt : ' Hello Janet, thank you for reaching out'},
+                {id: 3, date : '11 August 2022', time : '12:57 am', my : true, txt : 'What do you need to know?'},
+                {id: 4, date : '11 August 2022', time : '12:55 am', my : false, txt : 'I want to know if the price is negotiable, i need about 2 Units'},
             ]
         },{
             id : 2,

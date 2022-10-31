@@ -119,7 +119,6 @@ module.exports = {
         messageOn(payload){
             this.$store.commit('userData/messageOn', payload)
             this.clickData = payload
-            this.dateCheck()
         },
         sendMessage(){
             const today = new Date();
@@ -137,17 +136,21 @@ module.exports = {
                 this.clickData.chat.push(this.upDate)
                 this.upDate = {id : '', time : '', my : true, txt : ''}
                 console.log(this.clickData)
-                this.dateCheck()
+                dateCheck()
             }
         },
         dateCheck(i){
-                if(i > 0){
-                    if(this.clickData.chat[i].date === this.clickData.chat[i - 1].date){
-                        console.log(i)
-                    }else{
-                        console.log('어이')
-                    }
+            if(i > 0){
+                if(this.clickData.chat[i].date === this.clickData.chat[i - 1].date){
+                    console.log(i)
+                    return false
+                }else{
+                    console.log('어이')
+                    return true
                 }
+            }else {
+                return true
+            }
         }
     },
     computed: {

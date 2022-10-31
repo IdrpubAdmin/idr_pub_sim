@@ -151,7 +151,7 @@ var router = new VueRouter({
       meta: {
         title: 'Conversations',
       },
-      // redirect:'/'
+      redirect:'/'
     },
 	  { 
       name: 'settings',
