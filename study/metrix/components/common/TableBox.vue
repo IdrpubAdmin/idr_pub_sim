@@ -16,7 +16,7 @@
                     <date-popup></date-popup>
                 </li>
                 <li class="share-btn btn">
-                    <button class="sand-icon btn-ty02">Share</button>
+                    <button class="send-icon btn-ty02">Share</button>
                 </li>
                 <li class="action-btn">
                     <select-box

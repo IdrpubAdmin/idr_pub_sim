@@ -30,7 +30,7 @@
                             <div class="texts">
                                 <div class="text">
                                     <p class="user-name">{{user.name}}</p>
-                                    <p class="user-state"><span class="state-btn state-ty01">New</span><span class="alarm">2</span></p>
+                                    <p class="user-state"><span class="state-btn state-ty01">New</span><span v-if="user.alarm" class="alarm">2</span></p>
                                 </div>
                                 <div v-if="user.chat.length > 0" class="text">
                                     <p class="user-message">{{user.chat[user.chat.length-1].txt}}</p>
@@ -73,14 +73,18 @@
                         </div>
                         <div class="chating">
                             <ul class="chat-board">
-                                <li v-for="chat in clickData.chat" :key="chat.id" :class="chat.my ? 'ty1' : 'ty2'">
-                                    <h6 v-if="chat.date">{{chat.date}}</h6>
+                                <li v-for="(chat, i) in clickData.chat" :key="chat.id" :class="chat.my ? 'ty1' : 'ty2'">
+                                    <h6 v-if="chat.date && dateCheck(i)">{{chat.date}}</h6>
                                     <p><span class="txt">{{chat.txt}}</span></p>
                                     <p class="time">{{chat.time}}<i v-if="chat.my === true" class="icon-box check-icon"></i></p>
                                 </li>
                             </ul>
-                            <input type="text" placeholder="Your message" @keydown.enter="sendMessage" v-model="upDate.txt">
-                            <button @click="sendMessage">1</button>
+                        </div>
+                        <div class="chat-area">
+                                <button class="upload-btn plus3-icon"></button>
+                                <input type="text" placeholder="Your message" @keydown.enter="sendMessage" v-model="upDate.txt">
+                                <button class="icon-btn smile-icon"></button>
+                                <button class="send-btn send2-icon" @click="sendMessage">Send</button>
                         </div>
                     </template>
                     <template v-else>
@@ -93,7 +97,7 @@
                             <div class="btn-area">
                                 <button class="chat-icon">New Message</button>
                             </div>
-                        </div>
+                        </div>    
                     </template>
                 </article>
             </div>
@@ -114,7 +118,8 @@ module.exports = {
     methods: {
         messageOn(payload){
             this.$store.commit('userData/messageOn', payload)
-            return this.clickData = payload
+            this.clickData = payload
+            this.dateCheck()
         },
         sendMessage(){
             const today = new Date();
@@ -131,18 +136,18 @@ module.exports = {
                 this.date = `${day} ${month} ${year}`    
                 this.clickData.chat.push(this.upDate)
                 this.upDate = {id : '', time : '', my : true, txt : ''}
-                console.log(this.date)
+                console.log(this.clickData)
+                this.dateCheck()
             }
         },
-        dateCheck(){
-            for(let i=0; i<this.clickData.chat.length; i++){
-                if(this.clickData.chat[i].date === this.date){
-  
-                }else{
-                    this.upDate.date = `${day} ${month} ${year}`.toString()
-                    this.clickData.chat.push(this.upDate)
+        dateCheck(i){
+                if(i > 0){
+                    if(this.clickData.chat[i].date === this.clickData.chat[i - 1].date){
+                        console.log(i)
+                    }else{
+                        console.log('어이')
+                    }
                 }
-            }
         }
     },
     computed: {

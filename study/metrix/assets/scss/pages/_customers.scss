@@ -36,10 +36,6 @@
         }
         @include mdq-tablet{
             width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            &.big-modal{
-                height: calc(100% - 40px);
-            }
         }
         section{
             article{

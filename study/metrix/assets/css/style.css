@@ -1064,6 +1064,10 @@ button {
   background-image: url("../images/orders/fi_plus.png");
 }
 
+.plus3-icon {
+  background-image: url("../images/conversations/fi_plus.png");
+}
+
 .minus-icon {
   background-image: url("../images/orders/minus.png");
 }
@@ -1080,8 +1084,12 @@ button {
   background-image: url("../images/table/fi_filter.png");
 }
 
-.sand-icon {
+.send-icon {
   background-image: url("../images/table/Send.png");
+}
+
+.send2-icon {
+  background-image: url("../images/conversations/Send.png");
 }
 
 .x-icon {
@@ -1114,6 +1122,10 @@ button {
 
 .check-icon {
   background-image: url("../images/conversations/fi_check.png");
+}
+
+.smile-icon {
+  background-image: url("../images/conversations/fi_smile.png");
 }
 
 .bar_chart_box {
@@ -3426,10 +3438,6 @@ header .location .breadcrumb ul li::before {
 @media (max-width: 768px) {
   .modal-wrap .new-customer {
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
-  }
-  .modal-wrap .new-customer.big-modal {
-    height: calc(100% - 40px);
   }
 }
 .modal-wrap .new-customer section article {
@@ -3473,8 +3481,10 @@ header .location .breadcrumb ul li::before {
   }
 }
 .conversations .main-conversation .contents {
-  grid-template-columns: 410fr 882fr;
-  grid-template-rows: auto;
+  display: flex;
+}
+.conversations .main-conversation .contents .contact {
+  width: 33%;
 }
 .conversations .main-conversation .contents .contact .article-title {
   margin: 22px 24px;
@@ -3613,6 +3623,7 @@ header .location .breadcrumb ul li::before {
 }
 .conversations .main-conversation .contents .message {
   position: relative;
+  width: 66%;
 }
 .conversations .main-conversation .contents .message .message-summary {
   cursor: default;
@@ -3689,6 +3700,14 @@ header .location .breadcrumb ul li::before {
 .conversations .main-conversation .contents .message .chating {
   padding: 20px 22px;
 }
+.conversations .main-conversation .contents .message .chating .chat-board {
+  position: relative;
+  height: calc(100vh - 380px);
+  overflow-x: auto;
+}
+.conversations .main-conversation .contents .message .chating .chat-board::-webkit-scrollbar {
+  display: none;
+}
 .conversations .main-conversation .contents .message .chating .chat-board li {
   margin-top: 20px;
 }
@@ -3728,6 +3747,54 @@ header .location .breadcrumb ul li::before {
   background-color: #5570f1;
   border-radius: 16px 16px 16px 0;
   color: #fff;
+}
+.conversations .main-conversation .contents .message .chat-area {
+  width: calc(100% - 44px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: solid 1px #e1e2e9;
+  padding: 8px 9px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: 14px auto 0;
+}
+.conversations .main-conversation .contents .message .chat-area .upload-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #fff2e2;
+  margin-right: 20px;
+}
+.conversations .main-conversation .contents .message .chat-area input {
+  width: calc(100% - 220px);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6e7079;
+}
+.conversations .main-conversation .contents .message .chat-area .icon-btn {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+.conversations .main-conversation .contents .message .chat-area .send-btn {
+  text-align-last: left;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1c1d22;
+  width: 100px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #fff2e2;
+  background-size: 20px;
+  background-position: center right 16px;
 }
 .conversations .main-conversation .contents .message .start-wrap {
   width: 282px;
@@ -3780,6 +3847,17 @@ header .location .breadcrumb ul li::before {
   background-position: center left 14px;
 }
 
+@media (max-width: 1024px) {
+  .conversations .main-conversation .contents {
+    display: block;
+  }
+  .conversations .main-conversation .contents .contact {
+    width: 100%;
+  }
+  .conversations .main-conversation .contents .message {
+    width: 100%;
+  }
+}
 .settings {
   padding: 20px;
 }
