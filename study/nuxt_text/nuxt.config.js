@@ -2,6 +2,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  target: 'static',
   head: {
     title: 'nuxt',
     meta: [
@@ -34,6 +35,8 @@ module.exports = {
         })
       }
     }
+  },
+  router: {
+    base: '/IdrpubAdmin/trial_pub_sim/'
   }
 }
-
