@@ -5,7 +5,7 @@ module.exports = {
   target: 'static',
   ssr: false,
   router: {
-    base: '/trial_pub_sim/study/nuxt/dist/'
+    base: '/trial_pub_sim/study/nuxt/'
   },
   head: {
     title: 'nuxt',
