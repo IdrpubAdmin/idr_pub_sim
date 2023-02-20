@@ -33,8 +33,14 @@ export default {
       step: 0,
       인스타데이터: data,
       src: '',
-      작성한글: ''
+      작성한글: '',
+      filter: ''
     }
+  },
+  mounted() {
+    this.emitter.on('filter', (a)=>{
+      this.filter = a
+    })
   },
   methods: {
     more(){
@@ -57,7 +63,7 @@ export default {
             date: "May 15",
             liked: false,
             content: this.작성한글,
-            filter: "perpetua"
+            filter: this.filter
           });
           this.step = 0;
         }

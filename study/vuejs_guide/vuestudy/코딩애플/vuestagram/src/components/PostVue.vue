@@ -4,7 +4,7 @@
       <div class="profile" :style="{backgroundImage: `url(${인스타데이터.userImage})`}"></div>
       <span class="profile-name">{{인스타데이터.name}}</span>
     </div>
-    <div class="post-body" :style="{backgroundImage: `url(${인스타데이터.postImage})`}"></div>
+    <div :class="인스타데이터.filter" class="post-body" :style="{backgroundImage: `url(${인스타데이터.postImage})`}"></div>
     <div class="post-content">
       <p>{{인스타데이터.likes}} Likes</p>
       <p><strong>{{인스타데이터.name}}</strong> {{인스타데이터.content}}</p>

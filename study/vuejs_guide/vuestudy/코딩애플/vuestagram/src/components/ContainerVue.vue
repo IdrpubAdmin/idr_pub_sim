@@ -4,17 +4,15 @@
       <Post :인스타데이터="인스타데이터" v-for="인스타데이터 in 인스타데이터" :key="인스타데이터.name" />      
     </template>
     <template v-if="step == 1">
-      <div class="upload-image" :style="{backgroundImage: `url(${src})`}"></div>
+      <div :class="filter" class="upload-image" :style="{backgroundImage: `url(${src})`}"></div>
       <div class="filters">
-        <div class="filter-1"></div>
-        <div class="filter-1"></div>
-        <div class="filter-1"></div>
-        <div class="filter-1"></div>
-        <div class="filter-1"></div>
+        <FilterBox :이미지="src" :filters="filters" v-for="filters in filters" :key="filters">
+          <span>{{filters}}</span>
+        </FilterBox>
       </div>
     </template>
     <template v-if="step == 2">
-      <div class="upload-image" :style="{backgroundImage: `url(${src})`}"></div>
+      <div :class="filter" class="upload-image" :style="{backgroundImage: `url(${src})`}"></div>
       <div class="write">
         <textarea @input="$emit('write', $event.target.value)" class="write-box">write!</textarea>
       </div>
@@ -25,15 +23,32 @@
 <script>
 
 import Post from "./PostVue.vue";
+import FilterBox from "./FilterBox.vue";
 
 export default {
+  data() {
+    return {
+      filters : [ 
+        "aden", "_1977", "brannan", "brooklyn", "clarendon", "earlybird", "gingham", "hudson", 
+        "inkwell", "kelvin", "lark", "lofi", "maven", "mayfair", "moon", "nashville", "perpetua", 
+        "reyes", "rise", "slumber", "stinson", "toaster", "valencia", "walden", "willow", "xpro2"
+      ],
+      filter: ''
+    }
+  },
+  mounted() {
+    this.emitter.on('filter', (a)=>{
+      this.filter = a
+    })
+  },
   props: {
     step: Number,
     인스타데이터: Array,
-    src:String
+    src:String,
   },
   components: {
-    Post
+    Post,
+    FilterBox
   }
 }
 </script>
