@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="header">
-        <ul class="header-button-left">
+        <ul v-if="step !== 0" @click="step = 0" class="header-button-left">
           <li>Cancel</li>
         </ul>
-        <ul class="header-button-right">
+        <ul v-if="step !== 0" @click="publish" class="header-button-right">
           <li>Next</li>
         </ul>
         <img src="./assets/logo.png" class="logo" />
       </div>
-      <Container :인스타데이터="인스타데이터" />
-      <button @click="more">더보기</button>
+      <Container @write="작성한글 = $event" :인스타데이터="인스타데이터" :step="step" :src="src" />
+      <button v-if="step == 0" @click="more">더보기</button>
       <div class="footer">
-        <ul class="footer-button-plus">
-          <input type="file" id="file" class="inputfile" />
+        <ul class="footer-button-plus" v-if="step == 0">
+          <input @change="upload" type="file" id="file" class="inputfile" />
           <label for="file" class="input-plus">+</label>
         </ul>
     </div>
@@ -30,8 +30,10 @@ export default {
   name: 'App',
   data() {
     return {
-      인스타데이터 : data,
-
+      step: 0,
+      인스타데이터: data,
+      src: '',
+      작성한글: ''
     }
   },
   methods: {
@@ -39,7 +41,30 @@ export default {
       axios.get('https://codingapple1.github.io/vue/more0.json').then((결과)=>{
         this.인스타데이터.push(결과.data)
       })
-    }
+    },
+    upload(e){
+      this.src = URL.createObjectURL(e.target.files[0])
+      this.step = 1;
+    },
+    publish(){
+      if(this.step == 2){
+        if(confirm('정말 게시글을 올리시겠습니까?')){
+          this.인스타데이터.unshift({
+            name: "Sim Won",
+            userImage: "https://placeimg.com/100/100/arch",
+            postImage: this.src,
+            likes: 36,
+            date: "May 15",
+            liked: false,
+            content: this.작성한글,
+            filter: "perpetua"
+          });
+          this.step = 0;
+        }
+      } else{
+        this.step++
+      }
+    },
   },
   components: {
     Container
