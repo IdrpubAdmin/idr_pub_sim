@@ -10,7 +10,6 @@
         <img src="./assets/logo.png" class="logo" />
       </div>
       <Container @write="작성한글 = $event" :인스타데이터="인스타데이터" :step="step" :src="src" />
-      <button v-if="step == 0" @click="more">더보기</button>
       <div class="footer">
         <ul class="footer-button-plus" v-if="step == 0">
           <input @change="upload" type="file" id="file" class="inputfile" />
