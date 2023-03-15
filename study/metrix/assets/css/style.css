@@ -464,7 +464,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -819,6 +820,9 @@ input {
   line-height: 20px;
   color: #5e6366;
 }
+.input-box input::-moz-placeholder {
+  color: #abafb1;
+}
 .input-box input::placeholder {
   color: #abafb1;
 }
@@ -843,6 +847,10 @@ textarea {
   font-weight: 400;
   line-height: 18px;
   color: #000;
+}
+
+textarea::-moz-placeholder {
+  color: #abafb1;
 }
 
 textarea::placeholder {
@@ -1497,6 +1505,9 @@ article {
   line-height: 16px;
   color: #000;
 }
+.table-area .title .table-btns .search-area input::-moz-placeholder {
+  color: #abafb1;
+}
 .table-area .title .table-btns .search-area input::placeholder {
   color: #abafb1;
 }
@@ -1596,7 +1607,9 @@ article {
   height: 24px;
   border-radius: 8px;
   border: solid 1px #cfd3d4;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -1688,7 +1701,9 @@ article {
   height: 24px;
   border-radius: 8px;
   border: solid 1px #cfd3d4;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 .table-area table tr td input[type=checkbox]:checked, .table-area table tr th input[type=checkbox]:checked {
@@ -1838,7 +1853,8 @@ article {
   min-width: 360px;
   min-height: 100vh;
   height: 100vh;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   background-color: rgba(163, 163, 163, 0.2);
   position: fixed;
   display: block;
@@ -3370,8 +3386,8 @@ header .location .breadcrumb ul li::before {
     display: none;
   }
   .inventory .view-inven .contents .flex-area article:nth-child(2),
-.inventory .view-inven .contents .flex-area article:nth-child(3),
-.inventory .view-inven .contents .flex-area article:nth-child(4) {
+  .inventory .view-inven .contents .flex-area article:nth-child(3),
+  .inventory .view-inven .contents .flex-area article:nth-child(4) {
     width: 100%;
   }
   .inventory .view-inven .contents .table-area {
@@ -3737,6 +3753,7 @@ header .location .breadcrumb ul li::before {
 }
 .conversations .main-conversation .contents .message .chating .chat-board .ty1 p {
   justify-content: flex-end;
+  padding-bottom: 20px;
 }
 .conversations .main-conversation .contents .message .chating .chat-board .ty1 p .txt {
   background: #ffead1;
@@ -3747,6 +3764,15 @@ header .location .breadcrumb ul li::before {
   background-color: #5570f1;
   border-radius: 16px 16px 16px 0;
   color: #fff;
+}
+.conversations .main-conversation .contents .message .chating .chat-board .chat-item .date {
+  justify-content: center;
+}
+.conversations .main-conversation .contents .message .chating .chat-board .chat-item .date span {
+  text-align: center;
+  padding: 8px 12px;
+  background: #F4F5FA;
+  border-radius: 8px;
 }
 .conversations .main-conversation .contents .message .chat-area {
   width: calc(100% - 44px);
@@ -3783,7 +3809,8 @@ header .location .breadcrumb ul li::before {
   margin-right: 20px;
 }
 .conversations .main-conversation .contents .message .chat-area .send-btn {
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
   font-family: "Inter";
   font-size: 16px;
   font-weight: 400;

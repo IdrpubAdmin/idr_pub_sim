@@ -1,9 +1,12 @@
-var mysql = require('mysql');
-var express = require('express');
-var session = require('express-session');
-var FileStore = require('session-file-store')(session);
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var mysql = require('mysql'); // mysql
+var express = require('express'); // 노드로 앱 라이브러리
+var session = require('express-session'); // 세션 라이브러리
+var FileStore = require('session-file-store')(session); // 세션스토어 라이브러리
+var MySQLStore = require('express-mysql-session')(session); // musql세션스토어 라이브러리
+var cookieParser = require('cookie-parser'); // cookie를 쉽게 추출할수 있도록 도와줌
+var bodyParser = require('body-parser'); // POST data의 body로부터 파라미터를 쉽게 추출할수 있도록 도와줌
+var md5 = require('md5'); // 비밀번호 보안관련 라이브러리
+
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -11,7 +14,14 @@ app.use(session({
   secret: '13213DFs21@sd12@!%',
   resave: false,
   saveUninitialized: true,
-  store: new FileStore()
+  // store: new FileStore() 세션스토어
+  store: new MySQLStore({
+    host : 'localhost',
+    port : 3306,
+    user : 'root',
+    password : '1234',
+    database : 'o2'
+  })
 }))
 app.use(cookieParser('21321354DF21@#@!#sa1')) // 암호화
 
@@ -41,22 +51,29 @@ app.get('/', function(req, res){
 
 app.get('/logout', function(req, res){
   delete req.session.displayName;
-  res.redirect('/')
+  req.session.save(function(){ // 세션데이터가 저장되기도 전에 리다이렉션이 일어날수 있음. 그렇기에 이 함수 추가
+    res.redirect('/')
+  })
 })
-
+var salt = '@!#@2213sadsadewr@!#21' // 보안 2단계
+var users = [{
+  username: 'seop',
+  password: 'e5ffc6d4bf85ff8ae0c41aeb1fa2aee0', // md5를 이용해 1234를 암호화함 (salt + pw)
+  displayName: '원섭'
+}];
 app.post('/login', function(req, res){
-  var user = {
-    username: 'seop',
-    password: '1234',
-    displayName: '원섭'
-  };
   var username = req.body.username;
   var pwd = req.body.password;
-  if(username === user.username && pwd === user.password ) {
-    req.session.displayName = user.displayName
-    res.redirect('/');
-  } else {
-    res.redirect('/login');
+  for(var i=0; i<users.length; i++){
+    var user = users[i];
+    if(username === user.username && md5(salt+pwd) === user.password ) {
+      req.session.displayName = user.displayName;
+      req.session.save(function(){
+        res.redirect('/');
+      });
+    } else {
+      res.redirect('/login');
+    }
   }
 })
 

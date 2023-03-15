@@ -73,8 +73,8 @@
                         </div>
                         <div class="chating">
                             <ul class="chat-board">
-                                <li v-for="(chat, i) in clickData.chat" :key="chat.id" :class="chat.my ? 'ty1' : 'ty2'">
-                                    <h6 v-if="chat.date && dateCheck(i)">{{chat.date}}</h6>
+                                <li v-for="(chat, i) in clickData.chat" :key="chat.id" class="chat-item" :class="chat.my ? 'ty1' : 'ty2'">
+                                    <p class="date" v-if="chat.date && dateCheck(i)"><span>{{chat.date}}</span></p>
                                     <p><span class="txt">{{chat.txt}}</span></p>
                                     <p class="time">{{chat.time}}<i v-if="chat.my === true" class="icon-box check-icon"></i></p>
                                 </li>
@@ -130,22 +130,23 @@ module.exports = {
             const minutes = today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes();
             const ampm = today.getHours() >= 12 ? 'pm' : 'am';
             if(this.upDate.txt.length > 0){
-                this.upDate.id = this.clickData.chat.length + 1
-                this.upDate.time = `${hours}:${minutes} ${ampm}`.toString()
-                this.date = `${day} ${month} ${year}`    
+                this.upDate = {
+                    id : this.clickData.chat.length + 1 , 
+                    date : `${day} ${month} ${year}`, 
+                    time : `${hours}:${minutes} ${ampm}`.toString(), 
+                    my : true, 
+                    txt : this.upDate.txt
+                }
                 this.clickData.chat.push(this.upDate)
-                this.upDate = {id : '', time : '', my : true, txt : ''}
-                console.log(this.clickData)
-                dateCheck()
+                console.log(this.upDate)
+                this.upDate = { id : '' , date : '', time : '', my : true, txt : '' }
             }
         },
         dateCheck(i){
             if(i > 0){
                 if(this.clickData.chat[i].date === this.clickData.chat[i - 1].date){
-                    console.log(i)
                     return false
                 }else{
-                    console.log('어이')
                     return true
                 }
             }else {

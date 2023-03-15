@@ -242,6 +242,7 @@
                         .ty1{
                             p{
                                 justify-content: flex-end;
+                                padding-bottom: 20px;
                                 .txt{
                                     background: #ffead1;
                                     border-radius: 16px 16px 0 16px;
@@ -255,7 +256,18 @@
                                 border-radius: 16px 16px 16px 0;
                                 color: #fff;
                             }
-                        }  
+                        } 
+                        .chat-item{
+                            .date{
+                                justify-content: center;
+                                span{
+                                    text-align: center;
+                                    padding: 8px 12px;
+                                    background: #F4F5FA;
+                                    border-radius: 8px;
+                                }
+                            }
+                        } 
                     }
                 }
                 .chat-area{

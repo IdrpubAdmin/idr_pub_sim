@@ -20,6 +20,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: [
+    { src: '~/plugins/swiper.js', ssr: false }
+  ],
   build: {
     /*
     ** Run ESLint on save
