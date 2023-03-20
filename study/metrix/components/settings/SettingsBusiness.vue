@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     mounted() {
-        axios.get('https://gist.githubusercontent.com/seop2777/7ba39aa7ead3c55618a21e5b7e4eb936/raw/8a3e32791887ebf559db3b88ec529977c419c65c/data.json')
+        axios.get('https://idrpubadmin.github.io/trial_pub_sim/study/metrix/assets/js/test_data.json')
         .then(response => {
             this.user = response.data;
             console.log(this.user)
@@ -30,7 +30,7 @@ module.exports = {
     },
     methods: {
         postTest(){
-            axios.post('https://gist.githubusercontent.com/seop2777/7ba39aa7ead3c55618a21e5b7e4eb936/raw/8a3e32791887ebf559db3b88ec529977c419c65c/data.json', { id: 2 }, {withCredentials: true })
+            axios.post('https://idrpubadmin.github.io/trial_pub_sim/study/metrix/assets/js/test_data.json', { id: 2 })
         }
     }
 }
