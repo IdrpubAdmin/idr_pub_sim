@@ -1,8 +1,12 @@
 <template>
     <article>
         <div class="settings-header">
-            <button v-on:click="fetchData">get data</button>
-            <h1>{{id}}</h1>
+            <button @click="postTest">post data</button>
+            <ul>
+              <li v-for="user in user" :key="user.id">
+                {{ user }}
+              </li>
+            </ul>      
         </div>
     </article>
 </template>
@@ -11,19 +15,23 @@
 module.exports = {
     data() {
         return {
-            id : ''
+            user : [],
         }
     },
-    methods: {
-    fetchData: function() {
-      axios.get('https://raw.githubusercontent.com/IdrpubAdmin/trial_pub_sim/main/study/metrix/assets/js/test_data.json')
-        .then(function(response) {
-            console.log(response.data);
+    mounted() {
+        axios.get('https://gist.githubusercontent.com/seop2777/7ba39aa7ead3c55618a21e5b7e4eb936/raw/8a3e32791887ebf559db3b88ec529977c419c65c/data.json')
+        .then(response => {
+            this.user = response.data;
+            console.log(this.user)
         })
-        .catch(function(error) {
+        .catch(error => {
           console.log(error);
         });
+    },
+    methods: {
+        postTest(){
+            axios.post('https://gist.githubusercontent.com/seop2777/7ba39aa7ead3c55618a21e5b7e4eb936/raw/8a3e32791887ebf559db3b88ec529977c419c65c/data.json', { id: 2 }, {withCredentials: true })
+        }
     }
-  }
 }
 </script>

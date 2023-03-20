@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "name": "심원섭",
-      "id": "seop277",
-      "password": "123"
-    },
+      "userName": "심원섭",
+      "userId": "seop277",
+      "userPassword": "123"
+    }
 ]
