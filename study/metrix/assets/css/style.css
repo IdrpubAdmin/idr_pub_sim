@@ -3753,7 +3753,6 @@ header .location .breadcrumb ul li::before {
 }
 .conversations .main-conversation .contents .message .chating .chat-board .ty1 p {
   justify-content: flex-end;
-  padding-bottom: 20px;
 }
 .conversations .main-conversation .contents .message .chating .chat-board .ty1 p .txt {
   background: #ffead1;
@@ -3767,6 +3766,7 @@ header .location .breadcrumb ul li::before {
 }
 .conversations .main-conversation .contents .message .chating .chat-board .chat-item .date {
   justify-content: center;
+  padding-bottom: 20px;
 }
 .conversations .main-conversation .contents .message .chating .chat-board .chat-item .date span {
   text-align: center;

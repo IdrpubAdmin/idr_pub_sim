@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="chating">
-                            <ul class="chat-board">
+                            <ul class="chat-board" ref="chating">
                                 <li v-for="(chat, i) in clickData.chat" :key="chat.id" class="chat-item" :class="chat.my ? 'ty1' : 'ty2'">
                                     <p class="date" v-if="chat.date && dateCheck(i)"><span>{{chat.date}}</span></p>
                                     <p><span class="txt">{{chat.txt}}</span></p>
@@ -81,10 +81,10 @@
                             </ul>
                         </div>
                         <div class="chat-area">
-                                <button class="upload-btn plus3-icon"></button>
+                                <button class="upload-btn plus3-icon"></button> <!-- input type file로 바꾸기 -->
                                 <input type="text" placeholder="Your message" @keydown.enter="sendMessage" v-model="upDate.txt">
                                 <button class="icon-btn smile-icon"></button>
-                                <button class="send-btn send2-icon" @click="sendMessage">Send</button>
+                                <button class="send-btn send2-icon" @click="sendMessage">Send</button> <!-- 서버에 보낼 데이터이므로 submit 으로 바꾸기 -->
                         </div>
                     </template>
                     <template v-else>
@@ -119,6 +119,7 @@ module.exports = {
         messageOn(payload){
             this.$store.commit('userData/messageOn', payload)
             this.clickData = payload
+            this.scrollE()
         },
         sendMessage(){
             const today = new Date();
@@ -138,8 +139,8 @@ module.exports = {
                     txt : this.upDate.txt
                 }
                 this.clickData.chat.push(this.upDate)
-                console.log(this.upDate)
                 this.upDate = { id : '' , date : '', time : '', my : true, txt : '' }
+                this.scrollE()
             }
         },
         dateCheck(i){
@@ -152,6 +153,11 @@ module.exports = {
             }else {
                 return true
             }
+        },
+        scrollE(){
+            this.$nextTick(function(){
+                this.$refs.chating.scrollTop = this.$refs.chating.scrollHeight;
+            })
         }
     },
     computed: {

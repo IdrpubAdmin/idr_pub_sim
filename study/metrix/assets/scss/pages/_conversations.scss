@@ -242,7 +242,6 @@
                         .ty1{
                             p{
                                 justify-content: flex-end;
-                                padding-bottom: 20px;
                                 .txt{
                                     background: #ffead1;
                                     border-radius: 16px 16px 0 16px;
@@ -260,6 +259,7 @@
                         .chat-item{
                             .date{
                                 justify-content: center;
+                                padding-bottom: 20px;
                                 span{
                                     text-align: center;
                                     padding: 8px 12px;

@@ -176,7 +176,7 @@ var router = new VueRouter({
           meta: {
             title: 'Setting',
           },
-          redirect:{name:'account'}
+          // redirect:{name:'account'}
         },
         {
           name: 'security',
