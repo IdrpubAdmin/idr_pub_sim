@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     mounted() {
-        axios.get('https://idrpubadmin.github.io/trial_pub_sim/study/metrix/assets/js/test_data.json')
+        axios.get('http://127.0.0.1:5500/assets/js/test_data.js')
         .then(response => {
             this.user = response.data;
             console.log(this.user)
@@ -30,7 +30,7 @@ module.exports = {
     },
     methods: {
         postTest(){
-            axios.post('https://idrpubadmin.github.io/trial_pub_sim/study/metrix/assets/js/test_data.json', { id: 2 })
+            axios.post('http://127.0.0.1:5500/assets/js/test_data.js', { id: 2 }, {withCredentials: true})
         }
     }
 }
