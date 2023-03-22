@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .wapper{
     position: relative;
     header{
@@ -9,6 +13,13 @@
             display: flex;
             li{
                 margin-right: 30px;
+                opacity: 0.4;
+                &.active{
+                    opacity: 1;
+                }
+                &:hover{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -20,14 +31,17 @@
         ul{
             li{
                 margin-bottom: 4px;
+                opacity: 0.4;
+                &.active{
+                    opacity: 1;
+                }
             }
         }
     }
     .container{
-        .cnt1{
+        section{
             width: 100%;
             height: 100vh;
-            background-color: #fec56d;
             position: relative;
             img{
                 position: absolute;
@@ -38,12 +52,115 @@
                 margin: auto;
             }
         }
+
+        .cnt1{
+            background-color: #fec56d;
+        }
+        .cnt2{
+            background: url(../images/fond18.jpg);
+            background-color: #000;
+        }
+        .cnt3{
+            background: url(../images/fond1.jpg);
+            background-color: #f4d0ad;
+        }
+        .cnt4{
+            background: url(../images/fond2.jpg);
+            background-color: #b1deed;
+        }
+        .cnt5{
+            background: url(../images/fond3.jpg);
+            background-color: #f79cc1;
+        }
+        .cnt6{
+            background: url(../images/fond4.jpg);
+            background-color: #abe7f4;
+        }
+        .cnt7{
+            background: url(../images/fond5.jpg);
+            background-color: #f8d5b8;
+        }
+        .cnt8{
+            background: url(../images/fond6.jpg);
+            background-color: #a0e3ff;
+        }
+        .cnt9{
+            background: url(../images/fond7.jpg);
+            background-color: #f7ca7d;
+        }
+        .cnt10{
+            background: url(../images/fond8.jpg);
+            background-color: #fbdff8;
+        }
+        .cnt11{
+            background: url(../images/fond9.jpg);
+            background-color: #c6deff;
+        }
+        .cnt12{
+            background: url(../images/fond10.jpg);
+            background-color: #91f9d3;
+        }
+        .cnt13{
+            background: url(../images/fond11.jpg);
+            background-color: #f8c075;
+        }
+        .cnt14{
+            background: url(../images/fond12.jpg);
+            background-color: #ffd4ab;
+        }
+        .cnt15{
+            background: url(../images/fond13.jpg);
+            background-color: #b2fad7;
+        }
+        .cnt16{
+            background: url(../images/fond14.jpg);
+            background-color: #dbdbdb;
+        }
+        .cnt17{
+            background: url(../images/fond15.jpg);
+            background-color: #fddcae;
+        }
+        .cnt18{
+            background: url(../images/fond16.jpg);
+            background-color: #fb9d79;
+        }
+        .cnt19{
+            background: url(../images/fond17.jpg);
+            background-color: #f6978f;
+        }
+        .cnt20{
+            background-color: #f68076;
+        }
+        .content{
+            background-position: 50% 50%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 1200px;
+        }
     }
     footer{
         position: fixed;
         z-index: 1;
         bottom: 40px;
         left: 40px;
+        opacity: 0.4;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .scroll_move{
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        bottom: 15px;
+        button{
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/fleche2.png);
+            background-color: transparent;
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 
