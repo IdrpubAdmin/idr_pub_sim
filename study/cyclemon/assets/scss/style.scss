@@ -41,8 +41,19 @@ html{
     .container{
         section{
             width: 100%;
-            height: 100vh;
+            height: 120vh;
             position: relative;
+            overflow: hidden;
+            .image{
+                height: 100%;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                margin: auto;
+            }
+        }
+        .cnt1{
+            background-color: #fec56d;
             img{
                 position: absolute;
                 top: 0;
@@ -52,84 +63,151 @@ html{
                 margin: auto;
             }
         }
-
-        .cnt1{
-            background-color: #fec56d;
-        }
         .cnt2{
             background: url(../images/fond18.jpg);
             background-color: #000;
+            .image{
+                background: url(../images/velo18.png) 50% center no-repeat fixed;
+            }
         }
         .cnt3{
             background: url(../images/fond1.jpg);
             background-color: #f4d0ad;
+            .image{
+                background: url(../images/velo2.png) 50% center no-repeat fixed;
+            }
         }
         .cnt4{
             background: url(../images/fond2.jpg);
             background-color: #b1deed;
+            .image{
+                background: url(../images/velo1.png) 50% center no-repeat fixed;
+            }
         }
         .cnt5{
             background: url(../images/fond3.jpg);
             background-color: #f79cc1;
+            .image{
+                background: url(../images/velo3.png) 50% center no-repeat fixed;
+            }
         }
         .cnt6{
             background: url(../images/fond4.jpg);
             background-color: #abe7f4;
+            .image{
+                background: url(../images/velo4.png) 50% center no-repeat fixed;
+            }
         }
         .cnt7{
             background: url(../images/fond5.jpg);
             background-color: #f8d5b8;
+            .image{
+                background: url(../images/velo5.png) 50% center no-repeat fixed;
+            }
         }
         .cnt8{
             background: url(../images/fond6.jpg);
             background-color: #a0e3ff;
+            .image{
+                background: url(../images/velo6.png) 50% center no-repeat fixed;
+            }
         }
         .cnt9{
             background: url(../images/fond7.jpg);
             background-color: #f7ca7d;
+            .image{
+                background: url(../images/velo7.png) 50% center no-repeat fixed;
+            }
         }
         .cnt10{
             background: url(../images/fond8.jpg);
             background-color: #fbdff8;
+            .image{
+                background: url(../images/velo8.png) 50% center no-repeat fixed;
+            }
         }
         .cnt11{
             background: url(../images/fond9.jpg);
             background-color: #c6deff;
+            .image{
+                background: url(../images/velo9.png) 50% center no-repeat fixed;
+            }
         }
         .cnt12{
             background: url(../images/fond10.jpg);
             background-color: #91f9d3;
+            .image{
+                background: url(../images/velo10.png) 50% center no-repeat fixed;
+            }
         }
         .cnt13{
             background: url(../images/fond11.jpg);
             background-color: #f8c075;
+            .image{
+                background: url(../images/velo11.png) 50% center no-repeat fixed;
+            }
         }
         .cnt14{
             background: url(../images/fond12.jpg);
             background-color: #ffd4ab;
+            .image{
+                background: url(../images/velo12.png) 50% center no-repeat fixed;
+            }
         }
         .cnt15{
             background: url(../images/fond13.jpg);
             background-color: #b2fad7;
+            .image{
+                background: url(../images/velo13.png) 50% center no-repeat fixed;
+            }
         }
         .cnt16{
             background: url(../images/fond14.jpg);
             background-color: #dbdbdb;
+            .image{
+                background: url(../images/velo14.png) 50% center no-repeat fixed;
+            }
         }
         .cnt17{
             background: url(../images/fond15.jpg);
             background-color: #fddcae;
+            .image{
+                background: url(../images/velo15.png) 50% center no-repeat fixed;
+            }
         }
         .cnt18{
             background: url(../images/fond16.jpg);
             background-color: #fb9d79;
+            .image{
+                background: url(../images/velo16.png) 50% center no-repeat fixed;
+            }
         }
         .cnt19{
             background: url(../images/fond17.jpg);
             background-color: #f6978f;
+            .image{
+                background: url(../images/velo17.png) 50% center no-repeat fixed;
+            }
         }
         .cnt20{
             background-color: #f68076;
+            z-index: -10;
+            position: relative;
+            .images{
+                position: fixed;
+                top: 50%;
+                transform: translate(0, -50%);
+                left: 0;
+                right: 0;
+                text-align: center;
+                hr{
+                    width: 280px;
+                    color: #ffffff;
+                    height: 5px;
+                    background-color: #FFF;
+                    margin: 20px auto;
+                }
+            }
         }
         .content{
             background-position: 50% 50%;
