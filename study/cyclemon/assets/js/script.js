@@ -12,14 +12,12 @@ document.addEventListener('scroll', function(){
     }
 })
 
-
-
-
 function scrollToNext() {
-    let currentContentIndex = 0;
+    const navButton = document.querySelectorAll('nav ul li')
     const contents = document.querySelectorAll('.container section');
-    if (currentContentIndex < contents.length - 1) {
-        currentContentIndex++;
-        contents[currentContentIndex].scrollIntoView({ behavior: 'smooth' });
+    for (let i = 0; i < navButton.length; i++) {
+        if(navButton[i].classList.contains('active') && i < navButton.length - 1){
+            window.scrollTo(0, contents[i + 1].offsetTop)
+        }
     }
 }
