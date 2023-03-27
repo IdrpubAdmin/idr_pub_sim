@@ -1,244 +1,4 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
-}
-
-.wapper {
-  position: relative;
-}
-.wapper header {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  z-index: 1;
-}
-.wapper header ul {
-  display: flex;
-}
-.wapper header ul li {
-  margin-right: 30px;
-  opacity: 0.4;
-}
-.wapper header ul li.active {
-  opacity: 1;
-}
-.wapper header ul li:hover {
-  opacity: 1;
-}
-.wapper nav {
-  position: fixed;
-  z-index: 1;
-  top: 40px;
-  right: 40px;
-}
-.wapper nav ul li {
-  margin-bottom: 4px;
-  opacity: 0.4;
-}
-.wapper nav ul li.active {
-  opacity: 1;
-}
-.wapper .container section {
-  width: 100%;
-  height: 120vh;
-  position: relative;
-  overflow: hidden;
-}
-.wapper .container section .image {
-  height: 100%;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  margin: auto;
-}
-.wapper .container .cnt1 {
-  background-color: #fec56d;
-}
-.wapper .container .cnt1 img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-.wapper .container .cnt2 {
-  background: url(../images/fond18.jpg);
-  background-color: #000;
-}
-.wapper .container .cnt2 .image {
-  background: url(../images/velo18.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt3 {
-  background: url(../images/fond1.jpg);
-  background-color: #f4d0ad;
-}
-.wapper .container .cnt3 .image {
-  background: url(../images/velo2.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt4 {
-  background: url(../images/fond2.jpg);
-  background-color: #b1deed;
-}
-.wapper .container .cnt4 .image {
-  background: url(../images/velo1.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt5 {
-  background: url(../images/fond3.jpg);
-  background-color: #f79cc1;
-}
-.wapper .container .cnt5 .image {
-  background: url(../images/velo3.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt6 {
-  background: url(../images/fond4.jpg);
-  background-color: #abe7f4;
-}
-.wapper .container .cnt6 .image {
-  background: url(../images/velo4.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt7 {
-  background: url(../images/fond5.jpg);
-  background-color: #f8d5b8;
-}
-.wapper .container .cnt7 .image {
-  background: url(../images/velo5.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt8 {
-  background: url(../images/fond6.jpg);
-  background-color: #a0e3ff;
-}
-.wapper .container .cnt8 .image {
-  background: url(../images/velo6.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt9 {
-  background: url(../images/fond7.jpg);
-  background-color: #f7ca7d;
-}
-.wapper .container .cnt9 .image {
-  background: url(../images/velo7.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt10 {
-  background: url(../images/fond8.jpg);
-  background-color: #fbdff8;
-}
-.wapper .container .cnt10 .image {
-  background: url(../images/velo8.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt11 {
-  background: url(../images/fond9.jpg);
-  background-color: #c6deff;
-}
-.wapper .container .cnt11 .image {
-  background: url(../images/velo9.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt12 {
-  background: url(../images/fond10.jpg);
-  background-color: #91f9d3;
-}
-.wapper .container .cnt12 .image {
-  background: url(../images/velo10.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt13 {
-  background: url(../images/fond11.jpg);
-  background-color: #f8c075;
-}
-.wapper .container .cnt13 .image {
-  background: url(../images/velo11.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt14 {
-  background: url(../images/fond12.jpg);
-  background-color: #ffd4ab;
-}
-.wapper .container .cnt14 .image {
-  background: url(../images/velo12.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt15 {
-  background: url(../images/fond13.jpg);
-  background-color: #b2fad7;
-}
-.wapper .container .cnt15 .image {
-  background: url(../images/velo13.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt16 {
-  background: url(../images/fond14.jpg);
-  background-color: #dbdbdb;
-}
-.wapper .container .cnt16 .image {
-  background: url(../images/velo14.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt17 {
-  background: url(../images/fond15.jpg);
-  background-color: #fddcae;
-}
-.wapper .container .cnt17 .image {
-  background: url(../images/velo15.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt18 {
-  background: url(../images/fond16.jpg);
-  background-color: #fb9d79;
-}
-.wapper .container .cnt18 .image {
-  background: url(../images/velo16.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt19 {
-  background: url(../images/fond17.jpg);
-  background-color: #f6978f;
-}
-.wapper .container .cnt19 .image {
-  background: url(../images/velo17.png) 50% center no-repeat fixed;
-}
-.wapper .container .cnt20 {
-  background-color: #f68076;
-  z-index: -10;
-  position: relative;
-}
-.wapper .container .cnt20 .images {
-  position: fixed;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.wapper .container .cnt20 .images hr {
-  width: 280px;
-  color: #ffffff;
-  height: 5px;
-  background-color: #FFF;
-  margin: 20px auto;
-}
-.wapper .container .content {
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 1200px;
-}
-.wapper footer {
-  position: fixed;
-  z-index: 1;
-  bottom: 40px;
-  left: 40px;
-  opacity: 0.4;
-}
-.wapper footer:hover {
-  opacity: 1;
-}
-.wapper .scroll_move {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  bottom: 15px;
-}
-.wapper .scroll_move button {
-  width: 30px;
-  height: 30px;
-  background-image: url(../images/fleche2.png);
-  background-color: transparent;
-  display: block;
-  margin: 0 auto;
-}
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. 기본 글꼴을 sans-serif로 설정.
@@ -997,4 +757,244 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wapper {
+  position: relative;
+}
+.wapper header {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+}
+.wapper header ul {
+  display: flex;
+}
+.wapper header ul li {
+  margin-right: 30px;
+  opacity: 0.4;
+}
+.wapper header ul li.active {
+  opacity: 1;
+}
+.wapper header ul li:hover {
+  opacity: 1;
+}
+.wapper nav {
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  right: 40px;
+}
+.wapper nav ul li {
+  margin-bottom: 4px;
+  opacity: 0.4;
+}
+.wapper nav ul li.active {
+  opacity: 1;
+}
+.wapper .container section {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+}
+.wapper .container section .image {
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: auto;
+}
+.wapper .container .cnt1 {
+  background-color: #fec56d;
+}
+.wapper .container .cnt1 img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.wapper .container .cnt2 {
+  background: url(../images/fond18.jpg);
+  background-color: #000;
+}
+.wapper .container .cnt2 .image {
+  background: url(../images/velo18.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt3 {
+  background: url(../images/fond1.jpg);
+  background-color: #f4d0ad;
+}
+.wapper .container .cnt3 .image {
+  background: url(../images/velo2.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt4 {
+  background: url(../images/fond2.jpg);
+  background-color: #b1deed;
+}
+.wapper .container .cnt4 .image {
+  background: url(../images/velo1.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt5 {
+  background: url(../images/fond3.jpg);
+  background-color: #f79cc1;
+}
+.wapper .container .cnt5 .image {
+  background: url(../images/velo3.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt6 {
+  background: url(../images/fond4.jpg);
+  background-color: #abe7f4;
+}
+.wapper .container .cnt6 .image {
+  background: url(../images/velo4.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt7 {
+  background: url(../images/fond5.jpg);
+  background-color: #f8d5b8;
+}
+.wapper .container .cnt7 .image {
+  background: url(../images/velo5.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt8 {
+  background: url(../images/fond6.jpg);
+  background-color: #a0e3ff;
+}
+.wapper .container .cnt8 .image {
+  background: url(../images/velo6.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt9 {
+  background: url(../images/fond7.jpg);
+  background-color: #f7ca7d;
+}
+.wapper .container .cnt9 .image {
+  background: url(../images/velo7.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt10 {
+  background: url(../images/fond8.jpg);
+  background-color: #fbdff8;
+}
+.wapper .container .cnt10 .image {
+  background: url(../images/velo8.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt11 {
+  background: url(../images/fond9.jpg);
+  background-color: #c6deff;
+}
+.wapper .container .cnt11 .image {
+  background: url(../images/velo9.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt12 {
+  background: url(../images/fond10.jpg);
+  background-color: #91f9d3;
+}
+.wapper .container .cnt12 .image {
+  background: url(../images/velo10.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt13 {
+  background: url(../images/fond11.jpg);
+  background-color: #f8c075;
+}
+.wapper .container .cnt13 .image {
+  background: url(../images/velo11.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt14 {
+  background: url(../images/fond12.jpg);
+  background-color: #ffd4ab;
+}
+.wapper .container .cnt14 .image {
+  background: url(../images/velo12.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt15 {
+  background: url(../images/fond13.jpg);
+  background-color: #b2fad7;
+}
+.wapper .container .cnt15 .image {
+  background: url(../images/velo13.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt16 {
+  background: url(../images/fond14.jpg);
+  background-color: #dbdbdb;
+}
+.wapper .container .cnt16 .image {
+  background: url(../images/velo14.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt17 {
+  background: url(../images/fond15.jpg);
+  background-color: #fddcae;
+}
+.wapper .container .cnt17 .image {
+  background: url(../images/velo15.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt18 {
+  background: url(../images/fond16.jpg);
+  background-color: #fb9d79;
+}
+.wapper .container .cnt18 .image {
+  background: url(../images/velo16.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt19 {
+  background: url(../images/fond17.jpg);
+  background-color: #f6978f;
+}
+.wapper .container .cnt19 .image {
+  background: url(../images/velo17.png) 50% center no-repeat fixed;
+}
+.wapper .container .cnt20 {
+  background-color: #f68076;
+  z-index: -10;
+  position: relative;
+}
+.wapper .container .cnt20 .images {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.wapper .container .cnt20 .images hr {
+  width: 280px;
+  color: #ffffff;
+  height: 5px;
+  background-color: #FFF;
+  margin: 20px auto;
+}
+.wapper .container .content {
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 1200px;
+}
+.wapper footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 40px;
+  left: 40px;
+  opacity: 0.4;
+}
+.wapper footer:hover {
+  opacity: 1;
+}
+.wapper .scroll-move {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 15px;
+}
+.wapper .scroll-move button {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/fleche2.png);
+  background-color: transparent;
+  display: block;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

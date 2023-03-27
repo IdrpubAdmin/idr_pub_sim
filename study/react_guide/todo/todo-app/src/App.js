@@ -4,41 +4,39 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (e) => {
+  const inputChange = (e) => {
     setInputValue(e.target.value);
   };
 
-  const handleAddTodo = () => {
+  const addTodo = () => {
     setTodos([...todos, inputValue]);
     setInputValue('');
   };
 
-  const handleDeleteTodo = (index) => {
+  const deleteTodo = (index) => {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
 
   return (
-    <div className="container">
+    <div>
       <h1>Todo List</h1>
-      <div className="input-group mb-3">
+      <div>
         <input
           type="text"
           className="form-control"
           placeholder="Add todo item"
           value={inputValue}
-          onChange={handleInputChange}
+          onChange={inputChange}
         />
-        <button className="btn btn-outline-secondary" type="button" onClick={handleAddTodo}>
-          Add
-        </button>
+        <button type="button" onClick={addTodo}>생성</button>
       </div>
-      <ul className="list-group">
+      <ul>
         {todos.map((todo, index) => (
-          <li className="list-group-item" key={index}>
+          <li key={index}>
             {todo}
-            <button type="button" className="btn-close" aria-label="Close" onClick={() => handleDeleteTodo(index)}></button>
+            <button type="button" aria-label="Close" onClick={() => deleteTodo(index)}></button>
           </li>
         ))}
       </ul>

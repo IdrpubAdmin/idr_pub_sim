@@ -28,10 +28,5 @@ module.exports = {
           console.log(error);
         });
     },
-    methods: {
-        postTest(){
-            axios.post('http://127.0.0.1:5500/assets/js/test_data.js', { id: 2 }, {withCredentials: true})
-        }
-    }
 }
 </script>
