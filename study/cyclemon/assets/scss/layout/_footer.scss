@@ -1,0 +1,33 @@
+footer{
+    position: fixed;
+    z-index: 1;
+    bottom: 40px;
+    left: 40px;
+    .share-btn-area{
+        button{        
+            width: 40px;
+            height: 40px;
+            background-image: url('../images/share.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.scroll-btn-area{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 15px;
+    button{
+        width: 30px;
+        height: 30px;
+        background-image: url('../images/fleche2.png');
+        display: block;
+        margin: 0 auto;
+    }
+}

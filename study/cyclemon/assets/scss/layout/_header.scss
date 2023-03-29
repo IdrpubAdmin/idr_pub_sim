@@ -1,0 +1,43 @@
+header{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+    .menu-list{
+        display: flex;
+        .menu-item{
+            margin-right: 30px;
+            opacity: 0.4;
+            &.active{
+                opacity: 1;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+nav{
+    position: fixed;
+    z-index: 1;
+    top: 40px;
+    right: 40px;
+    .nav-list{
+        .nav-ltem{
+            margin-bottom: 10px;
+            opacity: 0.4;
+            &.active{
+                opacity: 1;
+            }
+            button{
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-image: url(../images/button.png);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}

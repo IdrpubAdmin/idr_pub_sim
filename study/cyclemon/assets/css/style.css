@@ -763,58 +763,115 @@ html {
   scroll-behavior: smooth;
 }
 
-.wapper {
-  position: relative;
+.wrapper {
+  background-repeat: no-repeat;
 }
-.wapper header {
+
+.text-hidden {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent;
+}
+
+header {
   position: fixed;
   top: 40px;
   left: 40px;
   z-index: 1;
 }
-.wapper header ul {
+header .menu-list {
   display: flex;
 }
-.wapper header ul li {
+header .menu-list .menu-item {
   margin-right: 30px;
   opacity: 0.4;
 }
-.wapper header ul li.active {
+header .menu-list .menu-item.active {
   opacity: 1;
 }
-.wapper header ul li:hover {
+header .menu-list .menu-item:hover {
   opacity: 1;
 }
-.wapper nav {
+
+nav {
   position: fixed;
   z-index: 1;
   top: 40px;
   right: 40px;
 }
-.wapper nav ul li {
-  margin-bottom: 4px;
+nav .nav-list .nav-ltem {
+  margin-bottom: 10px;
   opacity: 0.4;
 }
-.wapper nav ul li.active {
+nav .nav-list .nav-ltem.active {
   opacity: 1;
 }
-.wapper .container section {
+nav .nav-list .nav-ltem button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/button.png);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 40px;
+  left: 40px;
+}
+footer .share-btn-area button {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/share.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+}
+footer .share-btn-area button:hover {
+  opacity: 1;
+}
+
+.scroll-btn-area {
   width: 100%;
-  height: 120vh;
+  position: fixed;
+  z-index: 1;
+  bottom: 15px;
+}
+.scroll-btn-area button {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/fleche2.png");
+  display: block;
+  margin: 0 auto;
+}
+
+.main-page {
+  position: relative;
+}
+.main-page .container section {
+  width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
-.wapper .container section .image {
+.main-page .container section .cycle-image {
   height: 100%;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   margin: auto;
 }
-.wapper .container .cnt1 {
+.main-page .container .cnt1 {
   background-color: #fec56d;
 }
-.wapper .container .cnt1 img {
+.main-page .container .cnt1 img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -822,138 +879,138 @@ html {
   left: 0;
   margin: auto;
 }
-.wapper .container .cnt2 {
+.main-page .container .cnt2 {
   background: url(../images/fond18.jpg);
   background-color: #000;
 }
-.wapper .container .cnt2 .image {
-  background: url(../images/velo18.png) 50% center no-repeat fixed;
+.main-page .container .cnt2 .cycle-image {
+  background: url(../images/velo18.png);
 }
-.wapper .container .cnt3 {
+.main-page .container .cnt3 {
   background: url(../images/fond1.jpg);
   background-color: #f4d0ad;
 }
-.wapper .container .cnt3 .image {
-  background: url(../images/velo2.png) 50% center no-repeat fixed;
+.main-page .container .cnt3 .cycle-image {
+  background: url(../images/velo2.png);
 }
-.wapper .container .cnt4 {
+.main-page .container .cnt4 {
   background: url(../images/fond2.jpg);
   background-color: #b1deed;
 }
-.wapper .container .cnt4 .image {
-  background: url(../images/velo1.png) 50% center no-repeat fixed;
+.main-page .container .cnt4 .cycle-image {
+  background: url(../images/velo1.png);
 }
-.wapper .container .cnt5 {
+.main-page .container .cnt5 {
   background: url(../images/fond3.jpg);
   background-color: #f79cc1;
 }
-.wapper .container .cnt5 .image {
-  background: url(../images/velo3.png) 50% center no-repeat fixed;
+.main-page .container .cnt5 .cycle-image {
+  background: url(../images/velo3.png);
 }
-.wapper .container .cnt6 {
+.main-page .container .cnt6 {
   background: url(../images/fond4.jpg);
   background-color: #abe7f4;
 }
-.wapper .container .cnt6 .image {
-  background: url(../images/velo4.png) 50% center no-repeat fixed;
+.main-page .container .cnt6 .cycle-image {
+  background: url(../images/velo4.png);
 }
-.wapper .container .cnt7 {
+.main-page .container .cnt7 {
   background: url(../images/fond5.jpg);
   background-color: #f8d5b8;
 }
-.wapper .container .cnt7 .image {
-  background: url(../images/velo5.png) 50% center no-repeat fixed;
+.main-page .container .cnt7 .cycle-image {
+  background: url(../images/velo5.png);
 }
-.wapper .container .cnt8 {
+.main-page .container .cnt8 {
   background: url(../images/fond6.jpg);
   background-color: #a0e3ff;
 }
-.wapper .container .cnt8 .image {
-  background: url(../images/velo6.png) 50% center no-repeat fixed;
+.main-page .container .cnt8 .cycle-image {
+  background: url(../images/velo6.png);
 }
-.wapper .container .cnt9 {
+.main-page .container .cnt9 {
   background: url(../images/fond7.jpg);
   background-color: #f7ca7d;
 }
-.wapper .container .cnt9 .image {
-  background: url(../images/velo7.png) 50% center no-repeat fixed;
+.main-page .container .cnt9 .cycle-image {
+  background: url(../images/velo7.png);
 }
-.wapper .container .cnt10 {
+.main-page .container .cnt10 {
   background: url(../images/fond8.jpg);
   background-color: #fbdff8;
 }
-.wapper .container .cnt10 .image {
-  background: url(../images/velo8.png) 50% center no-repeat fixed;
+.main-page .container .cnt10 .cycle-image {
+  background: url(../images/velo8.png);
 }
-.wapper .container .cnt11 {
+.main-page .container .cnt11 {
   background: url(../images/fond9.jpg);
   background-color: #c6deff;
 }
-.wapper .container .cnt11 .image {
-  background: url(../images/velo9.png) 50% center no-repeat fixed;
+.main-page .container .cnt11 .cycle-image {
+  background: url(../images/velo9.png);
 }
-.wapper .container .cnt12 {
+.main-page .container .cnt12 {
   background: url(../images/fond10.jpg);
   background-color: #91f9d3;
 }
-.wapper .container .cnt12 .image {
-  background: url(../images/velo10.png) 50% center no-repeat fixed;
+.main-page .container .cnt12 .cycle-image {
+  background: url(../images/velo10.png);
 }
-.wapper .container .cnt13 {
+.main-page .container .cnt13 {
   background: url(../images/fond11.jpg);
   background-color: #f8c075;
 }
-.wapper .container .cnt13 .image {
-  background: url(../images/velo11.png) 50% center no-repeat fixed;
+.main-page .container .cnt13 .cycle-image {
+  background: url(../images/velo11.png);
 }
-.wapper .container .cnt14 {
+.main-page .container .cnt14 {
   background: url(../images/fond12.jpg);
   background-color: #ffd4ab;
 }
-.wapper .container .cnt14 .image {
-  background: url(../images/velo12.png) 50% center no-repeat fixed;
+.main-page .container .cnt14 .cycle-image {
+  background: url(../images/velo12.png);
 }
-.wapper .container .cnt15 {
+.main-page .container .cnt15 {
   background: url(../images/fond13.jpg);
   background-color: #b2fad7;
 }
-.wapper .container .cnt15 .image {
-  background: url(../images/velo13.png) 50% center no-repeat fixed;
+.main-page .container .cnt15 .cycle-image {
+  background: url(../images/velo13.png);
 }
-.wapper .container .cnt16 {
+.main-page .container .cnt16 {
   background: url(../images/fond14.jpg);
   background-color: #dbdbdb;
 }
-.wapper .container .cnt16 .image {
-  background: url(../images/velo14.png) 50% center no-repeat fixed;
+.main-page .container .cnt16 .cycle-image {
+  background: url(../images/velo14.png);
 }
-.wapper .container .cnt17 {
+.main-page .container .cnt17 {
   background: url(../images/fond15.jpg);
   background-color: #fddcae;
 }
-.wapper .container .cnt17 .image {
-  background: url(../images/velo15.png) 50% center no-repeat fixed;
+.main-page .container .cnt17 .cycle-image {
+  background: url(../images/velo15.png);
 }
-.wapper .container .cnt18 {
+.main-page .container .cnt18 {
   background: url(../images/fond16.jpg);
   background-color: #fb9d79;
 }
-.wapper .container .cnt18 .image {
-  background: url(../images/velo16.png) 50% center no-repeat fixed;
+.main-page .container .cnt18 .cycle-image {
+  background: url(../images/velo16.png);
 }
-.wapper .container .cnt19 {
+.main-page .container .cnt19 {
   background: url(../images/fond17.jpg);
   background-color: #f6978f;
 }
-.wapper .container .cnt19 .image {
-  background: url(../images/velo17.png) 50% center no-repeat fixed;
+.main-page .container .cnt19 .cycle-image {
+  background: url(../images/velo17.png);
 }
-.wapper .container .cnt20 {
+.main-page .container .cnt20 {
   background-color: #f68076;
   z-index: -10;
   position: relative;
 }
-.wapper .container .cnt20 .images {
+.main-page .container .cnt20 .text-images {
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
@@ -961,40 +1018,22 @@ html {
   right: 0;
   text-align: center;
 }
-.wapper .container .cnt20 .images hr {
+.main-page .container .cnt20 .text-images hr {
   width: 280px;
   color: #ffffff;
   height: 5px;
   background-color: #FFF;
   margin: 20px auto;
 }
-.wapper .container .content {
-  background-position: 50% 50%;
+.main-page .container .content {
+  height: 120vh;
+  background-position: 50% 90%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 1200px;
 }
-.wapper footer {
-  position: fixed;
-  z-index: 1;
-  bottom: 40px;
-  left: 40px;
-  opacity: 0.4;
-}
-.wapper footer:hover {
-  opacity: 1;
-}
-.wapper .scroll-move {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  bottom: 15px;
-}
-.wapper .scroll-move button {
-  width: 30px;
-  height: 30px;
-  background-image: url(../images/fleche2.png);
-  background-color: transparent;
-  display: block;
-  margin: 0 auto;
+.main-page .container .content .cycle-image {
+  background-position: 50% 70%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
