@@ -1,9 +1,9 @@
 footer{
-    position: fixed;
-    z-index: 1;
-    bottom: 40px;
-    left: 40px;
     .share-btn-area{
+        position: fixed;
+        z-index: 1;
+        bottom: 40px;
+        left: 40px;
         button{        
             width: 40px;
             height: 40px;
@@ -16,18 +16,18 @@ footer{
             }
         }
     }
-}
 
-.scroll-btn-area{
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    bottom: 15px;
-    button{
-        width: 30px;
-        height: 30px;
-        background-image: url('../images/fleche2.png');
-        display: block;
-        margin: 0 auto;
+    .scroll-btn-area{
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        bottom: 15px;
+        button{
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/fleche2.png');
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
