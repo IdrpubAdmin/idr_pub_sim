@@ -1,7 +1,9 @@
 document.addEventListener('scroll', function(){
     const navButton = document.querySelectorAll('.main-navigator ul li')
     const contents = document.querySelectorAll('.container section')
-    const scroll = window.pageYOffset // 모바일 스크롤양 소수 방지
+    // const scroll = window.pageYOffset
+    const scroll = document.documentElement.scrollTop // 모바일 스크롤양 소수 방지
+    console.log(`scroll : ${scroll}`)
     for (let i = 0; i < navButton.length; i++) {
         for (let x = 0; x < navButton.length; x++) {
             if(contents[i].offsetTop <= scroll){
@@ -30,7 +32,8 @@ function scrollToNext() {
 document.addEventListener('scroll', function(){
     const navButton = document.querySelectorAll('.main-navigator ul li')
     const contents = document.querySelectorAll('.container section')
-    const scroll = window.pageYOffset
+    // const scroll = window.pageYOffset
+    const scroll = document.documentElement.scrollTop // 모바일 스크롤양 소수 방지
     for (let i = 0; i < navButton.length; i++) {
         const scrollAmount = scroll - contents[i].offsetTop // 스크롤 양 (px)
         const contentHeight = contents[i].offsetHeight / 150 // 한번 스크롤 될때 배경 감도 (숫자 높을수록 체감 많이됨)
