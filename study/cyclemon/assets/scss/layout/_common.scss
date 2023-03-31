@@ -2,8 +2,39 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    &.lock{
+        overflow: hidden;
+    }
+}
+
+.splash-img{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #e2e0e0;
+    &.load{
+        display: none;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
 .wrapper{
     background-repeat: no-repeat;
+    .container{
+        section{
+            width: 100%;
+            height: 100vh;
+        }
+    }
 }
 
 .text-hidden {    
@@ -15,4 +46,19 @@ html{
 
 button{
     background-color: transparent;
+}
+
+p{
+    font-family: 'LucidaGrande';
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #404040;
+}
+h4{
+    font-family: 'Georgia';
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #000;
 }

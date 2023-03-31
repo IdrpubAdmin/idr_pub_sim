@@ -1,0 +1,101 @@
+.shop-page{
+    .container{
+        section{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            article{
+                max-width: 920px;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .content1{
+            background-color: #baf5e9;
+            article{
+                display: flex;
+                align-items: center;
+                .content-header{
+                    width: 285px;
+                    text-align: center;
+                    margin-right: 80px;
+                    p{
+                        margin-top: 10px;
+                        a{
+                            color: #EB5D50;
+                        }
+                    }
+                    button{
+                        width: 180px;
+                        height: 40px;
+                        background-image: url('../images/order.jpg');
+                        margin-top: 10px;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                .image-list{
+                    width: calc(100% - 365px);
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    .image-item{
+                        width: calc(50% - 10px);
+                        a{
+                            &:hover{
+                                opacity: 0.7;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content2{
+            display: block;
+            height: auto;
+            padding: 100px 0;
+            article{
+                .content-header{
+                    text-align: center;
+                }
+                .poster-list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 20px;
+                    row-gap: 40px;
+                    margin-top: 60px;
+                    .poster-item{
+                        width: calc((100% - 40px) / 3);
+                        a{
+                            &:hover{
+                                opacity: 0.7;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .txt{
+                            margin-top: 20px;
+                            width: 100%;
+                            text-align: center;
+                            hr{
+                                width: 120px;
+                                height: 1px;
+                                background-color: #333;
+                                margin: 0 auto;
+                            }
+                            p{
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

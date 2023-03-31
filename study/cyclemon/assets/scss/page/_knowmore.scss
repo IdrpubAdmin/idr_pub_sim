@@ -1,0 +1,71 @@
+.knowmore-page{
+    .container{
+        section{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            article{
+                max-width: 920px;
+                width: 90%;
+                margin: 0 auto;
+                .content-header{
+                    text-align: center;
+                }
+            }
+        }
+        .content1{
+            background-color: #FFD2A1;
+            article{
+                .video{
+                    margin-top: 100px;
+                    position: relative;
+                    padding-top: 56%;
+                    width: 100%;
+                    height: 0;
+                    text-align: center;
+                    iframe{
+                        max-width: 650px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .content2{
+            background-color: #a3efc9;
+            article{
+                .author-list{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 100px;
+                    .author-item{
+                        width: 250px;
+                        text-align: center;
+                        opacity: 0.7;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        .aut-name{
+                            margin-top: 30px;
+                        }
+                        p{
+                            margin-top: 30px;
+                        }
+                        .sns{
+                            margin-top: 30px;
+                            a{
+                                margin: 0 5px;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,34 +1,7 @@
-body{
-    &.lock{
-        overflow: hidden;
-    }
-}
-
-.splash-img{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    z-index: 1000;
-    background-color: #e2e0e0;
-    &.load{
-        display: none;
-    }
-    img{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-}
-
 .main-page{
     position: relative;
     .container{
         section{
-            width: 100%;
-            height: 100vh;
             position: relative;
             overflow: hidden;
             .cycle-image{
@@ -39,7 +12,7 @@ body{
                 margin: auto;
             }
         }
-        .cnt1{
+        .content1{
             background-color: #fec56d;
             img{
                 position: absolute;
@@ -50,133 +23,133 @@ body{
                 margin: auto;
             }
         }
-        .cnt2{
-            background: url(../images/fond18.jpg);
+        .content2{
+            background: url('../images/fond18.jpg');
             background-color: #000;
             .cycle-image{
-                background: url(../images/velo18.png);
+                background: url('../images/velo18.png');
             }
         }
-        .cnt3{
-            background: url(../images/fond1.jpg);
+        .content3{
+            background: url('../images/fond1.jpg');
             background-color: #f4d0ad;
             .cycle-image{
-                background: url(../images/velo2.png);
+                background: url('./images/velo2.png');
             }
         }
-        .cnt4{
-            background: url(../images/fond2.jpg);
+        .content4{
+            background: url('../images/fond2.jpg');
             background-color: #b1deed;
             .cycle-image{
-                background: url(../images/velo1.png);
+                background: url('../images/velo1.png');
             }
         }
-        .cnt5{
-            background: url(../images/fond3.jpg);
+        .content5{
+            background: url('../images/fond3.jpg');
             background-color: #f79cc1;
             .cycle-image{
-                background: url(../images/velo3.png);
+                background: url('../images/velo3.png');
             }
         }
-        .cnt6{
-            background: url(../images/fond4.jpg);
+        .content6{
+            background: url('../images/fond4.jpg');
             background-color: #abe7f4;
             .cycle-image{
-                background: url(../images/velo4.png);
+                background: url('../images/velo4.png');
             }
         }
-        .cnt7{
-            background: url(../images/fond5.jpg);
+        .content7{
+            background: url('../images/fond5.jpg');
             background-color: #f8d5b8;
             .cycle-image{
-                background: url(../images/velo5.png);
+                background: url('./images/velo5.png');
             }
         }
-        .cnt8{
-            background: url(../images/fond6.jpg);
+        .content8{
+            background: url('../images/fond6.jpg');
             background-color: #a0e3ff;
             .cycle-image{
-                background: url(../images/velo6.png);
+                background: url('../images/velo6.png');
             }
         }
-        .cnt9{
-            background: url(../images/fond7.jpg);
+        .content9{
+            background: url('../images/fond7.jpg');
             background-color: #f7ca7d;
             .cycle-image{
-                background: url(../images/velo7.png);
+                background: url('../images/velo7.png');
             }
         }
-        .cnt10{
-            background: url(../images/fond8.jpg);
+        .content10{
+            background: url('../images/fond8.jpg');
             background-color: #fbdff8;
             .cycle-image{
-                background: url(../images/velo8.png);
+                background: url('../images/velo8.png');
             }
         }
-        .cnt11{
-            background: url(../images/fond9.jpg);
+        .content11{
+            background: url('../images/fond9.jpg');
             background-color: #c6deff;
             .cycle-image{
-                background: url(../images/velo9.png);
+                background: url('./images/velo9.png');
             }
         }
-        .cnt12{
-            background: url(../images/fond10.jpg);
+        .content12{
+            background: url('../images/fond10.jpg');
             background-color: #91f9d3;
             .cycle-image{
-                background: url(../images/velo10.png);
+                background: url('../images/velo10.png');
             }
         }
-        .cnt13{
-            background: url(../images/fond11.jpg);
+        .content13{
+            background: url('../images/fond11.jpg');
             background-color: #f8c075;
             .cycle-image{
-                background: url(../images/velo11.png);
+                background: url('../images/velo11.png');
             }
         }
-        .cnt14{
-            background: url(../images/fond12.jpg);
+        .content14{
+            background: url('../images/fond12.jpg');
             background-color: #ffd4ab;
             .cycle-image{
-                background: url(../images/velo12.png);
+                background: url('../images/velo12.png');
             }
         }
-        .cnt15{
-            background: url(../images/fond13.jpg);
+        .content15{
+            background: url('../images/fond13.jpg');
             background-color: #b2fad7;
             .cycle-image{
-                background: url(../images/velo13.png);
+                background: url('../images/velo13.png');
             }
         }
-        .cnt16{
-            background: url(../images/fond14.jpg);
+        .content16{
+            background: url('../images/fond14.jpg');
             background-color: #dbdbdb;
             .cycle-image{
-                background: url(../images/velo14.png);
+                background: url('../images/velo14.png');
             }
         }
-        .cnt17{
-            background: url(../images/fond15.jpg);
+        .content17{
+            background: url('../images/fond15.jpg');
             background-color: #fddcae;
             .cycle-image{
-                background: url(../images/velo15.png);
+                background: url('../images/velo15.png');
             }
         }
-        .cnt18{
-            background: url(../images/fond16.jpg);
+        .content18{
+            background: url('../images/fond16.jpg');
             background-color: #fb9d79;
             .cycle-image{
-                background: url(../images/velo16.png);
+                background: url('../images/velo16.png');
             }
         }
-        .cnt19{
-            background: url(../images/fond17.jpg);
+        .content19{
+            background: url('../images/fond17.jpg');
             background-color: #f6978f;
             .cycle-image{
-                background: url(../images/velo17.png);
+                background: url('../images/velo17.png');
             }
         }
-        .cnt20{
+        .content20{
             background-color: #f68076;
             z-index: -10;
             position: relative;
@@ -196,7 +169,7 @@ body{
                 }
             }
         }
-        .content{
+        .parallax-board{
             height: 120vh;
             background-position: 50% 60%;
             background-attachment: fixed;
@@ -213,12 +186,12 @@ body{
 @media (max-width: 750px) {
     .main-page{
         .container{
-            .cnt1{
+            .content1{
                 img{
                     width: 80%;
                 }
             }
-            .cnt20{
+            .content20{
                 .text-images{
                     width: 80%;
                     margin: 0 auto;
@@ -227,7 +200,7 @@ body{
                     }
                 }
             }
-            .content{
+            .parallax-board{
                 background-size: 100%;
                 height: 100vh;
                 .cycle-image{
