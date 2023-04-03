@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CYCLEMON</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="assets/js/script.js"></script>
 </head>
 <body class="lock">
@@ -34,92 +36,20 @@
       </ul>
     </header>
     <nav class="main-navigator">
-      <ul class="nav-list">
-        <li class="active nav-item">
-          <img src="assets/images/title1.png" alt="타이틀">
-          <button onclick="scrollMove(0)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title20.png" alt="타이틀">
-          <button onclick="scrollMove(1)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title2.png" alt="타이틀">
-          <button onclick="scrollMove(2)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title3.png" alt="타이틀">
-          <button onclick="scrollMove(3)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title4.png" alt="타이틀">
-          <button onclick="scrollMove(4)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title5.png" alt="타이틀">
-          <button onclick="scrollMove(5)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title6.png" alt="타이틀">
-          <button onclick="scrollMove(6)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title7.png" alt="타이틀">
-          <button onclick="scrollMove(7)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title8.png" alt="타이틀">
-          <button onclick="scrollMove(8)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title9.png" alt="타이틀">
-          <button onclick="scrollMove(9)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title10.png" alt="타이틀">
-          <button onclick="scrollMove(10)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title11.png" alt="타이틀">
-          <button onclick="scrollMove(11)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title12.png" alt="타이틀">
-          <button onclick="scrollMove(12)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title13.png" alt="타이틀">
-          <button onclick="scrollMove(13)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title14.png" alt="타이틀">
-          <button onclick="scrollMove(14)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title15.png" alt="타이틀">
-          <button onclick="scrollMove(15)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title16.png" alt="타이틀">
-          <button onclick="scrollMove(16)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title17.png" alt="타이틀">
-          <button onclick="scrollMove(17)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title18.png" alt="타이틀">
-          <button onclick="scrollMove(18)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-        <li class="nav-item">
-          <img src="assets/images/title19.png" alt="타이틀">
-          <button onclick="scrollMove(19)"><span class="text-hidden">스크롤 이동 버튼</span></button>
-        </li>
-      </ul>
+      <script id="nav-list" type="text/x-handlebars-template">
+        <ul class="nav-list">
+          {{#navData}}
+          <li class="nav-item">
+            <img src="{{img}}" alt="타이틀">
+            <button onclick="scrollMove('{{@index}}')"><span class="text-hidden">스크롤 이동 버튼</span></button>
+          </li>
+          {{/navData}}
+        </ul>
+      </script>
     </nav>
     <div class="container">
       <section class="content1">
-        <img src="assets/images/titre.jpg" alt="">
+        <img src="assets/images/titre.jpg" alt="로고">
       </section>
       <section class="parallax-board content2">
         <div class="cycle-image">
@@ -236,5 +166,6 @@
       </div>
     </footer>
   </div>
+  <script src="assets/js/nav_data.js"></script>
 </body>
 </html>
