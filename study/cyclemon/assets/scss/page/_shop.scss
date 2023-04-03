@@ -99,3 +99,40 @@
         }
     }
 }
+
+@include mdq-tablet {
+    .shop-page{
+        .container{
+            .content1{
+                height: auto;
+                padding: 100px 0;
+                article{
+                    display: block;
+                    .content-header{
+                        margin: 0 auto;
+                    }
+                    .image-list{
+                        width: 100%;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mdq-mobile {
+    .shop-page{
+        .container{
+            .content2{
+                article{
+                    .poster-list{
+                        .poster-item{
+                            width: calc((100% - 20px) / 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

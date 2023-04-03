@@ -31,12 +31,13 @@ document.addEventListener('scroll', function(){
     const navButton = document.querySelectorAll('.main-navigator ul li')
     const contents = document.querySelectorAll('.container section')
     const scroll = Math.ceil(window.scrollY)
+    const media = matchMedia("screen and (min-width: 1024px)").matches;
     for (let i = 0; i < navButton.length; i++) {
         const scrollAmount = scroll - contents[i].offsetTop // 스크롤 양 (px)
         const contentHeight = contents[i].offsetHeight / 150 // 한번 스크롤 될때 배경 감도 (숫자 높을수록 체감 많이됨)
         const num = scrollAmount / contentHeight // 스크롤된 양 (%)
         const percent = 60 - num // 50은 포지션값 (60으로 변경되면 바꿔야함)
-        if(document.querySelector('.main-page')){
+        if(document.querySelector('.main-page') && media){
             contents[i].setAttribute('style', `background-position: 50% ${percent}%;`)
         }
     }

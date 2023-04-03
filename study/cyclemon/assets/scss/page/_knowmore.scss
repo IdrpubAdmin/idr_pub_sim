@@ -69,3 +69,26 @@
         }
     }
 }
+
+@include mdq-mobile {
+    .knowmore-page{
+        .container{
+            .content2{
+                height: auto;
+                padding: 100px 0;
+                article{
+                    .author-list{
+                        display: block;
+                        .author-item{
+                            width: 250px;
+                            margin: 40px auto 0;
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
