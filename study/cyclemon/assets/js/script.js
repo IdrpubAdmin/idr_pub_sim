@@ -1,3 +1,44 @@
+
+window.addEventListener('load', function(){
+    if(document.querySelector('.main-page')){
+        // nav 동적 생성
+        for (let i = 0; i < navImgData.length; i++) {
+            const navList = document.querySelector('.nav-list');
+            const navItem = document.createElement('li');
+            navItem.classList.add('nav-item')
+            navItem.innerHTML = 
+            `
+                <img src="${navImgData[i].img}" alt="타이틀">
+                <button onclick="scrollMove(${i})"><span class="text-hidden">스크롤 이동 버튼</span></button>
+            `;
+            navList.appendChild(navItem);
+        }
+        // content 동적 생성
+        for (let i = navImgData.length; i > 1; i--) {
+            const container = document.querySelector('.container');
+            const content = document.createElement('section');
+            content.classList.add('parallax-board')
+            content.classList.add(`content${i}`)
+            content.innerHTML = 
+            `
+                <div class="cycle-image">
+                    <span span class="text-hidden">자전거 이미지</span>
+                </div>
+            `;
+            container.insertBefore(content, container.children[1]);
+        }
+        const navButton = document.querySelectorAll('.main-navigator ul li')
+        navButton[0].classList.add('active')
+    }
+    // 랜딩 페이지
+    setTimeout(function(){
+        document.querySelector('.splash-img').classList.add('load')
+        document.querySelector('body').classList.remove('lock')
+    }, 1000);
+
+});
+
+
 document.addEventListener('scroll', function(){
     const navButton = document.querySelectorAll('.main-navigator ul li')
     const contents = document.querySelectorAll('.container section')
@@ -23,16 +64,6 @@ document.addEventListener('scroll', function(){
         }
     }
 })
-
-window.addEventListener('load', function(){
-    const navButton = document.querySelectorAll('.main-navigator ul li')
-    navButton[0].classList.add('active')
-    // 랜딩 페이지
-    setTimeout(function(){
-        document.querySelector('.splash-img').classList.add('load')
-        document.querySelector('body').classList.remove('lock')
-    }, 1000);
-});
 
 function scrollMove(i) {
     const contents = document.querySelectorAll('.container section');

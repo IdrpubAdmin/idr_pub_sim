@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CYCLEMON</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="assets/js/nav_data.js"></script>
   <script src="assets/js/script.js"></script>
 </head>
 <body class="lock">
@@ -36,110 +35,11 @@
       </ul>
     </header>
     <nav class="main-navigator">
-      <script id="nav-list" type="text/x-handlebars-template">
-        <ul class="nav-list">
-          {{#navData}}
-          <li class="nav-item">
-            <img src="{{img}}" alt="타이틀">
-            <button onclick="scrollMove('{{@index}}')"><span class="text-hidden">스크롤 이동 버튼</span></button>
-          </li>
-          {{/navData}}
-        </ul>
-      </script>
+        <ul class="nav-list"></ul>
     </nav>
     <div class="container">
       <section class="content1">
         <img src="assets/images/titre.jpg" alt="로고">
-      </section>
-      <section class="parallax-board content2">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content3">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content4">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content5">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content6">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content7">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content8">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content9">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content10">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content11">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content12">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content13">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content14">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content15">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content16">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content17">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content18">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
-      </section>
-      <section class="parallax-board content19">
-        <div class="cycle-image">
-          <span class="text-hidden">자전거 이미지</span>
-        </div>
       </section>
       <section class="content20">
         <div class="text-images">
@@ -166,6 +66,5 @@
       </div>
     </footer>
   </div>
-  <script src="assets/js/nav_data.js"></script>
 </body>
 </html>
