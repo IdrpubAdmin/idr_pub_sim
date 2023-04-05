@@ -38,7 +38,6 @@ window.addEventListener('load', function(){
 
 });
 
-
 document.addEventListener('scroll', function(){
     const navButton = document.querySelectorAll('.main-navigator ul li')
     const contents = document.querySelectorAll('.container section')
