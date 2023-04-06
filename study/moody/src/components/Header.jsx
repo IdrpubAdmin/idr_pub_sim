@@ -10,18 +10,21 @@ function Header() {
           </svg>
         </h1>
         <ul className='header-icon-list'>
-          <li className='icon-item'>아이콘</li>
-          <li className='icon-item'>아이콘</li>
-          <li className='icon-item'>아이콘</li>
-          <li className='icon-item'>아이콘</li>
+        {['search','user','bag','like'].map((v)=>{
+          return (
+          <li className={`icon-item ${v}-icon`}>
+            <img src={require(`../assets/images/${v}.png`)} alt="아이콘" />
+          </li>
+          )
+        })}
         </ul>
       </header>
       <nav className='main-nav'>
         <ul className='nav-list'>
           {['HOME','STORE','ACCESSORIES','BRAND','PAGES','ABOUT US','NEWS','CONTACT US'].map((v)=>{
             return (
-              <li className='nav-item'>
-                <h2>{v}</h2>
+              <li className='nav-item' key={v}>
+                <h2 className='txt-p-b'>{v}</h2>
               </li>
             )
           })}

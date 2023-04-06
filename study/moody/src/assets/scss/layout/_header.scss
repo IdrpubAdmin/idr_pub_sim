@@ -1,0 +1,40 @@
+.header-wrap{
+    header{
+        @include content-width;
+        padding: 35px 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-icon-list{
+            display: flex;
+            justify-content: space-around;
+            .icon-item{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+        
+                } 
+            }  
+        }
+    }
+    nav{
+        @include content-width;
+        padding: 35px 0;
+        border-top: 1px solid $default-fc;
+        border-bottom: 1px solid $default-fc;
+        .nav-list{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+main{
+    background-color: #DBD0CC;
+
+    img{
+    }
+}

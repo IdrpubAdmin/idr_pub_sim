@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './assets/scss/style.scss'
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -11,6 +12,9 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+      <main>
+        <img src={require('./assets/images/image2.png')} alt="메인" />
+      </main>
       {inputValue}
       <button onClick={test}></button>
       <Footer />

@@ -1,0 +1,21 @@
+@mixin mdq-mobile {
+    @media (max-width: 480px) {
+        @content;    
+    }
+}
+@mixin mdq-tablet {
+    @media (max-width: 768px) {
+        @content;    
+    }
+}
+@mixin mdq-desktop {
+    @media (max-width: 1024px) {
+        @content;    
+    }
+}
+
+@mixin content-width {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}

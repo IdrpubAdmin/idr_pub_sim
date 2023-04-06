@@ -1,0 +1,33 @@
+body {
+    font-family: $default-font;
+}
+.txt-h1 {
+    font-size: $font-48r;
+    font-weight: $b;
+    line-height: $ln;
+    color: $default-fc;
+}
+.txt-h2 {
+    font-size: $font-28r;
+    font-weight: $b;
+    line-height: $ln;
+    color: $default-fc;
+}
+.txt-h3 {
+    font-size: $font-18r;
+    font-weight: $b;
+    line-height: $ln;
+    color: $default-fc;
+}
+.txt-p-b {
+    font-size: $font-16r;
+    font-weight: $b;
+    line-height: $ln;
+    color: $default-fc;
+}
+.txt-p {
+    font-size: $font-16r;
+    font-weight: $l;
+    line-height: $ln;
+    color: $default-fc;
+}
