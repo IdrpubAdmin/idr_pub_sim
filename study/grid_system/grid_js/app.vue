@@ -1,21 +1,22 @@
 <template>
-  <div ref="wrapper"></div>
+  <grid :cols="cols" :rows="rows"></grid>
 </template>
 
 <script>
-import { default as Grid } from 'gridjs';
-
-export default {
-  mounted() {
-    const table = this.$grid({
-      data: [
-        ['John', 'Doe', 24],
-        ['Jane', 'Doe', 32],
-        ['Foo', 'Bar', 42],
-      ],
-      columns: ['First Name', 'Last Name', 'Age'],
-    })
-    table.render(this.$refs.wrapper)
-  },
-}
+  import Grid from 'gridjs-vue'
+  export default {
+    name: 'Cars',
+     components: {
+      Grid
+    },
+    data() {
+      return {
+        cols: ['Make', 'Model', 'Year', 'Color'],
+        rows: [
+          ['Ford', 'Fusion', '2011', 'Silver'],
+          ['Chevrolet', 'Cruz', '2018', 'White']
+        ]
+      }
+    }
+  }
 </script>
