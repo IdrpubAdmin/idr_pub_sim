@@ -34,4 +34,3 @@
 <style>
   @import 'tabulator-tables/dist/css/tabulator.min.css';
 </style>
-

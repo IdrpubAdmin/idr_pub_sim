@@ -6,5 +6,8 @@ export default defineNuxtConfig({
         {src: '//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'},
       ]
     }
-  }
+  },
+  plugins: [
+    // { src: '@/plugins/tree.js', mode: 'client' }
+  ]
 })
