@@ -7,35 +7,29 @@
     <input type="text" id="detailAddress" placeholder="상세주소">
     <input type="text" v-model="extraAddress" id="extraAddress" placeholder="참고항목">
     <img-up></img-up>
-    <!-- <div id="tree" class="tui-tree-wrap"></div> -->
-      <Bar
-        id="my-chart-id"
-        :options="chartOptions"
-        :data="chartData"
-      />
+    <tree :nodes="nodes" :config="config" @nodeOpened="log()"></tree>
+    <input v-model="searchText" type="text" />
+    <Tree
+      :nodes="data"
+      :search-text="searchText"
+      :indentSize="10"
+    />
   </div>
 </template>
 
 <script>
-// useHead({
-//   title: 'My App',
-//   meta: [
-//     { name: 'description', content: 'My amazing site.' }
-//   ],
-//   bodyAttrs: {
-//     class: 'test'
-//   },
-//   script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
-// })
-
 import imgUp from './imgUp.vue'
-// import Tree from 'tui-tree';
-import { Bar } from 'vue-chartjs'
-// import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-
-// ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+import treeview from "vue3-treeview";
+import "vue3-treeview/dist/style.css";
+import Tree from "vue3-tree";
+import "vue3-tree/dist/style.css";
 
 export default {
+  components:{
+    imgUp : imgUp,
+    tree: treeview,
+    Tree,
+  },
   data() {
     return {
       postcode: "",
@@ -47,14 +41,142 @@ export default {
       },
       chartOptions: {
         responsive: true
-      }
+      },
+      // vue3-treeview
+      config: { // 트리 구성
+        roots: ["id1", "id2"], // 가장 최상단 루트
+        // leaves: [], // 자식이 없는 노드들이 저장되는곳
+        padding: 25, // 뎁스당 여백
+        editable: false, // 요소를 편집할수 있나
+        editing: '', // 현재 편집 노드의 ID 값
+        checkboxes: false, // 체크박스 요소 활성화
+        checkMode: "manual", // 체크박스 모드 manual: 선택된 개체만 or auto: 선택된 개체 자식들까지 선택
+        dragAndDrop: false, // 드래그 기능
+        keyboardNavigation: false, // 키보드 탐색 활성화
+        disabled: false, // 모든 트리 비활성화
+        editableClass: "editable", // 편집기능이 활성화 되었을때 붙는 클래스명
+        disabledClass: "disabled", // 비활성화 되었을때 붙는 클래스명
+        focusClass: "focused", // 포커스 되었을때 붙는 클래스명
+        checkedClass: "checked", // 체크 되었을때 붙는 클래스명
+        indeterminateClass: "indeterminate", // 불확실할 때 붙는 클래스명
+        openedIcon: { // 열려있을때 아이콘
+          type: "shape",
+          stroke: "black",
+          strokeWidth: 3,
+          viewBox: "0 0 24 24",
+          draw: "M 2 12 L 22 12",
+        },
+        closedIcon: { // 닫혀있을때 아이콘
+          type: "shape",
+          stroke: "black",
+          strokeWidth: 3,
+          viewBox: "0 0 24 24",
+          draw: `M 12 2 L 12 22 M 2 12 L 22 12`,
+        }
+      },
+      nodes: {
+        id1: {
+          text: "text1", // 표시되는 텍스트
+          children: ["id11", "id12"], // 자식 배열
+          state: { // 노드 상태 (기본값)
+            opened: false, // 열고 닫힘
+            disabled: false, // 기능 비활성화
+            editable: true, // 편집 기능
+            draggable:	true, // 드래그 기능
+            dropable: true, // 드롭 기능
+            checked: false, // 체크박스 상태
+            indeterminate: false, // 체크박스 불확정 상태
+            isLoading: false, // 비동기 로딩에 사용
+          }
+        },
+        id11: {
+          text: "text11",
+        },
+        id12: {
+          text: "text12",
+        },
+        id2: {
+          text: "text2",
+        },
+      },
     }
   },
-  components:{
-    imgUp : imgUp,
-    Bar
+  // vue3-tree
+  setup() {
+    const data = ref([
+      {
+        id: "1",
+        label: "a",
+        nodes: [
+          {
+            id: "4",
+            label: "aa",
+          },
+          {
+            id: "5",
+            label: "ab",
+          },
+        ],
+      },
+      {
+        id: "2",
+        label: "b",
+        nodes: [
+          {
+            id: "6",
+            label: "ba",
+            nodes: [
+              {
+                id: "11",
+                label: "aaaa",
+                nodes: [
+                  {
+                    id: "15",
+                    label: "aaaa",
+                  },
+                  {
+                    id: "16",
+                    label: "bbbb",
+                  },
+                ],
+              },
+              {
+                id: "12",
+                label: "bbbb",
+              },
+            ],
+          },
+          {
+            id: "7",
+            label: "bb",
+            nodes: [
+              {
+                id: "13",
+                label: "cccc",
+              },
+              {
+                id: "14",
+                label: "dddd",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "3",
+        label: "c",
+      },
+    ]);
+    const searchText = ref("");
+    return {
+      data,
+      searchText,
+    };
   },
   methods: {
+    log(){
+      console.log(1)
+    },
     execDaumPostcode() {
       new window.daum.Postcode({
         oncomplete: (data) => {

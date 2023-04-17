@@ -7,7 +7,4 @@ export default defineNuxtConfig({
       ]
     }
   },
-  plugins: [
-    // { src: '@/plugins/tree.js', mode: 'client' }
-  ]
 })
