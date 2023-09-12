@@ -8,12 +8,12 @@ function Home() {
     setInputValue(testTxt)
   }
   return (
-    <div>
+    <div className='container'>
         <main>
           <img src={require('../assets/images/image2.png')} alt="메인" />
         </main>
         {inputValue}
-        <button onClick={test}></button>
+        <button onClick={test}>.</button>
     </div>
   );
 }

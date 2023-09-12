@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Header() {
   const navList = useSelector((state) => state.nav.navList)
-
+  const [headerIconData, setHeaderIconData] = useState(['search','user','bag','like'])
   return (
     <div className="header-wrap">
       <header className='main-header'>
@@ -16,7 +16,7 @@ function Header() {
             </Link>
         </h1>
         <ul className='header-icon-list'>
-        {['search','user','bag','like'].map((v)=>{
+        {headerIconData.map((v)=>{
           return (
           <li className={`icon-item ${v}-icon`} key={v}>
             <img src={require(`../assets/images/${v}.png`)} alt="아이콘" />
