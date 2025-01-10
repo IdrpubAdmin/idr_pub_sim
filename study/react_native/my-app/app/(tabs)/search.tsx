@@ -7,7 +7,8 @@ import {
   View,
   TouchableOpacity,
   TouchableHighlight,
-  ScrollView
+  ScrollView,
+  Alert
 } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
@@ -16,9 +17,13 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import Fontisto from '@expo/vector-icons/Fontisto';
 
 import { Theme } from '@/constants/Colors'
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+const STORAGE_KEY = '@toDos'
 
 export default function TabTwoScreen() {
   const [working, setWorking] = useState(true)
@@ -28,13 +33,38 @@ export default function TabTwoScreen() {
   const travel = () => setWorking(false)
 
   const onChangeText = (payload) => setText(payload)
-  const addToDo = () => {
+
+  const saveToDos = async (toSave) => {
+    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave))
+  }
+  const loadToDos = async () => {
+    const s = await AsyncStorage.getItem(STORAGE_KEY)
+    if (s) {
+      setToDos(JSON.parse(s))
+    }
+  }
+  useEffect(() => {
+    loadToDos()
+  }, []);
+  const addToDo = async () => {
     if (text === '') {
       return ;
     }
     const newToDos = {...toDos, [Date.now()]: {text, working}}
     setToDos(newToDos)
+    await saveToDos(newToDos)
     setText('')
+  }
+  const deleteToDo = (key) => {
+    Alert.alert('Delete To Do', 'Are you sure?', [
+      {text: 'Cancel'},
+      {text: 'Im Sure', onPress: async () => {
+        const newToDos = {...toDos}
+        delete newToDos[key]
+        setToDos(newToDos)
+        await saveToDos(newToDos)
+      }},
+    ])
   }
 
   return (
@@ -53,8 +83,12 @@ export default function TabTwoScreen() {
       <ScrollView>
         {
           Object.keys(toDos).map(key => (
-            toDos[key].working === working && <View key={key} style={styles.toDo}>
+            toDos[key].working === working &&
+            <View key={key} style={styles.toDo}>
               <Text style={styles.toDoText}>{toDos[key].text}</Text>
+              <TouchableOpacity onPress={() => deleteToDo(key)}>
+                <Fontisto name="trash" size={18} color={Theme.gray} />
+              </TouchableOpacity>
             </View>
             )
           )
@@ -93,6 +127,9 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 20,
     borderRadius: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   toDoText:{
     color: 'white',

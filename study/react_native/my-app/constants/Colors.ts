@@ -26,7 +26,7 @@ export const Colors = {
 };
 
 export const Theme = {
-  bg: 'black',
-  gray: '#3A3D40',
-  toDoBg: '#5C5C60',
-}
+  bg: "black",
+  gray: "#3A3D40",
+  toDoBg: "#1A1C20",
+};
