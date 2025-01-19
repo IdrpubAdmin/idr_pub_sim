@@ -56,15 +56,26 @@ export default function TabTwoScreen() {
     setText('')
   }
   const deleteToDo = (key) => {
-    Alert.alert('Delete To Do', 'Are you sure?', [
-      {text: 'Cancel'},
-      {text: 'Im Sure', onPress: async () => {
+    // 플랫폼 체크
+    if(Platform.OS === 'web') {
+      const ok = confirm('Do you want to delete this To Do?')
+      if (ok) {
         const newToDos = {...toDos}
         delete newToDos[key]
         setToDos(newToDos)
-        await saveToDos(newToDos)
-      }},
-    ])
+        saveToDos(newToDos)
+      }
+    } else {
+      Alert.alert('Delete To Do', 'Are you sure?', [
+        {text: 'Cancel'},
+        {text: 'Im Sure', onPress: async () => {
+            const newToDos = {...toDos}
+            delete newToDos[key]
+            setToDos(newToDos)
+            await saveToDos(newToDos)
+          }},
+      ])
+    }
   }
 
   return (
